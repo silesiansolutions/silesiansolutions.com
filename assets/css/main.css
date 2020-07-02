@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 /* Reset */
 
@@ -124,7 +124,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -209,7 +209,7 @@ body,
 input,
 select,
 textarea {
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.65;
   font-size: 1em;
@@ -310,7 +310,7 @@ blockquote {
 code {
   border-radius: 4px;
   border: solid 1px;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   font-size: 0.9em;
   margin: 0 0.25em;
   padding: 0.25em 0.65em;
@@ -319,7 +319,7 @@ code {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   font-size: 0.9em;
   margin: 0 0 1.25em 0;
 }
@@ -354,9 +354,9 @@ hr.major {
 
 /* Button */
 
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
 button,
 .button {
   -moz-appearance: none;
@@ -384,42 +384,42 @@ button,
   white-space: nowrap;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
+input[type='submit']:hover,
+input[type='reset']:hover,
+input[type='button']:hover,
 button:hover,
 .button:hover {
   border-color: #00d3b7;
   color: #00d3b7;
 }
 
-input[type="submit"]:hover:active,
-input[type="reset"]:hover:active,
-input[type="button"]:hover:active,
+input[type='submit']:hover:active,
+input[type='reset']:hover:active,
+input[type='button']:hover:active,
 button:hover:active,
 .button:hover:active {
   background-color: rgba(0, 211, 183, 0.15);
 }
 
-input[type="submit"].icon,
-input[type="reset"].icon,
-input[type="button"].icon,
+input[type='submit'].icon,
+input[type='reset'].icon,
+input[type='button'].icon,
 button.icon,
 .button.icon {
   padding-left: 1.35em;
 }
 
-input[type="submit"].icon:before,
-input[type="reset"].icon:before,
-input[type="button"].icon:before,
+input[type='submit'].icon:before,
+input[type='reset'].icon:before,
+input[type='button'].icon:before,
 button.icon:before,
 .button.icon:before {
   margin-right: 0.5em;
 }
 
-input[type="submit"].fit,
-input[type="reset"].fit,
-input[type="button"].fit,
+input[type='submit'].fit,
+input[type='reset'].fit,
+input[type='button'].fit,
 button.fit,
 .button.fit {
   display: block;
@@ -427,28 +427,28 @@ button.fit,
   width: 100%;
 }
 
-input[type="submit"].small,
-input[type="reset"].small,
-input[type="button"].small,
+input[type='submit'].small,
+input[type='reset'].small,
+input[type='button'].small,
 button.small,
 .button.small {
   font-size: 0.8em;
 }
 
-input[type="submit"].big,
-input[type="reset"].big,
-input[type="button"].big,
+input[type='submit'].big,
+input[type='reset'].big,
+input[type='button'].big,
 button.big,
 .button.big {
   font-size: 1.35em;
 }
 
-input[type="submit"].disabled,
-input[type="submit"]:disabled,
-input[type="reset"].disabled,
-input[type="reset"]:disabled,
-input[type="button"].disabled,
-input[type="button"]:disabled,
+input[type='submit'].disabled,
+input[type='submit']:disabled,
+input[type='reset'].disabled,
+input[type='reset']:disabled,
+input[type='button'].disabled,
+input[type='button']:disabled,
 button.disabled,
 button:disabled,
 .button.disabled,
@@ -474,9 +474,9 @@ label {
   margin: 0 0 0.625em 0;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
 select,
 textarea {
   -moz-appearance: none;
@@ -494,17 +494,17 @@ textarea {
   width: 100%;
 }
 
-input[type="text"]:invalid,
-input[type="password"]:invalid,
-input[type="email"]:invalid,
+input[type='text']:invalid,
+input[type='password']:invalid,
+input[type='email']:invalid,
 select:invalid,
 textarea:invalid {
   box-shadow: none;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus,
 select:focus,
 textarea:focus {
   border-color: #00d3b7;
@@ -527,7 +527,7 @@ textarea:focus {
 
 .select-wrapper:before {
   color: #ccc;
-  content: "\f107";
+  content: '\f107';
   display: block;
   height: 2.75em;
   line-height: 2.75em;
@@ -543,9 +543,9 @@ textarea:focus {
   display: none;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
 select {
   height: 2.75em;
 }
@@ -554,8 +554,8 @@ textarea {
   padding: 0.75em 1em;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -568,8 +568,8 @@ input[type="radio"] {
   z-index: -1;
 }
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
+input[type='checkbox'] + label,
+input[type='radio'] + label {
   text-decoration: none;
   color: #aaa;
   cursor: pointer;
@@ -582,8 +582,8 @@ input[type="radio"] + label {
   position: relative;
 }
 
-input[type="checkbox"] + label:before,
-input[type="radio"] + label:before {
+input[type='checkbox'] + label:before,
+input[type='radio'] + label:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: FontAwesome;
@@ -592,12 +592,12 @@ input[type="radio"] + label:before {
   text-transform: none !important;
 }
 
-input[type="checkbox"] + label:before,
-input[type="radio"] + label:before {
+input[type='checkbox'] + label:before,
+input[type='radio'] + label:before {
   background: transparent;
   border-radius: 4px;
   border: solid 1px #ccc;
-  content: "";
+  content: '';
   display: inline-block;
   height: 1.65em;
   left: 0;
@@ -608,24 +608,24 @@ input[type="radio"] + label:before {
   width: 1.65em;
 }
 
-input[type="checkbox"]:checked + label:before,
-input[type="radio"]:checked + label:before {
+input[type='checkbox']:checked + label:before,
+input[type='radio']:checked + label:before {
   background-color: #555;
   border-color: #555;
   color: #fff;
-  content: "\f00c";
+  content: '\f00c';
 }
 
-input[type="checkbox"]:focus + label:before,
-input[type="radio"]:focus + label:before {
+input[type='checkbox']:focus + label:before,
+input[type='radio']:focus + label:before {
   border-color: #00d3b7;
 }
 
-input[type="checkbox"] + label:before {
+input[type='checkbox'] + label:before {
   border-radius: 4px;
 }
 
-input[type="radio"] + label:before {
+input[type='radio'] + label:before {
   border-radius: 100%;
 }
 
@@ -848,7 +848,7 @@ dl dd {
   top: 0;
   width: 4em;
   height: 4em;
-  background-image: url("images/close-small-alt.svg");
+  background-image: url('images/close-small-alt.svg');
   background-repeat: no-repeat;
   background-size: 32px 32px;
   cursor: pointer;
@@ -991,7 +991,7 @@ body.is-loading-1 #main {
   -webkit-transition: opacity 0.25s ease;
   -ms-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -1154,7 +1154,7 @@ body.is-loading-1 #main {
       rgba(16, 16, 16, 0) 10em,
       rgba(16, 16, 16, 0)
     );
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0;
@@ -1169,7 +1169,7 @@ body.is-loading-1 #main {
   top: 0;
   width: 4em;
   height: 4em;
-  background-image: url("images/close.svg");
+  background-image: url('images/close.svg');
   background-repeat: no-repeat;
   background-size: 64px 64px;
   cursor: pointer;
@@ -1186,7 +1186,7 @@ body.is-loading-1 #main {
   width: 6em;
   height: 6em;
   margin-top: -3em;
-  background-image: url("images/arrow.svg");
+  background-image: url('images/arrow.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1222,26 +1222,26 @@ body.is-loading-1 #main {
 #viewer .slide .caption {
   background-image: -moz-linear-gradient(
     bottom,
-    rgba(16, 16, 16, 0.75),
-    rgba(16, 16, 16, 0.25) 80%,
+    rgba(16, 16, 16, 0.85),
+    rgba(16, 16, 16, 0.5) 90%,
     rgba(16, 16, 16, 0)
   );
   background-image: -webkit-linear-gradient(
     bottom,
-    rgba(16, 16, 16, 0.75),
-    rgba(16, 16, 16, 0.25) 80%,
+    rgba(16, 16, 16, 0.85),
+    rgba(16, 16, 16, 0.5) 90%,
     rgba(16, 16, 16, 0)
   );
   background-image: -ms-linear-gradient(
     bottom,
-    rgba(16, 16, 16, 0.75),
-    rgba(16, 16, 16, 0.25) 80%,
+    rgba(16, 16, 16, 0.85),
+    rgba(16, 16, 16, 0.5) 90%,
     rgba(16, 16, 16, 0)
   );
   background-image: linear-gradient(
     bottom,
-    rgba(16, 16, 16, 0.75),
-    rgba(16, 16, 16, 0.25) 80%,
+    rgba(16, 16, 16, 0.85),
+    rgba(16, 16, 16, 0.5) 90%,
     rgba(16, 16, 16, 0)
   );
   padding: 2em 2em 0.75em 2em;
@@ -1249,7 +1249,7 @@ body.is-loading-1 #main {
   bottom: 0;
   left: 0;
   width: 100%;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   z-index: 1;
 }
 
@@ -1285,14 +1285,14 @@ body.is-loading-1 #main {
   -webkit-transition: opacity 0.5s ease-in-out;
   -ms-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 3em;
   height: 3em;
-  background-image: url("images/spinner.svg");
+  background-image: url('images/spinner.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1313,7 +1313,7 @@ body.fullscreen #viewer {
 }
 
 body.fullscreen #viewer .inner .toggle {
-  background-image: url("images/open.svg");
+  background-image: url('images/open.svg');
 }
 
 body.is-loading-1 #viewer {
@@ -1340,7 +1340,7 @@ body.is-loading-2 #viewer .slide {
     -webkit-transition: opacity 0.75s ease;
     -ms-transition: opacity 0.75s ease;
     transition: opacity 0.75s ease;
-    background-image: url("images/open.svg");
+    background-image: url('images/open.svg');
     opacity: 0;
     right: 0;
   }
@@ -1357,12 +1357,12 @@ body.is-loading-2 #viewer .slide {
 
   #viewer .inner .nav-next,
   #viewer .inner .nav-previous {
-    background-image: url("images/arrow-small.svg");
+    background-image: url('images/arrow-small.svg');
     background-size: 32px 32px;
   }
 
   body.fullscreen #viewer .inner .toggle {
-    background-image: url("images/open-small.svg");
+    background-image: url('images/open-small.svg');
   }
 }
 
@@ -1380,7 +1380,7 @@ body.is-loading-2 #viewer .slide {
   }
 
   #viewer .inner .toggle {
-    background-image: url("images/close-small.svg") !important;
+    background-image: url('images/close-small.svg') !important;
     background-size: 32px 32px;
   }
 
