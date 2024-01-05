@@ -1,0 +1,18 @@
+{
+  "intro": "Silesian Solutions",
+  "image": {
+    "src": "../../images/waving-hand.png",
+    "alt": "Waving Hand Emoji"
+  },
+  "title": "Nowoczesne rozwiązania",
+  "subtitle": {
+    "prefix": "prosto ze ",
+    "highlight": "Śląska",
+    "suffix": "."
+  },
+  "description": "Tworzymy oprogramowanie, które definiuje przyszłość.",
+  "socialProfiles": {
+    "from": ["Github", "LinkedIn", "Twitter"],
+    "showIcons": true
+  }
+}

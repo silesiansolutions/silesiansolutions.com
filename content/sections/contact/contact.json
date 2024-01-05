@@ -1,0 +1,13 @@
+{
+  "name": "Silesian Solutions",
+  "email": "silesian.solutions🐒gmail.com",
+  "description": "Jeśli masz pytania lub sugestie, skontaktuj się z nami.",
+  "image": {
+    "src": "../../images/silesiansolutions.png",
+    "alt": "Logo Silesian Solutions"
+  },
+  "socialProfiles": {
+    "from": ["Github", "LinkedIn", "Twitter"],
+    "showIcons": true
+  }
+}

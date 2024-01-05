@@ -1,0 +1,52 @@
+{
+  "siteMetadata": {
+    "language": "pl",
+    "siteUrl": "https://silesiansolutions.com/",
+    "title": "Silesian Solutions - Śląskie Rozwiązania",
+    "titleTemplate": "%s · Silesian Solutions",
+    "description": "Silesian Solutions - Nowoczesne rozwiązania prosto ze Śląska 💻🚀",
+    "author": "Silesian Solutions",
+    "avatar": "../content/images/silesiansolutions.png",
+    "social": {
+      "github": "https://github.com/silesiansolutions",
+      "linkedin": "https://www.linkedin.com/company/silesiansolutions/",
+      "twitter": "https://twitter.com/SilesianAgency"
+    }
+  },
+  "siteConfiguration": {
+    "logo": {
+      "text": "Silesian Solutions"
+    },
+    "navigation": {
+      "header": [
+        {
+          "label": "O nas",
+          "url": "/#o-nas"
+        },
+        {
+          "label": "Blog",
+          "url": "/blog"
+        },
+        {
+          "label": "Kontakt",
+          "url": "/#kontakt"
+        }
+      ],
+      "footer": [
+        {
+          "label": "Polityka Prywatności",
+          "url": "/polityka-prywatnosci"
+        },
+        {
+          "label": "Kontakt",
+          "url": "/#kontakt"
+        }
+      ]
+    },
+    "featureToggles": {
+      "useDarkModeAsDefault": true,
+      "useDarkModeBasedOnUsersPreference": true,
+      "useCookieBar": false
+    }
+  }
+}

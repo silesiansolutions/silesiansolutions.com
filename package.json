@@ -1,0 +1,19 @@
+{
+  "name": "silesiansolutions.com",
+  "description": "Silesian Solutions portfolio page",
+  "private": true,
+  "author": "Silesian Solutions",
+  "license": "MIT",
+  "scripts": {
+    "clean": "gatsby clean",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^5.0.1",
+    "gatsby-theme-portfolio-minimal": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
