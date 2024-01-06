@@ -1,6 +1,6 @@
 {
   "name": "silesiansolutions.com",
-  "description": "Silesian Solutions portfolio page",
+  "description": "Portfolio page based on React, Gatsby.",
   "private": true,
   "author": "Silesian Solutions",
   "license": "MIT",

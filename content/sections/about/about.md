@@ -1,5 +1,5 @@
 ---
-imageSrc: "../../images/charles-deluvio-DgoyKNgPiFQ-unsplash.jpg"
+imageSrc: "../../images/alessandro-bianchi-_kdTyfnUFAc-unsplash.jpg"
 imageAlt: "Innowacyjne oprogramowanie Silesian Solutions"
 ---
 
