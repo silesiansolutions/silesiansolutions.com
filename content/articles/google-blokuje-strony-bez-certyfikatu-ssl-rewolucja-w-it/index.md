@@ -170,8 +170,6 @@ Implementacja SSL (_Secure Socket Layer_) na swojej stronie internetowej jest kl
 
 Oto zoptymalizowana wersja tekstu, uwzględniająca poprawki językowe, SEO, marketingowe oraz dobre praktyki prowadzenia blogów firmowych:
 
----
-
 ## Podsumowanie
 
 ### SSL jako Nowy Standard w Internecie
