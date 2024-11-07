@@ -1,6 +1,6 @@
 ---
 title: "AMD – trochę o firmie"
-# description: "TODO"
+description: "Firma AMD jest jednym z czołowych światowych producentów układów scalonych i mikroprocesorów przeznaczonych do urządzeń elektronicznych dla różnorakich firm technologicznych oraz użytkowników domowych."
 date: "2017-09-28"
 banner:
   src: "./irving-marca--zJHwypEIT8-unsplash.jpg"

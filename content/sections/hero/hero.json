@@ -12,7 +12,7 @@
   },
   "description": "Tworzymy oprogramowanie, które definiuje przyszłość.",
   "socialProfiles": {
-    "from": ["Github", "LinkedIn", "Twitter"],
+    "from": ["LinkedIn", "Twitter", "Github"],
     "showIcons": true
   }
 }

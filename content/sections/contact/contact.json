@@ -1,13 +1,13 @@
 {
   "name": "Silesian Solutions",
   "email": "contact@silesiansolutions.com",
-  "description": "Jeśli masz pytania lub sugestie, skontaktuj się z nami.",
+  "description": "Odpowiadamy na pytania, doradzamy oraz wspieramy rozwój Twojego biznesu. Skontaktuj się z nami!",
   "image": {
     "src": "../../images/silesiansolutions.jpg",
     "alt": "Logo Silesian Solutions"
   },
   "socialProfiles": {
-    "from": ["Github", "LinkedIn", "Twitter"],
+    "from": ["LinkedIn", "Twitter", "Github"],
     "showIcons": true
   }
 }

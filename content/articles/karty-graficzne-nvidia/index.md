@@ -1,6 +1,6 @@
 ---
 title: "Karty graficzne Nvidia"
-# description: "TODO"
+description: "Nvidia Corporation należy do grona największych, najbardziej i najlepiej rozpoznawalnych producentów układów scalonych i procesorów graficznych na świecie."
 date: "2017-09-16"
 banner:
   src: "./boliviainteligente-1GOYDLM_jcg-unsplash.jpg"

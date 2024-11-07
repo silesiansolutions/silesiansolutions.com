@@ -1,6 +1,6 @@
 ---
 title: "Procesory Intel"
-# description: "TODO"
+description: "Firma Intel jest jednym z czołowych światowych producentów układów scalonych i mikroprocesorów do urządzeń elektronicznych."
 date: "2017-08-29"
 banner:
   src: "./slejven-djurakovic-0uXzoEzYZ4I-unsplash.jpg"
