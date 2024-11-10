@@ -3,13 +3,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 80%;
     max-width: var(--page-width);
     margin: 0 auto;
     padding: 1rem 2rem;
     background: var(--primary-color);
     color: var(--background-color);
     border-radius: var(--border-radius);
+    gap: 1rem;
 }
 
 .CookieConsent button {
@@ -41,10 +42,4 @@
     color: var(--primary-color);
     border: none;
     margin: 0;
-}
-
-@media (min-width: 992px) {
-    .CookieConsent {
-        flex-direction: row;
-    }
 }

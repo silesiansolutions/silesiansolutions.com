@@ -4,5 +4,17 @@
     left: 0;
     bottom: 1rem;
     width: 100%;
+}
+
+.CookieTitle {
     margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.CookieText {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--tertiary-color);
 }

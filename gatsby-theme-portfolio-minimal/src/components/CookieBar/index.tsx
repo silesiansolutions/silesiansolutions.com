@@ -15,14 +15,19 @@ export function CookieBar(): React.ReactElement {
             <CookieConsent
                 cookieName="gatsby-gdpr-google-analytics"
                 buttonId="confirm"
-                buttonText="Accept"
+                buttonText="Akceptuj"
                 declineButtonId="decline"
-                declineButtonText="Decline"
+                declineButtonText="Odrzuć"
                 enableDeclineButton={true}
                 disableStyles={true}
                 onAccept={() => initializeAndTrack(location)}
             >
-                <p>This website uses cookies 🍪 </p>
+                <p className={classes.CookieTitle}>Szanujemy Twoją prywatność</p>
+                <p className={classes.CookieText}>
+                    Pliki cookie wykorzystujemy, aby poprawić komfort przeglądania, wyświetlać reklamy i treści
+                    dopasowane do Twoich preferencji oraz analizować ruch na stronie. Kliknięcie „Akceptuj” oznacza
+                    wyrażenie zgody na korzystanie z plików cookie.
+                </p>
             </CookieConsent>
         </Animation>
     );
