@@ -7,14 +7,19 @@ import { useLocalDataSource } from './data';
 import { PageSection } from '../../types';
 import * as classes from './style.module.css';
 
-export function ContactSection(props: PageSection): React.ReactElement {
+type ContactSectionProps = PageSection & {
+    description?: string;
+};
+
+export function ContactSection(props: ContactSectionProps): React.ReactElement {
     const response = useLocalDataSource();
     const data = response.allContactJson.sections[0];
+    const finalDescription = props.description || data.description;
 
     return (
         <Animation type="fadeUp">
             <Section anchor={props.sectionId} heading={props.heading} additionalClasses={[classes.Contact]}>
-                {data.description && <p className={classes.Description}>{data.description}</p>}
+                <div className={classes.Description}>{finalDescription && <p>{finalDescription}</p>}</div>
                 <div className={classes.Profile}>
                     {data.image.src && (
                         <GatsbyImage

@@ -1,0 +1,42 @@
+[
+    {
+        "question": "Jakie cele biznesowe powinien realizować projekt?",
+        "answer": "Na etapie wstępnym koncentrujemy się na dogłębnym zrozumieniu celów biznesowych projektu, co umożliwia odpowiednie dopasowanie technologii oraz funkcjonalności aplikacji. Szczegóły zostaną omówione podczas kolejnych etapów rozmów."
+    },
+    {
+        "question": "Jakie funkcjonalności są kluczowe dla projektu?",
+        "answer": "Na podstawie prowadzonych rozmów określamy kluczowe funkcjonalności oraz wymagania systemowe niezbędne do spełnienia oczekiwań użytkowników końcowych."
+    },
+    {
+        "question": "Czy posiadają Państwo preferencje technologiczne?",
+        "answer": "Jesteśmy elastyczni w zakresie wyboru technologii i możemy zaproponować rozwiązania dostosowane do indywidualnych potrzeb. W przypadku istniejących preferencji technologicznych chętnie je omówimy."
+    },
+    {
+        "question": "Czy projekt dotyczy stworzenia nowego systemu, czy modernizacji istniejącego?",
+        "answer": "Wspieramy zarówno realizację nowych projektów od podstaw, jak i modernizację lub rozbudowę już istniejących rozwiązań, z pełnym dostosowaniem do Państwa wymagań."
+    },
+    {
+        "question": "Jakie są przewidywane wymagania dotyczące skali projektu?",
+        "answer": "Podczas wstępnych rozmów dokonamy oceny skali projektu, uwzględniając przewidywaną liczbę użytkowników, ilość danych oraz złożoność systemu."
+    },
+    {
+        "question": "Jakie są Państwa oczekiwania w zakresie modelu współpracy?",
+        "answer": "Dostosowujemy się do preferowanego modelu współpracy — możemy działać jako samodzielny zespół bądź jako część Państwa zespołu projektowego. Model współpracy oraz podział obowiązków zostaną ustalone wspólnie."
+    },
+    {
+        "question": "Jakie są Państwa oczekiwania dotyczące terminów realizacji projektu?",
+        "answer": "Ustalenie przewidywanych terminów na etapie wstępnym umożliwi stworzenie harmonogramu oraz odpowiednie przydzielenie zasobów."
+    },
+    {
+        "question": "Czy przewidują Państwo integracje projektu z innymi systemami?",
+        "answer": "Integracja z istniejącymi systemami może być kluczowa dla funkcjonalności projektu, dlatego omawiamy ten aspekt już na etapie planowania."
+    },
+    {
+        "question": "Jakie są Państwa wymagania dotyczące bezpieczeństwa i ochrony danych?",
+        "answer": "W przypadku projektów wymagających wysokich standardów bezpieczeństwa lub szczególnej ochrony danych, omówimy te aspekty szczegółowo, aby odpowiednio dostosować architekturę systemu."
+    },
+    {
+        "question": "Czy projekt zakłada możliwość przyszłego skalowania lub rozbudowy?",
+        "answer": "Jeśli planowany jest rozwój aplikacji w przyszłości, możemy zaprojektować architekturę, która umożliwi elastyczne skalowanie i łatwe dodawanie nowych funkcji."
+    }
+]

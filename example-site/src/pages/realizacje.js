@@ -9,7 +9,7 @@ export default function ProjectsPage() {
             <Page>
                 <ProjectsSection sectionId="realizacje" heading="Przykłady naszych projektów" />
                 <InterestsSection sectionId="oferta" heading="Nasze specjalizacje" />
-                <ContactSection sectionId="kontakt" heading="Napisz do nas" />
+                <ContactSection sectionId="kontakt" heading="Pozostajemy do Twojej dyspozycji" />
             </Page>
         </>
     );

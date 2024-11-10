@@ -1,0 +1,37 @@
+[
+    {
+        "day": "Poniedziałek",
+        "hours": "9:00 - 17:00",
+        "isOpen": true
+    },
+    {
+        "day": "Wtorek",
+        "hours": "9:00 - 17:00",
+        "isOpen": true
+    },
+    {
+        "day": "Środa",
+        "hours": "9:00 - 17:00",
+        "isOpen": true
+    },
+    {
+        "day": "Czwartek",
+        "hours": "9:00 - 17:00",
+        "isOpen": true
+    },
+    {
+        "day": "Piątek",
+        "hours": "9:00 - 15:00",
+        "isOpen": true
+    },
+    {
+        "day": "Sobota",
+        "hours": "Nieczynne",
+        "isOpen": false
+    },
+    {
+        "day": "Niedziela",
+        "hours": "Nieczynne",
+        "isOpen": false
+    }
+]

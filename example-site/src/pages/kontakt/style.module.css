@@ -1,0 +1,108 @@
+.infoSection {
+    margin-top: 2rem;
+}
+
+.contactInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contactInfo {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+.mapContainer {
+    width: 100%;
+    height: 450px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--background-color);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.hours {
+    padding: 2rem;
+    background: var(--background-color);
+    border-radius: 4px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+
+.hours h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.hoursTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hoursTable tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hoursTable tr:last-child {
+    border-bottom: none;
+}
+
+.hoursTable td {
+    padding: 0.75rem 0;
+    color: var(--primary-color);
+}
+
+.hoursTable td:first-child {
+    font-weight: 500;
+}
+
+.hoursTable td:last-child {
+    text-align: right;
+}
+
+.openHours {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.closedHours {
+    color: var(--grey-700);
+    font-style: italic;
+}
+
+.faqItem {
+    padding: 2rem 0;
+    background: var(--background-color);
+    border-radius: 4px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.faqQuestion {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+.faqAnswer {
+    color: var(--primary-color);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.8;
+}
