@@ -86,9 +86,5 @@ function getExampleFiles(directory) {
             destination: path.join(directory['aboutSection'], 'about.md'),
             example: path.join(exampleDirectory['aboutSection'], 'about.example.md'),
         },
-        legalSection: {
-            destination: path.join(directory['legalSection'], 'imprint.md'),
-            example: path.join(exampleDirectory['legalSection'], 'imprint.example.md'),
-        },
     };
 }

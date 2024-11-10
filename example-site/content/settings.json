@@ -43,6 +43,10 @@
                     "url": "/polityka-prywatnosci"
                 },
                 {
+                    "label": "RODO",
+                    "url": "/klauzula-informacyjna"
+                },
+                {
                     "label": "Kontakt",
                     "url": "/kontakt"
                 }
