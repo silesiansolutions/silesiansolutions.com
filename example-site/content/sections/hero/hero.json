@@ -1,0 +1,18 @@
+{
+    "intro": "Silesian Solutions",
+    "image": {
+        "src": "../../images/rocket.png",
+        "alt": "Rocket Emoji"
+    },
+    "title": "Nowoczesne rozwiązania",
+    "subtitle": {
+        "prefix": "prosto ze ",
+        "highlight": "Śląska",
+        "suffix": "."
+    },
+    "description": "Tworzymy oprogramowanie, które definiuje przyszłość.",
+    "socialProfiles": {
+        "from": ["LinkedIn", "Twitter", "Github"],
+        "showIcons": true
+    }
+}

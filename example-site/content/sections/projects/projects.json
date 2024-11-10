@@ -1,0 +1,98 @@
+{
+    "projects": [
+        {
+            "visible": true,
+            "category": "💻 Strona Internetowa",
+            "title": "Równi w Sieci",
+            "description": "Równi w Sieci to polska organizacja non-profit, której misją jest walka z wykluczeniem cyfrowym, promowanie równego dostępu do internetu i technologii oraz edukacja społeczeństwa w zakresie kompetencji cyfrowych. Strona internetowa została zbudowana w oparciu o nowoczesne technologie, takie jak Gatsby, React i GraphQL, co zapewnia szybkie działanie i pełną responsywność.",
+            "tags": ["Gatsby", "React", "GraphQL"],
+            "image": {
+                "src": "../../images/portfolio/rowniwsieci.pl.png",
+                "alt": "Strona główna Równi w Sieci - organizacja non-profit przeciwdziałająca wykluczeniu cyfrowemu"
+            },
+            "links": [
+                {
+                    "type": "external",
+                    "url": "https://rowniwsieci.pl/"
+                },
+                {
+                    "type": "github",
+                    "url": "https://github.com/silesiansolutions/rowniwsieci.pl"
+                }
+            ]
+        },
+        {
+            "visible": true,
+            "category": "💻 Strona Internetowa",
+            "title": "WIR Hurtownia Artykułów Przemysłowych",
+            "description": "Strona internetowa hurtowni WIR, specjalizującej się w sprzedaży hurtowej artykułów kosmetycznych i chemicznych od 1990 roku. Witryna oparta na WordPress oferuje intuicyjny dostęp do informacji o firmie i asortymencie, gwarantując profesjonalny wizerunek online i responsywność na urządzeniach mobilnych.",
+            "tags": ["WordPress"],
+            "image": {
+                "src": "../../images/portfolio/hurtownia-wir.com.pl-strona.png",
+                "alt": "Nowa strona internetowa hurtowni kosmetyczno-chemicznej WIR"
+            },
+            "links": [
+                {
+                    "type": "external",
+                    "url": "https://hurtownia-wir.com.pl/"
+                }
+            ]
+        },
+        {
+            "visible": true,
+            "category": "🛒 Sklep Internetowy",
+            "title": "WIR Hurtownia Artykułów Przemysłowych",
+            "description": "Aplikacja zakupowa hurtowni WIR, umożliwiająca klientom szybki i wygodny przegląd oferty oraz składanie zamówień online. Aplikacja została zaprojektowana z użyciem TypeScript i Node.js, zapewniając płynne działanie oraz przyjazny interfejs użytkownika.",
+            "tags": ["TypeScript", "Node.js"],
+            "image": {
+                "src": "../../images/portfolio/hurtownia-wir.com.pl-aplikacja.png",
+                "alt": "Aplikacja zakupowa hurtowni WIR z opcją przeglądania i zamawiania produktów online"
+            },
+            "links": [
+                {
+                    "type": "external",
+                    "url": "https://hurtownia-wir.com.pl/zakupy/"
+                }
+            ]
+        },
+        {
+            "visible": true,
+            "category": "💻 Strona Internetowa",
+            "title": "BLS Katowice",
+            "description": "Nowoczesna strona internetowa Biura Likwidacji Szkód BLS Katowice, działającego w branży ubezpieczeniowej od 1995 roku. Zbudowana z użyciem Angulara, zapewnia użytkownikom szybki dostęp do informacji i formularzy zgłoszeniowych.",
+            "tags": ["Angular"],
+            "image": {
+                "src": "../../images/portfolio/bls-katowice.pl-strona.png",
+                "alt": "Strona internetowa Biura Likwidacji Szkód BLS Katowice"
+            },
+            "links": [
+                {
+                    "type": "external",
+                    "url": "https://www.bls-katowice.pl/"
+                }
+            ]
+        },
+        {
+            "visible": true,
+            "category": "💡 System dedykowany",
+            "title": "BLS Katowice",
+            "description": "Platforma BLS Katowice to zaawansowany system do zarządzania dokumentacją oraz obsługi zgłoszeń szkód, dedykowany dla sektora ubezpieczeniowego. Oparty na technologii Angular i Symfony, system zapewnia pełną funkcjonalność dla użytkowników korporacyjnych i umożliwia integrację z zewnętrznymi bazami danych.",
+            "tags": ["Angular", "Symfony"],
+            "image": {
+                "src": "../../images/portfolio/bls-katowice.pl-platforma.png",
+                "alt": "Platforma zarządzania dokumentami i obsługi szkód BLS Katowice"
+            },
+            "links": [
+                {
+                    "type": "external",
+                    "url": "https://www.bls-katowice.pl/panel"
+                }
+            ]
+        }
+    ],
+    "button": {
+        "visible": true,
+        "label": "🌟 Znajdź nas na GitHubie",
+        "url": "https://github.com/silesiansolutions"
+    }
+}
