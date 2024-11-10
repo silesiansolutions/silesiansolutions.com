@@ -1,0 +1,14 @@
+{
+    "name": "",
+    "email": "",
+    "description": "",
+    "image": {
+        "src": "",
+        "alt": "",
+        "objectFit": ""
+    },
+    "socialProfiles": {
+        "from": [],
+        "showIcons": true
+    }
+}

@@ -1,0 +1,20 @@
+.Logo {
+    position: relative;
+    z-index: 9;
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    /* Disable effects when sidebar is open */
+    filter: none !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+    line-height: 2.5rem;
+}
+
+.Logo img,
+.Logo svg,
+.Logo picture > img {
+    width: 160px !important;
+    height: 80px !important;
+    object-fit: contain !important;
+}

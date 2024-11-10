@@ -1,0 +1,56 @@
+{
+    "siteMetadata": {
+        "language": "en",
+        "siteUrl": "",
+        "title": "",
+        "titleTemplate": "%s · Portfolio",
+        "description": "",
+        "author": "",
+        "avatar": "",
+        "bio": "",
+        "social": {
+            "behance": "",
+            "buymeacoffee": "",
+            "devto": "",
+            "discord": "",
+            "dribble": "",
+            "github": "",
+            "gitlab": "",
+            "goodreads": "",
+            "hashnode": "",
+            "instagram": "",
+            "linkedin": "",
+            "mail": "",
+            "mastodon": "",
+            "medium": "",
+            "twitter": "",
+            "twitch": "",
+            "patreon": "",
+            "reddit": "",
+            "untappd": "",
+            "stackoverflow": "",
+            "youtube": ""
+        }
+    },
+    "siteConfiguration": {
+        "logo": { "text": "" },
+        "navigation": {
+            "header": [
+                { "label": "About", "url": "/#about" },
+                { "label": "Blog", "url": "/blog" },
+                { "label": "Features", "url": "/#features" },
+                { "label": "Github", "url": "/#github" }
+            ],
+            "ctaButton": { "openNewTab": true, "label": "Resume", "url": "/resume.pdf" },
+            "footer": [
+                { "label": "Privacy", "url": "/privacy" },
+                { "label": "Imprint", "url": "/imprint" }
+            ]
+        },
+        "featureToggles": {
+            "useDarkModeAsDefault": false,
+            "useDarkModeBasedOnUsersPreference": true,
+            "useCookieBar": false
+        }
+    }
+}

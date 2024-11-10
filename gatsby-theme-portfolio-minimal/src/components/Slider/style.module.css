@@ -1,0 +1,13 @@
+.SlideContainer {
+    white-space: nowrap;
+    margin: 0 -2.5rem;
+    padding: var(--page-padding);
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.SlideContainer::-webkit-scrollbar {
+    display: none;
+}

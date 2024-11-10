@@ -1,0 +1,17 @@
+{
+    "interests": [
+        {
+            "label": "",
+            "image": {
+                "src": "",
+                "alt": "",
+                "objectFit": ""
+            }
+        }
+    ],
+    "button": {
+        "visible": true,
+        "label": "",
+        "initiallyShownInterests": 5
+    }
+}

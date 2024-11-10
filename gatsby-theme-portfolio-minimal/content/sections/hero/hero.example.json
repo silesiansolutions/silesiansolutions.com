@@ -1,0 +1,29 @@
+{
+    "intro": "",
+    "heroPhoto": {
+        "src": "",
+        "alt": ""
+    },
+    "image": {
+        "src": "",
+        "alt": "",
+        "objectFit": ""
+    },
+    "title": "",
+    "subtitle": {
+        "prefix": "",
+        "highlight": "",
+        "suffix": ""
+    },
+    "description": "",
+    "socialProfiles": {
+        "from": [],
+        "showIcons": false
+    },
+    "calendly": {
+        "label": "",
+        "username": "",
+        "colorText": "",
+        "colorButton": ""
+    }
+}

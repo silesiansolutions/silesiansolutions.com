@@ -1,0 +1,32 @@
+{
+    "projects": [
+        {
+            "visible": true,
+            "category": "",
+            "title": "",
+            "description": "",
+            "tags": [""],
+            "image": {
+                "src": "",
+                "alt": "",
+                "linkTo": "",
+                "objectFit": ""
+            },
+            "links": [
+                {
+                    "type": "github",
+                    "url": ""
+                },
+                {
+                    "type": "external",
+                    "url": ""
+                }
+            ]
+        }
+    ],
+    "button": {
+        "visible": true,
+        "label": "",
+        "url": ""
+    }
+}
