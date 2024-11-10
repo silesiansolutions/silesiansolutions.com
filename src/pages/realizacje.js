@@ -1,5 +1,6 @@
 import React from "react";
-import { ContactSection, InterestsSection, ProjectsSection, Page, Seo } from "gatsby-theme-portfolio-minimal";
+import { InterestsSection, ProjectsSection, Page, Seo } from "gatsby-theme-portfolio-minimal";
+import { ContactSection } from "../sections/Contact";
 
 export default function ProjectsPage() {
   return (
