@@ -12,7 +12,7 @@ export function AuthorSnippet(): React.ReactElement {
             ) : null}
             <div className={classes.Description}>
                 <span className={classes.WrittenBy}>
-                    Written By <u>{author}</u>
+                    <u>{author}</u>
                 </span>
                 <p className={classes.Bio}>{bio}</p>
             </div>

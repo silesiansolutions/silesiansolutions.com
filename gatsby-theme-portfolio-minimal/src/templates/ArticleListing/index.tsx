@@ -48,15 +48,15 @@ export default function ArticleListingTemplate(props: ArticleListingTemplateProp
             .filter((id, index, arr) => arr.indexOf(id) === index); // Remove duplicate article ids
     }
 
-    const entities = pluralize(props.pageContext.entityName) ?? 'Articles';
+    const entities = pluralize(props.pageContext.entityName) ?? 'Artykuły';
 
     return (
         <>
-            <Seo title={`All ${entities}`} useTitleTemplate={true} />
+            <Seo title={`Wszystkie ${entities}`} useTitleTemplate={true} />
             <Page>
                 <Section anchor="articleListing" heading={entities}>
                     <div className={classes.Filter}>
-                        Select categories to filter {entities.toLocaleLowerCase()}
+                        Zaznacz kategorie, aby filtrować {entities.toLocaleLowerCase()}
                         <Slider additionalClasses={[classes.Options]}>
                             {filterOptions.map((option, key) => {
                                 return (

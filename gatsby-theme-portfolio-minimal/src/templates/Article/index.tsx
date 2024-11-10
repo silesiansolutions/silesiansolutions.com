@@ -29,10 +29,10 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
                     <div className={classes.Breadcrumb}>
                         <Link
                             to={props.pageContext.listingPagePath}
-                            title={`Back To All ${pluralize(props.pageContext.entityName) ?? 'Articles'}`}
+                            title={`Wróć do ${pluralize(props.pageContext.entityName) ?? 'Artykuły'}`}
                         >
                             <span className={classes.BackArrow}>&#10094;</span>
-                            All {pluralize(props.pageContext.entityName) ?? 'Articles'}
+                            Wszystkie {pluralize(props.pageContext.entityName) ?? 'Artykuły'}
                         </Link>
                     </div>
                     <section className={classes.Header}>
