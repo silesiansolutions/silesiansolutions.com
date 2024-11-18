@@ -21,12 +21,16 @@
         "navigation": {
             "header": [
                 {
-                    "label": "O nas",
-                    "url": "/"
+                    "label": "Oferta",
+                    "url": "/oferta"
                 },
                 {
                     "label": "Realizacje",
                     "url": "/realizacje"
+                },
+                {
+                    "label": "O nas",
+                    "url": "/o-nas"
                 },
                 {
                     "label": "Blog",
