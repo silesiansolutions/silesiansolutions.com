@@ -2,8 +2,9 @@
     "siteMetadata": {
         "language": "pl",
         "siteUrl": "https://silesiansolutions.com/",
+        "thumbnail": "../content/images/silesiansolutions.jpg",
         "title": "Silesian Solutions - Śląskie Rozwiązania",
-        "titleTemplate": "%s · Silesian Solutions",
+        "titleTemplate": "%s · Silesian Solutions - Śląskie Rozwiązania",
         "description": "Silesian Solutions - Śląskie Rozwiązania. Nowoczesne rozwiązania prosto ze Śląska 💻🚀",
         "author": "Silesian Solutions",
         "bio": "Nowoczesne rozwiązania prosto ze Śląska 💻🚀",
