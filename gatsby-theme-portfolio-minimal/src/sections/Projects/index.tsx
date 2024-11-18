@@ -8,7 +8,7 @@ import { PageSection } from '../../types';
 import { useLocalDataSource } from './data';
 import * as classes from './style.module.css';
 
-export function ProjectsSection(props: PageSection): React.ReactElement {
+export function ProjectsSection(props: PageSection & { maxVisibleProjects: number }): React.ReactElement {
     const response = useLocalDataSource();
     const data = response.allProjectsJson.sections[0];
 
@@ -16,7 +16,7 @@ export function ProjectsSection(props: PageSection): React.ReactElement {
         <Animation type="fadeIn">
             <Section anchor={props.sectionId} heading={props.heading}>
                 <Slider additionalClasses={[classes.Projects]}>
-                    {data.projects.map((project, key) => {
+                    {data.projects.slice(0, props.maxVisibleProjects ?? data.projects.length).map((project, key) => {
                         return project.visible ? <Project key={key} index={key} data={project} /> : null;
                     })}
                 </Slider>
