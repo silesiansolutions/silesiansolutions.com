@@ -8,7 +8,7 @@ export default function ContactPage() {
 
     return (
         <>
-            <Seo title="Skontaktuj się z nami" />
+            <Seo title="Skontaktuj się z nami" useTitleTemplate={true} />
             <Page>
                 <ContactSection
                     sectionId="kontakt"

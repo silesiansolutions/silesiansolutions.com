@@ -5,7 +5,7 @@ import { ContactSection } from 'gatsby-theme-portfolio-minimal';
 export default function ProjectsPage() {
     return (
         <>
-            <Seo title="Nasze wybrane realizacje" />
+            <Seo title="Nasze wybrane realizacje" useTitleTemplate={true} />
             <Page>
                 <ProjectsSection sectionId="realizacje" heading="Przykłady naszych projektów" />
                 <InterestsSection sectionId="oferta" heading="Nasze specjalizacje" />
