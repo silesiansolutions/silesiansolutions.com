@@ -26,7 +26,7 @@ export function InterestsSection(props: PageSection): React.ReactElement {
                 <div className={classes.Interests}>
                     {data.interests.slice(0, shownInterests).map((interest, key) => {
                         return (
-                            <Animation key={key} className={classes.Interest} type="scaleIn" delay={key * 100}>
+                            <Animation key={key} className={classes.Interest} type="scaleIn" delay={key * 50}>
                                 {interest.image.src && (
                                     <GatsbyImage
                                         image={interest.image.src.childImageSharp.gatsbyImageData}
@@ -39,7 +39,7 @@ export function InterestsSection(props: PageSection): React.ReactElement {
                         );
                     })}
                     {shouldShowButton && shownInterests < data.interests.length && (
-                        <Animation type="scaleIn" delay={(shownInterests + 1) * 100}>
+                        <Animation type="scaleIn" delay={(shownInterests + 1) * 50}>
                             <Button
                                 type={ButtonType.BUTTON}
                                 onClickHandler={loadMoreHandler}

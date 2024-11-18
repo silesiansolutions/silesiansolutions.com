@@ -15,7 +15,7 @@ export function HeroSection(props: PageSection): React.ReactElement {
     const CalendlyWidget = useCalendlyWidget(data.calendly);
 
     return (
-        <Animation type="fadeUp" delay={400}>
+        <Animation type="fadeUp" delay={300}>
             {CalendlyWidget}
             <Section anchor={props.sectionId} additionalClasses={[classes.HeroContainer]}>
                 {data.heroPhoto?.src && (

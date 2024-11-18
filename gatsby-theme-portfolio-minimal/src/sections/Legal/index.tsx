@@ -1,4 +1,5 @@
 import React from 'react';
+import { Animation } from '../../components/Animation';
 import { Section } from '../../components/Section';
 import { PageSection } from '../../types';
 import { getSectionBySectionId, useLocalDataSource } from './data';
@@ -8,8 +9,10 @@ export function LegalSection(props: PageSection): React.ReactElement {
     const data = getSectionBySectionId(response, props.sectionId);
 
     return (
-        <Section anchor={props.sectionId} heading={props.heading}>
-            <div dangerouslySetInnerHTML={{ __html: data.html }} />
-        </Section>
+        <Animation type="fadeUp" delay={300}>
+            <Section anchor={props.sectionId} heading={props.heading}>
+                <div dangerouslySetInnerHTML={{ __html: data.html }} />
+            </Section>
+        </Animation>
     );
 }

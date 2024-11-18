@@ -10,7 +10,7 @@ export default function OfferPage() {
         <>
             <Seo title="Rozwiązania IT dostosowane do Twoich potrzeb" useTitleTemplate={true} />
             <Page>
-                <Animation type="fadeUp">
+                <Animation type="fadeUp" delay={300}>
                     <Section heading="Rozwiązania IT, które wspierają Twój biznes" anchor="oferta">
                         {allOfferJson.nodes.map((item, index) => (
                             <div key={index} className={classes.offerItem}>

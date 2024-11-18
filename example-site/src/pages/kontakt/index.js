@@ -16,7 +16,7 @@ export default function ContactPage() {
                     description="Jesteśmy do Twojej dyspozycji! Nasz zespół chętnie odpowie na pytania, doradzi i pomoże wybrać najlepsze rozwiązania technologiczne. Możesz się z nami skontaktować przez formularz, telefonicznie lub odwiedzając nas osobiście."
                 />
 
-                <Animation type="fadeUp">
+                <Animation type="fadeUp" delay={600}>
                     <Section
                         heading="Lokalizacja i godziny otwarcia"
                         anchor="lokalizacja-i-godziny-otwarcia"
@@ -32,26 +32,30 @@ export default function ContactPage() {
                                     className={classes.map}
                                 ></iframe>
                             </div>
-                            <div className={classes.hours}>
-                                <h3>Godziny otwarcia:</h3>
-                                <table className={classes.hoursTable}>
-                                    <tbody>
-                                        {allHoursJson.nodes.map((day, index) => (
-                                            <tr key={index}>
-                                                <td>{day.day}</td>
-                                                <td className={day.isOpen ? classes.openHours : classes.closedHours}>
-                                                    <u>{day.hours}</u>
-                                                </td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                            <Animation type="fadeLeft" delay={900}>
+                                <div className={classes.hours}>
+                                    <h3>Godziny otwarcia:</h3>
+                                    <table className={classes.hoursTable}>
+                                        <tbody>
+                                            {allHoursJson.nodes.map((day, index) => (
+                                                <tr key={index}>
+                                                    <td>{day.day}</td>
+                                                    <td
+                                                        className={day.isOpen ? classes.openHours : classes.closedHours}
+                                                    >
+                                                        <u>{day.hours}</u>
+                                                    </td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </Animation>
                         </div>
                     </Section>
                 </Animation>
 
-                <Animation type="fadeUp">
+                <Animation type="fadeUp" delay={300}>
                     <Section heading="Podczas rozmowy mogą zostać omówione następujące kwestie" anchor="faq">
                         {allFaqJson.nodes.map((item, index) => (
                             <div key={index} className={classes.faqItem}>

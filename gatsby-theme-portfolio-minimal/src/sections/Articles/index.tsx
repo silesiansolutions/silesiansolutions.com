@@ -75,7 +75,7 @@ export function ArticlesSection(props: ArticlesSectionProps): React.ReactElement
     }, []);
 
     return (
-        <Animation type="fadeUp" delay={1000}>
+        <Animation type="fadeUp" delay={300}>
             <Section anchor={props.sectionId} heading={props.heading}>
                 <Slider additionalClasses={[classes.Articles]}>
                     {articles.length > 0

@@ -13,7 +13,7 @@ export function ProjectsSection(props: PageSection & { maxVisibleProjects: numbe
     const data = response.allProjectsJson.sections[0];
 
     return (
-        <Animation type="fadeIn">
+        <Animation type="fadeUp" delay={300}>
             <Section anchor={props.sectionId} heading={props.heading}>
                 <Slider additionalClasses={[classes.Projects]}>
                     {data.projects

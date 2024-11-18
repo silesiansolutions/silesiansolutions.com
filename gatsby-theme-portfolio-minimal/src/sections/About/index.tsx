@@ -11,12 +11,12 @@ export function AboutSection(props: PageSection): React.ReactElement {
     const data = response.allAboutMarkdown.sections[0];
 
     return (
-        <Animation type="fadeUp">
+        <Animation type="fadeUp" delay={900}>
             <Section anchor={props.sectionId} heading={props.heading}>
                 <div className={classes.About}>
                     <div className={classes.Description} dangerouslySetInnerHTML={{ __html: data.html }} />
                     {data.frontmatter.imageSrc && (
-                        <Animation type="fadeLeft" delay={200}>
+                        <Animation type="fadeLeft" delay={1200}>
                             <div className={classes.ImageWrapper}>
                                 <GatsbyImage
                                     image={data.frontmatter.imageSrc.childImageSharp.gatsbyImageData}

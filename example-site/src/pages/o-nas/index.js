@@ -10,7 +10,7 @@ export default function AboutUsPage() {
         <>
             <Seo title="Tworzymy technologię, która wspiera rozwój biznesu" useTitleTemplate={true} />
             <Page>
-                <Animation type="fadeUp">
+                <Animation type="fadeUp" delay={300}>
                     <Section heading="Kim jesteśmy?" anchor="o-nas">
                         {allAboutUsJson.nodes.map((item, index) => (
                             <div key={index} className={classes.aboutUsItem}>

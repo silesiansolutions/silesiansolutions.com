@@ -18,7 +18,11 @@ export default function IndexPage() {
                 <HeroSection sectionId="hero" />
                 <AboutSection sectionId="o-nas" heading="Kim jesteśmy?" />
                 <InterestsSection sectionId="oferta" heading="Czym się zajmujemy?" />
-                <ProjectsSection sectionId="realizacje" heading="Przykładowe realizacje i projekty" maxVisibleProjects={3} />
+                <ProjectsSection
+                    sectionId="realizacje"
+                    heading="Przykładowe realizacje i projekty"
+                    maxVisibleProjects={3}
+                />
                 <ArticlesSection
                     sectionId="artykuly"
                     heading="Najnowsze artykuły o IT i technologii"
