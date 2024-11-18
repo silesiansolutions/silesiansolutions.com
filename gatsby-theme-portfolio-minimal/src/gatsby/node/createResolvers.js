@@ -1,10 +1,11 @@
 const path = require(`path`);
 const fs = require(`fs-extra`);
 const svgToMiniDataURI = require('mini-svg-data-uri');
-const { default: PQueue } = require('p-queue');
 const { optimize } = require('svgo');
 
-module.exports = ({ createResolvers, store, reporter }) => {
+module.exports = async ({ createResolvers, store, reporter }) => {
+    const { default: PQueue } = await import('p-queue');
+
     createResolvers({
         ArticleMarkdown: {
             body: { resolve: parentResolverPassthrough('html') },
@@ -12,7 +13,7 @@ module.exports = ({ createResolvers, store, reporter }) => {
         File: {
             svg: {
                 type: 'InlineSvg',
-                resolve: async (source) => await resolveSvgToInlineSvg({ source, store, reporter }),
+                resolve: async (source) => await resolveSvgToInlineSvg({ source, store, reporter, PQueue }),
             },
         },
     });
@@ -43,11 +44,7 @@ function parentResolverPassthrough(field, defaultValue) {
  * Due to this issue: https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal/issues/39
  */
 
-const queue = new PQueue({
-    concurrency: 5,
-});
-
-async function resolveSvgToInlineSvg({ source, store, reporter }) {
+async function resolveSvgToInlineSvg({ source, store, reporter, PQueue }) {
     const { absolutePath } = source;
 
     // Ensure to process only svgs
@@ -55,11 +52,11 @@ async function resolveSvgToInlineSvg({ source, store, reporter }) {
         return null;
     }
 
-    return queueSVG({ absolutePath, store, reporter });
+    return queueSVG({ absolutePath, store, reporter, PQueue });
 }
 
-async function queueSVG({ absolutePath, store, reporter }) {
-    return queue.add(async () => {
+async function queueSVG({ absolutePath, store, reporter, PQueue }) {
+    return PQueue.add(async () => {
         try {
             return await processSVG({ absolutePath, store, reporter });
         } catch (err) {

@@ -14,9 +14,9 @@
         "example-site"
     ],
     "devDependencies": {
-        "husky": "4",
-        "lint-staged": "^10.5.4",
-        "prettier": "^2.2.1"
+        "husky": "9",
+        "lint-staged": "^15.2.10",
+        "prettier": "^3.3.3"
     },
     "husky": {
         "hooks": {
