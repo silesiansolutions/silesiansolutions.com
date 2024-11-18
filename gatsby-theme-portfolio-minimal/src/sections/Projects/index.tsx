@@ -16,9 +16,12 @@ export function ProjectsSection(props: PageSection & { maxVisibleProjects: numbe
         <Animation type="fadeIn">
             <Section anchor={props.sectionId} heading={props.heading}>
                 <Slider additionalClasses={[classes.Projects]}>
-                    {data.projects.slice(0, props.maxVisibleProjects ?? data.projects.length).map((project, key) => {
-                        return project.visible ? <Project key={key} index={key} data={project} /> : null;
-                    })}
+                    {data.projects
+                        .sort(() => (props.maxVisibleProjects ? Math.random() - 0.5 : 0))
+                        .slice(0, props.maxVisibleProjects ?? data.projects.length)
+                        .map((project, key) => {
+                            return project.visible ? <Project key={key} index={key} data={project} /> : null;
+                        })}
                 </Slider>
                 {data.button !== undefined && data.button.visible !== false && (
                     <Animation className={classes.MoreProjects} type="fadeIn">
