@@ -19,7 +19,7 @@ export default function ContactPage() {
                 <Animation type="fadeUp">
                     <Section
                         heading="Lokalizacja i godziny otwarcia"
-                        anchor="kontakt-info"
+                        anchor="lokalizacja-i-godziny-otwarcia"
                         className={classes.infoSection}
                     >
                         <div className={classes.contactInfo}>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 </Animation>
 
                 <Animation type="fadeUp">
-                    <Section heading="Podczas rozmowy mogą zostać omówione następujące kwestie:" anchor="faq">
+                    <Section heading="Podczas rozmowy mogą zostać omówione następujące kwestie" anchor="faq">
                         {allFaqJson.nodes.map((item, index) => (
                             <div key={index} className={classes.faqItem}>
                                 <h3 className={classes.faqQuestion}>{item.question}</h3>

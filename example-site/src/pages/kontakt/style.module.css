@@ -81,7 +81,7 @@
 }
 
 .faqItem {
-    padding: 2rem 0;
+    padding: 1rem 0;
     background: var(--background-color);
     border-radius: 4px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
@@ -95,7 +95,7 @@
 .faqQuestion {
     color: var(--primary-color);
     font-size: 1.25rem;
-    margin: 0 0 1rem 0;
+    margin: 0.5rem 0;
     font-weight: 600;
 }
 
