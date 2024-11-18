@@ -9,7 +9,7 @@ import * as classes from './style.module.css';
 import { pluralize } from '../../utils/pluralize';
 
 // Reference to the local prismjs theme (Modified)
-require('../../globalStyles/prism.css');
+import '../../globalStyles/prism.css';
 
 interface ArticleTemplateProps {
     pageContext: {
