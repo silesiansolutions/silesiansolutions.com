@@ -8,14 +8,13 @@ banner:
     caption: 'Photo by Slejven Djurakovic on Unsplash'
 categories:
     - 'Technologia'
-    - 'Mikroprocesory'
     - 'Innowacje'
 keywords:
     - 'Intel'
-    - 'Procesor'
+    - 'Mikroprocesory'
     - 'Układy scalone'
-    - 'Wydajność'
     - 'Technologia komputerowa'
+    - 'Wydajność procesorów'
 ---
 
 ## Krótki przegląd

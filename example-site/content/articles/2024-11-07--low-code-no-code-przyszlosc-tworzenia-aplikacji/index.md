@@ -7,10 +7,10 @@ banner:
     alt: 'Nowoczesny interfejs platformy low-code/no-code z elementami do przeciągania i upuszczania, z prostymi ikonami kodu i elementami wizualnymi przypominającymi narzędzie do projektowania lub tworzenia aplikacji.'
     caption: 'Obraz stworzony przez DALL-E w ChatGPT'
 categories:
-    - 'Technologie'
-    - 'Rozwój oprogramowania'
+    - 'Technologia'
     - 'Innowacje'
 keywords:
+    - 'Rozwój oprogramowania'
     - 'Low-Code'
     - 'No-Code'
     - 'Tworzenie aplikacji'

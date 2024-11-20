@@ -8,7 +8,6 @@ banner:
     caption: 'Photo by BoliviaInteligente on Unsplash'
 categories:
     - 'Technologia'
-    - 'Gry komputerowe'
     - 'Innowacje'
 keywords:
     - 'Nvidia'

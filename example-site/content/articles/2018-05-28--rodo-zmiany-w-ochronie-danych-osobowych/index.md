@@ -9,10 +9,10 @@ banner:
 categories:
     - 'Bezpieczeństwo'
     - 'Prawo'
-    - 'Zarządzanie danymi'
 keywords:
     - 'RODO'
     - 'GDPR'
+    - 'Zarządzanie danymi'
     - 'Ochrona danych osobowych'
     - 'Zgodność z RODO'
     - 'Bezpieczeństwo danych'

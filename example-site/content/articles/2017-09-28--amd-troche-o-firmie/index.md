@@ -8,7 +8,6 @@ banner:
     caption: 'Photo by Irving Marca on Unsplash'
 categories:
     - 'Technologia'
-    - 'Mikroprocesory'
     - 'Innowacje'
 keywords:
     - 'AMD'

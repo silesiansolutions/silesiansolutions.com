@@ -9,7 +9,6 @@ banner:
 categories:
     - 'Bezpieczeństwo'
     - 'Marketing'
-    - 'SEO'
 keywords:
     - 'Google'
     - 'SSL'

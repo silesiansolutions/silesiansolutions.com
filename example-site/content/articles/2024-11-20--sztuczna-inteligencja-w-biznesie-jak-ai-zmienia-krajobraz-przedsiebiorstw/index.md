@@ -7,10 +7,10 @@ banner:
     alt: 'Nowoczesne biuro z komputerem wyświetlającym zaawansowane dane analityczne generowane przez sztuczną inteligencję. Na ekranie widoczne wykresy, diagramy i analiza trendów, w tle minimalistyczne otoczenie z elementami technologii.'
     caption: 'Obraz stworzony przez DALL-E w ChatGPT'
 categories:
-    - 'Technologie'
-    - 'Sztuczna inteligencja'
-    - 'Biznes'
+    - 'Technologia'
     - 'Innowacje'
+    - 'Biznes'
+    - 'Sztuczna inteligencja'
 keywords:
     - 'Sztuczna inteligencja'
     - 'AI w biznesie'

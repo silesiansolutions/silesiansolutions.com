@@ -7,9 +7,9 @@ banner:
     alt: 'Nowoczesne, futurystyczne cyfrowe miejsce pracy z interfejsem generatywnej AI na ekranie, z elementami wizualnymi takimi jak generowanie tekstu, analiza danych i narzędzia do projektowania. Miejsce pracy ma elegancki, minimalistyczny wygląd z ciemnymi i niebieskimi tonami, sugerującymi innowacje i technologię. Symbole lub ikony AI subtelnie pojawiają się w interfejsie, reprezentując kreatywność i sztuczną inteligencję w tworzeniu treści i projektowaniu produktów. Tło ma abstrakcyjne wzory i linie inspirowane technologią.'
     caption: 'Obraz stworzony przez DALL-E w ChatGPT'
 categories:
-    - 'Technologie'
-    - 'Sztuczna inteligencja'
+    - 'Technologia'
     - 'Innowacje'
+    - 'Sztuczna inteligencja'
 keywords:
     - 'Generatywna AI'
     - 'Sztuczna inteligencja'

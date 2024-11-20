@@ -7,10 +7,10 @@ banner:
     alt: 'Nowoczesne centrum danych korzystające z energii odnawialnej z widocznymi panelami solarnymi i turbinami wiatrowymi, symbolizujące połączenie technologii i ekologii.'
     caption: 'Obraz stworzony przez DALL-E w ChatGPT'
 categories:
-    - 'Zrównoważony rozwój'
-    - 'Technologie'
+    - 'Technologia'
     - 'Innowacje'
 keywords:
+    - 'Zrównoważony rozwój'
     - 'Zrównoważone technologie'
     - 'Efektywność energetyczna'
     - 'Odnawialne źródła energii'
