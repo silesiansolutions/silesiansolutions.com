@@ -64,5 +64,6 @@ function createSlugForFolder({ node, getNode }, options) {
     // Since filePath is something like /articles/first-article, we have to remove the /articles/ part first
     const dirName = filePath.replace(/^\/articles/g, '');
     // Then, we can slugify the remaining folder name and can concatenate the pathPrefix
-    return pathPrefix + slugify(dirName, { remove: /[*+~.()'"!:@]/g });
+    const slug = pathPrefix + slugify(dirName, { remove: /[*+~.()'"!:@]/g });
+    return slug.replace(/\/\d{4}-\d{2}-\d{2}-/, '/');
 }
