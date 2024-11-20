@@ -9,10 +9,13 @@ banner:
 categories:
     - 'Bezpieczeństwo'
     - 'Marketing'
+    - 'SEO'
 keywords:
     - 'Google'
     - 'SSL'
+    - 'Bezpieczeństwo danych'
     - 'SEO'
+    - 'Zaufanie klientów'
 ---
 
 Google od lipca 2018 roku - z wydaniem najnowszej wersji przeglądarki internetowej Chrome 68 - wprowadza rewolucyjne zmiany dotyczące wyszukiwania i wyświetlania stron internetowych. Strony bez szyfrowania SSL (Secure Socket Layer) będą oznaczone jako _niebezpieczne_. To znaczący przełom w kwestii bezpieczeństwa internetowego.

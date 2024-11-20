@@ -7,10 +7,15 @@ banner:
     alt: 'PC CPU Ryzen 5 3600'
     caption: 'Photo by Irving Marca on Unsplash'
 categories:
-    - 'Ciekawostki'
+    - 'Technologia'
+    - 'Mikroprocesory'
+    - 'Innowacje'
 keywords:
     - 'AMD'
-    - 'Procesor'
+    - 'Mikroprocesory'
+    - 'Układy scalone'
+    - 'Technologia komputerowa'
+    - 'Wydajność procesorów'
 ---
 
 Firma AMD jest jednym z czołowych światowych producentów układów scalonych i mikroprocesorów przeznaczonych do urządzeń elektronicznych dla różnorakich firm technologicznych oraz użytkowników domowych. Główne produkty tej firmy to mikroprocesory, chipsety do płyt głównych, systemy wbudowane, a także [procesory graficzne](../karty-graficzne-nvidia/).

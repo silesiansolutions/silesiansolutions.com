@@ -8,13 +8,16 @@ banner:
     caption: 'Obraz stworzony przez DALL-E w ChatGPT'
 categories:
     - 'Technologie'
+    - 'Sztuczna inteligencja'
     - 'Biznes'
+    - 'Innowacje'
 keywords:
     - 'Sztuczna inteligencja'
     - 'AI w biznesie'
     - 'Automatyzacja'
     - 'Personalizacja'
     - 'Analiza danych'
+    - 'Transformacja cyfrowa'
 ---
 
 Sztuczna inteligencja (AI) to technologia, która w ostatnich latach wywarła ogromny wpływ na wiele sektorów biznesowych. W przeciwieństwie do generatywnej AI, o której szczegółowo pisaliśmy w artykule ["Generatywna AI – Rewolucja w Tworzeniu Treści i Projektowaniu Produktów"](../generatywna-ai-rewolucja-w-tworzeniu-tresci), dziś skupimy się na innych aspektach sztucznej inteligencji. AI nie tylko rewolucjonizuje sposoby tworzenia treści, ale także znajduje zastosowanie w strategicznych obszarach przedsiębiorstw, takich jak zarządzanie, obsługa klienta, logistyka czy finanse.

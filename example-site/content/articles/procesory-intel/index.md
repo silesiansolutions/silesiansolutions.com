@@ -7,15 +7,20 @@ banner:
     alt: 'Płyta głowna z procesorem Intel'
     caption: 'Photo by Slejven Djurakovic on Unsplash'
 categories:
-    - 'Ciekawostki'
+    - 'Technologia'
+    - 'Mikroprocesory'
+    - 'Innowacje'
 keywords:
     - 'Intel'
     - 'Procesor'
+    - 'Układy scalone'
+    - 'Wydajność'
+    - 'Technologia komputerowa'
 ---
 
 ## Krótki przegląd
 
-Firma Intel jest jednym z czołowych światowych producentów układów scalonych i mikroprocesorów do urządzeń elektronicznych. Procesory Intel od wielu już lat znajdują one szerokie zastosowanie w komputerach osobistych, stacjonarnych i przenośnych, laptopach, tabletach oraz coraz częściej w telefonach typu smartfon.
+Firma Intel jest jednym z czołowych światowych producentów układów scalonych i mikroprocesorów do urządzeń elektronicznych. Procesory Intel od wielu już lat znajdują szerokie zastosowanie w komputerach osobistych, stacjonarnych i przenośnych, laptopach, tabletach oraz coraz częściej w telefonach typu smartfon.
 
 > Zapewne wiesz, że nasza firma produkuje procesory. Jednak nie tylko tym się zajmujemy. Firma Intel przesuwa granice technicznych innowacji, wzbogacając życie firm, społeczeństw i wszystkich mieszkańców naszego globu.
 

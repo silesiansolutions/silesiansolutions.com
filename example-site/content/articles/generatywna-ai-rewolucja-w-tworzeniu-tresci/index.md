@@ -8,13 +8,14 @@ banner:
     caption: 'Obraz stworzony przez DALL-E w ChatGPT'
 categories:
     - 'Technologie'
-    - 'Biznes'
+    - 'Sztuczna inteligencja'
+    - 'Innowacje'
 keywords:
     - 'Generatywna AI'
     - 'Sztuczna inteligencja'
     - 'Tworzenie treści'
-    - 'Projektowanie produktów'
     - 'Automatyzacja'
+    - 'Innowacje w biznesie'
 ---
 
 W dynamicznie zmieniającym się świecie technologii sztuczna inteligencja (AI) odgrywa coraz większą rolę w różnych sektorach gospodarki. Jednym z najnowszych i najbardziej obiecujących trendów jest generatywna AI, która rewolucjonizuje sposób tworzenia treści, projektowania produktów i podejmowania decyzji biznesowych. Generatywna AI pozwala na kreowanie zupełnie nowych treści oraz wzorów, co otwiera drzwi do innowacji i automatyzacji w biznesie na skalę wcześniej niespotykaną.

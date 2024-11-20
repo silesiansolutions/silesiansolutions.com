@@ -7,11 +7,15 @@ banner:
     alt: 'Logo Nvidia na szklanej kostce'
     caption: 'Photo by BoliviaInteligente on Unsplash'
 categories:
-    - 'Ciekawostki'
+    - 'Technologia'
+    - 'Gry komputerowe'
+    - 'Innowacje'
 keywords:
     - 'Nvidia'
-    - 'karta graficzna'
-    - 'gry komputerowe'
+    - 'Karty graficzne'
+    - 'Układy scalone'
+    - 'Gry komputerowe'
+    - 'Wydajność'
 ---
 
 Nvidia Corporation należy do grona największych, najbardziej i najlepiej rozpoznawalnych producentów układów scalonych i [procesorów graficznych](../procesory-intel/) na świecie. Jest chyba najlepiej znanym dostawcą dla producentów kart graficznych działających na rynku.

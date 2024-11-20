@@ -8,9 +8,14 @@ banner:
     caption: 'Photo by Maksym Kaharlytskyi on Unsplash'
 categories:
     - 'Bezpieczeństwo'
+    - 'Prawo'
+    - 'Zarządzanie danymi'
 keywords:
     - 'RODO'
     - 'GDPR'
+    - 'Ochrona danych osobowych'
+    - 'Zgodność z RODO'
+    - 'Bezpieczeństwo danych'
 ---
 
 RODO, czyli Ogólne Rozporządzenie o Ochronie Danych, zostało wprowadzone w życie 25 maja 2018 roku przez Unię Europejską. To jedna z największych zmian w przepisach dotyczących ochrony danych osobowych w ostatnich latach. Wprowadzenie RODO stanowi kluczowy moment dla firm i organizacji, które przetwarzają dane osobowe mieszkańców UE, wprowadzając szereg nowych wymagań i obowiązków.
