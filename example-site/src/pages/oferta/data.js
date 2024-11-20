@@ -14,3 +14,5 @@ export const useLocalDataSource = () => {
 
     return data;
 };
+
+export default () => null;
