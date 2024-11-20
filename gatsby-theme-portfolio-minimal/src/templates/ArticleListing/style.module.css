@@ -4,6 +4,7 @@
     justify-content: flex-start;
     align-items: stretch;
     flex-wrap: wrap;
+    gap: 2rem 2.5rem;
 }
 
 .Filter {

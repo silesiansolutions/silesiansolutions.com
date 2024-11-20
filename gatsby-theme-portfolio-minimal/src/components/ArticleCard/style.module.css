@@ -1,11 +1,9 @@
 .Card {
     width: 16.25rem;
-    height: auto;
+    height: 100%;
     min-height: 12rem;
     display: inline-flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin: 1rem 2.5rem 2rem 0;
     box-shadow: 0 5px 15px var(--box-shadow-color);
     border-radius: var(--border-radius);
     background: var(--card-color);

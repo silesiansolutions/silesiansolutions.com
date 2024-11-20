@@ -3,4 +3,5 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    gap: 2rem 2.5rem;
 }
