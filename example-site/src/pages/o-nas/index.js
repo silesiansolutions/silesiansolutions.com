@@ -1,7 +1,22 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { Page, Seo, ContactSection, InterestsSection, Animation, Section } from 'gatsby-theme-portfolio-minimal';
 import * as classes from './style.module.css';
-import { useLocalDataSource } from './data';
+
+const useLocalDataSource = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            allAboutUsJson {
+                nodes {
+                    heading
+                    content
+                }
+            }
+        }
+    `);
+
+    return data;
+};
 
 export default function AboutUsPage() {
     const { allAboutUsJson } = useLocalDataSource();

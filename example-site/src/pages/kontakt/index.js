@@ -1,7 +1,29 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { Page, Seo, ContactSection, Section, Animation } from 'gatsby-theme-portfolio-minimal';
-import { useLocalDataSource } from './data';
 import * as classes from './style.module.css';
+
+const useLocalDataSource = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            allHoursJson {
+                nodes {
+                    day
+                    hours
+                    isOpen
+                }
+            }
+            allFaqJson {
+                nodes {
+                    question
+                    answer
+                }
+            }
+        }
+    `);
+
+    return data;
+};
 
 export default function ContactPage() {
     const { allHoursJson, allFaqJson } = useLocalDataSource();
