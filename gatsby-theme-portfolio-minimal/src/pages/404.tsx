@@ -6,10 +6,10 @@ import { Seo } from '../components/Seo';
 export default function NotFoundPage(): React.ReactElement {
     return (
         <>
-            <Seo title="404: Not found" noIndex={true} />
+            <Seo title="404: Nie znaleziono strony" noIndex={true} />
             <Page>
-                <Section heading="Not Found" anchor="404">
-                    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+                <Section heading="Nie znaleziono strony" anchor="404">
+                    <p>Przepraszamy, ale strona, której szukasz, nie istnieje.</p>
                 </Section>
             </Page>
         </>
