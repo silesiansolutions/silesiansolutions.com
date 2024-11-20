@@ -8,6 +8,7 @@ banner:
     caption: 'Obraz stworzony przez DALL-E w ChatGPT'
 categories:
     - 'Technologie'
+    - 'Biznes'
 keywords:
     - 'Generatywna AI'
     - 'Sztuczna inteligencja'
