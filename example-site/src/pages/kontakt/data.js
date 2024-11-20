@@ -21,6 +21,3 @@ export const useLocalDataSource = () => {
 
     return data;
 };
-
-// Add this line to prevent Gatsby from trying to create a page from this file
-export default () => null;
