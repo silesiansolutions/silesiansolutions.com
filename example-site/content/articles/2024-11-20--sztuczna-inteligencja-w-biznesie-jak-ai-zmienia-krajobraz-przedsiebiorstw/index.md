@@ -3,7 +3,7 @@ title: 'Sztuczna inteligencja w biznesie: Jak AI zmienia krajobraz przedsiębior
 description: 'Dowiedz się, jak sztuczna inteligencja przekształca różne sektory biznesu, wspierając automatyzację, personalizację i podejmowanie lepszych decyzji.'
 date: '2024-11-20'
 banner:
-    src: './sztuczna-inteligencja-w-biznesie.webp'
+    src: './sztuczna-inteligencja-w-biznesie-jak-ai-zmienia-krajobraz-przedsiebiorstw.webp'
     alt: 'Nowoczesne biuro z komputerem wyświetlającym zaawansowane dane analityczne generowane przez sztuczną inteligencję. Na ekranie widoczne wykresy, diagramy i analiza trendów, w tle minimalistyczne otoczenie z elementami technologii.'
     caption: 'Obraz stworzony przez DALL-E w ChatGPT'
 categories:

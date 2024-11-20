@@ -3,7 +3,7 @@ title: 'Zrównoważone Technologie – Połączenie Innowacji i Odpowiedzialnoś
 description: 'Zrównoważone technologie integrują nowoczesne rozwiązania z dbałością o środowisko naturalne, łącząc innowacje z odpowiedzialnością ekologiczną i społeczną.'
 date: '2024-11-10'
 banner:
-    src: './zrownowazone-technologie-innowacje-odpowiedzialnosc.webp'
+    src: './zrownowazone-technologie–polaczenie-innowacji-i-odpowiedzialnosci.webp'
     alt: 'Nowoczesne centrum danych korzystające z energii odnawialnej z widocznymi panelami solarnymi i turbinami wiatrowymi, symbolizujące połączenie technologii i ekologii.'
     caption: 'Obraz stworzony przez DALL-E w ChatGPT'
 categories:
