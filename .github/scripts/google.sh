@@ -58,7 +58,7 @@ construct_submission_payload() {
       POST_DIR="${POSTS[i]}"
       POST_NAME=$(basename "$POST_DIR")
       POST_SLUG="${POST_NAME:12}"
-      echo "\"URL_UPDATED\",\"${BASE_URL}/${POST_SLUG}/\"" >> "$TMP_FILE"
+      echo "\"URL_UPDATED\",\"${BASE_URL}/blog/${POST_SLUG}/\"" >> "$TMP_FILE"
     done
   fi
 
