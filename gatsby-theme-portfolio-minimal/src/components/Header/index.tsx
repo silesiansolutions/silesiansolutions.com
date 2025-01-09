@@ -1,10 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { JsonLd } from 'react-schemaorg';
+import { SiteNavigationElement, WithContext } from 'schema-dts';
 
 import { Logo } from '../Logo';
 import { Link } from '../Link';
 import { Animation } from '../Animation';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useSiteConfiguration } from '../../hooks/useSiteConfiguration';
 import * as classes from './style.module.css';
 
@@ -12,6 +15,7 @@ export function Header(): React.ReactElement {
     const [open, setOpen] = React.useState<boolean>(false);
     const siteConfiguration = useSiteConfiguration();
     const isDesktopBreakpoint = useMediaQuery('(min-width: 992px)');
+    const { siteUrl } = useSiteMetadata();
 
     const navigationItems = (
         <>
@@ -59,6 +63,23 @@ export function Header(): React.ReactElement {
         </>
     );
 
+    const structuredData: WithContext<SiteNavigationElement> = {
+        '@context': 'https://schema.org',
+        '@type': 'SiteNavigationElement',
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': siteUrl,
+        },
+        about: siteConfiguration.navigation.header.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            item: {
+                '@type': 'WebPage',
+                url: `${siteUrl}${item.url}`,
+                name: item.label,
+            },
+        })),
+    };
     const topNavigationBar = <nav className={classes.TopNavigationBar}>{navigationItems}</nav>;
 
     return (
@@ -69,6 +90,7 @@ export function Header(): React.ReactElement {
                 <Link to="/" aria-label="home">
                     <Logo fontSize="2rem" color="var(--primary-color" />
                 </Link>
+                <JsonLd<SiteNavigationElement> item={structuredData} />
                 {isDesktopBreakpoint ? topNavigationBar : sideNavigationBar}
             </Animation>
         </header>

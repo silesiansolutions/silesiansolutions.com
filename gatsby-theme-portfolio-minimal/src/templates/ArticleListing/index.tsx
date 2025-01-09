@@ -1,10 +1,14 @@
 import React from 'react';
+import { JsonLd } from 'react-schemaorg';
+import { Blog, WithContext } from 'schema-dts';
+
 import { Page } from '../../components/Page';
 import { Section } from '../../components/Section';
 import { Seo } from '../../components/Seo';
 import { Slider } from '../../components/Slider';
 import { ArticleCard } from '../../components/ArticleCard';
 import { Button, ButtonType } from '../../components/Button';
+import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { ArticleTemplateData } from '../Article/data';
 import * as classes from './style.module.css';
 import { pluralize } from '../../utils/pluralize';
@@ -27,6 +31,7 @@ export default function ArticleListingTemplate(props: ArticleListingTemplateProp
     const articles = props.pageContext.articles;
     const [filterOptions, setFilterOptions] = React.useState<FilterOption[]>(extractFilterOptions(articles));
     const [shownArticlesNumber, setShownArticlesNumber] = React.useState<number>(ARTICLES_PER_PAGE);
+    const { siteUrl } = useSiteMetadata();
 
     function handleFilterOptionClick(optionLabel: string): void {
         const updatedFilterOptions = [...filterOptions];
@@ -49,12 +54,32 @@ export default function ArticleListingTemplate(props: ArticleListingTemplateProp
     }
 
     const entities = pluralize(props.pageContext.entityName) ?? 'Artykuły';
+    const structuredData: WithContext<Blog> = {
+        '@context': 'https://schema.org',
+        '@type': 'Blog',
+        headline: entities,
+        blogPost: articles.map((article) => {
+            return {
+                '@type': 'BlogPosting',
+                headline: article.title,
+                url: `${siteUrl}${article.slug}`,
+                datePublished: article.date,
+                dateModified: article.date,
+                image: {
+                    '@type': 'ImageObject',
+                    url: article.banner.src?.childImageSharp?.gatsbyImageData?.images?.fallback?.src ?? '',
+                    caption: article.banner.caption ?? '',
+                },
+            };
+        }),
+    };
 
     return (
         <>
             <Seo title={`Wszystkie ${entities}`} useTitleTemplate={true} />
             <Page>
                 <Section anchor="articleListing" heading={entities}>
+                    <JsonLd<Blog> item={structuredData} />
                     <div className={classes.Filter}>
                         Zaznacz kategorie, aby filtrować {entities.toLocaleLowerCase()}
                         <Slider additionalClasses={[classes.Options]}>
