@@ -3,8 +3,7 @@ title: 'Jak transformery rewolucjonizują przetwarzanie języka naturalnego i co
 description: 'Odkryj, jak architektura transformera rewolucjonizuje przetwarzanie języka naturalnego i wspiera rozwój biznesu dzięki zaawansowanym technologiom AI.'
 date: '2025-01-17'
 banner:
-    src: './jak-transformery-rewolucjonizuja-przetwarzanie-jezyka-naturalnego-i-co-to-oznacza-dla-biznesu
-.webp'
+    src: './jak-transformery-rewolucjonizuja-przetwarzanie-jezyka-naturalnego-i-co-to-oznacza-dla-biznesu.webp'
     alt: 'Futurystyczna ilustracja transformatora sieci neuronowej w centrum, przedstawionego za pomocą świecących węzłów i skomplikowanych, połączonych linii w odcieniach niebieskiego, fioletu i neonu. Tło zawiera subtelne elementy zorientowane na biznes, takie jak wykresy, ikony danych i grafy, płynnie zintegrowane z projektem. Styl jest szczegółowy, nowoczesny i przekazuje estetykę high-tech.'
     caption: 'Obraz stworzony przez DALL-E w ChatGPT'
 categories:
@@ -14,7 +13,7 @@ categories:
     - 'Sztuczna inteligencja'
 keywords:
     - 'Sztuczna inteligencja'
-    - 'Transformery AI
+    - 'Transformery AI'
     - 'AI w biznesie'
     - 'Przetwarzanie języka naturalnego'
     - 'GPT-3'
