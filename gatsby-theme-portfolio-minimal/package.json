@@ -51,7 +51,7 @@
         }
     },
     "dependencies": {
-        "@fontsource/roboto": "^5.2.5",
+        "@fontsource/roboto": "^5.2.6",
         "fs-extra": "^11.3.0",
         "gatsby-plugin-gdpr-cookies": "^2.0.9",
         "gatsby-plugin-image": "^3.14.0",
