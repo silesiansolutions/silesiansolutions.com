@@ -11,7 +11,7 @@
         "lint": "echo \"Nothing to do here\""
     },
     "dependencies": {
-        "gatsby": "^5.14.3",
+        "gatsby": "^5.14.4",
         "gatsby-theme-portfolio-minimal": "*",
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
