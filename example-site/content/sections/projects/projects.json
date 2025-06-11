@@ -2,19 +2,36 @@
     "projects": [
         {
             "visible": true,
+            "category": "💡 System dedykowany",
+            "title": "CyberKatalog",
+            "description": "CyberKatalog.pl to innowacyjna platforma online promująca polskie firmy z sektora cyberbezpieczeństwa na arenie międzynarodowej. Stworzyliśmy interaktywny katalog, który ułatwia nawiązywanie kontaktów biznesowych. Nowoczesny interfejs, zbudowany w oparciu o Svelte i Tailwind CSS, gwarantuje intuicyjną obsługę na każdym urządzeniu. System oferuje zaawansowane filtrowanie, wyszukiwarkę oraz integrację z API, co umożliwia efektywną prezentację firm podczas kluczowych wydarzeń branżowych.",
+            "tags": ["Svelte", "Tailwind CSS", "TypeScript", "Node.js"],
+            "image": {
+                "src": "./images/cyberkatalog.pl.png",
+                "alt": "Interfejs CyberKatalog - katalog firm cyberbezpieczeństwa"
+            },
+            "links": [
+                {
+                    "type": "external",
+                    "url": "https://cyberkatalog.pl/"
+                },
+                {
+                    "type": "github",
+                    "url": "https://github.com/cyberkatalog"
+                }
+            ]
+        },
+        {
+            "visible": true,
             "category": "💻 Strona Internetowa",
             "title": "Równi w Sieci",
-            "description": "Równi w Sieci to polska organizacja non-profit, której misją jest walka z wykluczeniem cyfrowym, promowanie równego dostępu do internetu i technologii oraz edukacja społeczeństwa w zakresie kompetencji cyfrowych. Strona internetowa została zbudowana w oparciu o nowoczesne technologie, takie jak Gatsby, React i GraphQL, co zapewnia szybkie działanie i pełną responsywność.",
+            "description": "Wspierając misję organizacji non-profit Równi w Sieci, stworzyliśmy stronę internetową dedykowaną walce z wykluczeniem cyfrowym. Wykorzystując technologie takie jak Gatsby, React i GraphQL, zbudowaliśmy ultra-szybką i w pełni responsywną witrynę, która skutecznie wspiera działania edukacyjne organizacji i dociera do szerokiego grona odbiorców.",
             "tags": ["Gatsby", "React", "GraphQL"],
             "image": {
                 "src": "./images/rowniwsieci.pl.png",
                 "alt": "Strona główna Równi w Sieci - organizacja non-profit przeciwdziałająca wykluczeniu cyfrowemu"
             },
             "links": [
-                {
-                    "type": "external",
-                    "url": "https://rowniwsieci.pl/"
-                },
                 {
                     "type": "github",
                     "url": "https://github.com/silesiansolutions/rowniwsieci.pl"
@@ -25,11 +42,11 @@
             "visible": true,
             "category": "🛒 Sklep Internetowy",
             "title": "WIR Hurtownia Artykułów Przemysłowych",
-            "description": "Aplikacja zakupowa hurtowni WIR, umożliwiająca klientom szybki i wygodny przegląd oferty oraz składanie zamówień online. Aplikacja została zaprojektowana z użyciem TypeScript i Node.js, zapewniając płynne działanie oraz przyjazny interfejs użytkownika.",
+            "description": "Dla hurtowni WIR opracowaliśmy dedykowaną aplikację zakupową B2B, która cyfryzuje i usprawnia proces składania zamówień. Rozwiązanie oparte na TypeScript i Node.js umożliwia klientom hurtowni błyskawiczny dostęp do oferty oraz intuicyjne zarządzanie zakupami online, zapewniając płynność działania i maksymalną wygodę.",
             "tags": ["TypeScript", "Node.js"],
             "image": {
                 "src": "./images/hurtownia-wir.com.pl-aplikacja.png",
-                "alt": "Aplikacja zakupowa hurtowni WIR z opcją przeglądania i zamawiania produktów online"
+                "alt": "Aplikacja zakupowa B2B dla hurtowni WIR"
             },
             "links": []
         },
@@ -37,7 +54,7 @@
             "visible": true,
             "category": "💻 Strona Internetowa",
             "title": "WIR Hurtownia Artykułów Przemysłowych",
-            "description": "Strona internetowa hurtowni WIR, specjalizującej się w sprzedaży hurtowej artykułów kosmetycznych i chemicznych od 1990 roku. Witryna oparta na WordPress oferuje intuicyjny dostęp do informacji o firmie i asortymencie, gwarantując profesjonalny wizerunek online i responsywność na urządzeniach mobilnych.",
+            "description": "Zmodernizowaliśmy wizerunek online hurtowni WIR, firmy z tradycjami sięgającymi 1990 roku. Nowa strona internetowa, oparta na elastycznym systemie WordPress, profesjonalnie prezentuje ofertę artykułów kosmetycznych i chemicznych. Zapewniliśmy intuicyjną nawigację oraz pełną responsywność, by skutecznie wspierać działalność firmy w świecie cyfrowym.",
             "tags": ["WordPress"],
             "image": {
                 "src": "./images/hurtownia-wir.com.pl-strona.png",
@@ -54,11 +71,11 @@
             "visible": true,
             "category": "💡 System dedykowany",
             "title": "BLS Katowice",
-            "description": "Platforma BLS Katowice to zaawansowany system do zarządzania dokumentacją oraz obsługi zgłoszeń szkód, dedykowany dla sektora ubezpieczeniowego. Oparty na technologii Angular i Symfony, system zapewnia pełną funkcjonalność dla użytkowników korporacyjnych i umożliwia integrację z zewnętrznymi bazami danych.",
+            "description": "Stworzyliśmy zaawansowany system dla Biura Likwidacji Szkód BLS Katowice, który rewolucjonizuje zarządzanie dokumentacją i procesem obsługi szkód. Platforma, oparta na technologiach Angular i Symfony, centralizuje dane, automatyzuje przepływ pracy oraz zapewnia bezpieczną obsługę zgłoszeń i integrację z zewnętrznymi bazami danych.",
             "tags": ["Angular", "Symfony"],
             "image": {
                 "src": "./images/bls-katowice.pl-platforma.png",
-                "alt": "Platforma zarządzania dokumentami i obsługi szkód BLS Katowice"
+                "alt": "Platforma do zarządzania dokumentacją i obsługi szkód BLS Katowice"
             },
             "links": []
         },
@@ -66,7 +83,7 @@
             "visible": true,
             "category": "💻 Strona Internetowa",
             "title": "BLS Katowice",
-            "description": "Nowoczesna strona internetowa Biura Likwidacji Szkód BLS Katowice, działającego w branży ubezpieczeniowej od 1995 roku. Zbudowana z użyciem Angulara, zapewnia użytkownikom szybki dostęp do informacji i formularzy zgłoszeniowych.",
+            "description": "Dla Biura Likwidacji Szkód BLS Katowice, firmy z ponad 25-letnim doświadczeniem, zaprojektowaliśmy nowoczesną witrynę korporacyjną. Strona, zbudowana w technologii Angular, gwarantuje błyskawiczne działanie i upraszcza proces zgłaszania szkód dzięki intuicyjnym formularzom online, podnosząc jakość obsługi klienta.",
             "tags": ["Angular"],
             "image": {
                 "src": "./images/bls-katowice.pl-strona.png",
@@ -83,11 +100,11 @@
             "visible": true,
             "category": "💡 System dedykowany",
             "title": "Best Assistance",
-            "description": "Aplikacja mobilna Best Assistance to narzędzie do zgłaszania szkód i korzystania z usług firmy ubezpieczeniowej na smartfony i tablety. Aplikacja PWA zbudowana w oparciu o Angular i Symfony, zapewnia klientom szybki dostęp do informacji i możliwość zgłaszania szkód w dowolnym miejscu i czasie.",
+            "description": "Z myślą o klientach Best Assistance, stworzyliśmy nowoczesną aplikację mobilną PWA do kompleksowej obsługi szkód. Aplikacja, wykorzystująca potencjał Angulara i Symfony, działa na każdym urządzeniu bez instalacji. Zapewnia natychmiastowy dostęp do usług, umożliwiając szybkie zgłaszanie szkód z dowolnego miejsca, 24/7.",
             "tags": ["Angular", "Symfony"],
             "image": {
                 "src": "./images/e-best.com.pl-pwa.png",
-                "alt": "Aplikacja Mobilna Best Assistance"
+                "alt": "Aplikacja mobilna PWA dla Best Assistance"
             },
             "links": []
         },
@@ -95,11 +112,11 @@
             "visible": true,
             "category": "💡 System dedykowany",
             "title": "Best Assistance",
-            "description": "Panel administracyjny Best Assistance to zaawansowane narzędzie do zarządzania zgłoszeniami szkód oraz obsługą klientów, stworzone dla firmy ubezpieczeniowej. Aplikacja webowa zbudowana w oparciu o Symfony i Twig, zapewnia pełną funkcjonalność dla pracowników firmy i umożliwia szybką obsługę zgłoszeń.",
+            "description": "Wdrożyliśmy centralny panel administracyjny dla Best Assistance, który optymalizuje procesy zarządzania szkodami. System, oparty na technologii Symfony i Twig, stanowi centrum operacyjne dla pracowników, umożliwiając efektywne monitorowanie zgłoszeń i skrócenie czasu obsługi każdego przypadku.",
             "tags": ["Symfony", "Twig"],
             "image": {
                 "src": "./images/e-best.com.pl-panel.png",
-                "alt": "Platforma zarządzania zgłoszeniami szkód firmy Best Assistance"
+                "alt": "Panel administracyjny do zarządzania szkodami dla Best Assistance"
             },
             "links": []
         },
@@ -107,18 +124,13 @@
             "visible": true,
             "category": "💻 Strona Internetowa",
             "title": "Best Assistance",
-            "description": "Strona internetowa firmy Best Assistance, specjalizującej się w obsłudze klientów i zarządzaniu szkodami. Zbudowana z użyciem Symfony i Twig, witryna oferuje klientom szybki dostęp do informacji o firmie i usługach, zapewniając profesjonalny wizerunek online.",
+            "description": "Zaprojektowaliśmy i wdrożyliśmy profesjonalną stronę internetową dla Best Assistance, która stanowi cyfrową wizytówkę firmy. Witryna, oparta o framework Symfony, klarownie prezentuje ofertę usług w zakresie zarządzania szkodami i buduje zaufanie klientów dzięki intuicyjnej architekturze informacji.",
             "tags": ["Symfony", "Twig"],
             "image": {
                 "src": "./images/e-best.com.pl-strona.png",
                 "alt": "Strona internetowa firmy Best Assistance"
             },
-            "links": [
-                {
-                    "type": "external",
-                    "url": "https://e-best.com.pl"
-                }
-            ]
+            "links": []
         }
     ],
     "button": {
