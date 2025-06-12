@@ -54,7 +54,8 @@
     margin-top: 1rem;
 }
 
-.Project .Details .Links a {
+.Project .Details .Links a,
+.Project .Details .Links .ViewProjectLink {
     display: inline-block;
     margin-right: 2rem;
 }

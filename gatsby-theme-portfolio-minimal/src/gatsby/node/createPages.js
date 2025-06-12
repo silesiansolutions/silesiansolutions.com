@@ -1,5 +1,6 @@
 const path = require('path');
 const query = require('../../templates/Article/query');
+const projectQuery = require('../../templates/Project/query');
 
 module.exports = async ({ graphql, actions, reporter }, options) => {
     const templateDir = path.join(__dirname, '../', '../', '../', 'src', 'templates');
@@ -41,4 +42,30 @@ module.exports = async ({ graphql, actions, reporter }, options) => {
             },
         });
     });
+
+    const projectResponse = await graphql(projectQuery.ProjectTemplateQuery);
+    const projectData = projectResponse.data;
+
+    if (!projectData && projectResponse.errors) {
+        throw new Error(`Error while fetching project data, ${projectResponse.errors}`);
+    } else if (projectData.allProjectsJson.sections.length === 0) {
+        reporter.info('No projects found, skipping project page creation');
+    } else {
+        const allProjects = projectData.allProjectsJson.sections[0].projects.filter(
+            (project) => project.visible && project.slug,
+        );
+
+        allProjects.forEach((project) => {
+            reporter.info(`Creating Project page under /realizacje/${project.slug}`);
+            actions.createPage({
+                path: `/realizacje/${project.slug}`,
+                component: path.resolve(templateDir, 'Project', 'index.tsx'),
+                context: {
+                    project: project,
+                    listingPagePath: '/realizacje',
+                    entityName: 'realizacja',
+                },
+            });
+        });
+    }
 };

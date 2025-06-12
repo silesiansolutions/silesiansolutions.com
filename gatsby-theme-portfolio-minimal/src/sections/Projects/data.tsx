@@ -25,6 +25,7 @@ export const useLocalDataSource = (): ProjectsSectionQueryResult => {
                         visible
                     }
                     projects {
+                        slug
                         category
                         description
                         image {

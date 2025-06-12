@@ -52,6 +52,7 @@ module.exports = ({ actions }) => {
         url: String
     }
     type Project {
+        slug: String!
         visible: Boolean
         category: String
         title: String

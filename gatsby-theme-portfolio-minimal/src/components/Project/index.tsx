@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Animation } from '../Animation';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
@@ -12,6 +13,7 @@ enum LinkType {
 }
 
 export interface Project {
+    slug: string;
     category?: string;
     title: string;
     description: string;
@@ -56,6 +58,15 @@ export function Project(props: ProjectProps): React.ReactElement {
                         })}
                 </div>
                 <div className={classes.Links}>
+                    {props.data.slug && (
+                        <Link
+                            to={`/realizacje/${props.data.slug}`}
+                            className={classes.ViewProjectLink}
+                            aria-label="Zobacz projekt"
+                        >
+                            <Icon name="internal" color="var(--subtext-color)" />
+                        </Link>
+                    )}
                     {props.data.links &&
                         props.data.links.length !== 0 &&
                         props.data.links.map((link, key) => {
@@ -65,7 +76,7 @@ export function Project(props: ProjectProps): React.ReactElement {
                                     href={link.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label="External Link"
+                                    aria-label="Zewnętrzny link"
                                 >
                                     <Icon name={link.type} color="var(--subtext-color)" />
                                 </a>
@@ -80,7 +91,7 @@ export function Project(props: ProjectProps): React.ReactElement {
                         imgClassName={classes.ProjectImage}
                         objectFit={props.data.image.objectFit}
                         image={props.data.image.src.childImageSharp.gatsbyImageData}
-                        alt={props.data.image.alt || `Project ${props.data.title}`}
+                        alt={props.data.image.alt || `Projekt ${props.data.title}`}
                     />
                 </a>
             )}
@@ -90,7 +101,7 @@ export function Project(props: ProjectProps): React.ReactElement {
                     imgClassName={classes.ProjectImage}
                     objectFit={props.data.image.objectFit}
                     image={props.data.image.src.childImageSharp.gatsbyImageData}
-                    alt={props.data.image.alt || `Project ${props.data.title}`}
+                    alt={props.data.image.alt || `Projekt ${props.data.title}`}
                 />
             )}
         </Animation>

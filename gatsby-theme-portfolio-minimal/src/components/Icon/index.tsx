@@ -22,6 +22,7 @@ import { IconTwitch } from './IconTwitch';
 import { IconYouTube } from './IconYouTube';
 import { IconUntappd } from './IconUntappd';
 import { IconFacebook } from './IconFacebook';
+import { IconInternal } from './IconInternal';
 
 interface IconProps {
     name: string;
@@ -76,6 +77,8 @@ export function Icon(props: IconProps): React.ReactElement | null {
             return <IconUntappd color={props.color} />;
         case 'facebook':
             return <IconFacebook color={props.color} />;
+        case 'internal':
+            return <IconInternal color={props.color} />;
         default:
             return null;
     }

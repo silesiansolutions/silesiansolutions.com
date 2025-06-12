@@ -3,12 +3,13 @@
         {
             "visible": true,
             "category": "💡 System dedykowany",
-            "title": "CyberKatalog",
+            "title": "Cyber Katalog",
+            "slug": "cyber-katalog",
             "description": "CyberKatalog.pl to innowacyjna platforma online promująca polskie firmy z sektora cyberbezpieczeństwa na arenie międzynarodowej. Stworzyliśmy interaktywny katalog, który ułatwia nawiązywanie kontaktów biznesowych. Nowoczesny interfejs, zbudowany w oparciu o Svelte i Tailwind CSS, gwarantuje intuicyjną obsługę na każdym urządzeniu. System oferuje zaawansowane filtrowanie, wyszukiwarkę oraz integrację z API, co umożliwia efektywną prezentację firm podczas kluczowych wydarzeń branżowych.",
             "tags": ["Svelte", "Tailwind CSS", "TypeScript", "Node.js"],
             "image": {
                 "src": "./images/cyberkatalog.pl.png",
-                "alt": "Interfejs CyberKatalog - katalog firm cyberbezpieczeństwa"
+                "alt": "Interfejs Cyber Katalog - katalog firm cyberbezpieczeństwa"
             },
             "links": [
                 {
@@ -25,6 +26,7 @@
             "visible": true,
             "category": "💻 Strona Internetowa",
             "title": "Równi w Sieci",
+            "slug": "rowni-w-sieci",
             "description": "Wspierając misję organizacji non-profit Równi w Sieci, stworzyliśmy stronę internetową dedykowaną walce z wykluczeniem cyfrowym. Wykorzystując technologie takie jak Gatsby, React i GraphQL, zbudowaliśmy ultra-szybką i w pełni responsywną witrynę, która skutecznie wspiera działania edukacyjne organizacji i dociera do szerokiego grona odbiorców.",
             "tags": ["Gatsby", "React", "GraphQL"],
             "image": {
@@ -42,6 +44,7 @@
             "visible": true,
             "category": "🛒 Sklep Internetowy",
             "title": "WIR Hurtownia Artykułów Przemysłowych",
+            "slug": "wir-hurtownia-sklep-internetowy",
             "description": "Dla hurtowni WIR opracowaliśmy dedykowaną aplikację zakupową B2B, która cyfryzuje i usprawnia proces składania zamówień. Rozwiązanie oparte na TypeScript i Node.js umożliwia klientom hurtowni błyskawiczny dostęp do oferty oraz intuicyjne zarządzanie zakupami online, zapewniając płynność działania i maksymalną wygodę.",
             "tags": ["TypeScript", "Node.js"],
             "image": {
@@ -54,6 +57,7 @@
             "visible": true,
             "category": "💻 Strona Internetowa",
             "title": "WIR Hurtownia Artykułów Przemysłowych",
+            "slug": "wir-hurtownia-strona-internetowa",
             "description": "Zmodernizowaliśmy wizerunek online hurtowni WIR, firmy z tradycjami sięgającymi 1990 roku. Nowa strona internetowa, oparta na elastycznym systemie WordPress, profesjonalnie prezentuje ofertę artykułów kosmetycznych i chemicznych. Zapewniliśmy intuicyjną nawigację oraz pełną responsywność, by skutecznie wspierać działalność firmy w świecie cyfrowym.",
             "tags": ["WordPress"],
             "image": {
@@ -71,6 +75,7 @@
             "visible": true,
             "category": "💡 System dedykowany",
             "title": "BLS Katowice",
+            "slug": "bls-katowice-system-dedykowany",
             "description": "Stworzyliśmy zaawansowany system dla Biura Likwidacji Szkód BLS Katowice, który rewolucjonizuje zarządzanie dokumentacją i procesem obsługi szkód. Platforma, oparta na technologiach Angular i Symfony, centralizuje dane, automatyzuje przepływ pracy oraz zapewnia bezpieczną obsługę zgłoszeń i integrację z zewnętrznymi bazami danych.",
             "tags": ["Angular", "Symfony"],
             "image": {
@@ -83,6 +88,7 @@
             "visible": true,
             "category": "💻 Strona Internetowa",
             "title": "BLS Katowice",
+            "slug": "bls-katowice-strona-internetowa",
             "description": "Dla Biura Likwidacji Szkód BLS Katowice, firmy z ponad 25-letnim doświadczeniem, zaprojektowaliśmy nowoczesną witrynę korporacyjną. Strona, zbudowana w technologii Angular, gwarantuje błyskawiczne działanie i upraszcza proces zgłaszania szkód dzięki intuicyjnym formularzom online, podnosząc jakość obsługi klienta.",
             "tags": ["Angular"],
             "image": {
@@ -100,6 +106,7 @@
             "visible": true,
             "category": "💡 System dedykowany",
             "title": "Best Assistance",
+            "slug": "best-assistance-system-dedykowany-pwa",
             "description": "Z myślą o klientach Best Assistance, stworzyliśmy nowoczesną aplikację mobilną PWA do kompleksowej obsługi szkód. Aplikacja, wykorzystująca potencjał Angulara i Symfony, działa na każdym urządzeniu bez instalacji. Zapewnia natychmiastowy dostęp do usług, umożliwiając szybkie zgłaszanie szkód z dowolnego miejsca, 24/7.",
             "tags": ["Angular", "Symfony"],
             "image": {
@@ -112,6 +119,7 @@
             "visible": true,
             "category": "💡 System dedykowany",
             "title": "Best Assistance",
+            "slug": "best-assistance-system-dedykowany-panel-administracyjny",
             "description": "Wdrożyliśmy centralny panel administracyjny dla Best Assistance, który optymalizuje procesy zarządzania szkodami. System, oparty na technologii Symfony i Twig, stanowi centrum operacyjne dla pracowników, umożliwiając efektywne monitorowanie zgłoszeń i skrócenie czasu obsługi każdego przypadku.",
             "tags": ["Symfony", "Twig"],
             "image": {
@@ -124,6 +132,7 @@
             "visible": true,
             "category": "💻 Strona Internetowa",
             "title": "Best Assistance",
+            "slug": "best-assistance-strona-internetowa",
             "description": "Zaprojektowaliśmy i wdrożyliśmy profesjonalną stronę internetową dla Best Assistance, która stanowi cyfrową wizytówkę firmy. Witryna, oparta o framework Symfony, klarownie prezentuje ofertę usług w zakresie zarządzania szkodami i buduje zaufanie klientów dzięki intuicyjnej architekturze informacji.",
             "tags": ["Symfony", "Twig"],
             "image": {
