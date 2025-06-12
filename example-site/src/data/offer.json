@@ -1,62 +1,667 @@
 [
     {
+        "slug": "sztuczna-inteligencja-ai",
         "heading": "🤖 Sztuczna Inteligencja (AI)",
-        "content": "Wykorzystujemy potencjał sztucznej inteligencji, aby tworzyć rozwiązania wspierające automatyzację, analizę danych i podejmowanie decyzji. Nasze usługi AI pomagają firmom zyskać przewagę konkurencyjną i optymalizować procesy."
+        "content": "Wykorzystujemy potencjał sztucznej inteligencji, aby tworzyć rozwiązania wspierające automatyzację, analizę danych i podejmowanie decyzji. Nasze usługi AI pomagają firmom zyskać przewagę konkurencyjną i optymalizować procesy, uwzględniając najnowsze osiągnięcia w generatywnej AI i MLOps.",
+        "description": "Nowoczesne rozwiązania AI: generatywna AI, analiza predykcyjna, NLP, computer vision i MLOps dla firm, które chcą zoptymalizować procesy i zwiększyć przewagę konkurencyjną.",
+        "detailedContent": "Nasze rozwiązania w zakresie sztucznej inteligencji pomagają firmom wykorzystać pełny potencjał danych i automatyzacji. Oferujemy kompleksowe usługi obejmujące:\n\nAnalizę predykcyjną i prognozowanie trendów: wykorzystujemy modele uczenia maszynowego i deep learning do przewidywania zachowań klientów, popytu rynkowego czy optymalizacji łańcucha dostaw.\nPrzetwarzanie języka naturalnego (NLP) i generatywna AI: budujemy chatboty, systemy FAQ, generujemy treści marketingowe, automatyzujemy tłumaczenia i analizę sentymentu z wykorzystaniem najnowszych modeli (np. GPT-4/5, BERT, T5).\nComputer Vision i rozpoznawanie obrazów: wdrażamy systemy do automatycznej analizy zdjęć i wideo (np. w kontroli jakości, bezpieczeństwie, medycynie), wykorzystując sieci CNN, detekcję obiektów i segmentację.\nImplementację inteligentnych systemów wspierających decyzje: budujemy systemy rekomendacyjne, scoring klientów, dynamiczne ustalanie cen i systemy wspomagania decyzyjnego oparte na danych w czasie rzeczywistym.\nMLOps i wdrożenia w chmurze: wdrażamy procesy CI/CD dla modeli ML, wersjonowanie danych, monitorowanie driftsów, automatyczne retrainingi, integrując z platformami typu Azure ML, AWS SageMaker, Google Vertex AI.\n\nSpecjalizujemy się w tworzeniu dedykowanych modeli uczenia maszynowego i deep learning dostosowanych do specyficznych potrzeb biznesowych. Nasze usługi obejmują audit danych i procesów, projektowanie architektury AI, rozwój prototypów, produkcyjne wdrożenia oraz monitorowanie i optymalizację.\n\nWdrażamy rozwiązania z uwzględnieniem zasad bezpieczeństwa i zgodności (np. GDPR, RODO) oraz etyki AI. Stosujemy najlepsze praktyki explainable AI (XAI), aby systemy były przejrzyste i zaufane. Oferujemy szkolenia i wsparcie dla zespołów klienta.\n\nDzięki automatyzacji powtarzalnych zadań, lepszej personalizacji i szybszej analizie danych, nasi klienci osiągają znaczną redukcję kosztów operacyjnych, poprawę efektywności procesów i lepsze doświadczenia użytkowników.",
+        "technologies": [
+            "Python",
+            "TensorFlow",
+            "PyTorch",
+            "scikit-learn",
+            "Hugging Face Transformers",
+            "OpenAI API",
+            "Azure Machine Learning",
+            "AWS SageMaker",
+            "Google Vertex AI",
+            "Docker",
+            "Kubernetes",
+            "MLflow",
+            "Kubeflow",
+            "Apache Spark"
+        ],
+        "benefits": [
+            "Automatyzacja i przyspieszenie procesów decyzyjnych",
+            "Analiza predykcyjna umożliwiająca proaktywne działania",
+            "Generowanie treści i interakcja oparta na NLP",
+            "Zwiększenie personalizacji ofert i doświadczeń klientów",
+            "Redukcja kosztów operacyjnych dzięki automatyzacji",
+            "Monitorowanie i optymalizacja modeli w produkcji",
+            "Lepsze zarządzanie ryzykiem dzięki explainable AI",
+            "Skalowalność rozwiązań AI w chmurze"
+        ],
+        "examples": [
+            "System rekomendacyjny e-commerce wykorzystujący deep learning",
+            "Chatbot i wirtualny asystent z generatywną AI dla obsługi klienta",
+            "Analiza sentymentu w mediach społecznościowych w czasie rzeczywistym",
+            "Predykcja popytu i optymalizacja łańcucha dostaw",
+            "Wykrywanie nadużyć finansowych z wykorzystaniem ML",
+            "Automatyczna analiza obrazów w procesie kontroli jakości produkcji"
+        ],
+        "image": {
+            "src": "./images/ai-sztuczna-inteligencja.png",
+            "alt": "Sztuczna Inteligencja - generatywna AI, analiza predykcyjna, NLP i computer vision"
+        }
     },
     {
+        "slug": "strony-internetowe",
         "heading": "💻 Strony Internetowe",
-        "content": "Projektujemy i tworzymy responsywne strony internetowe, które nie tylko wyglądają świetnie, ale także są zoptymalizowane pod kątem SEO i UX. Dzięki naszym rozwiązaniom Twoja firma zyska nowoczesną wizytówkę w sieci."
+        "content": "Projektujemy i tworzymy responsywne, szybkie i przyjazne dla SEO strony internetowe, uwzględniając najnowsze trendy jak core web vitals, headless CMS i Jamstack. Zapewniamy doskonałe UX oraz optymalizację wydajności.",
+        "description": "Profesjonalne strony internetowe: responsywne, szybkie, SEO-friendly, oparte na nowoczesnych technologiach webowych i najlepszych praktykach UX/UI.",
+        "detailedContent": "Tworzymy nowoczesne strony internetowe, które stanowią skuteczne narzędzie marketingowe i biznesowe, w oparciu o aktualne trendy:\n\nHeadless CMS i Jamstack: implementujemy rozwiązania oddzielające frontend od backendu, co zwiększa szybkość, bezpieczeństwo i skalowalność.\nCore Web Vitals i optymalizacja wydajności: dbamy o minimalne czasy ładowania, lazy loading obrazów, prefetching zasobów, optymalizację kodu i zasobów statycznych.\nResponsywność i mobile-first: projektujemy zgodnie z zasadą mobile-first, zapewniając doskonałe doświadczenie na wszystkich urządzeniach.\nSEO techniczne i semantyka: stosujemy semantyczne znaczniki HTML, struktury danych (schema.org), optymalizujemy meta tagi, nagłówki, linkowanie wewnętrzne i sitemapę.\nNowoczesne frameworki frontendowe: wykorzystujemy React (Next.js), Vue.js (Nuxt), SvelteKit, Gatsby, by tworzyć szybkie i skalowalne aplikacje.\nUX/UI zgodne z trendami: minimalistyczne interfejsy, ciemny motyw, microinterakcje, animacje CSS/Framer Motion, dostępność (WCAG).\nIntegracja z narzędziami marketingowymi: analityka (Google Analytics 4), narzędzia CRO, A/B testing, automatyzacja marketingu.\nBezpieczeństwo: stosujemy HTTPS, Content Security Policy, ochrona przed XSS, CSRF i innymi atakami.\nZarządzanie treścią: integrujemy headless CMS (Strapi, Contentful) lub tradycyjne CMS z optymalizacją pod SEO.\n\nRealizujemy projekty: strony korporacyjne, landing page'y, portale informacyjne, sklepy headless, blogi firmowe. Proces od analizy potrzeb, przez projekt UX/UI, development, testy, aż po wdrożenie i monitoring.\n\nDodatkowo oferujemy wsparcie w utrzymaniu, aktualizacjach, migracji treści oraz szkolenia dla zespołów klienta.",
+        "technologies": [
+            "React",
+            "Next.js",
+            "Gatsby",
+            "Vue.js",
+            "Nuxt.js",
+            "SvelteKit",
+            "TypeScript",
+            "Tailwind CSS",
+            "SCSS",
+            "Headless CMS (Strapi, Contentful, Prismic)",
+            "GraphQL",
+            "REST API",
+            "Netlify",
+            "Vercel",
+            "Docker"
+        ],
+        "benefits": [
+            "Nowoczesny, profesjonalny wygląd zgodny z trendami",
+            "Pełna responsywność na wszystkich urządzeniach",
+            "Optymalizacja SEO i Core Web Vitals dla lepszej widoczności",
+            "Szybkie ładowanie i wysoka wydajność",
+            "Intuicyjna nawigacja i doskonałe UX",
+            "Łatwa aktualizacja treści przez headless CMS",
+            "Lepsza konwersja dzięki optymalizacji CRO",
+            "Wysoki poziom bezpieczeństwa i skalowalność"
+        ],
+        "examples": [
+            "Strona korporacyjna z headless CMS i integracją z CRM",
+            "Landing page kampanii marketingowej z A/B testingiem",
+            "Portal informacyjny z dynamicznym generowaniem treści",
+            "Blog firmowy zoptymalizowany pod SEO",
+            "Portfolio lub wizytówka dla małych firm z integracją analityki"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Strony internetowe - responsywne, szybkie i SEO-friendly"
+        }
     },
     {
+        "slug": "aplikacje-mobilne",
         "heading": "📱 Aplikacje Mobilne",
-        "content": "Tworzymy aplikacje mobilne dostosowane do systemów Android i iOS. Zapewniamy intuicyjny interfejs i wysoką wydajność, dzięki czemu Twoi klienci mogą cieszyć się wyjątkowym doświadczeniem użytkownika."
+        "content": "Tworzymy aplikacje mobilne na Android i iOS oraz PWA, z intuicyjnym UX, wysoką wydajnością i integracją z najnowszymi funkcjami urządzeń. Stosujemy cross-platform i natywne narzędzia, dbając o skalowalność i bezpieczeństwo.",
+        "description": "Nowoczesne aplikacje mobilne i Progressive Web Apps: intuicyjne, wydajne, bezpieczne, zoptymalizowane pod kątem UX/UI i SEO w sklepach aplikacji.",
+        "detailedContent": "Projektujemy i wdrażamy aplikacje mobilne, uwzględniając aktualne trendy:\n\nCross-platform i natywne: React Native, Flutter, Swift (iOS), Kotlin (Android) - wybór technologii zależy od wymagań wydajności, integracji z funkcjami urządzenia i budżetu.\nProgressive Web Apps (PWA): aplikacje webowe działające offline, instalowalne na urządzeniach mobilnych, optymalizowane pod kątem wydajności i SEO.\nUX/UI zgodne z wytycznymi platform: Material Design, Human Interface Guidelines, microinterakcje, animacje, dostępność.\nIntegracja z funkcjami urządzenia: kamera, GPS, czujniki, Bluetooth, NFC, push notifications, biometria, AR/VR (ARKit/ARCore).\nOffline-first i synchronizacja: lokalne bazy (SQLite, Realm), synchronizacja danych, obsługa konfliktów.\nBezpieczeństwo: szyfrowanie danych w spoczynku i transmisji, ochrona przed atakami, zabezpieczenie API.\nBackend i API: GraphQL, REST, Firebase, serverless functions, integracje z systemami zewnętrznymi.\n5G i optymalizacja wydajności: adaptacja do szybkich sieci, minimalizacja zużycia baterii, zarządzanie zasobami.\nDevOps mobilne: CI/CD (Fastlane, GitHub Actions), automatyczne testy UI (Appium, Detox), monitorowanie w czasie rzeczywistym.\n\nOferujemy pełen proces: analiza i koncepcja, projekt UX/UI, development, testy (automatyczne i użytkowników), publikację w App Store i Google Play, monitorowanie, wsparcie i rozwój kolejnych wersji.\n\nPrzykładowe wdrożenia obejmują: aplikacje e-commerce z płatnościami mobilnymi, narzędzia biznesowe, aplikacje edukacyjne z AR, fitness-tracking, aplikacje społecznościowe i IoT companion apps.",
+        "technologies": [
+            "React Native",
+            "Flutter",
+            "Swift",
+            "Kotlin",
+            "Ionic",
+            "Xamarin",
+            "Firebase",
+            "GraphQL",
+            "REST API",
+            "Realm",
+            "SQLite",
+            "Fastlane",
+            "Appium",
+            "Detox",
+            "Docker"
+        ],
+        "benefits": [
+            "Dostępność na Android i iOS oraz PWA",
+            "Intuicyjny i nowoczesny UX zgodny z wytycznymi platform",
+            "Integracja z funkcjami urządzenia (kamera, GPS, AR/VR)",
+            "Offline-first i synchronizacja danych",
+            "Bezpieczne przechowywanie i transmisja danych",
+            "Szybkie wydanie dzięki CI/CD i testom automatycznym",
+            "Łatwa rozbudowa i aktualizacje",
+            "Optymalizacja pod kątem wydajności i baterii"
+        ],
+        "examples": [
+            "Aplikacja e-commerce z integracją płatności mobilnych i push notifications",
+            "Narzędzie biznesowe do zarządzania zespołem z synchronizacją offline",
+            "Aplikacja edukacyjna z interaktywnym contentem i AR",
+            "Aplikacja fitness z trackingiem aktywności i integracją wearable",
+            "Companion app dla urządzeń IoT"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Aplikacje mobilne - nowoczesne, wydajne i bezpieczne rozwiązania"
+        }
     },
     {
+        "slug": "sklepy-internetowe",
         "heading": "🛒 Sklepy Internetowe",
-        "content": "Projektujemy i wdrażamy sklepy internetowe, które zwiększają sprzedaż i angażują klientów. Nasze rozwiązania są skalowalne, bezpieczne i łatwe w obsłudze, co pozwala Ci skupić się na rozwoju biznesu."
+        "content": "Projektujemy i wdrażamy skalowalne, bezpieczne i SEO-friendly sklepy internetowe. Stosujemy headless commerce, omnichannel, personalizację i analitykę w czasie rzeczywistym, aby zwiększyć konwersję i zadowolenie klientów.",
+        "description": "Kompleksowe rozwiązania e-commerce: projektowanie, wdrożenie, integracje płatności, zarządzanie magazynem, marketing automation i analityka sprzedaży.",
+        "detailedContent": "Budujemy sklepy internetowe, które skutecznie konwertują odwiedzających w klientów, zgodnie z najnowszymi trendami:\n\nHeadless Commerce i API-first: oddzielamy frontend od backendu, co daje elastyczność w implementacji UI (React, Next.js, Vue) i lepszą wydajność.\nOmnichannel i mobile commerce: integrujemy sprzedaż w różnych kanałach (web, mobile, social commerce, marketplace), zapewniając spójne doświadczenie użytkownika.\nPersonalizacja i rekomendacje w czasie rzeczywistym: wykorzystujemy AI/ML do dostarczania spersonalizowanych ofert, cross-sellingu i upsellingu.\nIntegracje płatności i logistyki: Stripe, PayPal, lokalne metody płatności, systemy ERP/CRM, narzędzia do zarządzania magazynem i dostawami.\nBezpieczeństwo i zgodność: PCI DSS, RODO/GDPR, ochrona danych klientów i transakcji.\nPerformance optimization: CDN, caching, lazy loading, optymalizacja obrazów, Core Web Vitals.\nMarketing automation i analityka: integracja z narzędziami do email marketingu, retargetingu, A/B testing, Google Analytics 4, BI.\nPlatformy i frameworki: Shopify (Plus, headless), WooCommerce, Magento 2, PrestaShop, Saleor, commercetools, customowe rozwiązania w Next.js/NestJS.\nScalability & DevOps: infrastruktura w chmurze (AWS/GCP/Azure), Kubernetes, serverless, monitoring, CI/CD, autoskalowanie.\nCustomer Experience: łatwy checkout, opinie i recenzje, programy lojalnościowe, czat na żywo.\n\nProces: analiza i strategia e-commerce, projekt UX/UI, development, integracje, testy, wdrożenie, wsparcie i optymalizacja po uruchomieniu.\n\nDodatkowo prowadzimy audyt istniejących sklepów, migracje między platformami oraz optymalizację konwersji (CRO).",
+        "technologies": [
+            "Shopify (headless)",
+            "WooCommerce",
+            "Magento 2",
+            "PrestaShop",
+            "Saleor",
+            "Next.js",
+            "NestJS",
+            "React",
+            "Vue.js",
+            "GraphQL",
+            "REST API",
+            "Stripe",
+            "PayPal",
+            "Docker",
+            "Kubernetes",
+            "AWS/Azure/GCP"
+        ],
+        "benefits": [
+            "Intuicyjny proces zakupowy zwiększający konwersję",
+            "Elastyczność dzięki headless commerce i omnichannel",
+            "Personalizacja ofert w czasie rzeczywistym",
+            "Integracje płatności i systemów logistycznych",
+            "Skalowalność i wysoka wydajność",
+            "Bezpieczeństwo transakcji i zgodność z regulacjami",
+            "Analityka sprzedaży i marketing automation",
+            "Łatwe zarządzanie produktami i magazynem"
+        ],
+        "examples": [
+            "Sklep odzieżowy z konfiguratorami produktów i rekomendacjami AI",
+            "Platforma B2B z integracją ERP i automatycznym zamawianiem",
+            "Sklep z produktami cyfrowymi i subskrypcjami",
+            "Marketplace wielosprzedawców z zaawansowanymi panelami sprzedawców",
+            "Migracja sklepu z legacy na headless architecture"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Sklepy internetowe - headless, skalowalne i bezpieczne"
+        }
     },
     {
+        "slug": "systemy-dedykowane",
         "heading": "💡 Systemy Dedykowane",
-        "content": "Tworzymy systemy dedykowane, które odpowiadają na indywidualne potrzeby Twojej firmy. Nasze rozwiązania wspierają optymalizację procesów i automatyzację, co przekłada się na większą efektywność biznesową."
+        "content": "Tworzymy dedykowane systemy informatyczne szyte na miarę, wykorzystując architekturę mikrousług, chmurę oraz automatyzację procesów. Nasze rozwiązania optymalizują procesy biznesowe i skalują się wraz z rozwojem firmy.",
+        "description": "Oprogramowanie dedykowane: systemy ERP, CRM, workflow, automatyzacja i integracje, zaprojektowane pod specyficzne potrzeby branży i klienta.",
+        "detailedContent": "Projektujemy i implementujemy systemy dedykowane, które idealnie odpowiadają na unikalne potrzeby i wyzwania Twojej firmy:\n\nAnaliza i architektura: dogłębny audit procesów biznesowych, projekt architektury (monolit vs. mikrousługi, event-driven, serverless), dobór technologii.\nSystemy ERP/CRM i workflow: budowa modułowych systemów zarządzania zasobami, finansami, relacjami z klientami i procesami wewnętrznymi.\nAutomatyzacja i RPA: automatyzacja powtarzalnych zadań za pomocą skryptów, narzędzi RPA, integracji API.\nIntegracja z infrastrukturą: integrujemy z istniejącymi systemami (ERP, CRM, magazynowe), bazami danych, narzędziami analitycznymi, IoT.\nArchitektura skalowalna i bezpieczna: chmura (AWS/GCP/Azure), Kubernetes, Docker, CI/CD, monitoring, backup, disaster recovery.\nUX/UI i frontend: przyjazne panele użytkownika (React, Vue), dashboardy analityczne, wizualizacje danych (Grafana, wykresy w aplikacji).\nData-driven i BI: integracja z hurtownią danych, ETL, raportowanie, analizy w czasie rzeczywistym.\nZarządzanie projektem i metodyki: Agile/Scrum, DevOps, GitOps, Test Driven Development.\nBezpieczeństwo i compliance: uwzględniamy przepisy (RODO/GDPR, branżowe normy), stosujemy zabezpieczenia na poziomie aplikacji i infrastruktury.\nWsparcie i rozwój: szkolenia użytkowników, dokumentacja, SLA, rozwój kolejnych wersji i funkcji.\n\nOferujemy elastyczne modele pracy (dedykowany zespół, body leasing, projekt), zapewniając transparentność kosztów i harmonogramu. Każde rozwiązanie jest skalowalne i gotowe do integracji z przyszłymi technologiami.",
+        "technologies": [
+            "Python",
+            "Django",
+            "Laravel",
+            "Symfony",
+            "Node.js",
+            "Spring Boot",
+            "React",
+            "Vue.js",
+            "Angular",
+            "PostgreSQL",
+            "MySQL",
+            "MongoDB",
+            "Redis",
+            "Docker",
+            "Kubernetes",
+            "Terraform",
+            "AWS/Azure/GCP",
+            "RabbitMQ",
+            "Apache Kafka",
+            "GraphQL",
+            "REST API"
+        ],
+        "benefits": [
+            "Pełne dopasowanie do unikalnych procesów biznesowych",
+            "Skalowalność systemu wraz z rozwojem firmy",
+            "Integracja z istniejącą infrastrukturą i przyszłymi technologiami",
+            "Automatyzacja powtarzalnych zadań i optymalizacja zasobów",
+            "Wysoki poziom bezpieczeństwa i zgodność z regulacjami",
+            "Łatwe zarządzanie i rozbudowa funkcjonalności",
+            "Wsparcie i utrzymanie systemu przez dedykowany zespół"
+        ],
+        "examples": [
+            "System zarządzania dokumentami z workflow i e-podpisem",
+            "Platforma do zarządzania projektami i zasobami w dużej organizacji",
+            "Dedykowane ERP/CRM dla specyficznej branży (np. produkcja, logistyka)",
+            "Narzędzie automatyzujące proces sprzedażowy z integracją z ERP",
+            "Aplikacja analityczna łącząca dane z wielu źródeł w czasie rzeczywistym"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Systemy dedykowane - oprogramowanie szyte na miarę, mikroserwisy i chmura"
+        }
     },
     {
+        "slug": "integracje-systemow",
         "heading": "🧩 Integracje Systemów",
-        "content": "Zapewniamy płynną integrację istniejących systemów IT, aby Twoje narzędzia działały jako spójna całość. Dzięki naszym usługom możesz zwiększyć produktywność i efektywność operacyjną."
+        "content": "Zapewniamy płynną integrację systemów IT, łącząc platformy za pomocą API, middleware, iPaaS czy event-driven architektury. Nasze rozwiązania eliminują ręczne procesy i zwiększają spójność danych.",
+        "description": "Profesjonalne integracje systemów IT: API-first, iPaaS, middleware, ETL, event-driven, synchronizacja w czasie rzeczywistym i migracja danych.",
+        "detailedContent": "Specjalizujemy się w integrowaniu różnorodnych systemów IT, tworząc spójny ekosystem technologiczny w organizacji:\n\nAnaliza architektury: szczegółowy przegląd istniejących rozwiązań, identyfikacja punktów integracji i potrzeb biznesowych.\nAPI-first i mikroserwisy: projektowanie i wdrażanie REST API, GraphQL, message brokerów (RabbitMQ, Kafka) do komunikacji między usługami.\niPaaS i middleware: wykorzystujemy platformy typu Mulesoft, Zapier, Microsoft Power Automate, Dell Boomi do szybkich integracji SaaS.\nETL i data pipelines: budowa procesów ekstrakcji, transformacji i ładowania danych między systemami, hurtowniami danych i BI.\nEvent-driven architecture: integracje w czasie rzeczywistym, pub/sub, stream processing, webhooki.\nBezpieczeństwo i zgodność: szyfrowanie transmisji, autoryzacja OAuth2/OpenID Connect, kontrola dostępu, zgodność z RODO/GDPR.\nMigracja i synchronizacja danych: planowanie i wykonanie migracji, mapowanie danych, transformacje formatów, walidacja i testy.\nMonitoring i observability: logowanie, tracing, alerty dla integracji, zapewniające szybkie wykrywanie problemów.\nDevOps integracji: automatyzacja wdrożeń integracji, CI/CD, testy integracyjne.\nWsparcie i dokumentacja: przygotowanie dokumentacji API, szkolenia dla zespołów, wsparcie po wdrożeniu.\n\nDzięki naszym usługom klienci eliminują ręczne wprowadzanie danych, redukują błędy, przyspieszają procesy biznesowe i zyskują pełny wgląd w informacje. Integracje wspierają skalowalność i elastyczność systemów.\n\nPrzykładowe scenariusze: synchronizacja CRM z systemem marketing automation, integracja sklepu z magazynem i ERP, synchronizacja HR z payroll, łączenie platform analitycznych z różnymi źródłami danych.",
+        "technologies": [
+            "REST API",
+            "GraphQL",
+            "Apache Kafka",
+            "RabbitMQ",
+            "Mulesoft",
+            "Zapier",
+            "Microsoft Power Automate",
+            "Dell Boomi",
+            "Webhooki",
+            "ETL tools (Talend, Airbyte)",
+            "Docker",
+            "Kubernetes",
+            "OAuth2 / OpenID Connect",
+            "JSON, XML, CSV",
+            "Terraform",
+            "CI/CD"
+        ],
+        "benefits": [
+            "Eliminacja ręcznych procesów i duplikacji danych",
+            "Synchronizacja w czasie rzeczywistym między systemami",
+            "Lepsza jakość danych i spójność informacji",
+            "Zwiększenie efektywności pracy zespołów",
+            "Skalowalność i elastyczność architektury",
+            "Bezpieczeństwo transmisji i zgodność z regulacjami",
+            "Szybsze wdrożenia dzięki iPaaS i automatyzacji",
+            "Monitoring i szybkie reagowanie na błędy integracji"
+        ],
+        "examples": [
+            "Integracja CRM (Salesforce) z systemem e-mail marketingu (Mailchimp)",
+            "Połączenie sklepu internetowego z systemem magazynowym i ERP",
+            "Synchronizacja systemu HR z narzędziami payroll i benefitów",
+            "Integracja platformy analitycznej z wieloma źródłami danych (BI)",
+            "Event-driven integracja mikrousług w architekturze chmurowej"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Integracje systemów - API-first, iPaaS i event-driven architektura"
+        }
     },
     {
+        "slug": "rozwiazania-chmurowe",
         "heading": "☁️ Rozwiązania Chmurowe",
-        "content": "Wdrażamy i optymalizujemy rozwiązania chmurowe, które pozwalają na skalowalność, bezpieczeństwo i redukcję kosztów operacyjnych. Dzięki chmurze Twoja firma zyska elastyczność i dostępność danych w każdej chwili."
+        "content": "Wdrażamy i optymalizujemy rozwiązania chmurowe (publiczne, prywatne, hybrydowe, multicloud), wykorzystując konteneryzację, Kubernetes, serverless, infrastruktury jako kod (IaC) i FinOps, aby zapewnić skalowalność, bezpieczeństwo i optymalizację kosztów.",
+        "description": "Kompleksowe usługi chmurowe: migracja do chmury, architektura chmurowa, DevOps w chmurze, automatyzacja infrastruktury, bezpieczeństwo i optymalizacja kosztów (FinOps).",
+        "detailedContent": "Nasze usługi chmurowe obejmują pełen cykl: od strategii, przez architekturę, migrację, aż po zarządzanie i optymalizację:\n\nStrategia i doradztwo chmurowe: analiza potrzeb biznesowych, wybór modelu (public, private, hybrid, multicloud), plan migracji, ocena kosztów i ryzyka.\nProjektowanie architektury chmurowej: mikroserwisy, konteneryzacja (Docker, Kubernetes), serverless (AWS Lambda, Azure Functions, Google Cloud Functions), architektura event-driven.\nMigracja aplikacji i danych: lift-and-shift, refaktoryzacja lub replatforming, migracja baz danych (RDS, Cloud SQL), zarządzanie danymi i minimalizacja przestojów.\nInfrastruktura jako kod (IaC): Terraform, AWS CloudFormation, Azure ARM Templates, Pulumi - automatyzacja provisioning'u zasobów.\nDevOps i CI/CD w chmurze: pipeline'y CI/CD (GitHub Actions, GitLab CI, Azure DevOps), automatyczne testy, monitorowanie i observability (Prometheus, Grafana, CloudWatch).\nBezpieczeństwo chmury: IAM, zero trust, network security (VPC, firewalle), szyfrowanie danych, compliance (RODO/GDPR, ISO 27001), audyty bezpieczeństwa.\nOptymalizacja kosztów (FinOps): monitorowanie zużycia zasobów, automatyczne skalowanie, rezerwacje, analiza wydatków, rekomendacje oszczędności.\nBackup i disaster recovery: strategie backupu, replika danych, plan przywracania po awarii.\nMonitoring i zarządzanie: narzędzia APM, logowanie, alerty, analiza wydajności, SLA.\nChmura hybrydowa i edge computing: integracja lokalnych centrów danych z chmurą, architektury edge dla niskich opóźnień.\nKontenery i orkiestracja: Kubernetes, OpenShift, Docker Swarm, zarządzanie klastrami, autoskalowanie.\n\nWdrażamy rozwiązania w AWS, Azure, Google Cloud oraz w środowiskach on-premises. Pomagamy w utrzymaniu i rozwijaniu infrastruktury, zapewniając ciągły rozwój i bezpieczeństwo operacji chmurowych.\n\nPrzykłady wdrożeń: migracja legacy aplikacji do chmury z refaktoryzacją mikroserwisów, budowa systemów serverless, hybrydowe rozwiązanie łączące on-prem i cloud, platforma analityczna w chmurze z auto-skalowaniem, infrastruktura Kubernetes z CI/CD.",
+        "technologies": [
+            "AWS (EC2, Lambda, RDS, EKS)",
+            "Azure (VM, Functions, Cosmos DB, AKS)",
+            "Google Cloud (Compute Engine, Cloud Functions, GKE)",
+            "Docker",
+            "Kubernetes",
+            "Terraform",
+            "Pulumi",
+            "Serverless Framework",
+            "CI/CD (GitHub Actions, GitLab CI, Azure DevOps)",
+            "Prometheus",
+            "Grafana",
+            "CloudWatch / Azure Monitor / Stackdriver",
+            "Istio / Linkerd",
+            "Vault",
+            "Argo CD / Flux",
+            "Helm"
+        ],
+        "benefits": [
+            "Elastyczność i skalowalność zasobów w chmurze",
+            "Optymalizacja kosztów dzięki FinOps",
+            "Szybsze wdrożenia i automatyzacja infrastruktury",
+            "Wysoki poziom bezpieczeństwa i zgodność z regulacjami",
+            "Ciągła integracja i dostarczanie (CI/CD)",
+            "Monitoring i szybkie reagowanie na incydenty",
+            "Hybrydowe i multicloud rozwiązania dla redundancji",
+            "Edge computing dla niskich opóźnień"
+        ],
+        "examples": [
+            "Migracja monolitycznej aplikacji do chmury z refaktorem mikroserwisów",
+            "Budowa infrastruktury serverless dla aplikacji o zmiennym ruchu",
+            "Implementacja Kubernetes z autoskalowaniem i CI/CD",
+            "Hybrydowe środowisko łączące on-prem i public cloud",
+            "Platforma analityczna w chmurze z real-time streamingiem danych"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Rozwiązania chmurowe - konteneryzacja, Kubernetes, serverless i FinOps"
+        }
     },
     {
+        "slug": "cyberbezpieczenstwo",
         "heading": "🔒 Cyberbezpieczeństwo",
-        "content": "Oferujemy kompleksowe usługi z zakresu cyberbezpieczeństwa, które chronią Twoje dane i systemy przed zagrożeniami. Wdrażamy rozwiązania, które zwiększają bezpieczeństwo IT i minimalizują ryzyko ataków."
+        "content": "Oferujemy kompleksowe usługi cyberbezpieczeństwa: audyty, pen-testy, wdrożenia rozwiązań zero trust, SOC, SIEM, SASE, zabezpieczenia chmury i endpointów, minimalizując ryzyko ataków i zapewniając zgodność z regulacjami.",
+        "description": "Usługi cyberbezpieczeństwa: audyt, testy penetracyjne, zarządzanie incydentami, monitoring bezpieczeństwa, zero trust, SOC/SIEM, ochrona chmury i zgodność z RODO/GDPR oraz normami ISO.",
+        "detailedContent": "Nasze usługi z zakresu cyberbezpieczeństwa obejmują:\n\nAudyty bezpieczeństwa i assessment: przegląd architektury IT, analiza ryzyka, identyfikacja luk w zabezpieczeniach, ocena zgodności z regulacjami (RODO/GDPR, ISO 27001).\nTesty penetracyjne (Pen-testing): zewnętrzne i wewnętrzne pentesty aplikacji webowych, mobilnych, infrastruktury sieciowej oraz IoT.\nZarządzanie incydentami i reakcja (Incident Response): przygotowanie planów, procedury, szkolenia, wsparcie w wykrywaniu i reagowaniu na ataki.\nMonitoring i SOC/SIEM: wdrożenie i konfiguracja systemów SIEM, analiza logów, wykrywanie anomalii w czasie rzeczywistym, zarządzanie alertami.\nZero Trust i ochrony sieciowe: segmentacja sieci, MFA, polityki dostępu oparte na tożsamości, ochrona aplikacji i usług.\nOchrona chmury i DevSecOps: zabezpieczenie środowisk AWS/Azure/GCP, skanowanie kontenerów, integracja security w CI/CD, Infrastructure as Code scanning.\nEndpoint Security i EDR: ochrona urządzeń końcowych, wykrywanie i reagowanie na zagrożenia na poziomie endpointów.\nBezpieczeństwo aplikacji: secure coding, analiza statyczna i dynamiczna kodu (SAST/DAST), przeglądy architektury.\nSzkolenia i podnoszenie świadomości: kursy dla pracowników, phishing simulations, warsztaty.\nBackup i disaster recovery: zabezpieczenie danych, testy przywracania, plany ciągłości działania.\nCompliance i dokumentacja: wsparcie w uzyskaniu i utrzymaniu certyfikatów (ISO 27001), polityki bezpieczeństwa, dokumenty zgodności.\n\nDzięki naszym usługom firmy minimalizują ryzyko wycieków danych, ataków ransomware, phishingu i innych zagrożeń oraz zachowują ciągłość działania i zgodność z przepisami.",
+        "technologies": [
+            "SIEM (Splunk, Elastic, Azure Sentinel)",
+            "EDR (CrowdStrike, SentinelOne)",
+            "Firewall next-gen",
+            "WAF (Web Application Firewall)",
+            "Zero Trust (Okta, Azure AD Conditional Access)",
+            "IDS/IPS",
+            "SASE",
+            "Vulnerability scanners (Nessus, OpenVAS)",
+            "Pentest tools (Burp Suite, Metasploit)",
+            "DevSecOps tools (Snyk, Checkmarx)",
+            "Cloud Security (AWS Security Hub, Azure Security Center)",
+            "Encryption (TLS, PKI)",
+            "MFA, VPN",
+            "SIEM/SOAR integration",
+            "Backup & DR tools"
+        ],
+        "benefits": [
+            "Zidentyfikowanie i załatanie luk w zabezpieczeniach",
+            "Proaktywne wykrywanie i reagowanie na incydenty",
+            "Ochrona danych i ciągłość działania",
+            "Zgodność z regulacjami (RODO/GDPR, ISO)",
+            "Zwiększenie świadomości bezpieczeństwa w organizacji",
+            "Zabezpieczenie środowisk chmurowych i endpointów",
+            "Integracja bezpieczeństwa z cyklem DevOps",
+            "Skalowalność i elastyczność rozwiązań"
+        ],
+        "examples": [
+            "Audyty bezpieczeństwa i pentesty aplikacji webowej",
+            "Wdrożenie SOC/SIEM i monitoring w czasie rzeczywistym",
+            "Implementacja zero trust dla dostępu do zasobów chmury",
+            "Szkolenia phishingowe i podnoszenie świadomości pracowników",
+            "Zabezpieczenie kontenerów i procesów CI/CD w DevSecOps"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Cyberbezpieczeństwo - audyt, pentest, zero trust i SIEM"
+        }
     },
     {
+        "slug": "analiza-danych",
         "heading": "📊 Analiza Danych",
-        "content": "Pomagamy firmom wykorzystać moc danych, oferując zaawansowaną analizę, wizualizacje i modele predykcyjne. Dzięki naszym rozwiązaniom możesz podejmować lepsze decyzje biznesowe."
+        "content": "Pomagamy firmom wykorzystać moc danych: zaawansowana analityka, wizualizacje, BI, data science i modele predykcyjne. Wdrażamy rozwiązania data-driven, dashboardy w czasie rzeczywistym i ML Ops.",
+        "description": "Usługi analizy danych: ETL, Data Warehouse, BI, wizualizacje, analityka predykcyjna, machine learning, big data i data governance.",
+        "detailedContent": "Oferujemy pełen zakres usług analityki danych:\n\nETL i data pipelines: projektujemy i budujemy procesy ekstrakcji, transformacji i ładowania danych z różnych źródeł (relacyjne, NoSQL, API, IoT).\nData Warehouse i Data Lake: wdrażamy hurtownie danych (Snowflake, BigQuery, Redshift) oraz jeziora danych, zapewniając skalowalność i wydajność analiz.\nBusiness Intelligence i dashboardy: tworzymy interaktywne raporty i dashboardy (Power BI, Tableau, Looker) z wizualizacjami wspierającymi szybkie decyzje.\nAnalityka predykcyjna i statystyczna: budujemy modele ML do prognozowania sprzedaży, churn prediction, segmentacji klientów, analiz ryzyka.\nBig Data: wykorzystujemy technologie Apache Spark, Hadoop, Flink do przetwarzania dużych zbiorów danych.\nMLOps i wdrożenia modeli: integrujemy modele ML z produkcyjnymi systemami, monitorujemy ich działanie i retraining.\nData Governance i compliance: definiujemy polityki zarządzania danymi, zapewniamy zgodność z RODO/GDPR, zabezpieczamy dane wrażliwe.\nReal-time analytics: streaming danych, analiza w czasie rzeczywistym (Kafka, Kinesis), alerty i automatyczne reakcje.\nWizualizacje zaawansowane: dashboardy KPI, wykresy interaktywne, mapy cieplne, analizy geolokalizacyjne.\nDoradztwo data-driven: wsparcie w strategii danych, generowanie insightów, kultura data-driven w organizacji.\n\nWspółpracujemy z zespołami IT i biznesowymi, aby dostarczyć rozwiązania odpowiadające na konkretne potrzeby: optymalizacja kosztów, zwiększenie przychodów, poprawa efektywności operacyjnej, lepsze zrozumienie klientów.\n\nPrzykłady: platforma analityczna sprzedaży w czasie rzeczywistym, model predykcyjny churn, segmentacja klientów, analiza koszyka zakupowego, monitorowanie wskaźników operacyjnych.",
+        "technologies": [
+            "Python (pandas, NumPy)",
+            "R",
+            "Apache Spark",
+            "Hadoop",
+            "Flink",
+            "SQL",
+            "Snowflake",
+            "BigQuery",
+            "Amazon Redshift",
+            "Power BI",
+            "Tableau",
+            "Looker",
+            "Kafka",
+            "Kinesis",
+            "Airflow",
+            "dbt",
+            "MLflow",
+            "TensorFlow",
+            "PyTorch"
+        ],
+        "benefits": [
+            "Lepsze decyzje dzięki insightom z danych",
+            "Optymalizacja procesów i kosztów",
+            "Predykcja trendów rynkowych i zachowań klientów",
+            "Skalowalna infrastruktura analityczna",
+            "Real-time monitoring i alerty",
+            "Zgodność z regulacjami danych",
+            "Wdrażanie modeli ML w produkcji",
+            "Kultura data-driven w organizacji"
+        ],
+        "examples": [
+            "Dashboard sprzedaży z analizą w czasie rzeczywistym i alertami",
+            "Model predykcyjny churn dla klientów subskrypcyjnych",
+            "Segmentacja klientów i rekomendacje marketingowe",
+            "Analiza kosztów operacyjnych i optymalizacja wydatków",
+            "Platforma big data do analizy logów i monitoringu systemów"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Analiza danych - ETL, BI, predykcja i big data"
+        }
     },
     {
+        "slug": "doradztwo-it",
         "heading": "📈 Doradztwo IT",
-        "content": "Zapewniamy wsparcie doradcze w zakresie wyboru technologii i strategii IT. Nasze usługi pomagają firmom wybrać najlepsze rozwiązania dopasowane do ich celów biznesowych."
+        "content": "Zapewniamy wsparcie doradcze w zakresie strategii IT, architektury, transformacji cyfrowej, wyboru technologii oraz optymalizacji procesów. Pomagamy firmom planować i realizować projekty IT zgodnie z biznesowymi celami.",
+        "description": "Kompleksowe doradztwo IT: analiza potrzeb, strategia technologiczna, optymalizacja architektury, transformacja cyfrowa, zarządzanie projektami i ryzykiem.",
+        "detailedContent": "Nasze usługi doradcze obejmują:\n\nAnaliza i strategia IT: ocena dojrzałości IT, roadmapa technologiczna, planowanie inwestycji, ocena ROI.\nArchitektura i design: projektowanie skalowalnych i elastycznych rozwiązań (mikrousługi, chmura, serverless), ocena istniejących systemów.\nTransformacja cyfrowa: wsparcie w modernizacji aplikacji, migracjach do chmury, automatyzacji procesów, wdrażaniu Agile/DevOps.\nZarządzanie projektami i metodyki: Agile/Scrum, Kanban, PMI, zarządzanie ryzykiem, governance, kontrola budżetu i harmonogramu.\nOptymalizacja procesów biznesowych: mapowanie procesów, Lean, Six Sigma, automatyzacja RPA.\nBezpieczeństwo i compliance: ocena ryzyka, polityki bezpieczeństwa, audyty, planowanie ciągłości działania.\nZarządzanie zmianą i szkolenia: wsparcie organizacyjne, komunikacja zmiany, szkolenia techniczne i z zakresu zarządzania.\nWybór technologii i partnerów: rekomendacje dotyczące stacku technologicznego, vendor selection, przetargi IT.\nFinanse i optymalizacja kosztów IT: budżetowanie, FinOps, analiza kosztów licencji i infrastruktury.\nInnovation & R&D: wsparcie w identyfikacji nowych technologii (AI, blockchain, IoT), proof-of-concept, pilotaże.\n\nWspółpracujemy z zarządem, zespołami IT i biznesowymi, aby zapewnić spójność strategii technologicznej z celami organizacji. Nasze doradztwo pomaga unikać ryzyk, optymalizować koszty i przyspieszać realizację projektów.",
+        "technologies": [
+            "Architektura mikrousług",
+            "Chmura (AWS, Azure, GCP)",
+            "DevOps i CI/CD",
+            "Narzędzia do zarządzania projektami (Jira, Trello)",
+            "Narzędzia do automatyzacji procesów (UiPath, Power Automate)",
+            "Analiza danych i BI",
+            "Bezpieczeństwo IT",
+            "RPA",
+            "Metodyki Agile/Scrum",
+            "Narzędzia do monitoringu i observability"
+        ],
+        "benefits": [
+            "Jasna strategia IT zgodna z celami biznesu",
+            "Optymalizacja kosztów i zasobów",
+            "Zwiększenie efektywności projektów i procesów",
+            "Redukcja ryzyk technologicznych",
+            "Przyspieszenie transformacji cyfrowej",
+            "Lepsze zarządzanie zmianą i szkolenia",
+            "Wybór najlepszych technologii i partnerów",
+            "Innowacje wspierające rozwój firmy"
+        ],
+        "examples": [
+            "Opracowanie roadmapy technologicznej dla firmy średniej wielkości",
+            "Audyt architektury i rekomendacje migracji do chmury",
+            "Optymalizacja procesów IT i wdrożenie DevOps",
+            "Wdrażanie metodyk Agile w zespole projektowym",
+            "Analiza kosztów infrastruktury i plan FinOps"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Doradztwo IT - strategia, architektura i transformacja cyfrowa"
+        }
     },
     {
+        "slug": "compliance-i-audyty-it",
         "heading": "🛡️ Compliance i Audyty IT",
-        "content": "Przeprowadzamy audyty IT oraz pomagamy firmom dostosować się do wymogów prawnych i standardów branżowych. Z nami Twoja infrastruktura będzie zgodna z obowiązującymi przepisami."
+        "content": "Przeprowadzamy audyty IT, oceniamy zgodność z regulacjami (RODO/GDPR, ISO 27001, PCI DSS) i standardami branżowymi. Pomagamy w budowie polityk bezpieczeństwa, procedur i dokumentacji, aby utrzymać wysoki poziom compliance.",
+        "description": "Usługi compliance i audytów IT: ocena zgodności z przepisami, przygotowanie do certyfikacji, polityki bezpieczeństwa, zarządzanie ryzykiem i ciągłość działania.",
+        "detailedContent": "Nasze usługi compliance i audytów IT obejmują:\n\nAudyty zgodności: analiza i ocena zgodności systemów, procesów i polityk z wymaganiami prawnymi (RODO/GDPR), normami (ISO 27001, PCI DSS, HIPAA itp.).\nPrzygotowanie do certyfikacji: wsparcie w procesie uzyskania i utrzymania certyfikatów (ISO 27001, SOC 2), tworzenie niezbędnej dokumentacji.\nZarządzanie ryzykiem: identyfikacja zagrożeń, ocena ryzyka, planowanie działań minimalizujących ryzyko IT.\nPolityki i procedury bezpieczeństwa: opracowanie polityk bezpieczeństwa, polityk dostępu, procedur backupu, disaster recovery, business continuity.\nSzkolenia i podnoszenie świadomości: edukacja pracowników z zakresu ochrony danych, bezpieczeństwa informacji, reakcji na incydenty.\nMonitoring i raportowanie: wdrożenie narzędzi do monitorowania zgodności, regularne przeglądy i raporty dla zarządu.\nOchrona danych osobowych: analiza przepływu danych, DPIA, mechanizmy anonimizacji/pseudonimizacji, zarządzanie zgodą.\nBezpieczeństwo dostawców i łańcucha dostaw IT: ocena ryzyka dostawców, kontrola umów, wymogi bezpieczeństwa.\nContinuous compliance: automatyzacja procesów compliance, integracja z DevOps/DevSecOps, regularne aktualizacje polityk.\n\nEfektem jest zmniejszenie ryzyka sankcji prawnych, zwiększenie zaufania klientów i partnerów oraz zachowanie ciągłości działania organizacji.",
+        "technologies": [
+            "Narzędzia do audytu i monitoringu (Splunk, Elastic Security)",
+            "Platformy GRC (Governance, Risk, Compliance)",
+            "Systemy zarządzania politykami bezpieczeństwa",
+            "Narzędzia do analizy ryzyka",
+            "Data Loss Prevention (DLP)",
+            "SIEM",
+            "Backup & DR tools",
+            "Narzędzia do zarządzania dokumentacją (Confluence)",
+            "Automatyzacja compliance w CI/CD",
+            "Rozwiązania szyfrowania"
+        ],
+        "benefits": [
+            "Zgodność z przepisami i normami branżowymi",
+            "Przygotowanie do certyfikacji i audytów zewnętrznych",
+            "Redukcja ryzyka prawnego i finansowego",
+            "Lepsze zarządzanie ryzykiem i incydentami",
+            "Zwiększenie zaufania klientów i partnerów",
+            "Ciągłość działania dzięki przemyślanym procedurom",
+            "Świadomość i kompetencje pracowników w zakresie compliance"
+        ],
+        "examples": [
+            "Audyty zgodności RODO/GDPR i wdrożenie wymagań",
+            "Przygotowanie do certyfikacji ISO 27001: gap analysis i dokumentacja",
+            "Ocena ryzyka dostawców i łańcucha dostaw IT",
+            "Wdrożenie continuous compliance w pipeline CI/CD",
+            "Opracowanie polityk backupu, DR i business continuity"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Compliance i audyty IT - zgodność z RODO/GDPR, ISO 27001 i PCI DSS"
+        }
     },
     {
+        "slug": "automatyzacja-procesow",
         "heading": "⚙️ Automatyzacja Procesów",
-        "content": "Automatyzujemy powtarzalne procesy biznesowe, co pozwala na oszczędność czasu i zasobów. Nasze rozwiązania zwiększają produktywność i redukują błędy operacyjne."
+        "content": "Automatyzujemy procesy biznesowe za pomocą RPA, workflow, integracji API i AI. Nasze rozwiązania zwiększają produktywność, redukują błędy operacyjne i przyspieszają realizację zadań.",
+        "description": "Usługi automatyzacji procesów: RPA, workflow, integracje, AI-driven automation, optymalizacja procesów i robotyzacja zadań.",
+        "detailedContent": "Oferujemy kompleksowe podejście do automatyzacji procesów biznesowych:\n\nAnaliza procesów: mapowanie procesów, identyfikacja punktów do automatyzacji, ocena ROI.\nRPA: wdrożenie robotów automatyzujących powtarzalne zadania (UiPath, Automation Anywhere, Power Automate).\nWorkflow automation: projektowanie i wdrażanie systemów workflow do zarządzania procesami wewnętrznymi.\nIntegracje API: łączenie systemów w celu automatycznego przepływu danych i działań.\nAI-driven automation: wykorzystanie AI/NLP do inteligentnej automatyzacji (np. automatyczna kategoryzacja dokumentów, analiza tekstu, predykcja decyzji).\nLow-Code/No-Code: narzędzia do szybkiego tworzenia procesów automatyzacji przez zespoły biznesowe.\nMonitorowanie i optymalizacja: dashboardy monitorujące efektywność automatyzacji, analiza wyników i dalsze usprawnienia.\nBezpieczeństwo i kontrola: zabezpieczenie dostępu do systemów, audyt działań automatycznych, logowanie i raportowanie.\nChange management i szkolenia: wsparcie we wdrożeniu automatyzacji w organizacji, szkolenia użytkowników.\nScalability: rozproszona architektura automatyzacji, skalowanie robotów w chmurze.\n\nRezultatem jest przyspieszenie operacji, redukcja kosztów, minimalizacja błędów oraz możliwość przekierowania zasobów do działań o wyższej wartości biznesowej.",
+        "technologies": [
+            "UiPath",
+            "Automation Anywhere",
+            "Microsoft Power Automate",
+            "Camunda",
+            "Zapier",
+            "Integromat",
+            "Python scripting",
+            "API integrations",
+            "NLP libraries",
+            "RPA orchestration",
+            "Low-Code/No-Code platforms"
+        ],
+        "benefits": [
+            "Redukcja ręcznych, powtarzalnych zadań",
+            "Zwiększenie efektywności i prędkości procesów",
+            "Zmniejszenie liczby błędów operacyjnych",
+            "Skalowalność automatyzacji w miarę rozwoju firmy",
+            "Uwolnienie zasobów do zadań strategicznych",
+            "Lepsza kontrola i monitorowanie procesów",
+            "Szybki zwrot z inwestycji (ROI)"
+        ],
+        "examples": [
+            "Automatyzacja fakturowania i księgowości",
+            "RPA do przetwarzania zamówień i generowania raportów",
+            "Inteligentna automatyzacja obsługi klienta (NLP chatbot)",
+            "Workflow HR: onboarding pracowników z integracjami systemów",
+            "Automatyczne przetwarzanie dokumentów i e-podpis"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Automatyzacja procesów - RPA, workflow i AI-driven automation"
+        }
     },
     {
+        "slug": "devops-ci-cd",
         "heading": "🛠️ DevOps i CI/CD",
-        "content": "Wdrażamy najlepsze praktyki DevOps i CI/CD, które przyspieszają procesy dostarczania oprogramowania. Dzięki naszym usługom możesz zyskać przewagę konkurencyjną i zwiększyć efektywność zespołów IT."
+        "content": "Wdrażamy najlepsze praktyki DevOps, CI/CD, GitOps i Infrastrukturę jako kod, aby przyspieszyć dostarczanie oprogramowania, zwiększyć jakość i stabilność oraz zautomatyzować procesy wdrożeń.",
+        "description": "Usługi DevOps: CI/CD, GitOps, IaC, automatyzacja pipeline'ów, monitoring, kultury współpracy między zespołami deweloperskimi i operacyjnymi.",
+        "detailedContent": "Nasze usługi DevOps obejmują:\n\nCI/CD pipelines: projektowanie i wdrażanie pipeline'ów (GitHub Actions, GitLab CI, Jenkins, Azure DevOps) do automatycznych buildów, testów i wdrożeń.\nGitOps: zarządzanie infrastrukturą i aplikacjami za pomocą kontroli wersji, deklaratywne konfiguracje (Argo CD, Flux).\nInfrastruktura jako kod (IaC): Terraform, CloudFormation, Pulumi do zarządzania zasobami w chmurze.\nKonteneryzacja i orkiestracja: Docker, Kubernetes, OpenShift, zarządzanie klastrami, autoskalowanie.\nMonitoring i observability: Prometheus, Grafana, ELK/EFK stack, APM (New Relic, Datadog), alerty i logowanie.\nAutomatyzacja testów: testy jednostkowe, integracyjne, end-to-end, testy bezpieczeństwa w CI.\nSecurity w DevOps (DevSecOps): integracja skanowania bezpieczeństwa w pipeline (SAST, DAST), zarządzanie tajemnicami (HashiCorp Vault).\nKultura i procesy: wspieranie komunikacji między zespołami, retrospekcje, ciągłe doskonalenie, lean principles.\nRelease management: blue-green deployments, canary releases, feature flags.\nBackup i disaster recovery: automatyczne backupy, testy przywracania.\n\nDzięki DevOps klienci osiągają szybsze dostarczanie funkcji, lepszą jakość kodu, wyższą stabilność środowisk produkcyjnych oraz większą satysfakcję zespołów deweloperskich i biznesowych.",
+        "technologies": [
+            "GitHub Actions",
+            "GitLab CI/CD",
+            "Jenkins",
+            "Azure DevOps",
+            "Docker",
+            "Kubernetes",
+            "Argo CD",
+            "Flux",
+            "Terraform",
+            "Pulumi",
+            "Prometheus",
+            "Grafana",
+            "ELK/EFK",
+            "New Relic",
+            "Datadog",
+            "Snyk",
+            "HashiCorp Vault"
+        ],
+        "benefits": [
+            "Przyspieszone dostarczanie oprogramowania",
+            "Wysoka jakość i stabilność aplikacji",
+            "Automatyzacja procesów build/test/deploy",
+            "Skalowalność infrastruktury",
+            "Szybsze wykrywanie i naprawa błędów",
+            "Bezpieczeństwo wdrożeń w pipeline (DevSecOps)",
+            "Lepsza współpraca między zespołami",
+            "Elastyczne strategie wdrożeń (canary, blue-green)"
+        ],
+        "examples": [
+            "Pipeline CI/CD w GitHub Actions dla mikroserwisów",
+            "GitOps z Argo CD na Kubernetes",
+            "Infrastruktura jako kod z Terraform w AWS",
+            "Monitoring aplikacji i infrastruktury w Prometheus + Grafana",
+            "Automatyzacja testów bezpieczeństwa w pipeline"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "DevOps i CI/CD - automatyzacja pipeline'ów, IaC i monitoring"
+        }
     },
     {
+        "slug": "low-code-no-code",
         "heading": "📲 Low-Code i No-Code",
-        "content": "Wdrażamy platformy low-code i no-code, które umożliwiają szybkie tworzenie aplikacji bez konieczności pisania dużej ilości kodu. Nasze rozwiązania są szybkie, wydajne i elastyczne."
+        "content": "Wdrażamy platformy low-code/no-code, umożliwiające szybkie tworzenie aplikacji i automatyzację procesów bez potrzeby pisania dużej ilości kodu. Usprawniamy prototypowanie i działanie zespołów biznesowych.",
+        "description": "Usługi low-code/no-code: szybkie aplikacje biznesowe, automatyzacja, integracje, prototypowanie i przyspieszenie digitalizacji procesów.",
+        "detailedContent": "Nasze podejście low-code/no-code obejmuje:\n\nOcena potrzeb i dobór platformy: analiza wymagań, wybór narzędzi (OutSystems, Mendix, Power Apps, Appian, Bubble itp.).\nTworzenie aplikacji biznesowych: szybkie prototypy i produkcyjne rozwiązania do zarządzania procesami, formularzami, workflow.\nAutomatyzacja procesów: integracje API, RPA, tworzenie automatycznych zadań bez pisania kodu.\nIntegracje i rozszerzenia: łączenie z systemami backend (ERP, CRM), bazami danych i usługami zewnętrznymi.\nUX/UI w platformach low-code: tworzenie przyjaznych interfejsów przy minimalnym wysiłku deweloperskim.\nSkalowalność i bezpieczeństwo: konfiguracja platform zgodnie z wymaganiami bezpieczeństwa i skalowalności.\nSzkolenia i wsparcie zespołów: przekazanie kompetencji biznesowym użytkownikom do samodzielnego tworzenia aplikacji.\nMigracja z rozwiązań legacy: przenoszenie istniejących procesów na platformy low-code/no-code.\nGovernance i zarządzanie: kontrola jakości, monitoring aplikacji, zarządzanie licencjami.\nMarketplace rozszerzeń: wykorzystanie gotowych komponentów i integracji dostępnych w platformach.\n\nLow-code/no-code przyspiesza digitalizację procesów, pozwala na szybkie testowanie pomysłów i odciążenie zespołów deweloperskich od prostych zadań.\n\nPrzykłady: aplikacje do zarządzania workflow HR, formularze zgłoszeniowe, dashboardy analityczne, narzędzia do zatwierdzania wydatków, prototypy aplikacji w ciągu dni.",
+        "technologies": [
+            "OutSystems",
+            "Mendix",
+            "Microsoft Power Apps",
+            "Appian",
+            "Bubble",
+            "Zapier",
+            "Integromat",
+            "Retool",
+            "Airtable",
+            "RPA tools"
+        ],
+        "benefits": [
+            "Szybkie tworzenie i wdrażanie aplikacji",
+            "Usprawnienie procesów biznesowych bez dużych nakładów deweloperskich",
+            "Łatwa integracja z istniejącymi systemami",
+            "Większa autonomia zespołów biznesowych",
+            "Obniżenie kosztów developmentu",
+            "Skalowalność i bezpieczeństwo rozwiązań low-code",
+            "Szybkie prototypowanie i testowanie pomysłów"
+        ],
+        "examples": [
+            "Aplikacja do zatwierdzania wniosków wewnętrznych stworzona na Power Apps",
+            "Dashboard analityczny na Retool z integracją API",
+            "Formularze i workflow HR na Mendix",
+            "Narzędzie do raportowania wydatków bez kodowania",
+            "Prototyp aplikacji mobilnej w Bubble"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Low-Code i No-Code - szybkie tworzenie aplikacji i automatyzacja"
+        }
     },
     {
+        "slug": "internet-of-things-iot",
         "heading": "🌐 Internet of Things (IoT)",
-        "content": "Tworzymy i wdrażamy rozwiązania IoT, które łączą urządzenia i systemy, umożliwiając zbieranie i analizę danych w czasie rzeczywistym. Nasze usługi wspierają rozwój inteligentnych rozwiązań w różnych branżach."
+        "content": "Tworzymy i wdrażamy rozwiązania IoT łączące urządzenia i systemy, umożliwiając zbieranie, przetwarzanie i analizę danych w czasie rzeczywistym. Wykorzystujemy edge computing, 5G, AI i chmurę.",
+        "description": "Usługi IoT: projektowanie architektury, integracja urządzeń, przetwarzanie danych edge, analiza w chmurze, bezpieczeństwo i zarządzanie flotą urządzeń.",
+        "detailedContent": "Oferujemy pełne rozwiązania IoT:\n\nProjektowanie architektury IoT: dobór protokołów komunikacyjnych (MQTT, CoAP), platform IoT (AWS IoT, Azure IoT Hub, Google IoT Core), edge computing.\nIntegracja urządzeń i sensorów: łączenie z różnymi czujnikami, urządzeniami przemysłowymi, urządzeniami konsumenckimi, konfiguracja firmware i OTA updates.\nPrzetwarzanie edge: lokalne przetwarzanie danych na urządzeniach lub bramkach edge, redukcja opóźnień i obciążenia sieci.\nChmura i analiza danych: zbieranie danych w chmurze, big data, machine learning na danych IoT, dashboardy w czasie rzeczywistym.\n5G i sieci LPWAN: wykorzystanie 5G, NB-IoT, LoRaWAN dla różnych scenariuszy wymagających niskiego poboru energii lub wysokiej przepustowości.\nBezpieczeństwo IoT: zabezpieczenie komunikacji, uwierzytelnianie urządzeń, aktualizacje firmware, ochrona danych.\nZarządzanie flotą urządzeń: monitoring, provisioning, zarządzanie konfiguracją, OTA updates, diagnostyka.\nIntegracje z systemami biznesowymi: ERP, MES, systemy analityczne, AI-driven insights.\nMachine Learning i AI: predykcyjne utrzymanie ruchu, analiza zachowań, automatyczne reakcje na zdarzenia.\nPrototypowanie i PoC: szybkie prototypy urządzeń i platformy do walidacji koncepcji.\nSkalowalność i operacje: zarządzanie dużą liczbą urządzeń, skalowalne backendy, monitorowanie i alerty.\n\nPrzykłady: system monitoringu w przemyśle z predykcyjnym utrzymaniem ruchu, inteligentne miasta (smart city) z czujnikami środowiskowymi, rozwiązania smart home, telematyka flot pojazdów, IoT w rolnictwie (smart farming).",
+        "technologies": [
+            "MQTT",
+            "CoAP",
+            "AWS IoT Core",
+            "Azure IoT Hub",
+            "Google Cloud IoT",
+            "Edge computing (Azure IoT Edge, AWS Greengrass)",
+            "5G, NB-IoT, LoRaWAN",
+            "Raspberry Pi / Arduino / ESP32",
+            "Docker",
+            "Kubernetes (Edge)",
+            "Python, C/C++ dla embedded",
+            "Machine Learning at Edge",
+            "Grafana / Prometheus",
+            "Security frameworks for IoT"
+        ],
+        "benefits": [
+            "Zbieranie i analiza danych w czasie rzeczywistym",
+            "Predykcyjne utrzymanie ruchu i zmniejszenie przestojów",
+            "Automatyzacja i optymalizacja procesów przemysłowych",
+            "Lepsze zarządzanie zasobami i energią",
+            "Skalowalna i bezpieczna architektura IoT",
+            "Wdrażanie innowacyjnych usług i produktów",
+            "Elastyczne prototypowanie i szybkie testy PoC"
+        ],
+        "examples": [
+            "System predykcyjnego utrzymania ruchu w fabryce",
+            "Smart city - monitoring zanieczyszczeń i zarządzanie oświetleniem",
+            "Telematyka flot pojazdów z analizą tras i optymalizacją paliwa",
+            "Smart farming - monitorowanie warunków glebowych i nawadniania",
+            "Inteligentne rozwiązania w budynkach - HVAC, bezpieczeństwo"
+        ],
+        "image": {
+            "src": "./images/strony-internetowe.png",
+            "alt": "Internet of Things (IoT) - edge computing, 5G, analiza danych"
+        }
     }
 ]

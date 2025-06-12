@@ -41,6 +41,7 @@ module.exports = ({ actions }) => {
     type Interest {
         label: String
         image: Image
+        slug: String
     }
     type InterestsButton {
         visible: Boolean
@@ -193,6 +194,17 @@ module.exports = ({ actions }) => {
     type ProjectsJson implements Node @dontInfer {
         projects: [Project]
         button: ProjectButton
+    }
+    type OfferJson implements Node @dontInfer {
+        slug: String!
+        heading: String
+        content: String
+        description: String
+        detailedContent: String
+        technologies: [String]
+        benefits: [String]
+        examples: [String]
+        image: Image
     }
     type ContentJson implements Node @dontInfer {
         siteMetadata: SiteMetadata

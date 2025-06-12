@@ -1,6 +1,7 @@
 const path = require('path');
 const query = require('../../templates/Article/query');
 const projectQuery = require('../../templates/Project/query');
+const offerQuery = require('../../templates/Offer/query');
 
 module.exports = async ({ graphql, actions, reporter }, options) => {
     const templateDir = path.join(__dirname, '../', '../', '../', 'src', 'templates');
@@ -63,7 +64,29 @@ module.exports = async ({ graphql, actions, reporter }, options) => {
                 context: {
                     project: project,
                     listingPagePath: '/realizacje',
-                    entityName: 'realizacja',
+                },
+            });
+        });
+    }
+
+    const offerResponse = await graphql(offerQuery.OfferTemplateQuery);
+    const offerData = offerResponse.data;
+
+    if (!offerData && offerResponse.errors) {
+        throw new Error(`Error while fetching offer data, ${offerResponse.errors}`);
+    } else if (!offerData || !offerData.allOfferJson || offerData.allOfferJson.offers.length === 0) {
+        reporter.info('No offers found, skipping offer page creation');
+    } else {
+        const allOffers = offerData.allOfferJson.offers.filter((offer) => offer.slug);
+
+        allOffers.forEach((offer) => {
+            reporter.info(`Creating Offer page under /oferta/${offer.slug}`);
+            actions.createPage({
+                path: `/oferta/${offer.slug}`,
+                component: path.resolve(templateDir, 'Offer', 'index.tsx'),
+                context: {
+                    offer: offer,
+                    listingPagePath: '/oferta',
                 },
             });
         });

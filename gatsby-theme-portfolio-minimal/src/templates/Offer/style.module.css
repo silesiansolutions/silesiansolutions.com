@@ -1,0 +1,172 @@
+.Breadcrumb {
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+    background-color: var(--subtext-color);
+    border-radius: var(--border-radius);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.Breadcrumb a {
+    letter-spacing: +1px;
+}
+
+.Breadcrumb a,
+.Breadcrumb .BackArrow {
+    color: var(--background-color);
+}
+
+.Breadcrumb .BackArrow {
+    margin-right: 0.25rem;
+}
+
+.Article {
+    width: 100%;
+    height: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.Article .Header,
+.Article .Banner,
+.Article .Body {
+    margin-bottom: 2rem;
+}
+
+.Article .Category {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: +1px;
+    color: var(--primary-color);
+}
+
+.Article .Description {
+    font-size: 1rem;
+    letter-spacing: +0.5px;
+    margin-top: 0.25rem;
+    color: var(--text-color);
+}
+
+.Article .BannerImage {
+    border-radius: var(--border-radius);
+    margin-bottom: 0;
+}
+
+.Article .Body .Content {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.Article .Body .Content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: +1px;
+}
+
+.Article .Body .Keyword {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: +1px;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+    cursor: default;
+    font-size: 0.75rem;
+}
+
+.TagsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.LinksList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.Link {
+    width: auto;
+    height: auto;
+    background: var(--background-color);
+    background: linear-gradient(to right, var(--primary-color) 50%, var(--background-color) 50%);
+    background-size: 205% 100%;
+    background-position: right bottom;
+    border-radius: var(--border-radius);
+    border: 0.125rem solid var(--primary-color);
+    padding: 0.25rem 1rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+    transition: all 0.1s ease-out;
+    font-size: 0.875rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.Link:hover {
+    background-position: left bottom;
+    color: var(--background-color);
+}
+
+.Link svg {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+}
+
+.Link:hover svg {
+    filter: invert(1);
+}
+
+.Article img {
+    max-height: 660px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+:global(.gatsby-resp-image-wrapper),
+:global(.gatsby-resp-image-background-image) {
+    margin: 1rem 0;
+    max-height: 660px;
+    overflow-y: hidden;
+}
+
+.Article figure {
+    margin: 1rem 0;
+}
+
+.Article figure > figcaption {
+    margin-top: -0.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--subtext-color);
+    letter-spacing: +0.5px;
+}
+
+@media (min-width: 768px) {
+    .LinksList {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    .Link {
+        margin-right: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+}

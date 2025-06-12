@@ -1,6 +1,6 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { Page, Seo, ContactSection, Animation, Section, ProjectsSection } from 'gatsby-theme-portfolio-minimal';
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import { Page, Seo, ContactSection, Animation, Section, ProjectsSection, Icon } from 'gatsby-theme-portfolio-minimal';
 import * as classes from './style.module.css';
 
 const useLocalDataSource = () => {
@@ -8,8 +8,10 @@ const useLocalDataSource = () => {
         query {
             allOfferJson {
                 nodes {
+                    slug
                     heading
                     content
+                    description
                 }
             }
         }
@@ -28,9 +30,22 @@ export default function OfferPage() {
                 <Animation type="fadeUp" delay={300}>
                     <Section heading="Rozwiązania IT, które wspierają Twój biznes" anchor="oferta">
                         {allOfferJson.nodes.map((item, index) => (
-                            <div key={index} className={classes.offerItem}>
-                                <h3 className={classes.offerHeading}>{item.heading}</h3>
-                                <p className={classes.offerContent}>{item.content}</p>
+                            <div key={index}>
+                                {item.slug ? (
+                                    <Link
+                                        to={`/oferta/${item.slug}`}
+                                        className={classes.offerItem}
+                                        aria-label={`Zobacz szczegóły oferty: ${item.heading}`}
+                                    >
+                                        <h3 className={classes.offerHeading}>{item.heading}</h3>
+                                        <p className={classes.offerContent}>{item.content}</p>
+                                    </Link>
+                                ) : (
+                                    <div className={classes.offerItem}>
+                                        <h3 className={classes.offerHeading}>{item.heading}</h3>
+                                        <p className={classes.offerContent}>{item.content}</p>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </Section>

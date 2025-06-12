@@ -9,3 +9,4 @@ export { ContactSection } from './src/sections/Contact';
 export { LegalSection } from './src/sections/Legal';
 export { Section } from './src/components/Section';
 export { Animation } from './src/components/Animation';
+export { Icon } from './src/components/Icon';

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Animation } from '../../components/Animation';
 import { Section } from '../../components/Section';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -25,8 +26,8 @@ export function InterestsSection(props: PageSection): React.ReactElement {
             <Section anchor={props.sectionId} heading={props.heading}>
                 <div className={classes.Interests}>
                     {data.interests.slice(0, shownInterests).map((interest, key) => {
-                        return (
-                            <Animation key={key} className={classes.Interest} type="scaleIn" delay={key * 50}>
+                        const interestContent = (
+                            <>
                                 {interest.image.src && (
                                     <GatsbyImage
                                         image={interest.image.src.childImageSharp.gatsbyImageData}
@@ -35,6 +36,22 @@ export function InterestsSection(props: PageSection): React.ReactElement {
                                     />
                                 )}{' '}
                                 {interest.label}
+                            </>
+                        );
+
+                        return (
+                            <Animation key={key} type="scaleIn" delay={key * 50}>
+                                {interest.slug ? (
+                                    <Link
+                                        to={`/oferta/${interest.slug}`}
+                                        className={classes.Interest}
+                                        aria-label={`Zobacz szczegóły oferty: ${interest.label}`}
+                                    >
+                                        {interestContent}
+                                    </Link>
+                                ) : (
+                                    <div className={classes.Interest}>{interestContent}</div>
+                                )}
                             </Animation>
                         );
                     })}
