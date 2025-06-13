@@ -86,7 +86,7 @@
         ],
         "image": {
             "src": "./images/strony-internetowe.png",
-            "alt": "Strony internetowe - responsywne, szybkie i SEO-friendly"
+            "alt": "Strony Internetowe - responsywne, szybkie i SEO-friendly"
         }
     },
     {
@@ -130,8 +130,8 @@
             "Companion app dla urządzeń IoT"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
-            "alt": "Aplikacje mobilne - nowoczesne, wydajne i bezpieczne rozwiązania"
+            "src": "./images/aplikacje-mobilne.png",
+            "alt": "Aplikacje Mobilne - nowoczesne, wydajne i bezpieczne rozwiązania"
         }
     },
     {
@@ -176,8 +176,8 @@
             "Migracja sklepu z legacy na headless architecture"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
-            "alt": "Sklepy internetowe - headless, skalowalne i bezpieczne"
+            "src": "./images/sklepy-internetowe.png",
+            "alt": "Sklepy Internetowe - headless, skalowalne i bezpieczne"
         }
     },
     {
@@ -226,8 +226,8 @@
             "Aplikacja analityczna łącząca dane z wielu źródeł w czasie rzeczywistym"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
-            "alt": "Systemy dedykowane - oprogramowanie szyte na miarę, mikroserwisy i chmura"
+            "src": "./images/systemy-dedykowane.png",
+            "alt": "Systemy Dedykowane - oprogramowanie szyte na miarę, mikroserwisy i chmura"
         }
     },
     {
@@ -272,8 +272,8 @@
             "Event-driven integracja mikrousług w architekturze chmurowej"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
-            "alt": "Integracje systemów - API-first, iPaaS i event-driven architektura"
+            "src": "./images/integracje-systemow.png",
+            "alt": "Integracje Systemów - API-first, iPaaS i event-driven architektura"
         }
     },
     {
@@ -318,8 +318,8 @@
             "Platforma analityczna w chmurze z real-time streamingiem danych"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
-            "alt": "Rozwiązania chmurowe - konteneryzacja, Kubernetes, serverless i FinOps"
+            "src": "./images/rozwiazania-chmurowe.png",
+            "alt": "Rozwiązania Chmurowe - konteneryzacja, Kubernetes, serverless i FinOps"
         }
     },
     {
@@ -363,7 +363,7 @@
             "Zabezpieczenie kontenerów i procesów CI/CD w DevSecOps"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
+            "src": "./images/cyberbezpieczenstwo.png",
             "alt": "Cyberbezpieczeństwo - audyt, pentest, zero trust i SIEM"
         }
     },
@@ -412,7 +412,7 @@
             "Platforma big data do analizy logów i monitoringu systemów"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
+            "src": "./images/analiza-danych.png",
             "alt": "Analiza danych - ETL, BI, predykcja i big data"
         }
     },
@@ -452,7 +452,7 @@
             "Analiza kosztów infrastruktury i plan FinOps"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
+            "src": "./images/doradztwo-it.png",
             "alt": "Doradztwo IT - strategia, architektura i transformacja cyfrowa"
         }
     },
@@ -491,8 +491,8 @@
             "Opracowanie polityk backupu, DR i business continuity"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
-            "alt": "Compliance i audyty IT - zgodność z RODO/GDPR, ISO 27001 i PCI DSS"
+            "src": "./images/compliance-i-audyty-it.png",
+            "alt": "Compliance i Audyty IT - zgodność z RODO/GDPR, ISO 27001 i PCI DSS"
         }
     },
     {
@@ -531,8 +531,8 @@
             "Automatyczne przetwarzanie dokumentów i e-podpis"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
-            "alt": "Automatyzacja procesów - RPA, workflow i AI-driven automation"
+            "src": "./images/automatyzacja-procesow.png",
+            "alt": "Automatyzacja Procesów - RPA, Workflow i AI-driven automation"
         }
     },
     {
@@ -578,7 +578,7 @@
             "Automatyzacja testów bezpieczeństwa w pipeline"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
+            "src": "./images/devops-ci-cd.png",
             "alt": "DevOps i CI/CD - automatyzacja pipeline'ów, IaC i monitoring"
         }
     },
@@ -617,7 +617,7 @@
             "Prototyp aplikacji mobilnej w Bubble"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
+            "src": "./images/low-code-no-code.png",
             "alt": "Low-Code i No-Code - szybkie tworzenie aplikacji i automatyzacja"
         }
     },
@@ -660,7 +660,7 @@
             "Inteligentne rozwiązania w budynkach - HVAC, bezpieczeństwo"
         ],
         "image": {
-            "src": "./images/strony-internetowe.png",
+            "src": "./images/internet-of-things-iot.png",
             "alt": "Internet of Things (IoT) - edge computing, 5G, analiza danych"
         }
     }
