@@ -4,7 +4,7 @@ set -o nounset
 
 BASE_URL="https://silesiansolutions.com"
 STATIC_PAGES=("oferta" "realizacje" "o-nas" "blog" "kontakt")
-POSTS_DIR="../../../example-site/content/articles/"
+POSTS_DIR="../../../content/articles/"
 TMP_DIR="$(pwd)/tmp"
 TMP_FILE="$TMP_DIR/bing.json"
 

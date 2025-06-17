@@ -1,6 +1,0 @@
----
-imageSrc: ''
-imageAlt: ''
----
-
-Markdown Content
