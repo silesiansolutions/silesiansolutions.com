@@ -1,6 +1,13 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
+import { JsonLd } from 'react-schemaorg';
 import { Page, Seo, ContactSection, Animation, Section, ProjectsSection, Icon } from '../../sections';
+import { useSiteMetadata } from '../../hooks/useSiteMetadata';
+import {
+    createOrganizationReference,
+    createSimpleBreadcrumb,
+    createAreaServed,
+} from '../../constants/organizationData';
 import * as classes from './style.module.css';
 
 const useLocalDataSource = () => {
@@ -22,10 +29,49 @@ const useLocalDataSource = () => {
 
 export default function OfferPage() {
     const { allOfferJson } = useLocalDataSource();
+    const { siteUrl } = useSiteMetadata();
+
+    const collectionPageSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'Oferta - Usługi IT - Silesian Solutions',
+        description:
+            'Kompleksowe usługi IT od Silesian Solutions. Tworzenie stron internetowych, aplikacji webowych, konsultacje technologiczne i więcej.',
+        url: `${siteUrl}/oferta`,
+        breadcrumb: createSimpleBreadcrumb(siteUrl, 'Oferta', `${siteUrl}/oferta`),
+        mainEntity: {
+            '@type': 'ItemList',
+            itemListElement: allOfferJson.nodes.map((offer, index) => ({
+                '@type': 'ListItem',
+                position: index + 1,
+                item: {
+                    '@type': 'Service',
+                    name: offer.heading,
+                    description: offer.content,
+                    url: offer.slug ? `${siteUrl}/oferta/${offer.slug}` : undefined,
+                    provider: createOrganizationReference(siteUrl),
+                },
+            })),
+        },
+    };
+
+    const professionalServicesSchema = allOfferJson.nodes.map((offer) => ({
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: offer.heading,
+        description: offer.content,
+        url: offer.slug ? `${siteUrl}/oferta/${offer.slug}` : `${siteUrl}/oferta`,
+        provider: createOrganizationReference(siteUrl),
+        areaServed: createAreaServed(),
+    }));
 
     return (
         <>
             <Seo title="Rozwiązania IT dostosowane do Twoich potrzeb" useTitleTemplate={true} />
+            <JsonLd item={collectionPageSchema} />
+            {professionalServicesSchema.map((schema, index) => (
+                <JsonLd key={index} item={schema} />
+            ))}
             <Page>
                 <Animation type="fadeUp" delay={300}>
                     <Section heading="Rozwiązania IT, które wspierają Twój biznes" anchor="oferta">

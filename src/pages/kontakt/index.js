@@ -1,6 +1,17 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { JsonLd } from 'react-schemaorg';
 import { Page, Seo, ContactSection, Section, Animation } from '../../sections';
+import { useSiteMetadata } from '../../hooks/useSiteMetadata';
+import {
+    ORGANIZATION_DATA,
+    createOrganizationReference,
+    createPostalAddress,
+    createGeoCoordinates,
+    createOfferCatalog,
+    createSimpleBreadcrumb,
+    createServiceArea,
+} from '../../constants/organizationData';
 import * as classes from './style.module.css';
 
 const useLocalDataSource = () => {
@@ -27,10 +38,75 @@ const useLocalDataSource = () => {
 
 export default function ContactPage() {
     const { allHoursJson, allFaqJson } = useLocalDataSource();
+    const { siteUrl } = useSiteMetadata();
+
+    function translateDayToEnglish(polishDay) {
+        const dayMap = {
+            Poniedziałek: 'Monday',
+            Wtorek: 'Tuesday',
+            Środa: 'Wednesday',
+            Czwartek: 'Thursday',
+            Piątek: 'Friday',
+            Sobota: 'Saturday',
+            Niedziela: 'Sunday',
+        };
+        return dayMap[polishDay] || polishDay;
+    }
+
+    const localBusinessSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': `${siteUrl}#organization`,
+        name: ORGANIZATION_DATA.name,
+        description: ORGANIZATION_DATA.description,
+        url: siteUrl,
+        email: ORGANIZATION_DATA.email,
+        address: createPostalAddress(),
+        geo: createGeoCoordinates(),
+        openingHoursSpecification: allHoursJson.nodes.map((day) => ({
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: translateDayToEnglish(day.day),
+            opens: day.isOpen ? day.hours.split(' - ')[0] : undefined,
+            closes: day.isOpen ? day.hours.split(' - ')[1] : undefined,
+        })),
+        areaServed: ORGANIZATION_DATA.areaServed,
+        serviceArea: createServiceArea(),
+        knowsAbout: ORGANIZATION_DATA.knowsAbout,
+        hasOfferCatalog: createOfferCatalog(),
+    };
+
+    const contactPageSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        name: 'Kontakt - Silesian Solutions',
+        description:
+            'Skontaktuj się z Silesian Solutions. Oferujemy profesjonalne usługi IT i rozwiązania technologiczne.',
+        url: `${siteUrl}/kontakt`,
+        mainEntity: {
+            '@id': `${siteUrl}#organization`,
+        },
+        breadcrumb: createSimpleBreadcrumb(siteUrl, 'Kontakt', `${siteUrl}/kontakt`),
+    };
+
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: allFaqJson.nodes.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: item.answer,
+            },
+        })),
+    };
 
     return (
         <>
             <Seo title="Skontaktuj się z nami" useTitleTemplate={true} />
+            <JsonLd item={localBusinessSchema} />
+            <JsonLd item={contactPageSchema} />
+            <JsonLd item={faqSchema} />
             <Page>
                 <ContactSection
                     sectionId="kontakt"

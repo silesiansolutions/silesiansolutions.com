@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { JsonLd } from 'react-schemaorg';
+import { CreativeWork, WebPage, WithContext } from 'schema-dts';
 import { Page } from '../../components/Page';
 import { Seo } from '../../components/Seo';
 import { Icon } from '../../components/Icon';
 import { Project } from '../../components/Project';
 import { pluralize } from '../../utils/pluralize';
+import { useSiteMetadata } from '../../hooks/useSiteMetadata';
+import { createOrganizationReference, createBreadcrumb } from '../../constants/organizationData';
 import * as classes from './style.module.css';
 
 interface ProjectTemplateProps {
@@ -18,10 +22,49 @@ interface ProjectTemplateProps {
 
 export default function ProjectTemplate(props: ProjectTemplateProps): React.ReactElement {
     const project = props.pageContext.project;
+    const { siteUrl } = useSiteMetadata();
+
+    const creativeWorkSchema: WithContext<CreativeWork> = {
+        '@context': 'https://schema.org',
+        '@type': 'CreativeWork',
+        name: project.title,
+        description: project.description,
+        url: `${siteUrl}${props.pageContext.listingPagePath}/${project.slug}`,
+        creator: createOrganizationReference(siteUrl),
+        publisher: createOrganizationReference(siteUrl),
+        image: project.image?.src
+            ? {
+                  '@type': 'ImageObject',
+                  url: `${siteUrl}${project.image.src.childImageSharp.gatsbyImageData.images.fallback?.src}`,
+                  caption: project.image.alt || project.title,
+              }
+            : undefined,
+        keywords: project.tags?.join(', '),
+        genre: project.category,
+        about: project.tags?.map((tag) => ({
+            '@type': 'Thing',
+            name: tag,
+        })),
+    };
+
+    const webPageSchema: WithContext<WebPage> = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: `${project.title} - Realizacja - Silesian Solutions`,
+        description: project.description,
+        url: `${siteUrl}${props.pageContext.listingPagePath}/${project.slug}`,
+        breadcrumb: createBreadcrumb([
+            { name: 'Strona główna', url: siteUrl },
+            { name: 'Realizacje', url: `${siteUrl}/realizacje` },
+            { name: project.title, url: `${siteUrl}${props.pageContext.listingPagePath}/${project.slug}` },
+        ]),
+    };
 
     return (
         <>
             <Seo title={project.title} description={project.description} useTitleTemplate={true} />
+            <JsonLd<CreativeWork> item={creativeWorkSchema} />
+            <JsonLd<WebPage> item={webPageSchema} />
             <Page>
                 <article className={classes.Article}>
                     <div className={classes.Breadcrumb}>

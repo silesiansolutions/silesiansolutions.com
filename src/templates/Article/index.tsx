@@ -1,12 +1,17 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { JsonLd } from 'react-schemaorg';
+import { Article, BlogPosting, WithContext } from 'schema-dts';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
+
+import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { Page } from '../../components/Page';
 import { Seo } from '../../components/Seo';
 import { AuthorSnippet } from '../../components/AuthorSnippet';
 import { ArticleTemplateData } from './data';
-import * as classes from './style.module.css';
 import { pluralize } from '../../utils/pluralize';
+import { createOrganizationReference } from '../../constants/organizationData';
+import * as classes from './style.module.css';
 
 // Reference to the local prismjs theme (Modified)
 import '../../globalStyles/prism.css';
@@ -21,9 +26,66 @@ interface ArticleTemplateProps {
 
 export default function ArticleTemplate(props: ArticleTemplateProps): React.ReactElement {
     const article = props.pageContext.article;
+    const { siteUrl, author } = useSiteMetadata();
+
+    const articleSchema: WithContext<Article> = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: article.title,
+        description: article.description || undefined,
+        author: {
+            '@type': 'Person',
+            name: author,
+        },
+        datePublished: article.date,
+        dateModified: article.date,
+        publisher: createOrganizationReference(siteUrl),
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${siteUrl}${props.pageContext.listingPagePath}/${article.slug}`,
+        },
+        image: article.banner?.src?.childImageSharp?.gatsbyImageData
+            ? {
+                  '@type': 'ImageObject',
+                  url: `${siteUrl}${article.banner.src.childImageSharp.gatsbyImageData.images.fallback?.src}`,
+              }
+            : undefined,
+        keywords: article.keywords?.join(', '),
+        articleSection: article.categories.join(', '),
+    };
+
+    const blogPostingSchema: WithContext<BlogPosting> = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: article.title,
+        description: article.description || undefined,
+        author: {
+            '@type': 'Person',
+            name: author,
+        },
+        datePublished: article.date,
+        dateModified: article.date,
+        publisher: createOrganizationReference(siteUrl),
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${siteUrl}${props.pageContext.listingPagePath}/${article.slug}`,
+        },
+        image: article.banner?.src?.childImageSharp?.gatsbyImageData
+            ? {
+                  '@type': 'ImageObject',
+                  url: `${siteUrl}${article.banner.src.childImageSharp.gatsbyImageData.images.fallback?.src}`,
+              }
+            : undefined,
+        keywords: article.keywords?.join(', '),
+        articleSection: article.categories.join(', '),
+        timeRequired: article.readingTime?.text,
+    };
+
     return (
         <>
             <Seo title={article.title} description={article.description || undefined} useTitleTemplate={true} />
+            <JsonLd<Article> item={articleSchema} />
+            <JsonLd<BlogPosting> item={blogPostingSchema} />
             <Page>
                 <article className={classes.Article}>
                     <div className={classes.Breadcrumb}>

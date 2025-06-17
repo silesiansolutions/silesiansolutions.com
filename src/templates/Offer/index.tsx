@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { JsonLd } from 'react-schemaorg';
+import { Service, WebPage, WithContext } from 'schema-dts';
 import { Page } from '../../components/Page';
 import { Seo } from '../../components/Seo';
 import { pluralize } from '../../utils/pluralize';
+import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { ImageObject } from '../../types';
+import { ORGANIZATION_DATA, createOrganizationReference, createBreadcrumb } from '../../constants/organizationData';
 import * as classes from './style.module.css';
 
 interface Offer {
@@ -29,10 +33,41 @@ interface OfferTemplateProps {
 
 export default function OfferTemplate(props: OfferTemplateProps): React.ReactElement {
     const offer = props.pageContext.offer;
+    const { siteUrl } = useSiteMetadata();
+
+    const serviceSchema: WithContext<Service> = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: offer.heading,
+        description: offer.description,
+        url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}`,
+        provider: createOrganizationReference(siteUrl),
+        areaServed: ORGANIZATION_DATA.areaServed,
+        offers: {
+            '@type': 'Offer',
+            description: offer.detailedContent,
+            seller: createOrganizationReference(siteUrl),
+        },
+    };
+
+    const webPageSchema: WithContext<WebPage> = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: `${offer.heading} - Silesian Solutions`,
+        description: offer.description,
+        url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}`,
+        breadcrumb: createBreadcrumb([
+            { name: 'Strona główna', url: siteUrl },
+            { name: 'Oferta', url: `${siteUrl}/oferta` },
+            { name: offer.heading, url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}` },
+        ]),
+    };
 
     return (
         <>
             <Seo title={offer.heading} description={offer.description} useTitleTemplate={true} />
+            <JsonLd<Service> item={serviceSchema} />
+            <JsonLd<WebPage> item={webPageSchema} />
             <Page>
                 <article className={classes.Article}>
                     <div className={classes.Breadcrumb}>
