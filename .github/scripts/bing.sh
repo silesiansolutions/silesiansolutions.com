@@ -31,13 +31,34 @@ construct_submission_payload() {
     json_content+="\"$BASE_URL/$page/\","
   done
 
+  # Add blog articles
   if [ -d "$POSTS_DIR" ]; then
     POSTS=("$POSTS_DIR"*/)
-    for ((i=0; i<${#POSTS[@]}; i++)); do
+    for ((i = 0; i < ${#POSTS[@]}; i++)); do
       POST_DIR="${POSTS[i]}"
       POST_NAME=$(basename "$POST_DIR")
       POST_SLUG="${POST_NAME:12}"
       json_content+="\"$BASE_URL/blog/$POST_SLUG/\","
+    done
+  fi
+
+  # Add offer pages from interests.json
+  INTERESTS_FILE="../../../content/sections/interests/interests.json"
+  if [ -f "$INTERESTS_FILE" ]; then
+    # Extract slugs from interests.json using grep and sed
+    OFFER_SLUGS=$(grep -o '"slug": "[^"]*"' "$INTERESTS_FILE" | sed 's/"slug": "\([^"]*\)"/\1/')
+    for slug in $OFFER_SLUGS; do
+      json_content+="\"$BASE_URL/oferta/$slug/\","
+    done
+  fi
+
+  # Add project pages from projects.json
+  PROJECTS_FILE="../../../content/sections/projects/projects.json"
+  if [ -f "$PROJECTS_FILE" ]; then
+    # Extract slugs from projects.json using grep and sed
+    PROJECT_SLUGS=$(grep -o '"slug": "[^"]*"' "$PROJECTS_FILE" | sed 's/"slug": "\([^"]*\)"/\1/')
+    for slug in $PROJECT_SLUGS; do
+      json_content+="\"$BASE_URL/realizacje/$slug/\","
     done
   fi
 
@@ -48,7 +69,7 @@ construct_submission_payload() {
   json_content="${json_content%,}]}"
 
   echo "Constructed JSON Body:"
-  echo "$json_content" | jq '.' > "$TMP_FILE" || log_error "Failed writing to $TMP_FILE"
+  echo "$json_content" | jq '.' >"$TMP_FILE" || log_error "Failed writing to $TMP_FILE"
   cat "$TMP_FILE"
   echo
 }

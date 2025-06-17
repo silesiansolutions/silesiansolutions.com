@@ -40,25 +40,46 @@ copy_credentials_file() {
     log_error "GOOGLE_JSON_KEY_FILE is not set or is empty. Exiting."
   fi
 
-  echo "$GOOGLE_JSON_KEY_FILE" > "$TMP_DIR/credentials.json" || log_error "Failed to write to credentials file $TMP_DIR/credentials.json"
+  echo "$GOOGLE_JSON_KEY_FILE" >"$TMP_DIR/credentials.json" || log_error "Failed to write to credentials file $TMP_DIR/credentials.json"
 }
 
 # Construct submission payload
 construct_submission_payload() {
-  echo "\"notification_type\",\"url\"" >> "$TMP_FILE"
-  echo "\"URL_UPDATED\",\"${BASE_URL}/\"" >> "$TMP_FILE"
+  echo "\"notification_type\",\"url\"" >>"$TMP_FILE"
+  echo "\"URL_UPDATED\",\"${BASE_URL}/\"" >>"$TMP_FILE"
 
   for page in "${STATIC_PAGES[@]}"; do
-    echo "\"URL_UPDATED\",\"${BASE_URL}/${page}/\"" >> "$TMP_FILE"
+    echo "\"URL_UPDATED\",\"${BASE_URL}/${page}/\"" >>"$TMP_FILE"
   done
 
+  # Add blog articles
   if [ -d "$POSTS_DIR" ]; then
     POSTS=("$POSTS_DIR"*/)
-    for ((i=0; i<${#POSTS[@]}; i++)); do
+    for ((i = 0; i < ${#POSTS[@]}; i++)); do
       POST_DIR="${POSTS[i]}"
       POST_NAME=$(basename "$POST_DIR")
       POST_SLUG="${POST_NAME:12}"
-      echo "\"URL_UPDATED\",\"${BASE_URL}/blog/${POST_SLUG}/\"" >> "$TMP_FILE"
+      echo "\"URL_UPDATED\",\"${BASE_URL}/blog/${POST_SLUG}/\"" >>"$TMP_FILE"
+    done
+  fi
+
+  # Add offer pages from interests.json
+  INTERESTS_FILE="../../../content/sections/interests/interests.json"
+  if [ -f "$INTERESTS_FILE" ]; then
+    # Extract slugs from interests.json using grep and sed
+    OFFER_SLUGS=$(grep -o '"slug": "[^"]*"' "$INTERESTS_FILE" | sed 's/"slug": "\([^"]*\)"/\1/')
+    for slug in $OFFER_SLUGS; do
+      echo "\"URL_UPDATED\",\"${BASE_URL}/oferta/${slug}/\"" >>"$TMP_FILE"
+    done
+  fi
+
+  # Add project pages from projects.json
+  PROJECTS_FILE="../../../content/sections/projects/projects.json"
+  if [ -f "$PROJECTS_FILE" ]; then
+    # Extract slugs from projects.json using grep and sed
+    PROJECT_SLUGS=$(grep -o '"slug": "[^"]*"' "$PROJECTS_FILE" | sed 's/"slug": "\([^"]*\)"/\1/')
+    for slug in $PROJECT_SLUGS; do
+      echo "\"URL_UPDATED\",\"${BASE_URL}/realizacje/${slug}/\"" >>"$TMP_FILE"
     done
   fi
 
