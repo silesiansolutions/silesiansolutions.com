@@ -11,7 +11,7 @@ import { Seo } from '../../components/Seo';
 import { AuthorSnippet } from '../../components/AuthorSnippet';
 import { ArticleTemplateData } from './data';
 import { pluralize } from '../../utils/pluralize';
-import { createOrganizationReference } from '../../constants/organizationData';
+import { createOrganizationReference } from '../../utils/organizationHelpers';
 import * as classes from './style.module.css';
 
 // Reference to the local prismjs theme (Modified)

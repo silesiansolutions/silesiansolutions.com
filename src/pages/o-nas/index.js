@@ -4,7 +4,7 @@ import { JsonLd } from 'react-schemaorg';
 import { Page, Seo, ContactSection, InterestsSection, Animation, Section } from '../../sections';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
-import { createOrganizationReference, createSimpleBreadcrumb } from '../../constants/organizationData';
+import { createOrganizationReference, createSimpleBreadcrumb } from '../../utils/organizationHelpers';
 import * as classes from './style.module.css';
 
 const useLocalDataSource = () => {

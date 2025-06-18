@@ -4,7 +4,7 @@ import { JsonLd } from 'react-schemaorg';
 import { Organization, WebSite, WithContext } from 'schema-dts';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
-import { createContactPoint, createServiceArea } from '../../constants/organizationData';
+import { createContactPoint, createServiceArea } from '../../utils/organizationHelpers';
 
 interface SeoProps {
     title: string;

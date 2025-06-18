@@ -10,7 +10,7 @@ import { Project } from '../../components/Project';
 import { pluralize } from '../../utils/pluralize';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData } from '../../hooks/useOrganizationData';
-import { createOrganizationReference, createBreadcrumb } from '../../constants/organizationData';
+import { createOrganizationReference, createBreadcrumb } from '../../utils/organizationHelpers';
 import * as classes from './style.module.css';
 
 interface ProjectTemplateProps {

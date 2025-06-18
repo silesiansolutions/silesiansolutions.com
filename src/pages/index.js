@@ -11,7 +11,7 @@ import {
     Seo,
 } from '../sections';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
-import { createBreadcrumb } from '../constants/organizationData';
+import { createBreadcrumb } from '../utils/organizationHelpers';
 
 export default function IndexPage() {
     const { siteUrl } = useSiteMetadata();

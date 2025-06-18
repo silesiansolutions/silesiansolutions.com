@@ -3,7 +3,7 @@ import { JsonLd } from 'react-schemaorg';
 import { LegalSection, Page, Seo } from '../sections';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { useJsonLdOptions } from '../hooks/useOrganizationData';
-import { createSimpleBreadcrumb } from '../constants/organizationData';
+import { createSimpleBreadcrumb } from '../utils/organizationHelpers';
 
 export default function InformationClausePage() {
     const { siteUrl } = useSiteMetadata();

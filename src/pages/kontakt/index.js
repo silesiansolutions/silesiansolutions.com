@@ -10,7 +10,7 @@ import {
     createOfferCatalog,
     createSimpleBreadcrumb,
     createServiceArea,
-} from '../../constants/organizationData';
+} from '../../utils/organizationHelpers';
 import * as classes from './style.module.css';
 
 const useLocalDataSource = () => {
