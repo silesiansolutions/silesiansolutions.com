@@ -72,6 +72,7 @@ export function Seo(props: SeoProps): React.ReactElement {
                 htmlAttributes={{ lang: siteMetadata.language }}
             >
                 {props.noIndex && <meta name="robots" content="noindex" />}
+                <link rel="canonical" href={props.currentUrl || siteMetadata.siteUrl} />
                 <meta name="description" content={siteMetadata.description} />
                 <meta property="og:title" content={siteMetadata.title} />
                 <meta property="og:site_name" content={siteMetadata.title} />
