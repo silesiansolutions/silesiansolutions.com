@@ -9,6 +9,7 @@ import { Icon } from '../../components/Icon';
 import { Project } from '../../components/Project';
 import { pluralize } from '../../utils/pluralize';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
+import { useOrganizationData } from '../../hooks/useOrganizationData';
 import { createOrganizationReference, createBreadcrumb } from '../../constants/organizationData';
 import * as classes from './style.module.css';
 
@@ -23,6 +24,7 @@ interface ProjectTemplateProps {
 export default function ProjectTemplate(props: ProjectTemplateProps): React.ReactElement {
     const project = props.pageContext.project;
     const { siteUrl } = useSiteMetadata();
+    const organizationData = useOrganizationData();
 
     const creativeWorkSchema: WithContext<CreativeWork> = {
         '@context': 'https://schema.org',
@@ -30,8 +32,8 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
         name: project.title,
         description: project.description,
         url: `${siteUrl}${props.pageContext.listingPagePath}/${project.slug}`,
-        creator: createOrganizationReference(siteUrl),
-        publisher: createOrganizationReference(siteUrl),
+        creator: createOrganizationReference(siteUrl, organizationData),
+        publisher: createOrganizationReference(siteUrl, organizationData),
         image: project.image?.src
             ? {
                   '@type': 'ImageObject',

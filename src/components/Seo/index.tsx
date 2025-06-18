@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet';
 import { JsonLd } from 'react-schemaorg';
 import { Organization, WebSite, WithContext } from 'schema-dts';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
-import { ORGANIZATION_DATA, createContactPoint, createServiceArea } from '../../constants/organizationData';
+import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
+import { createContactPoint, createServiceArea } from '../../constants/organizationData';
 
 interface SeoProps {
     title: string;
@@ -17,6 +18,8 @@ interface SeoProps {
 
 export function Seo(props: SeoProps): React.ReactElement {
     const siteMetadata = { ...useSiteMetadata(), ...props };
+    const organizationData = useOrganizationData();
+    const jsonLdOptions = useJsonLdOptions();
 
     const thumbnailUrl = siteMetadata.thumbnail
         ? (siteMetadata.siteUrl + siteMetadata.thumbnail.childImageSharp.original.src).replace(/([^:]\/)\/+/g, '$1')
@@ -25,8 +28,8 @@ export function Seo(props: SeoProps): React.ReactElement {
     const organizationSchema: WithContext<Organization> = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: ORGANIZATION_DATA.name,
-        legalName: ORGANIZATION_DATA.legalName,
+        name: organizationData.name,
+        legalName: organizationData.legalName,
         url: siteMetadata.siteUrl,
         logo: thumbnailUrl
             ? {
@@ -34,16 +37,16 @@ export function Seo(props: SeoProps): React.ReactElement {
                   url: thumbnailUrl,
               }
             : undefined,
-        description: ORGANIZATION_DATA.description,
+        description: organizationData.description,
         founder: {
             '@type': 'Person',
             name: siteMetadata.author,
         },
-        foundingLocation: createServiceArea(),
-        areaServed: ORGANIZATION_DATA.areaServed,
-        knowsAbout: ORGANIZATION_DATA.knowsAbout,
+        foundingLocation: createServiceArea(organizationData),
+        areaServed: organizationData.areaServed,
+        knowsAbout: organizationData.knowsAbout,
         sameAs: [siteMetadata.social.linkedin, siteMetadata.social.github, siteMetadata.social.twitter].filter(Boolean),
-        contactPoint: createContactPoint(),
+        contactPoint: createContactPoint(organizationData, jsonLdOptions),
     };
 
     const webSiteSchema: WithContext<WebSite> = {
@@ -54,7 +57,7 @@ export function Seo(props: SeoProps): React.ReactElement {
         description: siteMetadata.description,
         publisher: {
             '@type': 'Organization',
-            name: ORGANIZATION_DATA.name,
+            name: organizationData.name,
             logo: thumbnailUrl
                 ? {
                       '@type': 'ImageObject',

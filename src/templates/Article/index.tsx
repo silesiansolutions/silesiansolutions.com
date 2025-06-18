@@ -5,6 +5,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
+import { useOrganizationData } from '../../hooks/useOrganizationData';
 import { Page } from '../../components/Page';
 import { Seo } from '../../components/Seo';
 import { AuthorSnippet } from '../../components/AuthorSnippet';
@@ -27,6 +28,7 @@ interface ArticleTemplateProps {
 export default function ArticleTemplate(props: ArticleTemplateProps): React.ReactElement {
     const article = props.pageContext.article;
     const { siteUrl, author } = useSiteMetadata();
+    const organizationData = useOrganizationData();
 
     const articleSchema: WithContext<Article> = {
         '@context': 'https://schema.org',
@@ -39,7 +41,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
         },
         datePublished: article.date,
         dateModified: article.date,
-        publisher: createOrganizationReference(siteUrl),
+        publisher: createOrganizationReference(siteUrl, organizationData),
         mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': `${siteUrl}${props.pageContext.listingPagePath}/${article.slug}`,
@@ -65,7 +67,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
         },
         datePublished: article.date,
         dateModified: article.date,
-        publisher: createOrganizationReference(siteUrl),
+        publisher: createOrganizationReference(siteUrl, organizationData),
         mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': `${siteUrl}${props.pageContext.listingPagePath}/${article.slug}`,

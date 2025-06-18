@@ -206,9 +206,51 @@ module.exports = ({ actions }) => {
         examples: [String]
         image: Image
     }
+    type OrganizationLocation {
+        addressLocality: String
+        addressRegion: String
+        addressCountry: String
+        postalCode: String
+    }
+    type OrganizationCoordinates {
+        latitude: Float
+        longitude: Float
+    }
+    type OrganizationService {
+        name: String
+        description: String
+    }
+    type OrganizationData {
+        name: String
+        legalName: String
+        email: String
+        description: String
+        location: OrganizationLocation
+        coordinates: OrganizationCoordinates
+        areaServed: String
+        knowsAbout: [String]
+        availableLanguage: [String]
+        mainServices: [OrganizationService]
+    }
+    type JsonLdContactPoint {
+        contactType: String
+    }
+    type JsonLdOfferCatalog {
+        name: String
+    }
+    type JsonLdBreadcrumb {
+        homePageName: String
+    }
+    type JsonLdOptions {
+        contactPoint: JsonLdContactPoint
+        offerCatalog: JsonLdOfferCatalog
+        breadcrumb: JsonLdBreadcrumb
+    }
     type ContentJson implements Node @dontInfer {
         siteMetadata: SiteMetadata
         siteConfiguration: SiteConfiguration
+        organizationData: OrganizationData
+        jsonLdOptions: JsonLdOptions
     }
   `);
 };

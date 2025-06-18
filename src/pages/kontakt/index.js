@@ -3,9 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { JsonLd } from 'react-schemaorg';
 import { Page, Seo, ContactSection, Section, Animation } from '../../sections';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
+import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
 import {
-    ORGANIZATION_DATA,
-    createOrganizationReference,
     createPostalAddress,
     createGeoCoordinates,
     createOfferCatalog,
@@ -39,6 +38,8 @@ const useLocalDataSource = () => {
 export default function ContactPage() {
     const { allHoursJson, allFaqJson } = useLocalDataSource();
     const { siteUrl } = useSiteMetadata();
+    const organizationData = useOrganizationData();
+    const jsonLdOptions = useJsonLdOptions();
 
     function translateDayToEnglish(polishDay) {
         const dayMap = {
@@ -57,22 +58,22 @@ export default function ContactPage() {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         '@id': `${siteUrl}#organization`,
-        name: ORGANIZATION_DATA.name,
-        description: ORGANIZATION_DATA.description,
+        name: organizationData.name,
+        description: organizationData.description,
         url: siteUrl,
-        email: ORGANIZATION_DATA.email,
-        address: createPostalAddress(),
-        geo: createGeoCoordinates(),
+        email: organizationData.email,
+        address: createPostalAddress(organizationData),
+        geo: createGeoCoordinates(organizationData),
         openingHoursSpecification: allHoursJson.nodes.map((day) => ({
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: translateDayToEnglish(day.day),
             opens: day.isOpen ? day.hours.split(' - ')[0] : undefined,
             closes: day.isOpen ? day.hours.split(' - ')[1] : undefined,
         })),
-        areaServed: ORGANIZATION_DATA.areaServed,
-        serviceArea: createServiceArea(),
-        knowsAbout: ORGANIZATION_DATA.knowsAbout,
-        hasOfferCatalog: createOfferCatalog(),
+        areaServed: organizationData.areaServed,
+        serviceArea: createServiceArea(organizationData),
+        knowsAbout: organizationData.knowsAbout,
+        hasOfferCatalog: createOfferCatalog(organizationData, jsonLdOptions),
     };
 
     const contactPageSchema = {
@@ -85,7 +86,7 @@ export default function ContactPage() {
         mainEntity: {
             '@id': `${siteUrl}#organization`,
         },
-        breadcrumb: createSimpleBreadcrumb(siteUrl, 'Kontakt', `${siteUrl}/kontakt`),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, 'Kontakt', `${siteUrl}/kontakt`, jsonLdOptions),
     };
 
     const faqSchema = {

@@ -3,11 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { JsonLd } from 'react-schemaorg';
 import { Page, Seo, ContactSection, InterestsSection, Animation, Section } from '../../sections';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
-import {
-    ORGANIZATION_DATA,
-    createOrganizationReference,
-    createSimpleBreadcrumb,
-} from '../../constants/organizationData';
+import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
+import { createOrganizationReference, createSimpleBreadcrumb } from '../../constants/organizationData';
 import * as classes from './style.module.css';
 
 const useLocalDataSource = () => {
@@ -28,6 +25,8 @@ const useLocalDataSource = () => {
 export default function AboutUsPage() {
     const { allAboutUsJson } = useLocalDataSource();
     const { siteUrl } = useSiteMetadata();
+    const organizationData = useOrganizationData();
+    const jsonLdOptions = useJsonLdOptions();
 
     const aboutPageSchema = {
         '@context': 'https://schema.org',
@@ -36,8 +35,8 @@ export default function AboutUsPage() {
         description:
             'Poznaj Silesian Solutions - zespół specjalistów IT tworzących nowoczesne rozwiązania technologiczne prosto ze Śląska.',
         url: `${siteUrl}/o-nas`,
-        mainEntity: createOrganizationReference(siteUrl),
-        breadcrumb: createSimpleBreadcrumb(siteUrl, 'O nas', `${siteUrl}/o-nas`),
+        mainEntity: createOrganizationReference(siteUrl, organizationData),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, 'O nas', `${siteUrl}/o-nas`, jsonLdOptions),
     };
 
     return (

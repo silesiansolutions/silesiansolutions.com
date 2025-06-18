@@ -62,5 +62,80 @@
             "useDarkModeBasedOnUsersPreference": true,
             "useCookieBar": true
         }
+    },
+    "organizationData": {
+        "name": "Silesian Solutions",
+        "legalName": "Silesian Solutions",
+        "email": "biuro@silesiansolutions.com",
+        "description": "Silesian Solutions to ekspert w tworzeniu nowoczesnego oprogramowania, stron internetowych, aplikacji PWA, e-commerce, systemów dedykowanych, rozwiązań chmurowych, integracji, cyberbezpieczeństwie, BI i doradztwie IT.",
+        "location": {
+            "addressLocality": "Bielsko-Biała",
+            "addressRegion": "Śląskie",
+            "addressCountry": "PL",
+            "postalCode": "43-300"
+        },
+        "coordinates": {
+            "latitude": 49.823108285582414,
+            "longitude": 19.049053319792204
+        },
+        "areaServed": "Poland",
+        "knowsAbout": [
+            "Web Development",
+            "Mobile PWA",
+            "E-commerce",
+            "Custom Software",
+            "Cloud Architectures",
+            "DevOps",
+            "System Integration",
+            "Cybersecurity",
+            "Data Analytics",
+            "IT Consulting"
+        ],
+        "availableLanguage": ["Polish", "English"],
+        "mainServices": [
+            {
+                "name": "Tworzenie stron internetowych",
+                "description": "Responsywne, SEO-przyjazne strony i landing page'e"
+            },
+            {
+                "name": "Aplikacje webowe i mobilne PWA",
+                "description": "Skalowalne aplikacje biznesowe i PWA"
+            },
+            {
+                "name": "Sklepy internetowe",
+                "description": "Bezpieczne, headless B2B/B2C e-commerce"
+            },
+            {
+                "name": "Systemy dedykowane",
+                "description": "Mikroserwisy, architektura chmurowa i integracje"
+            },
+            {
+                "name": "Rozwiązania chmurowe i DevOps",
+                "description": "Kubernetes, serverless, IaC, FinOps"
+            },
+            {
+                "name": "Cyberbezpieczeństwo",
+                "description": "Audyty, pen-testy, RODO, ISO 27001"
+            },
+            {
+                "name": "Analiza danych i BI",
+                "description": "Dashboardy, ML Ops, data-driven insights"
+            },
+            {
+                "name": "Konsultacje IT",
+                "description": "Strategia, transformacja, Agile, RPA"
+            }
+        ]
+    },
+    "jsonLdOptions": {
+        "contactPoint": {
+            "contactType": "customer service"
+        },
+        "offerCatalog": {
+            "name": "Usługi IT"
+        },
+        "breadcrumb": {
+            "homePageName": "Strona główna"
+        }
     }
 }

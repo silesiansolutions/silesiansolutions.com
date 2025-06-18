@@ -1,8 +1,9 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { JsonLd } from 'react-schemaorg';
-import { Page, Seo, ContactSection, Animation, Section, ProjectsSection, Icon } from '../../sections';
+import { Page, Seo, ContactSection, Animation, Section, ProjectsSection } from '../../sections';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
+import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
 import {
     createOrganizationReference,
     createSimpleBreadcrumb,
@@ -30,6 +31,8 @@ const useLocalDataSource = () => {
 export default function OfferPage() {
     const { allOfferJson } = useLocalDataSource();
     const { siteUrl } = useSiteMetadata();
+    const organizationData = useOrganizationData();
+    const jsonLdOptions = useJsonLdOptions();
 
     const collectionPageSchema = {
         '@context': 'https://schema.org',
@@ -38,7 +41,7 @@ export default function OfferPage() {
         description:
             'Kompleksowe usługi IT od Silesian Solutions. Tworzenie stron internetowych, aplikacji webowych, konsultacje technologiczne i więcej.',
         url: `${siteUrl}/oferta`,
-        breadcrumb: createSimpleBreadcrumb(siteUrl, 'Oferta', `${siteUrl}/oferta`),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, 'Oferta', `${siteUrl}/oferta`, jsonLdOptions),
         mainEntity: {
             '@type': 'ItemList',
             itemListElement: allOfferJson.nodes.map((offer, index) => ({
@@ -49,7 +52,7 @@ export default function OfferPage() {
                     name: offer.heading,
                     description: offer.content,
                     url: offer.slug ? `${siteUrl}/oferta/${offer.slug}` : undefined,
-                    provider: createOrganizationReference(siteUrl),
+                    provider: createOrganizationReference(siteUrl, organizationData),
                 },
             })),
         },
@@ -61,8 +64,8 @@ export default function OfferPage() {
         name: offer.heading,
         description: offer.content,
         url: offer.slug ? `${siteUrl}/oferta/${offer.slug}` : `${siteUrl}/oferta`,
-        provider: createOrganizationReference(siteUrl),
-        areaServed: createAreaServed(),
+        provider: createOrganizationReference(siteUrl, organizationData),
+        areaServed: createAreaServed(organizationData),
     }));
 
     return (

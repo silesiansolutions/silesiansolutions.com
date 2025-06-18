@@ -2,10 +2,12 @@ import React from 'react';
 import { JsonLd } from 'react-schemaorg';
 import { LegalSection, Page, Seo } from '../sections';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import { useJsonLdOptions } from '../hooks/useOrganizationData';
 import { createSimpleBreadcrumb } from '../constants/organizationData';
 
 export default function InformationClausePage() {
     const { siteUrl } = useSiteMetadata();
+    const jsonLdOptions = useJsonLdOptions();
 
     const webPageSchema = {
         '@context': 'https://schema.org',
@@ -13,7 +15,12 @@ export default function InformationClausePage() {
         name: 'Klauzula informacyjna RODO - Silesian Solutions',
         description: 'Klauzula informacyjna dotycząca przetwarzania danych osobowych zgodnie z RODO.',
         url: `${siteUrl}/klauzula-informacyjna`,
-        breadcrumb: createSimpleBreadcrumb(siteUrl, 'Klauzula informacyjna', `${siteUrl}/klauzula-informacyjna`),
+        breadcrumb: createSimpleBreadcrumb(
+            siteUrl,
+            'Klauzula informacyjna',
+            `${siteUrl}/klauzula-informacyjna`,
+            jsonLdOptions,
+        ),
     };
 
     return (

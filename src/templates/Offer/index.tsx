@@ -7,8 +7,9 @@ import { Page } from '../../components/Page';
 import { Seo } from '../../components/Seo';
 import { pluralize } from '../../utils/pluralize';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
+import { useOrganizationData } from '../../hooks/useOrganizationData';
 import { ImageObject } from '../../types';
-import { ORGANIZATION_DATA, createOrganizationReference, createBreadcrumb } from '../../constants/organizationData';
+import { createOrganizationReference, createBreadcrumb } from '../../constants/organizationData';
 import * as classes from './style.module.css';
 
 interface Offer {
@@ -34,6 +35,7 @@ interface OfferTemplateProps {
 export default function OfferTemplate(props: OfferTemplateProps): React.ReactElement {
     const offer = props.pageContext.offer;
     const { siteUrl } = useSiteMetadata();
+    const organizationData = useOrganizationData();
 
     const serviceSchema: WithContext<Service> = {
         '@context': 'https://schema.org',
@@ -41,12 +43,12 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
         name: offer.heading,
         description: offer.description,
         url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}`,
-        provider: createOrganizationReference(siteUrl),
-        areaServed: ORGANIZATION_DATA.areaServed,
+        provider: createOrganizationReference(siteUrl, organizationData),
+        areaServed: organizationData.areaServed,
         offers: {
             '@type': 'Offer',
             description: offer.detailedContent,
-            seller: createOrganizationReference(siteUrl),
+            seller: createOrganizationReference(siteUrl, organizationData),
         },
     };
 
