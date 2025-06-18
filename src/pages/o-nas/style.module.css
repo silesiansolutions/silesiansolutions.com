@@ -2,7 +2,6 @@
     padding: 1rem 0;
     background: var(--background-color);
     border-radius: 4px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
     margin: 0;
     height: 100%;
     display: flex;

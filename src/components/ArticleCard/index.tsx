@@ -4,6 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import SkeletonLoader from 'tiny-skeleton-loader-react';
 import { ImageObject } from '../../types';
 import { Theme, useGlobalState } from '../../context';
+import { getExternalLinkRel } from '../../utils/linkUtils';
 import * as classes from './style.module.css';
 
 export interface ArticleCard {
@@ -59,7 +60,8 @@ export function ArticleCard(props: ArticleCardProps): React.ReactElement {
     );
 
     return absoluteUrl ? (
-        <a href={props.data.link} target="_blank" rel="noopener noreferrer" title={props.data.title}>
+        // eslint-disable-next-line react/jsx-no-target-blank
+        <a href={props.data.link} target="_blank" rel={getExternalLinkRel(props.data.link)} title={props.data.title}>
             {articleCard}
         </a>
     ) : (

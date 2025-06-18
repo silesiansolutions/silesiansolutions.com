@@ -15,7 +15,7 @@ Dane osobowe przetwarzane są zgodnie z zasadami zawartymi w Klauzuli Informacyj
 
 ## Administrator danych osobowych
 
-Administratorem danych osobowych jest Dawid Ryłko, prowadzący działalność gospodarczą z adresem do doręczeń: ul. Zwierzyniecka 19a/1, 43-300 Bielsko-Biała, Polska. W sprawach dotyczących przetwarzania danych osobowych można kontaktować się pod adresem e-mail: [biuro@silesiansolutions.com](mailto:biuro@silesiansolutions.com).
+Administratorem danych osobowych jest [Dawid Ryłko](https://dawidrylko.com/), prowadzący działalność gospodarczą z adresem do doręczeń: ul. Zwierzyniecka 19a/1, 43-300 Bielsko-Biała, Polska. W sprawach dotyczących przetwarzania danych osobowych można kontaktować się pod adresem e-mail: [biuro@silesiansolutions.com](mailto:biuro@silesiansolutions.com).
 
 Szczegółowe informacje o administratorze, zakresie przetwarzanych danych, podstawach prawnych, odbiorcach danych oraz okresie ich przechowywania znajdują się w Klauzuli Informacyjnej dostępnej [tutaj](/klauzula-informacyjna).
 

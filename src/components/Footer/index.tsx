@@ -149,7 +149,7 @@ export function Footer(): React.ReactElement {
                                     key={index}
                                     href={social.url}
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel="noopener noreferrer nofollow"
                                     className={classes.SocialLink}
                                     aria-label={social.label}
                                     style={{

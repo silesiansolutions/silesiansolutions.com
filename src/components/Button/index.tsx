@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { getExternalLinkRel } from '../../utils/linkUtils';
 import * as classes from './style.module.css';
 
 export enum ButtonType {
@@ -24,12 +25,13 @@ export function Button(props: ButtonProps): React.ReactElement {
         } else {
             if (props.externalLink) {
                 return (
+                    // eslint-disable-next-line react/jsx-no-target-blank
                     <a
                         id={props.id}
                         className={classes.Button}
                         href={props.url}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel={getExternalLinkRel(props.url)}
                         aria-label="Link zewnętrzny"
                     >
                         {props.label}

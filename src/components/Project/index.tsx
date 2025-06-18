@@ -5,6 +5,7 @@ import { Animation } from '../Animation';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { Icon } from '../Icon';
 import { ImageObject } from '../../types';
+import { getExternalLinkRel } from '../../utils/linkUtils';
 import * as classes from './style.module.css';
 
 enum LinkType {
@@ -71,11 +72,12 @@ export function Project(props: ProjectProps): React.ReactElement {
                         props.data.links.length !== 0 &&
                         props.data.links.map((link, key) => {
                             return (
+                                // eslint-disable-next-line react/jsx-no-target-blank
                                 <a
                                     key={key}
                                     href={link.url}
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel={getExternalLinkRel(link.url)}
                                     aria-label="Zewnętrzny link"
                                 >
                                     <Icon name={link.type} color="var(--subtext-color)" />
@@ -85,10 +87,11 @@ export function Project(props: ProjectProps): React.ReactElement {
                 </div>
             </div>
             {props.data.image.src && props.data.image.linkTo && (
+                // eslint-disable-next-line react/jsx-no-target-blank
                 <a
                     href={props.data.image.linkTo}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel={getExternalLinkRel(props.data.image.linkTo)}
                     aria-label="Link zewnętrzny"
                 >
                     <GatsbyImage

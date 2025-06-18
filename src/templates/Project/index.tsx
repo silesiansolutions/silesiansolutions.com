@@ -11,6 +11,7 @@ import { pluralize } from '../../utils/pluralize';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData } from '../../hooks/useOrganizationData';
 import { createOrganizationReference, createBreadcrumb } from '../../utils/organizationHelpers';
+import { getExternalLinkRel } from '../../utils/linkUtils';
 import * as classes from './style.module.css';
 
 interface ProjectTemplateProps {
@@ -114,11 +115,12 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
                                 <h3>Linki do projektu:</h3>
                                 <div className={classes.LinksList}>
                                     {project.links.map((link, key) => (
+                                        // eslint-disable-next-line react/jsx-no-target-blank
                                         <a
                                             key={key}
                                             href={link.url}
                                             target="_blank"
-                                            rel="noopener noreferrer"
+                                            rel={getExternalLinkRel(link.url)}
                                             className={classes.Link}
                                             aria-label={`Link do ${link.type === 'github' ? 'GitHub' : 'strony projektu'}`}
                                         >

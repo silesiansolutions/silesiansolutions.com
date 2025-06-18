@@ -6,7 +6,7 @@ Zgodnie z art. 13 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 
 
 ## Administrator danych osobowych
 
-Administratorem Pani/Pana danych osobowych jest Dawid Ryłko, prowadzący działalność gospodarczą z adresem do doręczeń: ul. Zwierzyniecka 19a/1, 43-300 Bielsko-Biała, Polska.
+Administratorem Pani/Pana danych osobowych jest [Dawid Ryłko](https://dawidrylko.com/), prowadzący działalność gospodarczą z adresem do doręczeń: ul. Zwierzyniecka 19a/1, 43-300 Bielsko-Biała, Polska.
 
 ## Dane kontaktowe administratora
 

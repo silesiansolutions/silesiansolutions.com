@@ -3,6 +3,7 @@ import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { Icon } from '../Icon';
 import { Slider } from '../Slider';
 import { socialProfileLabels } from './configuration';
+import { getExternalLinkRel } from '../../utils/linkUtils';
 import * as classes from './style.module.css';
 
 export enum SocialProfile {
@@ -58,12 +59,13 @@ export function SocialProfiles(props: SocialProfilesProps): React.ReactElement {
             {shownProfiles.map((profile, key) => {
                 const completeProfileData = profile.label && profile.url;
                 return !completeProfileData ? null : (
+                    // eslint-disable-next-line react/jsx-no-target-blank
                     <a
                         key={key}
                         className={classes.Profile}
                         href={profile.url}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel={getExternalLinkRel(profile.url)}
                         aria-label={profile.label}
                         style={props.showIcon ? { padding: '0.5rem 1.25rem' } : undefined}
                     >
