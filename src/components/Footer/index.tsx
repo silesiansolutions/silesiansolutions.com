@@ -196,7 +196,7 @@ export function Footer(): React.ReactElement {
                         className={classes.Copyright}
                         style={{ color: darkModeEnabled ? 'var(--subtext-color)' : 'var(--background-color)' }}
                     >
-                        Copyright &copy; {currentYear} Silesian Solutions. Wszelkie prawa zastrzeżone.
+                        Copyright &copy; 2015-{currentYear} Silesian Solutions. Wszelkie prawa zastrzeżone.
                     </p>
                 </div>
             </div>

@@ -24,9 +24,9 @@
 .Article {
     width: 100%;
     height: 100%;
-    max-width: 740px;
+        max-width: var(--page-width);
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: var(--page-padding);
 }
 
 .Article .Header,

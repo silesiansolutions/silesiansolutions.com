@@ -36,11 +36,12 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
     const offer = props.pageContext.offer;
     const { siteUrl } = useSiteMetadata();
     const organizationData = useOrganizationData();
+    const title = offer.heading.split(' ').slice(1).join(' ');
 
     const serviceSchema: WithContext<Service> = {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: offer.heading,
+        name: title,
         description: offer.description,
         url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}`,
         provider: createOrganizationReference(siteUrl, organizationData),
@@ -61,13 +62,13 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
         breadcrumb: createBreadcrumb([
             { name: 'Strona główna', url: siteUrl },
             { name: 'Oferta', url: `${siteUrl}/oferta` },
-            { name: offer.heading, url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}` },
+            { name: title, url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}` },
         ]),
     };
 
     return (
         <>
-            <Seo title={offer.heading} description={offer.description} useTitleTemplate={true} />
+            <Seo title={title} description={offer.description} useTitleTemplate={true} />
             <JsonLd<Service> item={serviceSchema} />
             <JsonLd<WebPage> item={webPageSchema} />
             <Page>
@@ -83,7 +84,7 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
                     </div>
 
                     <section className={classes.Header}>
-                        <h1>{offer.heading}</h1>
+                        <h1>{title}</h1>
                         {offer.description && <div className={classes.Description}>{offer.description}</div>}
                     </section>
 
@@ -91,7 +92,7 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
                         <section className={classes.Banner}>
                             <GatsbyImage
                                 image={offer.image.src.childImageSharp.gatsbyImageData}
-                                alt={offer.image.alt || offer.heading}
+                                alt={offer.image.alt || title}
                                 imgClassName={classes.BannerImage}
                             />
                         </section>
