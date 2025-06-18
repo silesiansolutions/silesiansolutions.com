@@ -65,6 +65,6 @@
 }
 
 .Card .ReadingTime::before {
-    content: '–';
+    content: '-';
     margin-right: 0.25rem;
 }

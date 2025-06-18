@@ -2,7 +2,7 @@
 sectionId: privacy-policy
 ---
 
-Polityka Prywatności określa zasady przetwarzania danych osobowych oraz wykorzystywania plików cookies w serwisie internetowym [silesiansolutions.com](https://silesiansolutions.com). Celem dokumentu jest zapewnienie, że dane osobowe użytkowników są przetwarzane z poszanowaniem ich prywatności i zgodnie z przepisami prawa, w tym Rozporządzeniem (UE) 2016/679 (RODO), oraz poinformowanie o przysługujących użytkownikom prawach.
+Polityka prywatności określa zasady przetwarzania danych osobowych oraz wykorzystywania plików cookies w serwisie internetowym [silesiansolutions.com](https://silesiansolutions.com). Celem dokumentu jest zapewnienie, że dane osobowe użytkowników są przetwarzane z poszanowaniem ich prywatności i zgodnie z przepisami prawa, w tym Rozporządzeniem (UE) 2016/679 (RODO), oraz poinformowanie o przysługujących użytkownikom prawach.
 
 ## Zakres i sposób zbierania danych osobowych
 

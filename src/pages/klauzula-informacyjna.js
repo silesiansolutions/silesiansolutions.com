@@ -12,7 +12,7 @@ export default function InformationClausePage() {
     const webPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Klauzula informacyjna RODO - Silesian Solutions',
+        name: 'Klauzula informacyjna - Silesian Solutions',
         description: 'Klauzula informacyjna dotycząca przetwarzania danych osobowych zgodnie z RODO.',
         url: `${siteUrl}/klauzula-informacyjna`,
         breadcrumb: createSimpleBreadcrumb(

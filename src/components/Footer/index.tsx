@@ -41,8 +41,8 @@ export function Footer(): React.ReactElement {
     ];
 
     const legalLinks = [
-        { label: 'Polityka Prywatności', url: '/polityka-prywatnosci' },
-        { label: 'Klauzula informacyjna RODO', url: '/klauzula-informacyjna' },
+        { label: 'Polityka prywatności', url: '/polityka-prywatnosci' },
+        { label: 'Klauzula informacyjna', url: '/klauzula-informacyjna' },
     ];
 
     const socialLinks = [

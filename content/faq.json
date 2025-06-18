@@ -1,42 +1,42 @@
 [
     {
-        "question": "Jakie cele biznesowe powinien realizować projekt?",
-        "answer": "Na etapie wstępnym koncentrujemy się na dogłębnym zrozumieniu celów biznesowych projektu, co umożliwia odpowiednie dopasowanie technologii oraz funkcjonalności aplikacji. Szczegóły zostaną omówione podczas kolejnych etapów rozmów."
+        "question": "Jakie cele biznesowe chcą Państwo osiągnąć dzięki projektowi IT?",
+        "answer": "Na samym początku rozmów skupiamy się na zrozumieniu strategicznych celów biznesowych klienta. Czy chodzi o optymalizację procesów, zwiększenie dostępności usług, automatyzację, czy może ekspansję na nowe rynki — dopasowujemy technologię do realnych potrzeb. Dzięki temu projekt ma nie tylko wartość technologiczną, ale także realny wpływ na wzrost i konkurencyjność firmy."
     },
     {
-        "question": "Jakie funkcjonalności są kluczowe dla projektu?",
-        "answer": "Na podstawie prowadzonych rozmów określamy kluczowe funkcjonalności oraz wymagania systemowe niezbędne do spełnienia oczekiwań użytkowników końcowych."
+        "question": "Jakie funkcjonalności powinny znaleźć się w systemie?",
+        "answer": "Ustalenie kluczowych funkcjonalności to jeden z pierwszych etapów analizy projektu. Podczas rozmowy identyfikujemy funkcje, które odpowiadają na potrzeby użytkowników końcowych, wspierają procesy wewnętrzne oraz dostarczają realnej wartości. Doradzamy, które komponenty warto zbudować w pierwszej kolejności, a które można wdrożyć na dalszych etapach rozwoju systemu."
     },
     {
-        "question": "Czy posiadają Państwo preferencje technologiczne?",
-        "answer": "Jesteśmy elastyczni w zakresie wyboru technologii i możemy zaproponować rozwiązania dostosowane do indywidualnych potrzeb. W przypadku istniejących preferencji technologicznych chętnie je omówimy."
+        "question": "Czy mają Państwo określone preferencje technologiczne?",
+        "answer": "Podczas spotkania chętnie poznamy preferowane technologie lub platformy, z których Państwo korzystają. Jesteśmy elastyczni technologicznie i posiadamy doświadczenie w pracy z React, Next.js, TypeScript, Node.js, PostgreSQL, a także z technologiami konteneryzacji i rozwiązań chmurowych. Możemy także doradzić najlepszy stack technologiczny w kontekście przyszłej skalowalności, bezpieczeństwa oraz kosztów utrzymania."
     },
     {
         "question": "Czy projekt dotyczy stworzenia nowego systemu, czy modernizacji istniejącego?",
-        "answer": "Wspieramy zarówno realizację nowych projektów od podstaw, jak i modernizację lub rozbudowę już istniejących rozwiązań, z pełnym dostosowaniem do Państwa wymagań."
+        "answer": "Rozróżnienie pomiędzy projektem typu greenfield (tworzenie od zera), a brownfield (modernizacja lub integracja istniejących rozwiązań) jest kluczowe już na początku rozmowy. Pomaga to określić zakres działań, potencjalne ryzyka oraz koszty. Niezależnie od typu projektu, zapewniamy kompleksową analizę i transparentne podejście, które pozwala wybrać najbardziej opłacalną ścieżkę."
     },
     {
-        "question": "Jakie są przewidywane wymagania dotyczące skali projektu?",
-        "answer": "Podczas wstępnych rozmów dokonamy oceny skali projektu, uwzględniając przewidywaną liczbę użytkowników, ilość danych oraz złożoność systemu."
+        "question": "Jak duża będzie skala systemu i ile będzie miał użytkowników?",
+        "answer": "Na etapie discovery wspólnie określamy przewidywaną skalę projektu: liczbę użytkowników, wolumen przetwarzanych danych, wymaganą dostępność, responsywność i odporność systemu. Taka analiza pozwala nam dobrać odpowiednią architekturę, zaplanować infrastrukturę (lokalną lub chmurową) i oszacować koszty związane z utrzymaniem oraz dalszym rozwojem rozwiązania."
     },
     {
-        "question": "Jakie są Państwa oczekiwania w zakresie modelu współpracy?",
-        "answer": "Dostosowujemy się do preferowanego modelu współpracy — możemy działać jako samodzielny zespół bądź jako część Państwa zespołu projektowego. Model współpracy oraz podział obowiązków zostaną ustalone wspólnie."
+        "question": "Jaki model współpracy preferują Państwo przy realizacji projektu?",
+        "answer": "Podczas pierwszych rozmów omawiamy możliwe modele współpracy. Pracujemy zarówno w formule time & materials, fixed-price, jak i body leasingu. Możemy działać jako samodzielny zespół realizacyjny lub stać się częścią wewnętrznego zespołu klienta. Dobór modelu uzależniamy od dynamiki projektu, zakresu odpowiedzialności oraz dostępności po stronie klienta."
     },
     {
-        "question": "Jakie są Państwa oczekiwania dotyczące terminów realizacji projektu?",
-        "answer": "Ustalenie przewidywanych terminów na etapie wstępnym umożliwi stworzenie harmonogramu oraz odpowiednie przydzielenie zasobów."
+        "question": "Jak wyglądają etapy projektu i planowanie harmonogramu?",
+        "answer": "Transparentność i przewidywalność są dla nas kluczowe. Wspólnie z klientem opracowujemy harmonogram, uwzględniając etapy projektu, kamienie milowe oraz czas potrzebny na testy i wdrożenie. Korzystamy z narzędzi do zarządzania projektami, takich jak Jira, Asana lub ClickUp, co zapewnia bieżący wgląd w postępy prac i umożliwia szybkie reagowanie na zmiany."
     },
     {
-        "question": "Czy przewidują Państwo integracje projektu z innymi systemami?",
-        "answer": "Integracja z istniejącymi systemami może być kluczowa dla funkcjonalności projektu, dlatego omawiamy ten aspekt już na etapie planowania."
+        "question": "Czy projekt będzie wymagał integracji z innymi systemami?",
+        "answer": "Podczas rozmowy pytamy o istniejące systemy, z którymi planowany projekt powinien się integrować — ERP, CRM, systemy płatności, ePUAP, systemy kolejkowe, API zewnętrzne czy inne usługi chmurowe. Wczesna identyfikacja wymagań integracyjnych pozwala zminimalizować ryzyko niekompatybilności i ograniczyć późniejsze koszty wdrożenia."
     },
     {
-        "question": "Jakie są Państwa wymagania dotyczące bezpieczeństwa i ochrony danych?",
-        "answer": "W przypadku projektów wymagających wysokich standardów bezpieczeństwa lub szczególnej ochrony danych, omówimy te aspekty szczegółowo, aby odpowiednio dostosować architekturę systemu."
+        "question": "Jakie są wymagania dotyczące bezpieczeństwa danych i zgodności z przepisami?",
+        "answer": "Kwestie bezpieczeństwa omawiamy już na pierwszych etapach projektu. Ustalamy poziom ochrony danych, zgodność z RODO, wymogi WCAG oraz inne normy branżowe. Projektujemy systemy zgodnie z zasadą secure by design — wdrażamy szyfrowanie danych, autoryzację wielopoziomową, polityki backupów oraz regularne testy bezpieczeństwa. W razie potrzeby angażujemy zewnętrznych audytorów i ekspertów ds. cyberbezpieczeństwa."
     },
     {
-        "question": "Czy projekt zakłada możliwość przyszłego skalowania lub rozbudowy?",
-        "answer": "Jeśli planowany jest rozwój aplikacji w przyszłości, możemy zaprojektować architekturę, która umożliwi elastyczne skalowanie i łatwe dodawanie nowych funkcji."
+        "question": "Czy system będzie skalowalny i gotowy na dalszy rozwój?",
+        "answer": "Zawsze projektujemy z myślą o przyszłości. Omawiamy plany rozwoju firmy, przewidywane potrzeby użytkowników i możliwe kierunki rozbudowy systemu. Architektura, którą proponujemy, umożliwia skalowanie poziome (więcej użytkowników) i pionowe (więcej funkcji), bez konieczności przebudowy podstaw. Dzięki temu inwestycja w system ma długoterminową wartość i niskie koszty utrzymania."
     }
 ]

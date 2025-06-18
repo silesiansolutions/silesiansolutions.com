@@ -12,7 +12,7 @@ export default function PrivacyPage() {
     const webPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Polityka Prywatności - Silesian Solutions',
+        name: 'Polityka prywatności - Silesian Solutions',
         description: 'Polityka prywatności i ochrony danych osobowych Silesian Solutions.',
         url: `${siteUrl}/polityka-prywatnosci`,
         breadcrumb: createSimpleBreadcrumb(
@@ -25,10 +25,10 @@ export default function PrivacyPage() {
 
     return (
         <>
-            <Seo title="Polityka Prywatności" useTitleTemplate={true} noIndex={true} />
+            <Seo title="Polityka prywatności" useTitleTemplate={true} noIndex={true} />
             <JsonLd item={webPageSchema} />
             <Page>
-                <LegalSection sectionId="privacy-policy" heading="Polityka Prywatności" />
+                <LegalSection sectionId="privacy-policy" heading="Polityka prywatności" />
             </Page>
         </>
     );

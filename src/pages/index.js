@@ -14,13 +14,13 @@ import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { createBreadcrumb } from '../utils/organizationHelpers';
 
 export default function IndexPage() {
-    const { siteUrl } = useSiteMetadata();
+    const { siteUrl, title, description } = useSiteMetadata();
 
     const webPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Silesian Solutions - Nowoczesne rozwiązania prosto ze Śląska',
-        description: 'Silesian Solutions - Śląskie Rozwiązania. Nowoczesne rozwiązania prosto ze Śląska 💻🚀',
+        name: title,
+        description: description,
         url: siteUrl,
         isPartOf: {
             '@type': 'WebSite',
@@ -41,7 +41,7 @@ export default function IndexPage() {
 
     return (
         <>
-            <Seo title="Silesian Solutions" />
+            <Seo title={title} description={description} />
             <JsonLd item={webPageSchema} />
             <Page useSplashScreenAnimation>
                 <HeroSection sectionId="hero" />

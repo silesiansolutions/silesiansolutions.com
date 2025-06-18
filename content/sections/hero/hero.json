@@ -2,15 +2,15 @@
     "intro": "Silesian Solutions",
     "image": {
         "src": "../../images/rocket.png",
-        "alt": "Rocket Emoji"
+        "alt": "Start rakiety symbolizujący rozwój technologii i innowacje IT"
     },
-    "title": "Nowoczesne rozwiązania",
+    "title": "Innowacyjne oprogramowanie",
     "subtitle": {
-        "prefix": "prosto ze ",
-        "highlight": "Śląska",
-        "suffix": "."
+        "prefix": "tworzone na ",
+        "highlight": "Śląsku",
+        "suffix": ", wdrażane globalnie."
     },
-    "description": "Tworzymy oprogramowanie, które definiuje przyszłość.",
+    "description": "Tworzymy skalowalne aplikacje, niezawodne systemy IT i nowoczesne portale internetowe. Od analizy i prototypu, przez solidny kod, aż po bezpieczne wdrożenie i utrzymanie. Dla startupów, firm i instytucji publicznych, które chcą rosnąć dzięki technologii.",
     "socialProfiles": {
         "from": ["LinkedIn", "Twitter", "Github"],
         "showIcons": true

@@ -1,22 +1,30 @@
 [
     {
         "heading": "🎯 Nasza misja",
-        "content": "W Silesian Solutions wierzymy, że technologia jest kluczem do sukcesu w nowoczesnym biznesie. Naszym celem jest dostarczanie innowacyjnych i niezawodnych rozwiązań IT, które nie tylko spełniają, ale przewyższają oczekiwania naszych klientów. Dążymy do tego, aby nasze usługi przyczyniały się do wzrostu efektywności i konkurencyjności firm na rynku."
+        "content": "W Silesian Solutions wierzymy, że technologia napędza rozwój biznesu. Naszą misją jest projektowanie skalowalnych, bezpiecznych i nowoczesnych rozwiązań IT, które realnie wspierają transformację cyfrową organizacji. Dostarczamy narzędzia, które zwiększają produktywność, automatyzują procesy i budują przewagę konkurencyjną w erze cyfrowej."
     },
     {
         "heading": "🌟 Co nas wyróżnia",
-        "content": "Nasze podejście opiera się na indywidualnym dostosowaniu rozwiązań do specyficznych potrzeb każdego klienta. Łączymy nowoczesne technologie z bogatym doświadczeniem, co pozwala nam oferować usługi najwyższej jakości. Nasza elastyczność i innowacyjność sprawiają, że jesteśmy w stanie sprostać nawet najbardziej wymagającym projektom."
+        "content": "Łączymy inżynierską precyzję z podejściem biznesowym. Wyróżnia nas biegłość w technologiach takich jak React, Node.js, Kubernetes czy GraphQL oraz umiejętność ich praktycznego zastosowania w realnych projektach. Zwinne metodyki (Agile, DevOps, CI/CD) i nastawienie na cel biznesowy klienta to fundamenty naszej skuteczności."
     },
     {
         "heading": "🤝 Nasze wartości",
-        "content": "Kładziemy nacisk na jakość, transparentność i zaufanie. Budujemy długoterminowe relacje z klientami, oparte na wspólnych celach i wzajemnym szacunku. Nasze działania są zgodne z najwyższymi standardami etycznymi, co przekłada się na satysfakcję i lojalność naszych partnerów biznesowych."
+        "content": "Pracujemy transparentnie, terminowo i odpowiedzialnie. Stawiamy na długofalowe partnerstwa i wzajemne zaufanie. Nasze działania kierujemy zgodnie z zasadami etyki, dostępności cyfrowej (WCAG) i najlepszymi praktykami branżowymi. Klienci cenią nas za komunikatywność, jakość kodu oraz proaktywne podejście do rozwoju projektów."
     },
     {
         "heading": "🔍 Jak pracujemy",
-        "content": "Proces współpracy rozpoczynamy od dogłębnej analizy potrzeb klienta, co pozwala nam zrozumieć jego cele i wyzwania. Na tej podstawie opracowujemy szczegółowy plan działania, który realizujemy z zachowaniem najwyższych standardów jakości. Zapewniamy pełne wsparcie na każdym etapie projektu, dbając o terminowość i efektywność naszych działań."
+        "content": "Każdy projekt rozpoczynamy od analizy wymagań biznesowych, architektury i ryzyk. Tworzymy roadmapy, prototypy oraz propozycje technologiczne, które następnie iteracyjnie wdrażamy. Zapewniamy monitoring, wsparcie powdrożeniowe oraz możliwość rozbudowy w oparciu o dane, testy A/B i potrzeby rynku."
     },
     {
         "heading": "💼 Dla kogo pracujemy",
-        "content": "Obsługujemy szerokie spektrum klientów - od startupów, przez średnie przedsiębiorstwa, aż po korporacje. Każdego klienta traktujemy indywidualnie, dostarczając rozwiązania dostosowane do jego specyficznych wymagań i celów biznesowych."
+        "content": "Wspieramy startupy, MŚP, instytucje publiczne oraz międzynarodowe korporacje. Realizujemy projekty B2B i B2C w branżach takich jak: Smart City, edukacja, e-commerce, logistyka, ochrona zdrowia, przemysł, kultura i administracja. Każde zlecenie traktujemy indywidualnie, oferując elastyczne modele współpracy (fixed-price, agile, body leasing, doradztwo)."
+    },
+    {
+        "heading": "🚀 Nasze kompetencje",
+        "content": "Specjalizujemy się w aplikacjach internetowych, headless commerce, API-first, architekturze mikroserwisowej, rozwiązaniach chmurowych, cyberbezpieczeństwie i automatyzacji procesów. Posiadamy doświadczenie w budowie systemów ETL, BI, dashboardów i rozwiązań opartych na danych (data-driven design)."
+    },
+    {
+        "heading": "📈 Nasz wpływ",
+        "content": "Nasze projekty wspierają miasta, uczelnie, NGO oraz liderów cyfryzacji. Wdrażamy innowacje, które realnie poprawiają jakość usług, dostępność cyfrową i efektywność organizacji. Przykłady to integratory danych miejskich, systemy zgłoszeń, portale dostępności, rozproszone API, platformy edukacyjne czy systemy raportowe."
     }
 ]

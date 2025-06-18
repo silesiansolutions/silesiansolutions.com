@@ -3,11 +3,11 @@
         "language": "pl",
         "siteUrl": "https://silesiansolutions.com",
         "thumbnail": "../content/images/silesiansolutions.jpg",
-        "title": "Silesian Solutions - Śląskie Rozwiązania",
-        "titleTemplate": "%s · Silesian Solutions - Śląskie Rozwiązania",
-        "description": "Silesian Solutions - Śląskie Rozwiązania. Nowoczesne rozwiązania prosto ze Śląska 💻🚀",
+        "title": "Silesian Solutions - Nowoczesne rozwiązania IT ze Śląska",
+        "titleTemplate": "%s · Silesian Solutions - Nowoczesne rozwiązania IT ze Śląska",
+        "description": "Tworzymy nowoczesne aplikacje, systemy i portale. Silesian Solutions - sprawdzone rozwiązania IT prosto ze Śląska 💻🚀",
         "author": "Silesian Solutions",
-        "bio": "Nowoczesne rozwiązania prosto ze Śląska 💻🚀",
+        "bio": "Nowoczesne rozwiązania IT, tworzone z pasją i doświadczeniem - prosto ze Śląska 💻🚀",
         "avatar": "../content/images/silesiansolutions.jpg",
         "social": {
             "linkedin": "https://www.linkedin.com/company/silesiansolutions/",
@@ -41,20 +41,6 @@
                     "label": "Kontakt",
                     "url": "/kontakt"
                 }
-            ],
-            "footer": [
-                {
-                    "label": "Polityka Prywatności",
-                    "url": "/polityka-prywatnosci"
-                },
-                {
-                    "label": "RODO",
-                    "url": "/klauzula-informacyjna"
-                },
-                {
-                    "label": "Kontakt",
-                    "url": "/kontakt"
-                }
             ]
         },
         "featureToggles": {
@@ -67,7 +53,7 @@
         "name": "Silesian Solutions",
         "legalName": "Silesian Solutions",
         "email": "biuro@silesiansolutions.com",
-        "description": "Silesian Solutions to ekspert w tworzeniu nowoczesnego oprogramowania, stron internetowych, aplikacji PWA, e-commerce, systemów dedykowanych, rozwiązań chmurowych, integracji, cyberbezpieczeństwie, BI i doradztwie IT.",
+        "description": "Silesian Solutions to ekspert w tworzeniu nowoczesnych stron internetowych, aplikacji PWA, systemów dedykowanych, rozwiązań chmurowych, integracji IT, cyberbezpieczeństwa oraz analizy danych. Wspieramy firmy, startupy i instytucje publiczne.",
         "location": {
             "addressLocality": "Bielsko-Biała",
             "addressRegion": "Śląskie",
@@ -78,12 +64,12 @@
             "latitude": 49.823108285582414,
             "longitude": 19.049053319792204
         },
-        "areaServed": "Poland",
+        "areaServed": "Polska",
         "knowsAbout": [
             "Tworzenie stron internetowych",
             "Aplikacje mobilne PWA",
-            "E-commerce",
-            "Oprogramowanie dedykowane",
+            "Sklepy internetowe",
+            "Systemy dedykowane",
             "Architektura chmurowa",
             "DevOps",
             "Integracja systemów",
@@ -94,42 +80,42 @@
         "availableLanguage": ["Polish", "English"],
         "mainServices": [
             {
-                "name": "Tworzenie stron internetowych",
-                "description": "Responsywne, SEO-przyjazne strony i landing page'e"
+                "name": "Strony internetowe",
+                "description": "Responsywne i zoptymalizowane witryny oraz landing page’e - przyjazne dla użytkownika i wyszukiwarek"
             },
             {
-                "name": "Aplikacje webowe i mobilne PWA",
-                "description": "Skalowalne aplikacje biznesowe i PWA"
+                "name": "Aplikacje webowe i PWA",
+                "description": "Nowoczesne aplikacje biznesowe typu Progressive Web App, skalowalne i bezpieczne"
             },
             {
                 "name": "Sklepy internetowe",
-                "description": "Bezpieczne, headless B2B/B2C e-commerce"
+                "description": "Rozwiązania e-commerce (B2B/B2C), w tym headless, zintegrowane z ERP i płatnościami"
             },
             {
                 "name": "Systemy dedykowane",
-                "description": "Mikroserwisy, architektura chmurowa i integracje"
+                "description": "Oprogramowanie szyte na miarę, oparte o mikroserwisy, integracje i nowoczesne API"
             },
             {
-                "name": "Rozwiązania chmurowe i DevOps",
-                "description": "Kubernetes, serverless, IaC, FinOps"
+                "name": "Chmura i DevOps",
+                "description": "Architektura chmurowa, Kubernetes, serverless, automatyzacja (CI/CD, IaC), FinOps"
             },
             {
                 "name": "Cyberbezpieczeństwo",
-                "description": "Audyty, pen-testy, RODO, ISO 27001"
+                "description": "Audyt bezpieczeństwa, testy penetracyjne, RODO, standardy ISO 27001 i OWASP"
             },
             {
                 "name": "Analiza danych i BI",
-                "description": "Dashboardy, ML Ops, data-driven insights"
+                "description": "Systemy raportowe, dashboardy, automatyzacja analityki i integracja z narzędziami ML/AI"
             },
             {
-                "name": "Konsultacje IT",
-                "description": "Strategia, transformacja, Agile, RPA"
+                "name": "Konsulting IT",
+                "description": "Doradztwo strategiczne, architektura systemowa, transformacja cyfrowa, Agile, RPA"
             }
         ]
     },
     "jsonLdOptions": {
         "contactPoint": {
-            "contactType": "obsługa klienta"
+            "contactType": "Obsługa klienta"
         },
         "offerCatalog": {
             "name": "Usługi IT"

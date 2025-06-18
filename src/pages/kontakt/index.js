@@ -112,7 +112,7 @@ export default function ContactPage() {
                 <ContactSection
                     sectionId="kontakt"
                     heading="Napisz do nas"
-                    description="Jesteśmy do Twojej dyspozycji! Nasz zespół chętnie odpowie na pytania, doradzi i pomoże wybrać najlepsze rozwiązania technologiczne. Możesz się z nami skontaktować przez formularz, telefonicznie lub odwiedzając nas osobiście."
+                    description="Potrzebujesz wsparcia w realizacji projektu IT? A może szukasz partnera technologicznego, który zrozumie potrzeby Twojego biznesu? Jesteśmy tu, by pomóc. Napisz do nas, zadzwoń lub odwiedź nasze biuro w Bielsku-Białej. Zespół Silesian Solutions z przyjemnością odpowie na Twoje pytania, przedstawi możliwe ścieżki działania i pomoże wybrać rozwiązanie dopasowane do Twoich celów. Bez zbędnego żargonu - konkretnie, rzeczowo i po partnersku."
                 />
 
                 <Animation type="fadeUp" delay={600}>

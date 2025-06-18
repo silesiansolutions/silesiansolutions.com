@@ -1,10 +1,10 @@
 {
     "name": "Silesian Solutions",
     "email": "biuro@silesiansolutions.com",
-    "description": "Odpowiadamy na pytania, doradzamy oraz wspieramy rozwój Twojego biznesu. Skontaktuj się z nami!",
+    "description": "Masz pytania o oprogramowanie, technologie lub rozwój cyfrowy? Napisz do nas. Doradzimy, podpowiemy i pomożemy wybrać rozwiązanie, które realnie wspiera Twój biznes.",
     "image": {
         "src": "../../images/silesiansolutions.jpg",
-        "alt": "Logo Silesian Solutions"
+        "alt": "Logotyp firmy Silesian Solutions - ekspertów w tworzeniu oprogramowania i aplikacji internetowych"
     },
     "socialProfiles": {
         "from": ["LinkedIn", "Twitter", "Github"],

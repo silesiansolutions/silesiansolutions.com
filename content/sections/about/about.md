@@ -1,12 +1,14 @@
 ---
 imageSrc: '../../images/alessandro-bianchi-_kdTyfnUFAc-unsplash.jpg'
-imageAlt: 'Innowacyjne oprogramowanie Silesian Solutions'
+imageAlt: 'Zespół Silesian Solutions tworzący nowoczesne oprogramowanie dla biznesu'
 ---
 
-Silesian Solutions to więcej niż oprogramowanie. To połączenie nowoczesnych technologii z dziedzictwem Śląska, tworzące unikalne rozwiązania dla przyszłości.
+**Silesian Solutions to więcej niż software. To strategia cyfrowa oparta na innowacjach, jakości i lokalnych wartościach.**
 
-Nasze portfolio obejmuje projekty odzwierciedlające naszą pasję do innowacji i doskonałości technicznej. Specjalizujemy się w tworzeniu intuicyjnego i zaawansowanego oprogramowania, które pomaga naszym klientom osiągać ich cele.
+Łączymy nowoczesne technologie z solidnością śląskiego rzemiosła cyfrowego. Tworzymy skalowalne aplikacje, systemy IT oraz platformy webowe, które wspierają rozwój firm, instytucji i startupów.
 
-W Silesian Solutions dbamy o prostotę użytkowania przy zachowaniu najwyższych standardów technicznych. Nasze rozwiązania są dostosowane do potrzeb każdego klienta, co pozwala na maksymalizację ich potencjału.
+Nasze portfolio obejmuje projekty dla różnych branż - od przemysłu po sektor publiczny. Specjalizujemy się w rozwiązaniach dostosowanych do rzeczywistych potrzeb użytkowników, stawiając na użyteczność, wydajność i bezpieczeństwo.
 
-Odkryj nasze projekty i przekonaj się, jak nasze oprogramowanie może pomóc w rozwoju Twojej działalności.
+Dzięki zespołowi doświadczonych inżynierów i projektantów, oferujemy pełne wsparcie: od analizy potrzeb, przez development, aż po utrzymanie i rozwój produktów cyfrowych.
+
+**Zobacz, jak możemy wesprzeć cyfrową transformację Twojego biznesu. Skontaktuj się z nami i zainicjuj nowy etap rozwoju.**

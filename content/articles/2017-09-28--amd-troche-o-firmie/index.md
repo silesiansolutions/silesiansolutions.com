@@ -25,7 +25,7 @@ Firma AMD jest jednym z czołowych światowych producentów układów scalonych 
 
 Advanced Micro Devices, Inc. to drugi na świecie po [Intelu](../procesory-intel/) producent procesorów x86 oraz procesorów graficznych. Od lat procesory firmy znajdują szerokie zastosowanie w komputerach osobistych, stacjonarnych i przenośnych, laptopach, tabletach.
 
-> Our history is marked by a commitment to innovation that’s truly useful to our customers — putting the real needs of people ahead of technical one-upmanship.
+> Our history is marked by a commitment to innovation that’s truly useful to our customers - putting the real needs of people ahead of technical one-upmanship.
 
 AMD przykłada pierwszorzędną wagę do wydajności swoich układów scalonych, których efektywność nieustannie rośnie. Każdy kolejny, wypuszczony na rynek procesor, jest małym ale istotnym krokiem do przodu. Aby nie zostać w tyle za konkurencją posiadają coraz większą moc obliczeniową. Dla wszystkich wymagających użytkowników, którzy niezmiennie chcą coraz więcej i szybciej ma to niebagatelne znaczenie.
 
