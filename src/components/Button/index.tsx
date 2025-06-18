@@ -30,7 +30,7 @@ export function Button(props: ButtonProps): React.ReactElement {
                         href={props.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="External Link"
+                        aria-label="Link zewnętrzny"
                     >
                         {props.label}
                     </a>

@@ -32,7 +32,7 @@ export function InterestsSection(props: PageSection): React.ReactElement {
                                     <GatsbyImage
                                         image={interest.image.src.childImageSharp.gatsbyImageData}
                                         className={classes.Icon}
-                                        alt={interest.image.alt || `Interest ${interest.label}`}
+                                        alt={interest.image.alt || `Ikona usługi ${interest.label}`}
                                     />
                                 )}{' '}
                                 {interest.label}

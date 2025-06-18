@@ -1,5 +1,5 @@
 ---
-title: 'RODO – Zmiany w ochronie danych osobowych'
+title: 'RODO - Zmiany w ochronie danych osobowych'
 description: 'Odkryj, jak dostosować Twoją firmę do RODO z Silesian Solutions: kluczowe informacje, przewodnik przygotowania i wsparcie ekspertów w zgodności z ochroną danych.'
 date: '2018-05-28'
 banner:

@@ -21,7 +21,7 @@ export function AboutSection(props: PageSection): React.ReactElement {
                                 <GatsbyImage
                                     image={data.frontmatter.imageSrc.childImageSharp.gatsbyImageData}
                                     className={classes.Image}
-                                    alt={data.frontmatter.imageAlt || `About Image`}
+                                    alt={data.frontmatter.imageAlt || `Zdjęcie sekcji o nas`}
                                 />
                             </div>
                         </Animation>

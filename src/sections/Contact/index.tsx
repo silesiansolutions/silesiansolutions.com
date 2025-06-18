@@ -25,7 +25,7 @@ export function ContactSection(props: ContactSectionProps): React.ReactElement {
                         <GatsbyImage
                             className={classes.Avatar}
                             image={data.image.src.childImageSharp.gatsbyImageData}
-                            alt={data.image.alt || `Profile ${data.name}`}
+                            alt={data.image.alt || `Zdjęcie profilowe ${data.name}`}
                         />
                     )}
                     <div className={classes.ContactDetails}>

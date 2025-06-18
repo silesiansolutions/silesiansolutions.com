@@ -43,7 +43,7 @@ export function Footer(): React.ReactElement {
         >
             <div className={classes.ContentWrapper}>
                 <JsonLd<SiteNavigationElement> item={structuredData} />
-                <Link to="/" aria-label="home">
+                <Link to="/" aria-label="strona główna">
                     <Logo
                         fontSize="1.5rem"
                         color={darkModeEnabled ? 'var(--primary-color)' : 'var(--background-color)'}

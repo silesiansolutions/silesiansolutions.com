@@ -111,7 +111,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
                         <section className={classes.Banner}>
                             <GatsbyImage
                                 image={article.banner.src.childImageSharp.gatsbyImageData}
-                                alt={article.banner.alt || `Image for ${article.title}`}
+                                alt={article.banner.alt || `Zdjęcie artykułu ${article.title}`}
                                 imgClassName={classes.BannerImage}
                             />
                             {article.banner.caption && (

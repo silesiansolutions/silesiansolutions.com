@@ -87,7 +87,7 @@ export function Header(): React.ReactElement {
             {/* Make background blurry when sidebar is opened */}
             <Helmet bodyAttributes={{ class: open ? classes.Blurred : undefined }} />
             <Animation className={classes.ContentWrapper} type="fadeDown">
-                <Link to="/" aria-label="home">
+                <Link to="/" aria-label="strona główna">
                     <Logo fontSize="2rem" color="var(--primary-color" />
                 </Link>
                 <JsonLd<SiteNavigationElement> item={structuredData} />

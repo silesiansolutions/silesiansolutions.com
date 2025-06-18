@@ -23,7 +23,7 @@ export function HeroSection(props: PageSection): React.ReactElement {
                         <GatsbyImage
                             className={classes.heroImage}
                             image={data.heroPhoto.src.childImageSharp.gatsbyImageData}
-                            alt={data.heroPhoto.alt || `Profile Image`}
+                            alt={data.heroPhoto.alt || `Zdjęcie profilowe`}
                             loading="eager"
                         />
                     </div>
@@ -35,7 +35,7 @@ export function HeroSection(props: PageSection): React.ReactElement {
                             <Animation className={classes.Image} type="waving-hand" duration={2500} iterationCount={3}>
                                 <GatsbyImage
                                     image={data.image.src.childImageSharp.gatsbyImageData}
-                                    alt={data.image.alt || `Intro Image`}
+                                    alt={data.image.alt || `Zdjęcie wprowadzenia`}
                                     loading="eager"
                                 />
                             </Animation>

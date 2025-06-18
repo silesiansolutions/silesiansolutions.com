@@ -80,16 +80,16 @@
         },
         "areaServed": "Poland",
         "knowsAbout": [
-            "Web Development",
-            "Mobile PWA",
+            "Tworzenie stron internetowych",
+            "Aplikacje mobilne PWA",
             "E-commerce",
-            "Custom Software",
-            "Cloud Architectures",
+            "Oprogramowanie dedykowane",
+            "Architektura chmurowa",
             "DevOps",
-            "System Integration",
-            "Cybersecurity",
-            "Data Analytics",
-            "IT Consulting"
+            "Integracja systemów",
+            "Cyberbezpieczeństwo",
+            "Analiza danych",
+            "Konsultacje IT"
         ],
         "availableLanguage": ["Polish", "English"],
         "mainServices": [
@@ -129,7 +129,7 @@
     },
     "jsonLdOptions": {
         "contactPoint": {
-            "contactType": "customer service"
+            "contactType": "obsługa klienta"
         },
         "offerCatalog": {
             "name": "Usługi IT"

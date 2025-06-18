@@ -126,7 +126,7 @@ export default function ArticleListingTemplate(props: ArticleListingTemplateProp
                         <div className={classes.LoadMore}>
                             <Button
                                 type={ButtonType.BUTTON}
-                                label="Load More"
+                                label="Załaduj więcej"
                                 onClickHandler={() => setShownArticlesNumber((prev) => prev + 6)}
                             />
                         </div>

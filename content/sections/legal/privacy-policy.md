@@ -33,9 +33,9 @@ Pliki cookies to małe pliki tekstowe zapisywane na urządzeniu końcowym użytk
 
 W serwisie [silesiansolutions.com](https://silesiansolutions.com) stosowane są następujące rodzaje plików cookies:
 
-- **Cookies niezbędne** – umożliwiające podstawowe funkcjonowanie serwisu, takie jak logowanie i nawigacja.
-- **Cookies analityczne** – zbierające dane o sposobie korzystania z serwisu w celu jego optymalizacji.
-- **Cookies funkcjonalne** – pozwalające na zapamiętywanie wybranych ustawień i personalizację interfejsu użytkownika.
+- **Cookies niezbędne** - umożliwiające podstawowe funkcjonowanie serwisu, takie jak logowanie i nawigacja.
+- **Cookies analityczne** - zbierające dane o sposobie korzystania z serwisu w celu jego optymalizacji.
+- **Cookies funkcjonalne** - pozwalające na zapamiętywanie wybranych ustawień i personalizację interfejsu użytkownika.
 
 ### Zastosowanie plików cookies
 

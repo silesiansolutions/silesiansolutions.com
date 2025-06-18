@@ -16,10 +16,10 @@ W sprawach dotyczących przetwarzania danych osobowych można kontaktować się 
 
 Pani/Pana dane osobowe przetwarzane będą w następujących celach:
 
-- **Na podstawie zgody** – w zakresie, w jakim została udzielona (Art. 6 ust. 1 lit. a RODO).
-- **Zawarcie i realizacja umowy** – kontakt telefoniczny, e-mailowy, osobisty; wystawienie oferty, realizacja zamówienia, itp. (Art. 6 ust. 1 lit. b RODO).
-- **Wykonywanie obowiązków prawnych związanych z prowadzeniem działalności gospodarczej** – księgowość, podatki, archiwizacja (Art. 6 ust. 1 lit. c RODO).
-- **Prawnie uzasadnione interesy administratora** – zapewnienie bezpieczeństwa usług, rozpatrywanie ewentualnych reklamacji, obrona przed roszczeniami (Art. 6 ust. 1 lit. f RODO).
+- **Na podstawie zgody** - w zakresie, w jakim została udzielona (Art. 6 ust. 1 lit. a RODO).
+- **Zawarcie i realizacja umowy** - kontakt telefoniczny, e-mailowy, osobisty; wystawienie oferty, realizacja zamówienia, itp. (Art. 6 ust. 1 lit. b RODO).
+- **Wykonywanie obowiązków prawnych związanych z prowadzeniem działalności gospodarczej** - księgowość, podatki, archiwizacja (Art. 6 ust. 1 lit. c RODO).
+- **Prawnie uzasadnione interesy administratora** - zapewnienie bezpieczeństwa usług, rozpatrywanie ewentualnych reklamacji, obrona przed roszczeniami (Art. 6 ust. 1 lit. f RODO).
 
 Podanie danych osobowych może być dobrowolne, ale jest konieczne do realizacji powyższych celów.
 

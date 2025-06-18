@@ -1,5 +1,5 @@
 ---
-title: 'Low-Code i No-Code – Przyszłość Tworzenia Aplikacji'
+title: 'Low-Code i No-Code - Przyszłość Tworzenia Aplikacji'
 description: 'Low-code i no-code to nowoczesne podejścia do tworzenia aplikacji, które pozwalają firmom na szybkie wdrażanie rozwiązań bez potrzeby intensywnego programowania.'
 date: '2024-11-07'
 banner:

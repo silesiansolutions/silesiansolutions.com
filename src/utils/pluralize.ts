@@ -1,5 +1,6 @@
 /**
- * Returns the plural of an English word.
+ * Returns the plural of a Polish word for certain common words.
+ * Falls back to adding 's' for unknown words.
  *
  * @export
  * @param {string} word
@@ -12,81 +13,38 @@ export function pluralize(word?: string, amount?: number): string | undefined {
     if (amount !== undefined && amount === 1) {
         return word;
     }
-    const plural: { [key: string]: string } = {
-        '(quiz)$': '$1zes',
-        '^(ox)$': '$1en',
-        '([m|l])ouse$': '$1ice',
-        '(matr|vert|ind)ix|ex$': '$1ices',
-        '(x|ch|ss|sh)$': '$1es',
-        '([^aeiouy]|qu)y$': '$1ies',
-        '(hive)$': '$1s',
-        '(?:([^f])fe|([lr])f)$': '$1$2ves',
-        '(shea|lea|loa|thie)f$': '$1ves',
-        sis$: 'ses',
-        '([ti])um$': '$1a',
-        '(tomat|potat|ech|her|vet)o$': '$1oes',
-        '(bu)s$': '$1ses',
-        '(alias)$': '$1es',
-        '(octop)us$': '$1i',
-        '(ax|test)is$': '$1es',
-        '(us)$': '$1es',
-        '([^s]+)$': '$1s',
+
+    // Polish plural forms for common words
+    const polishPlural: { [key: string]: string } = {
+        artykuł: 'artykuły',
+        projekt: 'projekty',
+        usługa: 'usługi',
+        realizacja: 'realizacje',
+        oferta: 'oferty',
+        strona: 'strony',
+        aplikacja: 'aplikacje',
+        blog: 'blogi',
+        wpis: 'wpisy',
+        tekst: 'teksty',
+        artykuły: 'artykuły', // already plural
+        projekty: 'projekty', // already plural
+        usługi: 'usługi', // already plural
+        realizacje: 'realizacje', // already plural
+        oferty: 'oferty', // already plural
+        strony: 'strony', // already plural
+        aplikacje: 'aplikacje', // already plural
+        blogi: 'blogi', // already plural
+        wpisy: 'wpisy', // already plural
+        teksty: 'teksty', // already plural
     };
-    const irregular: { [key: string]: string } = {
-        move: 'moves',
-        foot: 'feet',
-        goose: 'geese',
-        sex: 'sexes',
-        child: 'children',
-        man: 'men',
-        tooth: 'teeth',
-        person: 'people',
-    };
-    const uncountable: string[] = [
-        'sheep',
-        'fish',
-        'deer',
-        'moose',
-        'series',
-        'species',
-        'money',
-        'rice',
-        'information',
-        'equipment',
-        'bison',
-        'cod',
-        'offspring',
-        'pike',
-        'salmon',
-        'shrimp',
-        'swine',
-        'trout',
-        'aircraft',
-        'hovercraft',
-        'spacecraft',
-        'sugar',
-        'tuna',
-        'you',
-        'wood',
-    ];
-    // save some time in the case that singular and plural are the same
-    if (uncountable.indexOf(word.toLowerCase()) >= 0) {
-        return word;
+
+    const lowerWord = word.toLowerCase();
+
+    // Check for known Polish words
+    if (polishPlural[lowerWord]) {
+        return polishPlural[lowerWord];
     }
-    // check for irregular forms
-    for (const w in irregular) {
-        const pattern = new RegExp(`${w}$`, 'i');
-        const replace = irregular[w];
-        if (pattern.test(word)) {
-            return word.replace(pattern, replace);
-        }
-    }
-    // check for matches using regular expressions
-    for (const reg in plural) {
-        const pattern = new RegExp(reg, 'i');
-        if (pattern.test(word)) {
-            return word.replace(pattern, plural[reg]);
-        }
-    }
+
+    // Fallback - return the word as is (many Polish words don't change in plural in certain contexts)
     return word;
 }

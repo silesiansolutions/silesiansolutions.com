@@ -85,13 +85,18 @@ export function Project(props: ProjectProps): React.ReactElement {
                 </div>
             </div>
             {props.data.image.src && props.data.image.linkTo && (
-                <a href={props.data.image.linkTo} target="_blank" rel="noopener noreferrer" aria-label="External Link">
+                <a
+                    href={props.data.image.linkTo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Link zewnętrzny"
+                >
                     <GatsbyImage
                         className={classes.ProjectImageWrapper}
                         imgClassName={classes.ProjectImage}
                         objectFit={props.data.image.objectFit}
                         image={props.data.image.src.childImageSharp.gatsbyImageData}
-                        alt={props.data.image.alt || `Projekt ${props.data.title}`}
+                        alt={props.data.image.alt || `Zdjęcie projektu ${props.data.title}`}
                     />
                 </a>
             )}
@@ -101,7 +106,7 @@ export function Project(props: ProjectProps): React.ReactElement {
                     imgClassName={classes.ProjectImage}
                     objectFit={props.data.image.objectFit}
                     image={props.data.image.src.childImageSharp.gatsbyImageData}
-                    alt={props.data.image.alt || `Projekt ${props.data.title}`}
+                    alt={props.data.image.alt || `Zdjęcie projektu ${props.data.title}`}
                 />
             )}
         </Animation>

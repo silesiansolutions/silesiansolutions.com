@@ -1,5 +1,5 @@
 ---
-title: 'Zrównoważone Technologie – Połączenie Innowacji i Odpowiedzialności'
+title: 'Zrównoważone Technologie - Połączenie Innowacji i Odpowiedzialności'
 description: 'Zrównoważone technologie integrują nowoczesne rozwiązania z dbałością o środowisko naturalne, łącząc innowacje z odpowiedzialnością ekologiczną i społeczną.'
 date: '2024-11-10'
 banner:
@@ -37,7 +37,7 @@ Przykład: W branży IT, data center mogą korzystać z paneli słonecznych, aby
 
 ### 3. Gospodarka Obiegu Zamkniętego
 
-Gospodarka obiegu zamkniętego (GOZ) to model, który promuje ponowne wykorzystanie materiałów i minimalizację odpadów poprzez projektowanie produktów z myślą o ich recyklingu lub przetwarzaniu. GOZ obejmuje cały cykl życia produktu – od produkcji przez użytkowanie po recykling, redukując ilość odpadów i zapobiegając wyczerpywaniu się zasobów naturalnych.
+Gospodarka obiegu zamkniętego (GOZ) to model, który promuje ponowne wykorzystanie materiałów i minimalizację odpadów poprzez projektowanie produktów z myślą o ich recyklingu lub przetwarzaniu. GOZ obejmuje cały cykl życia produktu - od produkcji przez użytkowanie po recykling, redukując ilość odpadów i zapobiegając wyczerpywaniu się zasobów naturalnych.
 
 Przykład: Firma produkująca sprzęt elektroniczny może projektować urządzenia z myślą o łatwym demontażu i recyklingu komponentów, co pozwala na ponowne wykorzystanie materiałów, takich jak metale rzadkie, które są trudne do pozyskania.
 
