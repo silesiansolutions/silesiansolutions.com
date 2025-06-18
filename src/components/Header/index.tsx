@@ -88,7 +88,7 @@ export function Header(): React.ReactElement {
             <Helmet bodyAttributes={{ class: open ? classes.Blurred : undefined }} />
             <Animation className={classes.ContentWrapper} type="fadeDown">
                 <Link to="/" aria-label="strona główna">
-                    <Logo fontSize="2rem" color="var(--primary-color" />
+                    <Logo fontSize="2rem" color="var(--primary-color)" />
                 </Link>
                 <JsonLd<SiteNavigationElement> item={structuredData} />
                 {isDesktopBreakpoint ? topNavigationBar : sideNavigationBar}

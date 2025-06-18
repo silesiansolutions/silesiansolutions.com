@@ -8,7 +8,7 @@
     background: var(--primary-color);
     border-top: none;
     margin-top: 2rem;
-    padding: 2rem 0 3rem 0;
+    padding: 3rem 0 2rem 0;
 }
 
 .ContentWrapper {
@@ -19,40 +19,266 @@
     padding: var(--page-padding);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.LogoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.BrandRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.AvatarLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.BrandAvatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    object-fit: contain;
+}
+
+.BrandInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.BrandName {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: inherit;
+    line-height: 1.2;
+}
+
+.BrandDescription {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+    opacity: 0.8;
+    color: inherit;
+    line-height: 1.4;
+}
+
+.MainSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.LinkColumn {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
-.Links {
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.Links a {
-    font-size: 0.875rem;
+.ColumnTitle {
+    margin: 0;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--background-color);
     letter-spacing: 1px;
-    margin-right: 2rem;
+    color: inherit;
 }
 
-.Links a:last-child {
-    margin-right: 0;
+.LinkList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
+.LinkList li {
+    margin: 0;
+}
+
+.FooterLink {
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    display: inline-block;
+    color: inherit;
+}
+
+.FooterLink:hover {
+    opacity: 0.7;
+}
+
+.SocialLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.SocialLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    color: inherit;
+}
+
+.SocialLink:hover {
+    opacity: 0.7;
+}
+
+.SocialLink svg {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+}
+
+.ServicesSection {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    margin-top: 1rem;
+}
+
+.ServicesTitle {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: inherit;
+}
+
+.ServicesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+}
+
+.ServicesLink {
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    display: inline-block;
+    color: inherit;
+    position: relative;
+}
+
+.ServicesLink:hover {
+    opacity: 0.7;
+}
+
+.ServicesLink:not(:last-child)::after {
+    content: '•';
+    position: absolute;
+    right: -0.65rem;
+    color: inherit;
+    opacity: 0.5;
+}
+
+.BottomSection {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+}
+
+.Copyright {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.4;
+    opacity: 0.8;
+    text-align: left;
+}
+
+/* Tablet */
 @media (min-width: 768px) {
     .Footer {
-        padding: 0;
+        padding: 4rem 0 2rem 0;
     }
-    .ContentWrapper {
+
+    .LogoSection {
+        margin-bottom: 2rem;
+    }
+
+    .MainSection {
         flex-direction: row;
-        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 3rem;
     }
-    .Links a {
-        margin-right: 4rem;
+
+    .LinkColumn {
+        flex: 1;
     }
+
+    .SocialLinks {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .ServicesSection {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+
+    .ServicesList {
+        gap: 1rem 1.5rem;
+    }
+
+    .ServicesLink:not(:last-child)::after {
+        right: -0.8rem;
+    }
+
+    .Copyright {
+        font-size: 0.875rem;
+    }
+}
+
+/* Large desktop */
+@media (min-width: 992px) {
+    .MainSection {
+        gap: 4rem;
+    }
+
+    .ServicesSection {
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+    }
+
+    .ServicesList {
+        gap: 1rem 2rem;
+    }
+
+    .ServicesLink:not(:last-child)::after {
+        right: -1rem;
+    }
+}
+
+/* Dark mode adjustments */
+body[data-theme='darkTheme'] .Footer {
+    border-top: 3px solid var(--box-shadow-hover-color);
+}
+
+body[data-theme='darkTheme'] .BottomSection,
+body[data-theme='darkTheme'] .ServicesSection {
+    border-top-color: rgba(255, 255, 255, 0.2);
 }
