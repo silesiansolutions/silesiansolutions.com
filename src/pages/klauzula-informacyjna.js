@@ -4,31 +4,28 @@ import { LegalSection, Page, Seo } from '../sections';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { useJsonLdOptions } from '../hooks/useOrganizationData';
 import { createSimpleBreadcrumb } from '../utils/organizationHelpers';
+import { getPageSeoData, createSeoTitle } from '../utils/seoHelpers';
 
 export default function InformationClausePage() {
-    const { siteUrl } = useSiteMetadata();
+    const { siteUrl, titleTemplate } = useSiteMetadata();
     const jsonLdOptions = useJsonLdOptions();
+    const seoData = getPageSeoData('terms');
 
     const webPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Klauzula informacyjna - Silesian Solutions',
-        description: 'Klauzula informacyjna dotycząca przetwarzania danych osobowych zgodnie z RODO.',
+        name: createSeoTitle(seoData.seoTitle, titleTemplate),
+        description: seoData.description,
         url: `${siteUrl}/klauzula-informacyjna`,
         mainContentOfPage: {
             '@id': '#information-clause-content',
         },
-        breadcrumb: createSimpleBreadcrumb(
-            siteUrl,
-            'Klauzula informacyjna',
-            `${siteUrl}/klauzula-informacyjna`,
-            jsonLdOptions,
-        ),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/klauzula-informacyjna`, jsonLdOptions),
     };
 
     return (
         <>
-            <Seo title="Klauzula informacyjna" useTitleTemplate={true} noIndex={true} />
+            <Seo title={seoData.seoTitle} description={seoData.description} useTitleTemplate={true} noIndex={true} />
             <JsonLd item={webPageSchema} />
             <Page>
                 <LegalSection

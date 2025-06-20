@@ -11,6 +11,7 @@ import { pluralize } from '../../utils/pluralize';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData } from '../../hooks/useOrganizationData';
 import { createOrganizationReference, createBreadcrumb } from '../../utils/organizationHelpers';
+import { createSeoTitle } from '../../utils/seoHelpers';
 import { getExternalLinkRel } from '../../utils/linkUtils';
 import * as classes from './style.module.css';
 
@@ -24,7 +25,7 @@ interface ProjectTemplateProps {
 
 export default function ProjectTemplate(props: ProjectTemplateProps): React.ReactElement {
     const project = props.pageContext.project;
-    const { siteUrl } = useSiteMetadata();
+    const { siteUrl, titleTemplate } = useSiteMetadata();
     const organizationData = useOrganizationData();
 
     const creativeWorkSchema: WithContext<CreativeWork> = {
@@ -53,7 +54,7 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
     const webPageSchema: WithContext<WebPage> = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: `${project.title} - Realizacja - Silesian Solutions`,
+        name: createSeoTitle(project.title, titleTemplate),
         description: project.description,
         url: `${siteUrl}${props.pageContext.listingPagePath}/${project.slug}`,
         mainContentOfPage: {

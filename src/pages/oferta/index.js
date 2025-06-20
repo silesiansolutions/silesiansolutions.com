@@ -5,6 +5,7 @@ import { Page, Seo, ContactSection, Animation, Section, ProjectsSection } from '
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
 import { createOrganizationReference, createSimpleBreadcrumb, createAreaServed } from '../../utils/organizationHelpers';
+import { getPageSeoData, createSeoTitle } from '../../utils/seoHelpers';
 import * as classes from './style.module.css';
 
 const useLocalDataSource = () => {
@@ -26,21 +27,21 @@ const useLocalDataSource = () => {
 
 export default function OfferPage() {
     const { allOfferJson } = useLocalDataSource();
-    const { siteUrl } = useSiteMetadata();
+    const { siteUrl, titleTemplate } = useSiteMetadata();
     const organizationData = useOrganizationData();
     const jsonLdOptions = useJsonLdOptions();
+    const seoData = getPageSeoData('offer');
 
     const collectionPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
-        name: 'Oferta - Usługi IT - Silesian Solutions',
-        description:
-            'Kompleksowe usługi IT od Silesian Solutions. Tworzenie stron internetowych, aplikacji webowych, konsultacje technologiczne i więcej.',
+        name: createSeoTitle(seoData.seoTitle, titleTemplate),
+        description: seoData.description,
         url: `${siteUrl}/oferta`,
         mainContentOfPage: {
             '@id': '#offer-content',
         },
-        breadcrumb: createSimpleBreadcrumb(siteUrl, 'Oferta', `${siteUrl}/oferta`, jsonLdOptions),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/oferta`, jsonLdOptions),
         mainEntity: {
             '@type': 'ItemList',
             itemListElement: allOfferJson.nodes.map((offer, index) => ({
@@ -71,7 +72,7 @@ export default function OfferPage() {
 
     return (
         <>
-            <Seo title="Rozwiązania IT dostosowane do Twoich potrzeb" useTitleTemplate={true} />
+            <Seo title={seoData.seoTitle} description={seoData.description} useTitleTemplate={true} />
             <JsonLd item={collectionPageSchema} />
             {professionalServicesSchema.map((schema, index) => (
                 <JsonLd key={index} item={schema} />

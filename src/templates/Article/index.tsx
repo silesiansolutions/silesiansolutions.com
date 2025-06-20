@@ -12,6 +12,7 @@ import { AuthorSnippet } from '../../components/AuthorSnippet';
 import { ArticleTemplateData } from './data';
 import { pluralize } from '../../utils/pluralize';
 import { createOrganizationReference } from '../../utils/organizationHelpers';
+import { createSeoTitle } from '../../utils/seoHelpers';
 import * as classes from './style.module.css';
 
 // Reference to the local prismjs theme (Modified)
@@ -27,13 +28,15 @@ interface ArticleTemplateProps {
 
 export default function ArticleTemplate(props: ArticleTemplateProps): React.ReactElement {
     const article = props.pageContext.article;
-    const { siteUrl, author } = useSiteMetadata();
+    const { siteUrl, author, titleTemplate } = useSiteMetadata();
     const organizationData = useOrganizationData();
+
+    const schemaTitle = createSeoTitle(article.title, titleTemplate);
 
     const articleSchema: WithContext<Article> = {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        headline: article.title,
+        headline: schemaTitle,
         description: article.description || undefined,
         author: {
             '@type': 'Person',
@@ -59,7 +62,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
     const blogPostingSchema: WithContext<BlogPosting> = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
-        headline: article.title,
+        headline: schemaTitle,
         description: article.description || undefined,
         author: {
             '@type': 'Person',

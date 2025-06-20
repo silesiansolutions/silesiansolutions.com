@@ -10,6 +10,7 @@ import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData } from '../../hooks/useOrganizationData';
 import { ImageObject } from '../../types';
 import { createOrganizationReference, createBreadcrumb } from '../../utils/organizationHelpers';
+import { createSeoTitle } from '../../utils/seoHelpers';
 import * as classes from './style.module.css';
 
 interface Offer {
@@ -34,7 +35,7 @@ interface OfferTemplateProps {
 
 export default function OfferTemplate(props: OfferTemplateProps): React.ReactElement {
     const offer = props.pageContext.offer;
-    const { siteUrl } = useSiteMetadata();
+    const { siteUrl, titleTemplate } = useSiteMetadata();
     const organizationData = useOrganizationData();
     const title = offer.heading.split(' ').slice(1).join(' ');
 
@@ -56,7 +57,7 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
     const webPageSchema: WithContext<WebPage> = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: `${offer.heading} - Silesian Solutions`,
+        name: createSeoTitle(title, titleTemplate),
         description: offer.description,
         url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}`,
         mainContentOfPage: {

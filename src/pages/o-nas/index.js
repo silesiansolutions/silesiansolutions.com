@@ -5,6 +5,7 @@ import { Page, Seo, ContactSection, InterestsSection, Animation, Section } from 
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
 import { createOrganizationReference, createSimpleBreadcrumb } from '../../utils/organizationHelpers';
+import { getPageSeoData, createSeoTitle } from '../../utils/seoHelpers';
 import * as classes from './style.module.css';
 
 const useLocalDataSource = () => {
@@ -24,27 +25,27 @@ const useLocalDataSource = () => {
 
 export default function AboutUsPage() {
     const { allAboutUsJson } = useLocalDataSource();
-    const { siteUrl } = useSiteMetadata();
+    const { siteUrl, titleTemplate } = useSiteMetadata();
     const organizationData = useOrganizationData();
     const jsonLdOptions = useJsonLdOptions();
+    const seoData = getPageSeoData('about');
 
     const aboutPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'AboutPage',
-        name: 'O nas - Silesian Solutions',
-        description:
-            'Poznaj Silesian Solutions - zespół specjalistów IT tworzących nowoczesne rozwiązania technologiczne prosto ze Śląska.',
+        name: createSeoTitle(seoData.seoTitle, titleTemplate),
+        description: seoData.description,
         url: `${siteUrl}/o-nas`,
         mainContentOfPage: {
             '@id': '#about-us-content',
         },
         mainEntity: createOrganizationReference(siteUrl, organizationData),
-        breadcrumb: createSimpleBreadcrumb(siteUrl, 'O nas', `${siteUrl}/o-nas`, jsonLdOptions),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/o-nas`, jsonLdOptions),
     };
 
     return (
         <>
-            <Seo title="Tworzymy technologię, która wspiera rozwój biznesu" useTitleTemplate={true} />
+            <Seo title={seoData.seoTitle} description={seoData.description} useTitleTemplate={true} />
             <JsonLd item={aboutPageSchema} />
             <Page>
                 <Animation type="fadeUp" delay={300}>

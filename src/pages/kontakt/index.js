@@ -11,6 +11,7 @@ import {
     createSimpleBreadcrumb,
     createServiceArea,
 } from '../../utils/organizationHelpers';
+import { getPageSeoData, createSeoTitle } from '../../utils/seoHelpers';
 import * as classes from './style.module.css';
 
 const useLocalDataSource = () => {
@@ -37,9 +38,10 @@ const useLocalDataSource = () => {
 
 export default function ContactPage() {
     const { allHoursJson, allFaqJson } = useLocalDataSource();
-    const { siteUrl } = useSiteMetadata();
+    const { siteUrl, titleTemplate } = useSiteMetadata();
     const organizationData = useOrganizationData();
     const jsonLdOptions = useJsonLdOptions();
+    const seoData = getPageSeoData('contact');
 
     function translateDayToEnglish(polishDay) {
         const dayMap = {
@@ -82,14 +84,13 @@ export default function ContactPage() {
     const contactPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
-        name: 'Kontakt - Silesian Solutions',
-        description:
-            'Skontaktuj się z Silesian Solutions. Oferujemy profesjonalne usługi IT i rozwiązania technologiczne.',
+        name: createSeoTitle(seoData.seoTitle, titleTemplate),
+        description: seoData.description,
         url: `${siteUrl}/kontakt`,
         mainEntity: {
             '@id': `${siteUrl}#organization`,
         },
-        breadcrumb: createSimpleBreadcrumb(siteUrl, 'Kontakt', `${siteUrl}/kontakt`, jsonLdOptions),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/kontakt`, jsonLdOptions),
     };
 
     const faqSchema = {
@@ -108,7 +109,7 @@ export default function ContactPage() {
 
     return (
         <>
-            <Seo title="Skontaktuj się z nami" useTitleTemplate={true} />
+            <Seo title={seoData.seoTitle} description={seoData.description} useTitleTemplate={true} />
             <JsonLd item={localBusinessSchema} />
             <JsonLd item={contactPageSchema} />
             <JsonLd item={faqSchema} />

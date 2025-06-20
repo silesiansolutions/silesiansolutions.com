@@ -10,6 +10,7 @@ import { ArticleCard } from '../../components/ArticleCard';
 import { Button, ButtonType } from '../../components/Button';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { ArticleTemplateData } from '../Article/data';
+import { getPageSeoData } from '../../utils/seoHelpers';
 import * as classes from './style.module.css';
 import { pluralize } from '../../utils/pluralize';
 
@@ -32,6 +33,7 @@ export default function ArticleListingTemplate(props: ArticleListingTemplateProp
     const [filterOptions, setFilterOptions] = React.useState<FilterOption[]>(extractFilterOptions(articles));
     const [shownArticlesNumber, setShownArticlesNumber] = React.useState<number>(ARTICLES_PER_PAGE);
     const { siteUrl } = useSiteMetadata();
+    const seoData = getPageSeoData('blog');
 
     function handleFilterOptionClick(optionLabel: string): void {
         const updatedFilterOptions = [...filterOptions];
@@ -79,7 +81,7 @@ export default function ArticleListingTemplate(props: ArticleListingTemplateProp
 
     return (
         <>
-            <Seo title={`Wszystkie ${entities}`} useTitleTemplate={true} />
+            <Seo title={seoData.seoTitle} description={seoData.description} useTitleTemplate={true} />
             <Page>
                 <Section anchor="articleListing" heading={entities} id="articles-listing">
                     <JsonLd<Blog> item={structuredData} />

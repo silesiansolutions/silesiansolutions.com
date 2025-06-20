@@ -4,27 +4,28 @@ import { InterestsSection, ProjectsSection, Page, Seo, ContactSection } from '..
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { useJsonLdOptions } from '../hooks/useOrganizationData';
 import { createSimpleBreadcrumb } from '../utils/organizationHelpers';
+import { getPageSeoData, createSeoTitle } from '../utils/seoHelpers';
 
 export default function ProjectsPage() {
-    const { siteUrl } = useSiteMetadata();
+    const { siteUrl, titleTemplate } = useSiteMetadata();
     const jsonLdOptions = useJsonLdOptions();
+    const seoData = getPageSeoData('projects');
 
     const collectionPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
-        name: 'Realizacje - Nasze projekty IT - Silesian Solutions',
-        description:
-            'Poznaj nasze wybrane realizacje i projekty IT. Portfolio Silesian Solutions z przykładami aplikacji webowych, stron internetowych i rozwiązań technologicznych.',
+        name: createSeoTitle(seoData.seoTitle, titleTemplate),
+        description: seoData.description,
         url: `${siteUrl}/realizacje`,
         mainContentOfPage: {
             '@id': '#projects-content',
         },
-        breadcrumb: createSimpleBreadcrumb(siteUrl, 'Realizacje', `${siteUrl}/realizacje`, jsonLdOptions),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/realizacje`, jsonLdOptions),
     };
 
     return (
         <>
-            <Seo title="Nasze wybrane realizacje" useTitleTemplate={true} />
+            <Seo title={seoData.seoTitle} description={seoData.description} useTitleTemplate={true} />
             <JsonLd item={collectionPageSchema} />
             <Page>
                 <ProjectsSection sectionId="realizacje" heading="Przykłady naszych projektów" id="projects-content" />

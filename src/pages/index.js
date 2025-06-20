@@ -11,23 +11,27 @@ import {
     Seo,
 } from '../sections';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import { useOrganizationData } from '../hooks/useOrganizationData';
 import { createBreadcrumb } from '../utils/organizationHelpers';
+import { getPageSeoData, createSeoTitle } from '../utils/seoHelpers';
 
 export default function IndexPage() {
-    const { siteUrl, title, description } = useSiteMetadata();
+    const { siteUrl, titleTemplate } = useSiteMetadata();
+    const organizationData = useOrganizationData();
+    const seoData = getPageSeoData('home');
 
     const webPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: title,
-        description: description,
+        name: createSeoTitle(seoData.seoTitle, titleTemplate),
+        description: seoData.description,
         url: siteUrl,
         mainContentOfPage: {
             '@id': '#main-content',
         },
         isPartOf: {
             '@type': 'WebSite',
-            name: 'Silesian Solutions',
+            name: organizationData.name,
             url: siteUrl,
         },
         primaryImageOfPage: {
@@ -44,7 +48,7 @@ export default function IndexPage() {
 
     return (
         <>
-            <Seo title={title} description={description} />
+            <Seo title={seoData.seoTitle} description={seoData.description} useTitleTemplate={true} />
             <JsonLd item={webPageSchema} />
             <Page useSplashScreenAnimation id="main-content">
                 <HeroSection sectionId="hero" />

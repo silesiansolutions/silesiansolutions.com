@@ -71,11 +71,16 @@ module.exports = {
             },
         },
         `gatsby-plugin-robots-txt`,
-        `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-plugin-sitemap`,
+            options: {
+                excludes: ['/polityka-prywatnosci/', '/klauzula-informacyjna/'],
+            },
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: 'Silesian Solutions - Śląskie Rozwiązania',
+                name: 'Nowoczesne rozwiązania IT i AI | Silesian Solutions',
                 short_name: 'Silesian Solutions',
                 start_url: '/',
                 background_color: '#FFFFFF',
