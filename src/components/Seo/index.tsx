@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { JsonLd } from 'react-schemaorg';
 import { Organization, WebSite, WithContext } from 'schema-dts';
+import { useLocation } from '@reach/router';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
 import { createContactPoint, createServiceArea } from '../../utils/organizationHelpers';
@@ -13,13 +14,15 @@ interface SeoProps {
     description?: string;
     addOrganizationSchema?: boolean;
     addWebSiteSchema?: boolean;
-    currentUrl?: string;
 }
 
 export function Seo(props: SeoProps): React.ReactElement {
+    const location = useLocation();
     const siteMetadata = { ...useSiteMetadata(), ...props };
     const organizationData = useOrganizationData();
     const jsonLdOptions = useJsonLdOptions();
+
+    const currentUrl = siteMetadata.siteUrl + location.pathname;
 
     const thumbnailUrl = siteMetadata.thumbnail
         ? (siteMetadata.siteUrl + siteMetadata.thumbnail.childImageSharp.original.src).replace(/([^:]\/)\/+/g, '$1')
@@ -75,11 +78,11 @@ export function Seo(props: SeoProps): React.ReactElement {
                 htmlAttributes={{ lang: siteMetadata.language }}
             >
                 {props.noIndex && <meta name="robots" content="noindex" />}
-                <link rel="canonical" href={props.currentUrl || siteMetadata.siteUrl} />
+                <link rel="canonical" href={currentUrl} />
                 <meta name="description" content={siteMetadata.description} />
                 <meta property="og:title" content={siteMetadata.title} />
                 <meta property="og:site_name" content={siteMetadata.title} />
-                <meta property="og:url" content={props.currentUrl || siteMetadata.siteUrl} />
+                <meta property="og:url" content={currentUrl} />
                 {thumbnailUrl && <meta property="og:image" content={thumbnailUrl} />}
                 <meta property="og:description" content={siteMetadata.description} />
                 <meta property="og:type" content="website" />
