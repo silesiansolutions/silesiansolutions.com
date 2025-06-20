@@ -43,8 +43,10 @@ export const createOfferCatalog = (organizationData: OrganizationData, options: 
 
 export const createBreadcrumb = (items: Array<{ name: string; url: string }>) => ({
     '@type': 'BreadcrumbList' as const,
+    '@id': '#breadcrumb-list',
     itemListElement: items.map((item, index) => ({
         '@type': 'ListItem' as const,
+        '@id': `#breadcrumb-item-${index}`,
         position: index + 1,
         name: item.name,
         item: item.url,

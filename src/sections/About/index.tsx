@@ -12,7 +12,7 @@ export function AboutSection(props: PageSection): React.ReactElement {
 
     return (
         <Animation type="fadeUp" delay={900}>
-            <Section anchor={props.sectionId} heading={props.heading}>
+            <Section anchor={props.sectionId} heading={props.heading} id={props.id}>
                 <div className={classes.About}>
                     <div className={classes.Description} dangerouslySetInnerHTML={{ __html: data.html }} />
                     {data.frontmatter.imageSrc && (

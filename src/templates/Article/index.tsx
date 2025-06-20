@@ -44,7 +44,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
         publisher: createOrganizationReference(siteUrl, organizationData),
         mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `${siteUrl}${props.pageContext.listingPagePath}/${article.slug}`,
+            '@id': `${siteUrl}${props.pageContext.listingPagePath}/${article.slug}#article-content`,
         },
         image: article.banner?.src?.childImageSharp?.gatsbyImageData
             ? {
@@ -70,7 +70,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
         publisher: createOrganizationReference(siteUrl, organizationData),
         mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `${siteUrl}${props.pageContext.listingPagePath}/${article.slug}`,
+            '@id': `${siteUrl}${props.pageContext.listingPagePath}/${article.slug}#article-content`,
         },
         image: article.banner?.src?.childImageSharp?.gatsbyImageData
             ? {
@@ -89,8 +89,8 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
             <JsonLd<Article> item={articleSchema} />
             <JsonLd<BlogPosting> item={blogPostingSchema} />
             <Page>
-                <article className={classes.Article}>
-                    <div className={classes.Breadcrumb}>
+                <article className={classes.Article} id="article-content">
+                    <div className={classes.Breadcrumb} id="article-breadcrumb">
                         <Link
                             to={props.pageContext.listingPagePath}
                             title={`Wróć do ${pluralize(props.pageContext.entityName) ?? 'Artykuły'}`}

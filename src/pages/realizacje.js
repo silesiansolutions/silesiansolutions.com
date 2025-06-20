@@ -16,6 +16,9 @@ export default function ProjectsPage() {
         description:
             'Poznaj nasze wybrane realizacje i projekty IT. Portfolio Silesian Solutions z przykładami aplikacji webowych, stron internetowych i rozwiązań technologicznych.',
         url: `${siteUrl}/realizacje`,
+        mainContentOfPage: {
+            '@id': '#projects-content',
+        },
         breadcrumb: createSimpleBreadcrumb(siteUrl, 'Realizacje', `${siteUrl}/realizacje`, jsonLdOptions),
     };
 
@@ -24,7 +27,7 @@ export default function ProjectsPage() {
             <Seo title="Nasze wybrane realizacje" useTitleTemplate={true} />
             <JsonLd item={collectionPageSchema} />
             <Page>
-                <ProjectsSection sectionId="realizacje" heading="Przykłady naszych projektów" />
+                <ProjectsSection sectionId="realizacje" heading="Przykłady naszych projektów" id="projects-content" />
                 <InterestsSection sectionId="oferta" heading="Nasze specjalizacje" />
                 <ContactSection sectionId="kontakt" heading="Pozostajemy do Twojej dyspozycji" />
             </Page>

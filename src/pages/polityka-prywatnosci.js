@@ -15,6 +15,9 @@ export default function PrivacyPage() {
         name: 'Polityka prywatności - Silesian Solutions',
         description: 'Polityka prywatności i ochrony danych osobowych Silesian Solutions.',
         url: `${siteUrl}/polityka-prywatnosci`,
+        mainContentOfPage: {
+            '@id': '#privacy-content',
+        },
         breadcrumb: createSimpleBreadcrumb(
             siteUrl,
             'Polityka prywatności',
@@ -28,7 +31,7 @@ export default function PrivacyPage() {
             <Seo title="Polityka prywatności" useTitleTemplate={true} noIndex={true} />
             <JsonLd item={webPageSchema} />
             <Page>
-                <LegalSection sectionId="privacy-policy" heading="Polityka prywatności" />
+                <LegalSection sectionId="privacy-policy" heading="Polityka prywatności" id="privacy-content" />
             </Page>
         </>
     );

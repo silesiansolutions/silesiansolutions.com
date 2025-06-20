@@ -58,6 +58,9 @@ export default function ArticleListingTemplate(props: ArticleListingTemplateProp
         '@context': 'https://schema.org',
         '@type': 'Blog',
         headline: entities,
+        mainEntityOfPage: {
+            '@id': '#articles-listing',
+        },
         blogPost: articles.map((article) => {
             return {
                 '@type': 'BlogPosting',
@@ -78,7 +81,7 @@ export default function ArticleListingTemplate(props: ArticleListingTemplateProp
         <>
             <Seo title={`Wszystkie ${entities}`} useTitleTemplate={true} />
             <Page>
-                <Section anchor="articleListing" heading={entities}>
+                <Section anchor="articleListing" heading={entities} id="articles-listing">
                     <JsonLd<Blog> item={structuredData} />
                     <div className={classes.Filter}>
                         Zaznacz kategorie, aby filtrować {entities.toLocaleLowerCase()}

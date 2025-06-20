@@ -76,7 +76,7 @@ export function ArticlesSection(props: ArticlesSectionProps): React.ReactElement
 
     return (
         <Animation type="fadeUp" delay={300}>
-            <Section anchor={props.sectionId} heading={props.heading}>
+            <Section anchor={props.sectionId} heading={props.heading} id={props.id}>
                 <Slider additionalClasses={[classes.Articles]}>
                     {articles.length > 0
                         ? articles.slice(0, 3).map((article, key) => {

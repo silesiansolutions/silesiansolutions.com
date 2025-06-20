@@ -18,7 +18,12 @@ export function ContactSection(props: ContactSectionProps): React.ReactElement {
 
     return (
         <Animation type="fadeUp" delay={300}>
-            <Section anchor={props.sectionId} heading={props.heading} additionalClasses={[classes.Contact]}>
+            <Section
+                anchor={props.sectionId}
+                heading={props.heading}
+                additionalClasses={[classes.Contact]}
+                id={props.id}
+            >
                 <div className={classes.Description}>{finalDescription && <p>{finalDescription}</p>}</div>
                 <div className={classes.Profile}>
                     {data.image.src && (

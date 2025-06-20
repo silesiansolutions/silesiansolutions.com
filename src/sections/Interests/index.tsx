@@ -23,7 +23,7 @@ export function InterestsSection(props: PageSection): React.ReactElement {
 
     return (
         <Animation type="fadeUp">
-            <Section anchor={props.sectionId} heading={props.heading}>
+            <Section anchor={props.sectionId} heading={props.heading} id={props.id}>
                 <div className={classes.Interests}>
                     {data.interests.slice(0, shownInterests).map((interest, key) => {
                         const interestContent = (

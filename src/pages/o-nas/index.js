@@ -35,6 +35,9 @@ export default function AboutUsPage() {
         description:
             'Poznaj Silesian Solutions - zespół specjalistów IT tworzących nowoczesne rozwiązania technologiczne prosto ze Śląska.',
         url: `${siteUrl}/o-nas`,
+        mainContentOfPage: {
+            '@id': '#about-us-content',
+        },
         mainEntity: createOrganizationReference(siteUrl, organizationData),
         breadcrumb: createSimpleBreadcrumb(siteUrl, 'O nas', `${siteUrl}/o-nas`, jsonLdOptions),
     };
@@ -45,7 +48,7 @@ export default function AboutUsPage() {
             <JsonLd item={aboutPageSchema} />
             <Page>
                 <Animation type="fadeUp" delay={300}>
-                    <Section heading="Kim jesteśmy?" anchor="o-nas">
+                    <Section heading="Kim jesteśmy?" anchor="o-nas" id="about-us-content">
                         {allAboutUsJson.nodes.map((item, index) => (
                             <div key={index} className={classes.aboutUsItem}>
                                 <h3 className={classes.aboutUsHeading}>{item.heading}</h3>

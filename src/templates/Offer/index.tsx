@@ -59,6 +59,9 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
         name: `${offer.heading} - Silesian Solutions`,
         description: offer.description,
         url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}`,
+        mainContentOfPage: {
+            '@id': '#offer-content',
+        },
         breadcrumb: createBreadcrumb([
             { name: 'Strona główna', url: siteUrl },
             { name: 'Oferta', url: `${siteUrl}/oferta` },
@@ -72,7 +75,7 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
             <JsonLd<Service> item={serviceSchema} />
             <JsonLd<WebPage> item={webPageSchema} />
             <Page>
-                <article className={classes.Article}>
+                <article className={classes.Article} id="offer-content">
                     <div className={classes.Breadcrumb}>
                         <Link
                             to={props.pageContext.listingPagePath}

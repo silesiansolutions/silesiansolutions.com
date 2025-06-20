@@ -22,6 +22,9 @@ export default function IndexPage() {
         name: title,
         description: description,
         url: siteUrl,
+        mainContentOfPage: {
+            '@id': '#main-content',
+        },
         isPartOf: {
             '@type': 'WebSite',
             name: 'Silesian Solutions',
@@ -43,9 +46,9 @@ export default function IndexPage() {
         <>
             <Seo title={title} description={description} />
             <JsonLd item={webPageSchema} />
-            <Page useSplashScreenAnimation>
+            <Page useSplashScreenAnimation id="main-content">
                 <HeroSection sectionId="hero" />
-                <AboutSection sectionId="o-nas" heading="Kim jesteśmy?" />
+                <AboutSection sectionId="o-nas" heading="Kim jesteśmy?" id="about-section" />
                 <InterestsSection sectionId="oferta" heading="Czym się zajmujemy?" />
                 <ProjectsSection
                     sectionId="realizacje"

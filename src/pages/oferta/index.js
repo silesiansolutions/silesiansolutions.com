@@ -37,6 +37,9 @@ export default function OfferPage() {
         description:
             'Kompleksowe usługi IT od Silesian Solutions. Tworzenie stron internetowych, aplikacji webowych, konsultacje technologiczne i więcej.',
         url: `${siteUrl}/oferta`,
+        mainContentOfPage: {
+            '@id': '#offer-content',
+        },
         breadcrumb: createSimpleBreadcrumb(siteUrl, 'Oferta', `${siteUrl}/oferta`, jsonLdOptions),
         mainEntity: {
             '@type': 'ItemList',
@@ -45,6 +48,7 @@ export default function OfferPage() {
                 position: index + 1,
                 item: {
                     '@type': 'Service',
+                    '@id': `#offer-item-${index}`,
                     name: offer.heading,
                     description: offer.content,
                     url: offer.slug ? `${siteUrl}/oferta/${offer.slug}` : undefined,
@@ -54,9 +58,10 @@ export default function OfferPage() {
         },
     };
 
-    const professionalServicesSchema = allOfferJson.nodes.map((offer) => ({
+    const professionalServicesSchema = allOfferJson.nodes.map((offer, index) => ({
         '@context': 'https://schema.org',
         '@type': 'Service',
+        '@id': `#offer-item-${index}`,
         name: offer.heading,
         description: offer.content,
         url: offer.slug ? `${siteUrl}/oferta/${offer.slug}` : `${siteUrl}/oferta`,
@@ -73,9 +78,9 @@ export default function OfferPage() {
             ))}
             <Page>
                 <Animation type="fadeUp" delay={300}>
-                    <Section heading="Rozwiązania IT, które wspierają Twój biznes" anchor="oferta">
+                    <Section heading="Rozwiązania IT, które wspierają Twój biznes" anchor="oferta" id="offer-content">
                         {allOfferJson.nodes.map((item, index) => (
-                            <div key={index}>
+                            <div key={index} id={`offer-item-${index}`}>
                                 {item.slug ? (
                                     <Link
                                         to={`/oferta/${item.slug}`}

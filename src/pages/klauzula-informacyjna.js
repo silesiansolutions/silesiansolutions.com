@@ -15,6 +15,9 @@ export default function InformationClausePage() {
         name: 'Klauzula informacyjna - Silesian Solutions',
         description: 'Klauzula informacyjna dotycząca przetwarzania danych osobowych zgodnie z RODO.',
         url: `${siteUrl}/klauzula-informacyjna`,
+        mainContentOfPage: {
+            '@id': '#information-clause-content',
+        },
         breadcrumb: createSimpleBreadcrumb(
             siteUrl,
             'Klauzula informacyjna',
@@ -28,7 +31,11 @@ export default function InformationClausePage() {
             <Seo title="Klauzula informacyjna" useTitleTemplate={true} noIndex={true} />
             <JsonLd item={webPageSchema} />
             <Page>
-                <LegalSection sectionId="information-clause" heading="Klauzula informacyjna" />
+                <LegalSection
+                    sectionId="information-clause"
+                    heading="Klauzula informacyjna"
+                    id="information-clause-content"
+                />
             </Page>
         </>
     );

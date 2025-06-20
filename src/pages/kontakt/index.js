@@ -58,6 +58,9 @@ export default function ContactPage() {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         '@id': `${siteUrl}#organization`,
+        mainEntityOfPage: {
+            '@id': '#business-info',
+        },
         name: organizationData.name,
         description: organizationData.description,
         url: siteUrl,
@@ -92,8 +95,9 @@ export default function ContactPage() {
     const faqSchema = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: allFaqJson.nodes.map((item) => ({
+        mainEntity: allFaqJson.nodes.map((item, index) => ({
             '@type': 'Question',
+            '@id': `#faq-question-${index}`,
             name: item.question,
             acceptedAnswer: {
                 '@type': 'Answer',
@@ -113,6 +117,7 @@ export default function ContactPage() {
                     sectionId="kontakt"
                     heading="Napisz do nas"
                     description="Potrzebujesz wsparcia w realizacji projektu IT? A może szukasz partnera technologicznego, który zrozumie potrzeby Twojego biznesu? Jesteśmy tu, by pomóc. Napisz do nas, zadzwoń lub odwiedź nasze biuro w Bielsku-Białej. Zespół Silesian Solutions z przyjemnością odpowie na Twoje pytania, przedstawi możliwe ścieżki działania i pomoże wybrać rozwiązanie dopasowane do Twoich celów. Bez zbędnego żargonu - konkretnie, rzeczowo i po partnersku."
+                    id="contact-info"
                 />
 
                 <Animation type="fadeUp" delay={600}>
@@ -120,6 +125,7 @@ export default function ContactPage() {
                         heading="Lokalizacja i godziny otwarcia"
                         anchor="lokalizacja-i-godziny-otwarcia"
                         className={classes.infoSection}
+                        id="business-info"
                     >
                         <div className={classes.contactInfo}>
                             <div className={classes.mapContainer}>
@@ -158,7 +164,7 @@ export default function ContactPage() {
                 <Animation type="fadeUp" delay={300}>
                     <Section heading="Podczas rozmowy mogą zostać omówione następujące kwestie" anchor="faq">
                         {allFaqJson.nodes.map((item, index) => (
-                            <div key={index} className={classes.faqItem}>
+                            <div key={index} className={classes.faqItem} id={`faq-question-${index}`}>
                                 <h3 className={classes.faqQuestion}>{item.question}</h3>
                                 <p className={classes.faqAnswer}>{item.answer}</p>
                             </div>

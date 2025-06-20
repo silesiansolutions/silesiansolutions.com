@@ -56,6 +56,9 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
         name: `${project.title} - Realizacja - Silesian Solutions`,
         description: project.description,
         url: `${siteUrl}${props.pageContext.listingPagePath}/${project.slug}`,
+        mainContentOfPage: {
+            '@id': '#project-content',
+        },
         breadcrumb: createBreadcrumb([
             { name: 'Strona główna', url: siteUrl },
             { name: 'Realizacje', url: `${siteUrl}/realizacje` },
@@ -69,7 +72,7 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
             <JsonLd<CreativeWork> item={creativeWorkSchema} />
             <JsonLd<WebPage> item={webPageSchema} />
             <Page>
-                <article className={classes.Article}>
+                <article className={classes.Article} id="project-content">
                     <div className={classes.Breadcrumb}>
                         <Link
                             to={props.pageContext.listingPagePath}

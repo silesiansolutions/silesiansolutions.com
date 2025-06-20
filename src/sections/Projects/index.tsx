@@ -14,7 +14,7 @@ export function ProjectsSection(props: PageSection & { maxVisibleProjects: numbe
 
     return (
         <Animation type="fadeUp" delay={300}>
-            <Section anchor={props.sectionId} heading={props.heading}>
+            <Section anchor={props.sectionId} heading={props.heading} id={props.id}>
                 <Slider additionalClasses={[classes.Projects]}>
                     {data.projects
                         .sort(() => (props.maxVisibleProjects ? Math.random() - 0.5 : 0))

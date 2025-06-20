@@ -6,6 +6,7 @@ interface SectionProps {
     heading?: string;
     additionalClasses?: string[];
     children: React.ReactNode;
+    id?: string;
 }
 
 export function Section(props: SectionProps): React.ReactElement {
@@ -17,7 +18,7 @@ export function Section(props: SectionProps): React.ReactElement {
     }
     return (
         <section id={props.anchor} className={classes.Section}>
-            <div className={classList}>
+            <div className={classList} id={props.id}>
                 {props.heading && <h3 className={classes.Heading}>{props.heading}</h3>}
                 {props.children}
             </div>
