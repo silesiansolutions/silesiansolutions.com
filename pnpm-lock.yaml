@@ -51,8 +51,8 @@ importers:
         specifier: ^5.15.0
         version: 5.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.29.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))
       gatsby-transformer-json:
-        specifier: ^5.14.0
-        version: 5.14.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.29.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))
+        specifier: ^5.15.0
+        version: 5.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.29.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))
       gatsby-transformer-remark:
         specifier: ^6.15.0
         version: 6.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.29.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))
@@ -3998,8 +3998,8 @@ packages:
     peerDependencies:
       gatsby: ^5.0.0-next
 
-  gatsby-transformer-json@5.14.0:
-    resolution: {integrity: sha512-Uw+YbScBFHDcISf89cuwVUYW3inckRhY/oceoF0I+Rv+Tuvf7iARDXl+kvoWJzMkqwvl98yiwN0o/k5PCHsIig==}
+  gatsby-transformer-json@5.15.0:
+    resolution: {integrity: sha512-gulLlx8nrCpVs5OKFectSi6O6Q/SrEIi/2byf93wI85g/RRB722BvZz/jCe3nd+GwKLSkoMIOifiKlExhgdukg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       gatsby: ^5.0.0-next
@@ -12628,9 +12628,9 @@ snapshots:
       valid-url: 1.0.9
       xstate: 4.38.3
 
-  gatsby-transformer-json@5.14.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.29.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3)):
+  gatsby-transformer-json@5.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.29.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3)):
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.4
       bluebird: 3.7.2
       gatsby: 5.15.0(babel-eslint@10.1.0(eslint@9.29.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3)
 
