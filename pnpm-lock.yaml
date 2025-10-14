@@ -24,8 +24,8 @@ importers:
         specifier: ^5.15.0
         version: 5.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.37.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(graphql@16.11.0)
       gatsby-plugin-offline:
-        specifier: ^6.14.0
-        version: 6.14.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.37.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^6.15.0
+        version: 6.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.37.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gatsby-plugin-plausible:
         specifier: ^0.0.7
         version: 0.0.7(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.37.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3873,8 +3873,8 @@ packages:
     peerDependencies:
       gatsby: ^5.0.0-next
 
-  gatsby-plugin-offline@6.14.0:
-    resolution: {integrity: sha512-uvQhwZ1HhPZoLJDYdZ+OTWsz/QRz3hNqF+QVhihPRZ9jjgXsPAqKGTgrWM0Btaf6DiNImz10PTo1/SRsp0UDgQ==}
+  gatsby-plugin-offline@6.15.0:
+    resolution: {integrity: sha512-qrHDth/1rIXIQA/X7Z2fG2hNlF6xoOykzB33uMADZj3LACk/Y7ZJmBunkTNzfk3KteLemK6YODZi51Fy+C5p9g==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       gatsby: ^5.0.0-next
@@ -10692,7 +10692,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
       css-select: 5.2.2
-      css-what: 6.1.0
+      css-what: 6.2.2
       domelementtype: 2.3.0
       domhandler: 5.0.3
       domutils: 3.2.2
@@ -12288,7 +12288,7 @@ snapshots:
 
   gatsby-core-utils@4.14.0:
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.4
       ci-info: 2.0.0
       configstore: 5.0.1
       fastq: 1.19.1
@@ -12416,12 +12416,12 @@ snapshots:
       - graphql
       - react-native-b4a
 
-  gatsby-plugin-offline@6.14.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.37.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  gatsby-plugin-offline@6.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.37.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.4
       cheerio: 1.0.0-rc.12
       gatsby: 5.15.0(babel-eslint@10.1.0(eslint@9.37.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3)
-      gatsby-core-utils: 4.14.0
+      gatsby-core-utils: 4.15.0
       glob: 7.2.3
       idb-keyval: 3.2.0
       lodash: 4.17.21
@@ -12515,11 +12515,11 @@ snapshots:
 
   gatsby-plugin-utils@4.14.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.37.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(graphql@16.11.0):
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.4
       fastq: 1.19.1
       fs-extra: 11.3.2
       gatsby: 5.15.0(babel-eslint@10.1.0(eslint@9.37.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3)
-      gatsby-core-utils: 4.14.0
+      gatsby-core-utils: 4.15.0
       gatsby-sharp: 1.15.0
       graphql: 16.11.0
       graphql-compose: 9.1.0(graphql@16.11.0)
@@ -16738,7 +16738,7 @@ snapshots:
 
   workbox-build@4.3.1:
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.4
       '@hapi/joi': 15.1.1
       common-tags: 1.8.2
       fs-extra: 4.0.3
