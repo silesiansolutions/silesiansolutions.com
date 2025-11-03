@@ -15,8 +15,8 @@ importers:
         specifier: ^11.3.2
         version: 11.3.2
       gatsby-plugin-gdpr-cookies:
-        specifier: ^2.0.9
-        version: 2.0.9(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.38.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^2.0.10
+        version: 2.0.10(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.38.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gatsby-plugin-image:
         specifier: ^3.15.0
         version: 3.15.0(@babel/core@7.28.4)(gatsby-plugin-sharp@5.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.38.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(graphql@16.11.0))(gatsby-source-filesystem@5.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.38.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3)))(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.38.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(graphql@16.11.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -865,7 +865,7 @@ packages:
 
   '@builder.io/partytown@0.7.6':
     resolution: {integrity: sha512-snXIGNiZpqjno3XYQN2lbBB+05hsQR/LSttbtIW1c0gmZ7Kh/DIo0YrxlDxCDulAMFPFM8J+4voLwvYepSj3sw==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    deprecated: Use @qwik.dev/partytown instead
     hasBin: true
 
   '@colors/colors@1.5.0':
@@ -3889,13 +3889,13 @@ packages:
     peerDependencies:
       '@parcel/core': ^2.0.0
 
-  gatsby-plugin-gdpr-cookies@2.0.9:
-    resolution: {integrity: sha512-rU4O5oJ+ace0B6D4CG6dG5oOLYRQT3LEb+I5XjCieYVkk1KB0QgqhzsgkV8K6JO18EOExE0Y4HyHQHj3hF6uGg==}
+  gatsby-plugin-gdpr-cookies@2.0.10:
+    resolution: {integrity: sha512-u6MA7kj8j1lbAfF5AUwCtbzXM9dELTEJzEfJSFtLZIi3+CMfnXiMYoUMML6qe7pLS6Rf2h+EWZDsuh7Ub5fcoA==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
-      gatsby: ^2.24.77 || ^3.0.0 || ^4.0.0
-      react: ^16.13.1 || ^17.0.1
-      react-dom: ^16.13.1 || ^17.0.1
+      gatsby: ^2.24.77 || ^3.0.0 || ^4.0.0 || ^5.0.0
+      react: ^16.13.1 || ^17.0.1 || ^18.0.0
+      react-dom: ^16.13.1 || ^17.0.1 || ^18.0.0
 
   gatsby-plugin-image@3.15.0:
     resolution: {integrity: sha512-GlcBjJgRqBfTKG7iYRzqpdlar/MeKqNKRZBlvNhqu6fit68njRotCcoH+SnQizSgt+NoSYfjVY6mOjyD2LO8Dg==}
@@ -12445,9 +12445,9 @@ snapshots:
       '@parcel/transformer-js': 2.8.3(@parcel/core@2.8.3)
       '@parcel/transformer-json': 2.8.3(@parcel/core@2.8.3)
 
-  gatsby-plugin-gdpr-cookies@2.0.9(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.38.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  gatsby-plugin-gdpr-cookies@2.0.10(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.38.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.4
       gatsby: 5.15.0(babel-eslint@10.1.0(eslint@9.38.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.8.3)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
