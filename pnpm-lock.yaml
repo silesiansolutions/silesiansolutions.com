@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fontsource/roboto':
-        specifier: ^5.2.8
-        version: 5.2.8
+        specifier: ^5.2.9
+        version: 5.2.9
       fs-extra:
         specifier: ^11.3.2
         version: 11.3.2
@@ -927,8 +927,8 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@fontsource/roboto@5.2.8':
-    resolution: {integrity: sha512-oh9g4Cg3loVMz9MWeKWfDI+ooxxG1aRVetkiKIb2ESS2rrryGecQ/y4pAj4z5A5ebyw450dYRi/c4k/I3UBhHA==}
+  '@fontsource/roboto@5.2.9':
+    resolution: {integrity: sha512-ZTkyHiPk74B/aj8BZWbsxD5Yu+Lq+nR64eV4wirlrac2qXR7jYk2h6JlLYuOuoruTkGQWNw2fMuKNavw7/rg0w==}
 
   '@gatsbyjs/parcel-namer-relative-to-cwd@2.15.0':
     resolution: {integrity: sha512-k1a8iLsjQY0m5Rkj+IA6Ev5QwAUU7KK2NKX+5IMcr8Ld5s13Xc1l+8Vg++yX1eCFQUALk4J4dvm2gHBjDldd2Q==}
@@ -8849,7 +8849,7 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@fontsource/roboto@5.2.8': {}
+  '@fontsource/roboto@5.2.9': {}
 
   '@gatsbyjs/parcel-namer-relative-to-cwd@2.15.0(@parcel/core@2.8.3)':
     dependencies:
