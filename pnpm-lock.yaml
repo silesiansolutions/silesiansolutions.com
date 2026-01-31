@@ -30,8 +30,8 @@ importers:
         specifier: ^0.0.7
         version: 0.0.7(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.39.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.9.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gatsby-plugin-react-helmet:
-        specifier: ^6.15.0
-        version: 6.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.39.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.9.3))(react-helmet@6.1.0(react@18.3.1))
+        specifier: ^6.16.0
+        version: 6.16.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.39.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.9.3))(react-helmet@6.1.0(react@18.3.1))
       gatsby-plugin-robots-txt:
         specifier: ^1.8.0
         version: 1.8.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.39.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.9.3))
@@ -3969,9 +3969,9 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
 
-  gatsby-plugin-react-helmet@6.15.0:
-    resolution: {integrity: sha512-mznXJHiRJ8qQ7lROZEmNsmhRNhxMolcJmLlnSVyfqQrik+9sjRbrzdpZtDD3MJA+/UDDtEedXyXcK4F2HorWmQ==}
-    engines: {node: '>=18.0.0'}
+  gatsby-plugin-react-helmet@6.16.0:
+    resolution: {integrity: sha512-0iXshdRoPaeJ8xCTsBYTT6G7Txp9PcXDgotbzigdVGY6bXvFUSbEMFSVub7xtNKPX4LYnZkQxsjcOu0MXVFLuA==}
+    engines: {node: '>=18.0.0 <26'}
     peerDependencies:
       gatsby: ^5.0.0-next
       react-helmet: ^5.1.3 || ^6.0.0
@@ -12673,9 +12673,9 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  gatsby-plugin-react-helmet@6.15.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.39.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.9.3))(react-helmet@6.1.0(react@18.3.1)):
+  gatsby-plugin-react-helmet@6.16.0(gatsby@5.15.0(babel-eslint@10.1.0(eslint@9.39.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.9.3))(react-helmet@6.1.0(react@18.3.1)):
     dependencies:
-      '@babel/runtime': 7.28.4
+      '@babel/runtime': 7.28.6
       gatsby: 5.15.0(babel-eslint@10.1.0(eslint@9.39.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.41.0)(typescript@5.9.3)
       react-helmet: 6.1.0(react@18.3.1)
 
