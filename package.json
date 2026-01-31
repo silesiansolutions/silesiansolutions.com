@@ -28,7 +28,7 @@
         "gatsby-source-filesystem": "^5.15.0",
         "gatsby-transformer-json": "^5.16.0",
         "gatsby-transformer-remark": "^6.15.0",
-        "gatsby-transformer-sharp": "^5.15.0",
+        "gatsby-transformer-sharp": "^5.16.0",
         "js-cookie": "^3.0.5",
         "mini-svg-data-uri": "^1.4.4",
         "normalize.css": "^8.0.1",
