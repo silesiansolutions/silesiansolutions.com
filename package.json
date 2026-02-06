@@ -17,7 +17,7 @@
         "gatsby-plugin-gdpr-cookies": "^2.0.10",
         "gatsby-plugin-image": "^3.16.0",
         "gatsby-plugin-manifest": "^5.15.0",
-        "gatsby-plugin-offline": "^6.15.0",
+        "gatsby-plugin-offline": "^6.16.0",
         "gatsby-plugin-plausible": "^0.0.7",
         "gatsby-plugin-react-helmet": "^6.16.0",
         "gatsby-plugin-robots-txt": "^1.8.0",
