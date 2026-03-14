@@ -13,7 +13,7 @@
     },
     "dependencies": {
         "@fontsource/roboto": "^5.2.9",
-        "fs-extra": "^11.3.3",
+        "fs-extra": "^11.3.4",
         "gatsby-plugin-gdpr-cookies": "^2.0.10",
         "gatsby-plugin-image": "^3.16.0",
         "gatsby-plugin-manifest": "^5.16.0",
