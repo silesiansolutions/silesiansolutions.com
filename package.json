@@ -40,7 +40,7 @@
         "reading-time": "^1.5.0",
         "schema-dts": "^1.1.5",
         "sharp": "^0.34.5",
-        "slugify": "^1.6.6",
+        "slugify": "^1.6.8",
         "svgo": "^4.0.1",
         "tiny-skeleton-loader-react": "^1.2.1"
     },
