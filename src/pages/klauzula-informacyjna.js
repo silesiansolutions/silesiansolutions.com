@@ -31,6 +31,7 @@ export default function InformationClausePage() {
                 <LegalSection
                     sectionId="information-clause"
                     heading="Klauzula informacyjna"
+                    headingLevel="h1"
                     id="information-clause-content"
                 />
             </Page>

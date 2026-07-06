@@ -24,21 +24,21 @@ export function createSeoTitle(seoTitle: string, titleTemplate: string): string 
 export const pageSeoConfig: Record<string, PageSeoData> = {
     home: {
         title: 'Strona główna',
-        seoTitle: 'Nowoczesne rozwiązania IT i AI',
+        seoTitle: 'Software engineering, AI i automatyzacja dla firm',
         description:
-            'Silesian Solutions tworzy systemy, aplikacje i rozwiązania oparte na sztucznej inteligencji, no-code/low-code oraz automatyzacji procesów - skutecznie i nowocześnie.',
+            'Silesian Solutions pomaga firmom projektować i rozwijać oprogramowanie, rozwiązania AI i automatyzacje procesów - od architektury po bezpieczne wdrożenie.',
     },
     about: {
         title: 'O nas',
-        seoTitle: 'Tworzymy technologię, która wspiera rozwój biznesu',
+        seoTitle: 'Techniczne partnerstwo B2B dla rozwoju produktów',
         description:
-            'Poznaj Silesian Solutions - zespół specjalistów IT i AI tworzących nowoczesne rozwiązania technologiczne dla biznesu. Zajmujemy się systemami, aplikacjami i automatyzacją.',
+            'Poznaj podejście Silesian Solutions do software engineering, architektury, automatyzacji, AI, DevOps i bezpiecznego rozwoju produktów cyfrowych.',
     },
     offer: {
         title: 'Oferta',
-        seoTitle: 'Rozwiązania IT dostosowane do Twoich potrzeb',
+        seoTitle: 'Software engineering, AI, automatyzacje i DevOps',
         description:
-            'Kompleksowe usługi IT od Silesian Solutions: AI i chatboty, no-code/low-code, strony internetowe, aplikacje webowe, sklepy online, systemy dedykowane i cyberbezpieczeństwo.',
+            'Techniczne usługi B2B: oprogramowanie dedykowane, AI-assisted engineering, automatyzacja procesów, frontend architecture, DevOps, integracje i cyberbezpieczeństwo.',
     },
     projects: {
         title: 'Realizacje',
@@ -48,9 +48,9 @@ export const pageSeoConfig: Record<string, PageSeoData> = {
     },
     contact: {
         title: 'Kontakt',
-        seoTitle: 'Skontaktuj się z nami - rozpocznijmy współpracę',
+        seoTitle: 'Porozmawiajmy o Twoim projekcie technologicznym',
         description:
-            'Skontaktuj się z Silesian Solutions z Bielska-Białej. Oferujemy profesjonalne usługi IT, rozwiązania AI i wsparcie technologiczne dla Twojego biznesu.',
+            'Skontaktuj się z Silesian Solutions, aby omówić oprogramowanie, AI, automatyzację, frontend architecture, DevOps lub techniczne doradztwo B2B.',
     },
     blog: {
         title: 'Blog',

@@ -4,6 +4,7 @@ import { Animation } from '../../components/Animation';
 import { useCalendlyWidget } from '../../hooks/useCalendlyWidget';
 import { Section } from '../../components/Section';
 import { SocialProfiles } from '../../components/SocialProfiles';
+import { Button, ButtonType } from '../../components/Button';
 import { useLocalDataSource } from './data';
 import { PageSection } from '../../types';
 import * as classes from './style.module.css';
@@ -48,6 +49,11 @@ export function HeroSection(props: PageSection): React.ReactElement {
                         {data.subtitle.suffix}
                     </h2>
                     <p>{data.description}</p>
+                    {data.cta?.label && data.cta?.url && (
+                        <div className={classes.Actions}>
+                            <Button type={ButtonType.LINK} label={data.cta.label} url={data.cta.url} />
+                        </div>
+                    )}
                     <Animation type="fadeLeft" delay={600}>
                         {data.socialProfiles && (
                             <SocialProfiles from={data.socialProfiles.from} showIcon={data.socialProfiles.showIcons} />

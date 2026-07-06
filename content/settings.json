@@ -3,11 +3,11 @@
         "language": "pl",
         "siteUrl": "https://silesiansolutions.com",
         "thumbnail": "../content/images/silesiansolutions.jpg",
-        "title": "Nowoczesne rozwiązania IT i AI | Silesian Solutions",
+        "title": "Software engineering, AI i automatyzacja | Silesian Solutions",
         "titleTemplate": "%s | Silesian Solutions",
-        "description": "Silesian Solutions tworzy systemy, aplikacje i rozwiązania oparte na sztucznej inteligencji, no-code/low-code oraz automatyzacji procesów - skutecznie i nowocześnie.",
+        "description": "Silesian Solutions pomaga firmom projektować i rozwijać oprogramowanie, rozwiązania AI i automatyzacje procesów - od architektury po bezpieczne wdrożenie.",
         "author": "Silesian Solutions",
-        "bio": "Specjalizujemy się w IT i AI: inteligentne systemy, aplikacje, automatyzacja, no-code/low-code - zrealizowane z precyzją i pasją.",
+        "bio": "Software engineering, AI, automatyzacje, frontend architecture, DevOps i bezpieczne rozwiązania dla biznesu.",
         "avatar": "../content/images/silesiansolutions.jpg",
         "social": {
             "linkedin": "https://www.linkedin.com/company/silesiansolutions/",
@@ -41,7 +41,12 @@
                     "label": "Kontakt",
                     "url": "/kontakt"
                 }
-            ]
+            ],
+            "ctaButton": {
+                "label": "Porozmawiajmy o projekcie",
+                "url": "/kontakt",
+                "openNewTab": false
+            }
         },
         "featureToggles": {
             "useDarkModeAsDefault": true,
@@ -53,7 +58,7 @@
         "name": "Silesian Solutions",
         "legalName": "Silesian Solutions",
         "email": "biuro@silesiansolutions.com",
-        "description": "Silesian Solutions to śląski software house specjalizujący się w tworzeniu nowoczesnych aplikacji, systemów IT, rozwiązań AI, integracji no-code/low-code oraz kompleksowej cyfryzacji procesów.",
+        "description": "Silesian Solutions wspiera firmy B2B w projektowaniu i rozwijaniu oprogramowania, rozwiązań AI, automatyzacji procesów oraz bezpiecznej architektury technicznej.",
         "location": {
             "addressLocality": "Bielsko-Biała",
             "addressRegion": "Śląskie",
@@ -67,7 +72,12 @@
         "areaServed": "Polska",
         "knowsAbout": [
             "Sztuczna inteligencja (AI)",
+            "AI-assisted software engineering",
             "Agenci AI i chatboty konwersacyjne",
+            "Automatyzacja procesów biznesowych",
+            "Frontend architecture",
+            "Doradztwo techniczne B2B",
+            "Produktyzacja usług",
             "Platformy no-code / low-code",
             "Tworzenie stron internetowych",
             "Aplikacje mobilne PWA",
@@ -79,12 +89,9 @@
             "Cyberbezpieczeństwo",
             "Analiza danych i Business Intelligence",
             "Transformacja cyfrowa",
-            "RPA i automatyzacja procesów biznesowych"
+            "RPA"
         ],
-        "availableLanguage": [
-            "Polish",
-            "English"
-        ],
+        "availableLanguage": ["Polish", "English"],
         "mainServices": [
             {
                 "name": "AI i agenci AI",

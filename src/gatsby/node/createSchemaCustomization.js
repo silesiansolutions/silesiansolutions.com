@@ -38,6 +38,10 @@ module.exports = ({ actions }) => {
         colorText: String
         colorButton: String
     }
+    type HeroCallToAction {
+        label: String
+        url: String
+    }
     type Interest {
         label: String
         image: Image
@@ -186,6 +190,7 @@ module.exports = ({ actions }) => {
         description: String
         socialProfiles: SocialProfiles
         calendly: CalendlyIntegration
+        cta: HeroCallToAction
     }
     type InterestsJson implements Node @dontInfer {
         interests: [Interest]

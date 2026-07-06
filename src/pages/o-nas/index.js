@@ -49,7 +49,7 @@ export default function AboutUsPage() {
             <JsonLd item={aboutPageSchema} />
             <Page>
                 <Animation type="fadeUp" delay={300}>
-                    <Section heading="Kim jesteśmy?" anchor="o-nas" id="about-us-content">
+                    <Section heading="Kim jesteśmy?" headingLevel="h1" anchor="o-nas" id="about-us-content">
                         {allAboutUsJson.nodes.map((item, index) => (
                             <div key={index} className={classes.aboutUsItem}>
                                 <h3 className={classes.aboutUsHeading}>{item.heading}</h3>

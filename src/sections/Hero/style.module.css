@@ -26,6 +26,12 @@
 
 .Hero p {
     font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.Actions {
+    width: 100%;
+    max-width: 18rem;
     margin-bottom: 2rem;
 }
 

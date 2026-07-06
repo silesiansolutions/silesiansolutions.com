@@ -10,7 +10,7 @@ export function LegalSection(props: PageSection): React.ReactElement {
 
     return (
         <Animation type="fadeUp" delay={300}>
-            <Section anchor={props.sectionId} heading={props.heading} id={props.id}>
+            <Section anchor={props.sectionId} heading={props.heading} headingLevel={props.headingLevel} id={props.id}>
                 <div dangerouslySetInnerHTML={{ __html: data.html }} />
             </Section>
         </Animation>

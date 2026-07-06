@@ -8,7 +8,7 @@ export default function NotFoundPage(): React.ReactElement {
         <>
             <Seo title="404: Nie znaleziono strony" noIndex={true} />
             <Page>
-                <Section heading="Nie znaleziono strony" anchor="404">
+                <Section heading="Nie znaleziono strony" headingLevel="h1" anchor="404">
                     <p>Przepraszamy, ale strona, której szukasz, nie istnieje.</p>
                 </Section>
             </Page>

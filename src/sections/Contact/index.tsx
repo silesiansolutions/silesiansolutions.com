@@ -21,6 +21,7 @@ export function ContactSection(props: ContactSectionProps): React.ReactElement {
             <Section
                 anchor={props.sectionId}
                 heading={props.heading}
+                headingLevel={props.headingLevel}
                 additionalClasses={[classes.Contact]}
                 id={props.id}
             >

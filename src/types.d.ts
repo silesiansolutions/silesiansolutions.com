@@ -20,6 +20,7 @@ interface ImageObject {
 interface PageSection {
     sectionId: string;
     heading?: string;
+    headingLevel?: 'h1' | 'h2' | 'h3';
     id?: string;
 }
 

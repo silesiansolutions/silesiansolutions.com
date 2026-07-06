@@ -83,7 +83,7 @@ export default function ArticleListingTemplate(props: ArticleListingTemplateProp
         <>
             <Seo title={seoData.seoTitle} description={seoData.description} useTitleTemplate={true} />
             <Page>
-                <Section anchor="articleListing" heading={entities} id="articles-listing">
+                <Section anchor="articleListing" heading={entities} headingLevel="h1" id="articles-listing">
                     <JsonLd<Blog> item={structuredData} />
                     <div className={classes.Filter}>
                         Zaznacz kategorie, aby filtrować {entities.toLocaleLowerCase()}

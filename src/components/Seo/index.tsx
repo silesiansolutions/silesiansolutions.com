@@ -41,10 +41,6 @@ export function Seo(props: SeoProps): React.ReactElement {
               }
             : undefined,
         description: organizationData.description,
-        founder: {
-            '@type': 'Person',
-            name: siteMetadata.author,
-        },
         foundingLocation: createServiceArea(organizationData),
         areaServed: organizationData.areaServed,
         knowsAbout: organizationData.knowsAbout,
@@ -55,7 +51,7 @@ export function Seo(props: SeoProps): React.ReactElement {
     const webSiteSchema: WithContext<WebSite> = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        name: siteMetadata.title,
+        name: organizationData.name,
         url: siteMetadata.siteUrl,
         description: siteMetadata.description,
         publisher: {
@@ -81,15 +77,17 @@ export function Seo(props: SeoProps): React.ReactElement {
                 <link rel="canonical" href={currentUrl} />
                 <meta name="description" content={siteMetadata.description} />
                 <meta property="og:title" content={siteMetadata.title} />
-                <meta property="og:site_name" content={siteMetadata.title} />
+                <meta property="og:site_name" content={organizationData.name} />
                 <meta property="og:url" content={currentUrl} />
                 {thumbnailUrl && <meta property="og:image" content={thumbnailUrl} />}
+                {thumbnailUrl && <meta property="og:image:alt" content={`Logo ${organizationData.name}`} />}
                 <meta property="og:description" content={siteMetadata.description} />
                 <meta property="og:type" content="website" />
-                <meta property="twitter:card" content="summary" />
-                <meta property="twitter:creator" content={siteMetadata.author} />
-                <meta property="twitter:title" content={siteMetadata.title} />
-                <meta property="twitter:description" content={siteMetadata.description} />
+                <meta property="og:locale" content="pl_PL" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content={siteMetadata.title} />
+                <meta name="twitter:description" content={siteMetadata.description} />
+                {thumbnailUrl && <meta name="twitter:image" content={thumbnailUrl} />}
             </Helmet>
 
             {props.addOrganizationSchema !== false && <JsonLd<Organization> item={organizationSchema} />}

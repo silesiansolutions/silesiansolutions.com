@@ -46,12 +46,20 @@ export function Header(): React.ReactElement {
 
     const sideNavigationBar = (
         <>
-            <div className={classes.Burger} onClick={() => setOpen(!open)}>
+            <button
+                type="button"
+                className={classes.Burger}
+                onClick={() => setOpen(!open)}
+                aria-label={open ? 'Zamknij menu' : 'Otwórz menu'}
+                aria-expanded={open}
+                aria-controls="mobile-navigation"
+            >
                 <div style={open ? { transform: 'rotate(45deg)' } : undefined} />
                 <div style={open ? { transform: 'translateX(20px)', opacity: 0 } : undefined} />
                 <div style={open ? { transform: 'rotate(-45deg)' } : undefined} />
-            </div>
+            </button>
             <div
+                id="mobile-navigation"
                 className={classes.SideBarWrapper}
                 style={open ? { transform: 'translateX(0)', visibility: 'visible' } : undefined}
                 aria-hidden={!open}
@@ -59,7 +67,14 @@ export function Header(): React.ReactElement {
             >
                 <nav className={classes.SideNavigationBar}>{navigationItems}</nav>
             </div>
-            <div className={classes.SideBarBackdrop} style={open ? { display: 'block' } : undefined} />
+            <button
+                type="button"
+                className={classes.SideBarBackdrop}
+                style={open ? { display: 'block' } : undefined}
+                onClick={() => setOpen(false)}
+                aria-label="Zamknij menu"
+                tabIndex={open ? 0 : -1}
+            />
         </>
     );
 

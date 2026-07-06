@@ -8,7 +8,7 @@
 
 .Interest {
     width: 17.5rem;
-    height: 3rem;
+    min-height: 3.5rem;
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
