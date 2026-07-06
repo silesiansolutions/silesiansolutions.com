@@ -1,18 +1,27 @@
 import React from 'react';
 
 export function useMediaQuery(query: string, callback?: (isMatch: boolean) => void): boolean {
-    if (typeof window === 'undefined' || typeof window.matchMedia === 'undefined') {
-        return false;
-    }
-
-    const mediaQuery = window.matchMedia(query);
-    const [match, setMatch] = React.useState<boolean>(mediaQuery.matches);
+    const [match, setMatch] = React.useState<boolean>(false);
+    const callbackRef = React.useRef(callback);
 
     React.useEffect(() => {
+        callbackRef.current = callback;
+    }, [callback]);
+
+    React.useEffect(() => {
+        if (typeof window === 'undefined' || typeof window.matchMedia === 'undefined') {
+            return;
+        }
+
+        const mediaQuery = window.matchMedia(query);
+
         function handleMatch() {
             setMatch(mediaQuery.matches);
-            callback?.(mediaQuery.matches);
+            callbackRef.current?.(mediaQuery.matches);
         }
+
+        handleMatch();
+
         if (mediaQuery.addEventListener) {
             mediaQuery.addEventListener('change', handleMatch);
             return () => mediaQuery.removeEventListener('change', handleMatch);
@@ -22,7 +31,7 @@ export function useMediaQuery(query: string, callback?: (isMatch: boolean) => vo
             mediaQuery.addListener(handleMatch);
             return () => mediaQuery.removeListener(handleMatch);
         }
-    }, []);
+    }, [query]);
 
     return match;
 }

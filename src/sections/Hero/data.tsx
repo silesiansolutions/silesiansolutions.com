@@ -20,6 +20,10 @@ interface HeroSectionQueryResult {
                 colorText: string;
                 colorButton: string;
             };
+            cta: {
+                label: string;
+                url: string;
+            };
             subtitle: {
                 highlight: string;
                 prefix: string;
@@ -63,6 +67,10 @@ export const useLocalDataSource = (): HeroSectionQueryResult => {
                         username
                         colorText
                         colorButton
+                    }
+                    cta {
+                        label
+                        url
                     }
                     subtitle {
                         highlight

@@ -1,129 +1,84 @@
 {
     "interests": [
         {
-            "label": "🤖 Artificial intelligence (AI)",
+            "label": "🤖 AI i AI-assisted engineering",
             "slug": "sztuczna-inteligencja-ai",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
+            "image": { "src": "", "alt": "" }
         },
         {
-            "label": "💻 Strony Internetowe",
-            "slug": "strony-internetowe",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
-        },
-        {
-            "label": "📱 Aplikacje Mobilne",
-            "slug": "aplikacje-mobilne",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
-        },
-        {
-            "label": "🛒 Sklepy Internetowe",
-            "slug": "sklepy-internetowe",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
-        },
-        {
-            "label": "💡 Systemy Dedykowane",
-            "slug": "systemy-dedykowane",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
-        },
-        {
-            "label": "🧩 Integracje Systemów",
-            "slug": "integracje-systemow",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
-        },
-        {
-            "label": "☁️ Rozwiązania Chmurowe",
-            "slug": "rozwiazania-chmurowe",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
-        },
-        {
-            "label": "🔒 Cyberbezpieczeństwo",
-            "slug": "cyberbezpieczenstwo",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
-        },
-        {
-            "label": "📊 Analiza Danych",
-            "slug": "analiza-danych",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
-        },
-        {
-            "label": "📈 Doradztwo IT",
-            "slug": "doradztwo-it",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
-        },
-        {
-            "label": "🛡️ Compliance i Audyty IT",
-            "slug": "compliance-i-audyty-it",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
-        },
-        {
-            "label": "⚙️ Automatyzacja Procesów",
+            "label": "⚙️ Automatyzacja procesów",
             "slug": "automatyzacja-procesow",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
+            "image": { "src": "", "alt": "" }
+        },
+        {
+            "label": "💡 Oprogramowanie dedykowane",
+            "slug": "systemy-dedykowane",
+            "image": { "src": "", "alt": "" }
+        },
+        {
+            "label": "💻 Frontend architecture",
+            "slug": "strony-internetowe",
+            "image": { "src": "", "alt": "" }
         },
         {
             "label": "🛠️ DevOps i CI/CD",
             "slug": "devops-ci-cd",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
+            "image": { "src": "", "alt": "" }
         },
         {
-            "label": "📲 Low-Code i No-Code",
+            "label": "🔒 Cyberbezpieczeństwo aplikacji",
+            "slug": "cyberbezpieczenstwo",
+            "image": { "src": "", "alt": "" }
+        },
+        {
+            "label": "🧩 Integracje systemów",
+            "slug": "integracje-systemow",
+            "image": { "src": "", "alt": "" }
+        },
+        {
+            "label": "📈 Doradztwo techniczne B2B",
+            "slug": "doradztwo-it",
+            "image": { "src": "", "alt": "" }
+        },
+        {
+            "label": "☁️ Rozwiązania chmurowe",
+            "slug": "rozwiazania-chmurowe",
+            "image": { "src": "", "alt": "" }
+        },
+        {
+            "label": "📲 Low-code i no-code",
             "slug": "low-code-no-code",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
+            "image": { "src": "", "alt": "" }
+        },
+        {
+            "label": "📊 Analiza danych",
+            "slug": "analiza-danych",
+            "image": { "src": "", "alt": "" }
+        },
+        {
+            "label": "📱 Aplikacje mobilne",
+            "slug": "aplikacje-mobilne",
+            "image": { "src": "", "alt": "" }
+        },
+        {
+            "label": "🛒 E-commerce",
+            "slug": "sklepy-internetowe",
+            "image": { "src": "", "alt": "" }
+        },
+        {
+            "label": "🛡️ Compliance i audyty IT",
+            "slug": "compliance-i-audyty-it",
+            "image": { "src": "", "alt": "" }
         },
         {
             "label": "🌐 Internet of Things (IoT)",
             "slug": "internet-of-things-iot",
-            "image": {
-                "src": "",
-                "alt": ""
-            }
+            "image": { "src": "", "alt": "" }
         }
     ],
     "button": {
         "visible": true,
-        "label": "+ Pokaż więcej",
+        "label": "Zobacz wszystkie specjalizacje",
         "initiallyShownInterests": 8
     }
 }

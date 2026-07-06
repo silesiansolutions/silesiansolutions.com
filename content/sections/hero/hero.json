@@ -1,16 +1,20 @@
 {
-    "intro": "Silesian Solutions",
+    "intro": "Silesian Solutions · B2B",
     "image": {
         "src": "../../images/rocket.png",
         "alt": "Start rakiety symbolizujący rozwój technologii i innowacje IT"
     },
-    "title": "Innowacyjne oprogramowanie",
+    "title": "Software engineering, AI i automatyzacja",
     "subtitle": {
-        "prefix": "tworzone na ",
-        "highlight": "Śląsku",
-        "suffix": ", wdrażane globalnie."
+        "prefix": "Praktyczne systemy dla ",
+        "highlight": "biznesu",
+        "suffix": "."
     },
-    "description": "Tworzymy skalowalne aplikacje, niezawodne systemy IT i nowoczesne portale internetowe. Od analizy i prototypu, przez solidny kod, aż po bezpieczne wdrożenie i utrzymanie. Dla startupów, firm i instytucji publicznych, które chcą rosnąć dzięki technologii.",
+    "description": "Pomagamy firmom projektować, budować i rozwijać oprogramowanie, automatyzacje oraz rozwiązania AI. Łączymy frontend architecture, DevOps i podejście security-first z technicznym doradztwem B2B - od rozpoznania problemu po utrzymanie produkcji.",
+    "cta": {
+        "label": "Porozmawiajmy o projekcie",
+        "url": "/kontakt"
+    },
     "socialProfiles": {
         "from": ["LinkedIn", "Twitter", "Github"],
         "showIcons": true

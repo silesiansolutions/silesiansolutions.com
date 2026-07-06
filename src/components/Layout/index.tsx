@@ -54,5 +54,10 @@ export function Layout(props: LayoutProps): React.ReactElement {
         </>
     );
 
-    return showSplashScreen ? splashScreenView : layoutView;
+    return (
+        <>
+            {layoutView}
+            {showSplashScreen && splashScreenView}
+        </>
+    );
 }

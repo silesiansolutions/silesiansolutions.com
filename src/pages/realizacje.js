@@ -28,7 +28,12 @@ export default function ProjectsPage() {
             <Seo title={seoData.seoTitle} description={seoData.description} useTitleTemplate={true} />
             <JsonLd item={collectionPageSchema} />
             <Page>
-                <ProjectsSection sectionId="realizacje" heading="Przykłady naszych projektów" id="projects-content" />
+                <ProjectsSection
+                    sectionId="realizacje"
+                    heading="Przykłady naszych projektów"
+                    headingLevel="h1"
+                    id="projects-content"
+                />
                 <InterestsSection sectionId="oferta" heading="Nasze specjalizacje" />
                 <ContactSection sectionId="kontakt" heading="Pozostajemy do Twojej dyspozycji" />
             </Page>

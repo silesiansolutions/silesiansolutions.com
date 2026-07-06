@@ -117,6 +117,7 @@ export default function ContactPage() {
                 <ContactSection
                     sectionId="kontakt"
                     heading="Napisz do nas"
+                    headingLevel="h1"
                     description="Potrzebujesz wsparcia w realizacji projektu IT? A może szukasz partnera technologicznego, który zrozumie potrzeby Twojego biznesu? Jesteśmy tu, by pomóc. Napisz do nas, zadzwoń lub odwiedź nasze biuro w Bielsku-Białej. Zespół Silesian Solutions z przyjemnością odpowie na Twoje pytania, przedstawi możliwe ścieżki działania i pomoże wybrać rozwiązanie dopasowane do Twoich celów. Bez zbędnego żargonu - konkretnie, rzeczowo i po partnersku."
                     id="contact-info"
                 />

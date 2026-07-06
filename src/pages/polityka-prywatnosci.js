@@ -28,7 +28,12 @@ export default function PrivacyPage() {
             <Seo title={seoData.seoTitle} description={seoData.description} useTitleTemplate={true} noIndex={true} />
             <JsonLd item={webPageSchema} />
             <Page>
-                <LegalSection sectionId="privacy-policy" heading="Polityka prywatności" id="privacy-content" />
+                <LegalSection
+                    sectionId="privacy-policy"
+                    heading="Polityka prywatności"
+                    headingLevel="h1"
+                    id="privacy-content"
+                />
             </Page>
         </>
     );

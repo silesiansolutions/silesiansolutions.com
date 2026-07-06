@@ -79,7 +79,12 @@ export default function OfferPage() {
             ))}
             <Page>
                 <Animation type="fadeUp" delay={300}>
-                    <Section heading="Rozwiązania IT, które wspierają Twój biznes" anchor="oferta" id="offer-content">
+                    <Section
+                        heading="Usługi techniczne dla firm i zespołów produktowych"
+                        headingLevel="h1"
+                        anchor="oferta"
+                        id="offer-content"
+                    >
                         {allOfferJson.nodes.map((item, index) => (
                             <div key={index} id={`offer-item-${index}`}>
                                 {item.slug ? (
