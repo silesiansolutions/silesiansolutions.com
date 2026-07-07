@@ -24,45 +24,39 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@v7
 
             - name: Setup Node
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v6
               with:
                   node-version-file: '.nvmrc'
 
             - name: Setup PNPM
-              uses: pnpm/action-setup@v3
-              with:
-                  version: 10
+              uses: pnpm/action-setup@v6
 
             - name: Setup Pages
               id: pages
-              uses: actions/configure-pages@v4
-              with:
-                  static_site_generator: gatsby
+              uses: actions/configure-pages@v6
 
             - name: Restore cache
-              uses: actions/cache@v3
+              uses: actions/cache@v6
               with:
                   path: |
-                      public
-                      .cache
-                  key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+                      .astro
+                      node_modules/.astro
+                  key: astro-${{ runner.os }}-${{ hashFiles('astro/**', 'src/**', 'content/**', 'astro.config.mjs', 'pnpm-lock.yaml') }}
                   restore-keys: |
-                      ${{ runner.os }}-gatsby-build-
+                      astro-${{ runner.os }}-
             - name: Install dependencies
-              run: pnpm install
+              run: pnpm install --frozen-lockfile
 
-            - name: Build with Gatsby
-              env:
-                  PREFIX_PATHS: 'true'
+            - name: Build with Astro
               run: pnpm build
 
             - name: Upload artifact
-              uses: actions/upload-pages-artifact@v3
+              uses: actions/upload-pages-artifact@v5
               with:
-                  path: ./public
+                  path: ./dist
 
     deploy:
         environment:
@@ -73,7 +67,7 @@ jobs:
         steps:
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v4
+              uses: actions/deploy-pages@v5
 
     notify:
         runs-on: ubuntu-latest
