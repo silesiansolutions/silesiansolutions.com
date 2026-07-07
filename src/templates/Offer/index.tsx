@@ -98,6 +98,7 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
                                 image={offer.image.src.childImageSharp.gatsbyImageData}
                                 alt={offer.image.alt || title}
                                 imgClassName={classes.BannerImage}
+                                fullWidth
                             />
                         </section>
                     )}

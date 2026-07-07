@@ -96,6 +96,7 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
                                 image={project.image.src.childImageSharp.gatsbyImageData}
                                 alt={project.image.alt || `Zdjęcie projektu ${project.title}`}
                                 imgClassName={classes.BannerImage}
+                                fullWidth
                             />
                         </section>
                     )}

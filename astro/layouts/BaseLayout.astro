@@ -136,6 +136,19 @@ const graph = [
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="icon" href={fallbackImage} />
         <meta name="theme-color" content="#121212" />
+        <style is:inline>
+            html {
+                background-color: #121212;
+                color-scheme: dark;
+            }
+
+            @media (prefers-color-scheme: light) {
+                html {
+                    background-color: #ffffff;
+                    color-scheme: light;
+                }
+            }
+        </style>
         {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
         <meta property="og:title" content={fullTitle} />

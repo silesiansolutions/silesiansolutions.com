@@ -116,6 +116,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
                                 image={article.banner.src.childImageSharp.gatsbyImageData}
                                 alt={article.banner.alt || `Zdjęcie artykułu ${article.title}`}
                                 imgClassName={classes.BannerImage}
+                                fullWidth
                             />
                             {article.banner.caption && (
                                 <span

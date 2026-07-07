@@ -36,7 +36,7 @@ export function SplashScreen(): React.ReactElement {
                         }, 500);
                     }}
                 />
-                <Logo fontSize="3rem" color="var(--background-color)" theme={Theme.Dark} />
+                <Logo fontSize="3rem" color="var(--primary-color)" theme={Theme.Dark} />
             </div>
         </Animation>
     );
