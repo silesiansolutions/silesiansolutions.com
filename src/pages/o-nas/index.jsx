@@ -6,7 +6,7 @@ import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
 import { createOrganizationReference, createSimpleBreadcrumb } from '../../utils/organizationHelpers';
 import { getPageSeoData, createSeoTitle } from '../../utils/seoHelpers';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 const useLocalDataSource = () => {
     const data = useStaticQuery(graphql`

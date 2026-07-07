@@ -1,7 +1,7 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 export function AuthorSnippet(): React.ReactElement {
     const { author, avatar, bio } = useSiteMetadata();

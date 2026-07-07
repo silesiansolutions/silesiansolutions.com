@@ -1,0 +1,169 @@
+---
+import JsonLd from '../components/JsonLd.astro';
+import { content } from '../../src/data/content';
+
+interface BreadcrumbItem {
+    name: string;
+    path: string;
+}
+
+interface Props {
+    title: string;
+    description: string;
+    image?: string;
+    imageAlt?: string;
+    noIndex?: boolean;
+    pageType?: 'WebPage' | 'AboutPage' | 'CollectionPage' | 'ContactPage';
+    article?: boolean;
+    publishedTime?: string;
+    modifiedTime?: string;
+    breadcrumbs?: BreadcrumbItem[];
+}
+
+const {
+    title,
+    description,
+    image,
+    imageAlt,
+    noIndex = false,
+    pageType = 'WebPage',
+    article = false,
+    publishedTime,
+    modifiedTime,
+    breadcrumbs = [],
+} = Astro.props;
+
+const { siteMetadata, organizationData, jsonLdOptions, hours } = content;
+const siteUrl = siteMetadata.siteUrl.replace(/\/$/, '');
+const canonicalUrl = new URL(Astro.url.pathname, `${siteUrl}/`).href;
+const fullTitle = `${title} | Silesian Solutions`;
+const fallbackImage = siteMetadata.thumbnail.childImageSharp.original.src;
+const imageUrl = new URL(image || fallbackImage, `${siteUrl}/`).href;
+const organizationId = `${siteUrl}/#organization`;
+const websiteId = `${siteUrl}/#website`;
+const webpageId = `${canonicalUrl}#webpage`;
+const dayNames: Record<string, string> = {
+    Poniedziałek: 'Monday',
+    Wtorek: 'Tuesday',
+    Środa: 'Wednesday',
+    Czwartek: 'Thursday',
+    Piątek: 'Friday',
+    Sobota: 'Saturday',
+    Niedziela: 'Sunday',
+};
+
+const graph = [
+    {
+        '@type': ['Organization', 'ProfessionalService'],
+        '@id': organizationId,
+        name: organizationData.name,
+        legalName: organizationData.legalName,
+        url: `${siteUrl}/`,
+        logo: { '@type': 'ImageObject', url: new URL(fallbackImage, `${siteUrl}/`).href },
+        image: new URL(fallbackImage, `${siteUrl}/`).href,
+        email: organizationData.email,
+        description: organizationData.description,
+        address: {
+            '@type': 'PostalAddress',
+            ...organizationData.location,
+        },
+        geo: {
+            '@type': 'GeoCoordinates',
+            ...organizationData.coordinates,
+        },
+        areaServed: { '@type': 'Country', name: organizationData.areaServed },
+        availableLanguage: organizationData.availableLanguage,
+        knowsAbout: organizationData.knowsAbout,
+        sameAs: [siteMetadata.social.linkedin, siteMetadata.social.github, siteMetadata.social.twitter].filter(Boolean),
+        contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: jsonLdOptions.contactPoint.contactType,
+            email: organizationData.email,
+            availableLanguage: organizationData.availableLanguage,
+        },
+        openingHoursSpecification: hours
+            .filter((day) => day.isOpen)
+            .map((day) => ({
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: dayNames[day.day],
+                opens: day.hours.split(' - ')[0],
+                closes: day.hours.split(' - ')[1],
+            })),
+    },
+    {
+        '@type': 'WebSite',
+        '@id': websiteId,
+        url: `${siteUrl}/`,
+        name: organizationData.name,
+        description: siteMetadata.description,
+        inLanguage: siteMetadata.language,
+        publisher: { '@id': organizationId },
+    },
+    {
+        '@type': pageType,
+        '@id': webpageId,
+        url: canonicalUrl,
+        name: fullTitle,
+        description,
+        inLanguage: siteMetadata.language,
+        isPartOf: { '@id': websiteId },
+        about: { '@id': organizationId },
+        primaryImageOfPage: { '@type': 'ImageObject', url: imageUrl },
+        breadcrumb:
+            breadcrumbs.length > 0
+                ? {
+                      '@type': 'BreadcrumbList',
+                      itemListElement: breadcrumbs.map((item, index) => ({
+                          '@type': 'ListItem',
+                          position: index + 1,
+                          name: item.name,
+                          item: new URL(item.path, `${siteUrl}/`).href,
+                      })),
+                  }
+                : undefined,
+    },
+];
+---
+
+<!doctype html>
+<html lang={siteMetadata.language}>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{fullTitle}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalUrl} />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="icon" href={fallbackImage} />
+        <meta name="theme-color" content="#121212" />
+        {noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+        <meta property="og:title" content={fullTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content={article ? 'article' : 'website'} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:alt" content={imageAlt || fullTitle} />
+        <meta property="og:site_name" content={organizationData.name} />
+        <meta property="og:locale" content="pl_PL" />
+        {article && publishedTime && <meta property="article:published_time" content={publishedTime} />}
+        {article && modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={fullTitle} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={imageUrl} />
+        <JsonLd data={{ '@context': 'https://schema.org', '@graph': graph }} />
+    </head>
+    <body data-theme={content.siteConfiguration.featureToggles.useDarkModeAsDefault ? 'darkTheme' : 'lightTheme'}>
+        <script is:inline>
+            (() => {
+                const usePreference = true;
+                if (usePreference && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                    document.body.dataset.theme = 'lightTheme';
+                }
+            })();
+        </script>
+        <slot />
+    </body>
+</html>

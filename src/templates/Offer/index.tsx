@@ -11,7 +11,7 @@ import { useOrganizationData } from '../../hooks/useOrganizationData';
 import { ImageObject } from '../../types';
 import { createOrganizationReference, createBreadcrumb } from '../../utils/organizationHelpers';
 import { createSeoTitle } from '../../utils/seoHelpers';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 interface Offer {
     heading: string;

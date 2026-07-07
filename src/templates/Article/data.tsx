@@ -1,5 +1,4 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
-import * as query from './query';
 
 export interface ArticleTemplateData {
     id: string;
@@ -23,8 +22,3 @@ export interface ArticleTemplateData {
     };
     body: string;
 }
-
-// Since we use the query in gatsby-node files we have to store it
-// in a separate JavaScript file - otherwise we run into errors
-// due to missing transpilation
-export const ArticleTemplateQuery = query.ArticleTemplateQuery;

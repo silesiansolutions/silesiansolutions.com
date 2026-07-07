@@ -4,7 +4,7 @@ import { Icon } from '../Icon';
 import { Slider } from '../Slider';
 import { socialProfileLabels } from './configuration';
 import { getExternalLinkRel } from '../../utils/linkUtils';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 export enum SocialProfile {
     Behance = 'behance',
@@ -59,7 +59,6 @@ export function SocialProfiles(props: SocialProfilesProps): React.ReactElement {
             {shownProfiles.map((profile, key) => {
                 const completeProfileData = profile.label && profile.url;
                 return !completeProfileData ? null : (
-                    // eslint-disable-next-line react/jsx-no-target-blank
                     <a
                         key={key}
                         className={classes.Profile}

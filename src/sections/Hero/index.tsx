@@ -7,7 +7,7 @@ import { SocialProfiles } from '../../components/SocialProfiles';
 import { Button, ButtonType } from '../../components/Button';
 import { useLocalDataSource } from './data';
 import { PageSection } from '../../types';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 export function HeroSection(props: PageSection): React.ReactElement {
     const response = useLocalDataSource();

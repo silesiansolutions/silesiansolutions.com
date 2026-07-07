@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HomePage from '../../src/pages/index.jsx';
+import { getPageSeoData } from '../../src/utils/seoHelpers';
+
+const seo = getPageSeoData('home');
+---
+
+<BaseLayout title={seo.seoTitle} description={seo.description} breadcrumbs={[{ name: seo.title, path: '/' }]}>
+    <HomePage client:load />
+</BaseLayout>

@@ -12,7 +12,7 @@ import {
     createServiceArea,
 } from '../../utils/organizationHelpers';
 import { getPageSeoData, createSeoTitle } from '../../utils/seoHelpers';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 const useLocalDataSource = () => {
     const data = useStaticQuery(graphql`

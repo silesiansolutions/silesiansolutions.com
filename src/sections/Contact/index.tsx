@@ -5,7 +5,7 @@ import { Section } from '../../components/Section';
 import { SocialProfiles } from '../../components/SocialProfiles';
 import { useLocalDataSource } from './data';
 import { PageSection } from '../../types';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 type ContactSectionProps = PageSection & {
     description?: string;

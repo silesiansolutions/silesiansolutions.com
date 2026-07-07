@@ -6,7 +6,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { Button, ButtonType } from '../../components/Button';
 import { PageSection } from '../../types';
 import { useLocalDataSource } from './data';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 export function InterestsSection(props: PageSection): React.ReactElement {
     const response = useLocalDataSource();

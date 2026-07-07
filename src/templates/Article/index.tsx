@@ -13,7 +13,7 @@ import { ArticleTemplateData } from './data';
 import { pluralize } from '../../utils/pluralize';
 import { createOrganizationReference } from '../../utils/organizationHelpers';
 import { createSeoTitle } from '../../utils/seoHelpers';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 // Reference to the local prismjs theme (Modified)
 import '../../globalStyles/prism.css';

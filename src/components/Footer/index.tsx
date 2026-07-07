@@ -7,7 +7,7 @@ import { Link } from '../Link';
 import { Icon } from '../Icon';
 import { Theme, useGlobalState } from '../../context';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 export function Footer(): React.ReactElement {
     const { globalState } = useGlobalState();

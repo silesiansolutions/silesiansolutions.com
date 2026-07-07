@@ -11,7 +11,7 @@ import { Button, ButtonType } from '../../components/Button';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { ArticleTemplateData } from '../Article/data';
 import { getPageSeoData } from '../../utils/seoHelpers';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 import { pluralize } from '../../utils/pluralize';
 
 interface ArticleListingTemplateProps {

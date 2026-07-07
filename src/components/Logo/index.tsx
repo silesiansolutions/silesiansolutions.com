@@ -3,7 +3,7 @@ import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Theme, useGlobalState } from '../../context';
 import { SiteConfiguration, useSiteConfiguration } from '../../hooks/useSiteConfiguration';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 interface LogoProps {
     fontSize?: string;

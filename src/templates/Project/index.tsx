@@ -13,7 +13,7 @@ import { useOrganizationData } from '../../hooks/useOrganizationData';
 import { createOrganizationReference, createBreadcrumb } from '../../utils/organizationHelpers';
 import { createSeoTitle } from '../../utils/seoHelpers';
 import { getExternalLinkRel } from '../../utils/linkUtils';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 interface ProjectTemplateProps {
     pageContext: {
@@ -119,7 +119,6 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
                                 <h3>Linki do projektu:</h3>
                                 <div className={classes.LinksList}>
                                     {project.links.map((link, key) => (
-                                        // eslint-disable-next-line react/jsx-no-target-blank
                                         <a
                                             key={key}
                                             href={link.url}

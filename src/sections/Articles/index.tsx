@@ -6,7 +6,7 @@ import { ArticleCard, ArticleCardSkeleton } from '../../components/ArticleCard';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useLocalDataSource, useMediumFeed } from './data';
 import { PageSection } from '../../types';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 enum ArticleSource {
     Medium = 'medium',

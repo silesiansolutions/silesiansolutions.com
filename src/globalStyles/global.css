@@ -114,6 +114,12 @@ u:hover {
     height: 100%;
 }
 
+.gatsby-image-wrapper {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
 /* Disable smooth scrolling when users have prefers-reduced-motion enabled */
 @media screen and (prefers-reduced-motion: reduce) {
     html {
