@@ -27,7 +27,7 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
     const project = props.pageContext.project;
     const { siteUrl, titleTemplate } = useSiteMetadata();
     const organizationData = useOrganizationData();
-    const projectUrl = new URL(`${props.pageContext.listingPagePath}/${project.slug}/`, `${siteUrl}/`).href;
+    const projectUrl = new URL(`${props.pageContext.listingPagePath}${project.slug}/`, `${siteUrl}/`).href;
 
     const creativeWorkSchema: WithContext<CreativeWork> = {
         '@context': 'https://schema.org',
@@ -58,14 +58,14 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
         '@type': 'WebPage',
         name: createSeoTitle(project.title, titleTemplate),
         description: project.description,
-        url: `${siteUrl}${props.pageContext.listingPagePath}/${project.slug}`,
+        url: projectUrl,
         mainContentOfPage: {
             '@id': '#project-content',
         },
         breadcrumb: createBreadcrumb([
             { name: 'Strona główna', url: siteUrl },
-            { name: 'Realizacje', url: `${siteUrl}/realizacje` },
-            { name: project.title, url: `${siteUrl}${props.pageContext.listingPagePath}/${project.slug}` },
+            { name: 'Realizacje', url: `${siteUrl}/realizacje/` },
+            { name: project.title, url: projectUrl },
         ]),
     };
 

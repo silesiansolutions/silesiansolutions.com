@@ -43,7 +43,7 @@ export function InterestsSection(props: PageSection): React.ReactElement {
                             <Animation key={key} type="scaleIn" delay={key * 50}>
                                 {interest.slug ? (
                                     <Link
-                                        to={`/oferta/${interest.slug}`}
+                                        to={`/oferta/${interest.slug}/`}
                                         className={classes.Interest}
                                         aria-label={`Zobacz szczegóły oferty: ${interest.label}`}
                                     >

@@ -15,11 +15,11 @@ export default function PrivacyPage() {
         '@type': 'WebPage',
         name: createSeoTitle(seoData.seoTitle, titleTemplate),
         description: seoData.description,
-        url: `${siteUrl}/polityka-prywatnosci`,
+        url: `${siteUrl}/polityka-prywatnosci/`,
         mainContentOfPage: {
             '@id': '#privacy-content',
         },
-        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/polityka-prywatnosci`, jsonLdOptions),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/polityka-prywatnosci/`, jsonLdOptions),
     };
 
     return (

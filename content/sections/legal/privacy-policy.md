@@ -11,13 +11,13 @@ Podczas korzystania z serwisu mogą być przetwarzane następujące kategorie da
 - Dane kontaktowe, takie jak imię, nazwisko, adres e-mail, dobrowolnie podane przez użytkownika, na przykład za pośrednictwem formularza kontaktowego.
 - Dane techniczne, w tym adres IP, typ przeglądarki, system operacyjny oraz informacje dotyczące aktywności w serwisie, zbierane automatycznie i wykorzystywane do celów analitycznych oraz optymalizacji działania serwisu.
 
-Dane osobowe przetwarzane są zgodnie z zasadami zawartymi w Klauzuli Informacyjnej, dostępnej [tutaj](/klauzula-informacyjna).
+Dane osobowe przetwarzane są zgodnie z zasadami zawartymi w Klauzuli Informacyjnej, dostępnej [tutaj](/klauzula-informacyjna/).
 
 ## Administrator danych osobowych
 
 Administratorem danych osobowych jest [Dawid Ryłko](https://dawidrylko.com/), prowadzący działalność gospodarczą z adresem do doręczeń: ul. Zwierzyniecka 19a/1, 43-300 Bielsko-Biała, Polska. W sprawach dotyczących przetwarzania danych osobowych można kontaktować się pod adresem e-mail: [biuro@silesiansolutions.com](mailto:biuro@silesiansolutions.com).
 
-Szczegółowe informacje o administratorze, zakresie przetwarzanych danych, podstawach prawnych, odbiorcach danych oraz okresie ich przechowywania znajdują się w Klauzuli Informacyjnej dostępnej [tutaj](/klauzula-informacyjna).
+Szczegółowe informacje o administratorze, zakresie przetwarzanych danych, podstawach prawnych, odbiorcach danych oraz okresie ich przechowywania znajdują się w Klauzuli Informacyjnej dostępnej [tutaj](/klauzula-informacyjna/).
 
 ## Zabezpieczenia danych osobowych
 

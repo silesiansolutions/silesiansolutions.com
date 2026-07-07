@@ -22,11 +22,11 @@ export default function OfferPage() {
         '@type': 'CollectionPage',
         name: createSeoTitle(seoData.seoTitle, titleTemplate),
         description: seoData.description,
-        url: `${siteUrl}/oferta`,
+        url: `${siteUrl}/oferta/`,
         mainContentOfPage: {
             '@id': '#offer-content',
         },
-        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/oferta`, jsonLdOptions),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/oferta/`, jsonLdOptions),
         mainEntity: {
             '@type': 'ItemList',
             itemListElement: allOfferJson.nodes.map((offer, index) => ({
@@ -74,7 +74,7 @@ export default function OfferPage() {
                             <div key={index} id={`offer-item-${index}`}>
                                 {item.slug ? (
                                     <Link
-                                        to={`/oferta/${item.slug}`}
+                                        to={`/oferta/${item.slug}/`}
                                         className={classes.offerItem}
                                         aria-label={`Zobacz szczegóły oferty: ${item.heading}`}
                                     >

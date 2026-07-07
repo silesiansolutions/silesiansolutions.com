@@ -56,7 +56,7 @@ export function Project(props: ProjectProps): React.ReactElement {
                 <div className={classes.Links}>
                     {props.data.slug && (
                         <Link
-                            to={`/realizacje/${props.data.slug}`}
+                            to={`/realizacje/${props.data.slug}/`}
                             className={classes.ViewProjectLink}
                             aria-label="Zobacz projekt"
                         >

@@ -23,28 +23,28 @@
             "header": [
                 {
                     "label": "Oferta",
-                    "url": "/oferta"
+                    "url": "/oferta/"
                 },
                 {
                     "label": "Realizacje",
-                    "url": "/realizacje"
+                    "url": "/realizacje/"
                 },
                 {
                     "label": "O nas",
-                    "url": "/o-nas"
+                    "url": "/o-nas/"
                 },
                 {
                     "label": "Blog",
-                    "url": "/blog"
+                    "url": "/blog/"
                 },
                 {
                     "label": "Kontakt",
-                    "url": "/kontakt"
+                    "url": "/kontakt/"
                 }
             ],
             "ctaButton": {
                 "label": "Porozmawiajmy o projekcie",
-                "url": "/kontakt",
+                "url": "/kontakt/",
                 "openNewTab": false
             }
         },

@@ -81,4 +81,4 @@ Transport jest jednym z sektorów, który generuje największe emisje gazów cie
 
 Zrównoważone technologie stają się kluczowym elementem strategii biznesowych, łącząc innowacje z odpowiedzialnością ekologiczną i społeczną. Firmy, które wdrażają takie podejście, zyskują nie tylko przewagę konkurencyjną, ale również budują zaufanie i lojalność wśród klientów. W przyszłości technologia i ekologia będą jeszcze bardziej zintegrowane, a zrównoważone rozwiązania staną się normą w wielu sektorach gospodarki.
 
-Jeśli chcesz dowiedzieć się, jak zrównoważone technologie mogą wspierać rozwój Twojej firmy, [skontaktuj się z nami](/kontakt) i zobacz, jak nowoczesne technologie mogą pomóc w ochronie środowiska, jednocześnie wspierając efektywność operacyjną Twojej organizacji.
+Jeśli chcesz dowiedzieć się, jak zrównoważone technologie mogą wspierać rozwój Twojej firmy, [skontaktuj się z nami](/kontakt/) i zobacz, jak nowoczesne technologie mogą pomóc w ochronie środowiska, jednocześnie wspierając efektywność operacyjną Twojej organizacji.

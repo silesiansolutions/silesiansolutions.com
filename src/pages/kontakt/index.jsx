@@ -68,11 +68,11 @@ export default function ContactPage() {
         '@type': 'ContactPage',
         name: createSeoTitle(seoData.seoTitle, titleTemplate),
         description: seoData.description,
-        url: `${siteUrl}/kontakt`,
+        url: `${siteUrl}/kontakt/`,
         mainEntity: {
             '@id': `${siteUrl}#organization`,
         },
-        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/kontakt`, jsonLdOptions),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/kontakt/`, jsonLdOptions),
     };
 
     const faqSchema = {

@@ -23,5 +23,5 @@ const image = offer.image?.src?.childImageSharp?.gatsbyImageData.images.fallback
         { name: title, path: `/oferta/${offer.slug}/` },
     ]}
 >
-    <OfferTemplate client:load pageContext={{ offer, listingPagePath: '/oferta' }} />
+    <OfferTemplate client:load pageContext={{ offer, listingPagePath: '/oferta/' }} />
 </BaseLayout>
