@@ -19,7 +19,7 @@
         "@fontsource/roboto": "^5.2.10",
         "@astrojs/react": "^5.0.7",
         "@astrojs/sitemap": "^3.7.3",
-        "js-cookie": "^3.0.5",
+        "js-cookie": "^3.0.7",
         "mini-svg-data-uri": "^1.4.4",
         "normalize.css": "^8.0.1",
         "marked": "^16.4.1",
