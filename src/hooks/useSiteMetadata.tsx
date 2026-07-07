@@ -1,7 +1,6 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import type { ContentImageData } from '../components/ContentImage';
 import { SocialProfile } from '../components/SocialProfiles';
-import { AllSettingsQueryResult } from '../types';
+import { content } from '../data/content';
 
 export interface SiteMetadata {
     language: string;
@@ -11,7 +10,7 @@ export interface SiteMetadata {
     titleTemplate: string;
     description: string;
     author: string;
-    avatar?: { childImageSharp?: { gatsbyImageData?: IGatsbyImageData } };
+    avatar?: { childImageSharp?: { gatsbyImageData?: ContentImageData } };
     bio: string;
     social: {
         [profile in SocialProfile]: string;
@@ -19,60 +18,5 @@ export interface SiteMetadata {
 }
 
 export function useSiteMetadata(): SiteMetadata {
-    const data: AllSettingsQueryResult<{ siteMetadata: SiteMetadata }> = useStaticQuery(query);
-    return data.allSettingsJson.settings[0].siteMetadata;
+    return content.siteMetadata as unknown as SiteMetadata;
 }
-
-export const query = graphql`
-    query SiteMetadata {
-        allSettingsJson: allContentJson {
-            settings: nodes {
-                siteMetadata {
-                    author
-                    avatar {
-                        childImageSharp {
-                            gatsbyImageData(height: 100, width: 100)
-                        }
-                    }
-                    bio
-                    description
-                    language
-                    siteUrl
-                    thumbnail {
-                        childImageSharp {
-                            original {
-                                src
-                            }
-                        }
-                    }
-                    title
-                    social {
-                        behance
-                        github
-                        medium
-                        linkedin
-                        mail
-                        twitter
-                        mastodon
-                        hashnode
-                        devto
-                        instagram
-                        youtube
-                        twitch
-                        gitlab
-                        stackoverflow
-                        buymeacoffee
-                        discord
-                        dribble
-                        goodreads
-                        patreon
-                        reddit
-                        untappd
-                        facebook
-                    }
-                    titleTemplate
-                }
-            }
-        }
-    }
-`;

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import { JsonLd } from 'react-schemaorg';
 import { CreativeWork, WebPage, WithContext } from 'schema-dts';
+import { ContentImage } from '../../components/ContentImage';
+import { JsonLd } from '../../components/JsonLd';
+import { Link } from '../../components/Link';
 import { Page } from '../../components/Page';
 import { Seo } from '../../components/Seo';
 import { Icon } from '../../components/Icon';
@@ -13,7 +13,7 @@ import { useOrganizationData } from '../../hooks/useOrganizationData';
 import { createOrganizationReference, createBreadcrumb } from '../../utils/organizationHelpers';
 import { createSeoTitle } from '../../utils/seoHelpers';
 import { getExternalLinkRel } from '../../utils/linkUtils';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 interface ProjectTemplateProps {
     pageContext: {
@@ -92,7 +92,7 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
 
                     {project.image?.src && (
                         <section className={classes.Banner}>
-                            <GatsbyImage
+                            <ContentImage
                                 image={project.image.src.childImageSharp.gatsbyImageData}
                                 alt={project.image.alt || `Zdjęcie projektu ${project.title}`}
                                 imgClassName={classes.BannerImage}
@@ -119,7 +119,6 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
                                 <h3>Linki do projektu:</h3>
                                 <div className={classes.LinksList}>
                                     {project.links.map((link, key) => (
-                                        // eslint-disable-next-line react/jsx-no-target-blank
                                         <a
                                             key={key}
                                             href={link.url}

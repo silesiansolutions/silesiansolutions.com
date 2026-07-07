@@ -1,5 +1,4 @@
-import React from 'react';
-import { JsonLd } from 'react-schemaorg';
+import { JsonLd } from '../components/JsonLd';
 import {
     AboutSection,
     ArticlesSection,

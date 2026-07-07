@@ -1,35 +1,58 @@
 name: CI
 
 on:
-    push:
-        branches:
-            - master
     pull_request:
-        branches:
-            - master
+        branches: [master]
+
+permissions:
+    contents: read
+
+concurrency:
+    group: ci-${{ github.event.pull_request.number }}
+    cancel-in-progress: true
 
 jobs:
-    build:
+    static:
+        name: Static checks
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@v4
-
-            - name: Setup Node
-              uses: actions/setup-node@v4
+            - uses: actions/checkout@v7
+            - uses: pnpm/action-setup@v6
+            - uses: actions/setup-node@v6
               with:
                   node-version-file: '.nvmrc'
-
-            - name: Setup PNPM
-              uses: pnpm/action-setup@v3
-              with:
-                  version: 10
-
-            - name: Install dependencies
-              run: pnpm install
-
-            - name: Workspace test
-              run: pnpm test
-
+                  cache: pnpm
+            - run: pnpm install --frozen-lockfile
+            - name: Type check
+              run: pnpm type-check
             - name: Lint
               run: pnpm lint
+            - name: Format check
+              run: pnpm format:check
+            - name: Unit tests
+              run: pnpm test
+
+    build:
+        name: Production build
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            - uses: pnpm/action-setup@v6
+            - uses: actions/setup-node@v6
+              with:
+                  node-version-file: '.nvmrc'
+                  cache: pnpm
+            - run: pnpm install --frozen-lockfile
+            - name: Cache Astro build cache
+              uses: actions/cache@v6
+              with:
+                  path: |
+                      .astro
+                      node_modules/.astro
+                  key: astro-${{ runner.os }}-${{ hashFiles('astro/**', 'src/**', 'content/**', 'astro.config.mjs', 'pnpm-lock.yaml') }}
+                  restore-keys: astro-${{ runner.os }}-
+            - run: pnpm build
+            - name: Verify routes, metadata and structured data
+              run: pnpm check:build
+            - name: Check internal links
+              run: pnpm dlx linkinator@6.1.2 dist --recurse --skip "^https?://(?!localhost)"

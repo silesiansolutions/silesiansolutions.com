@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import OfferPage from '../../../src/pages/oferta/index.jsx';
+import { getPageSeoData } from '../../../src/utils/seoHelpers';
+
+const seo = getPageSeoData('offer');
+---
+
+<BaseLayout
+    title={seo.seoTitle}
+    description={seo.description}
+    pageType="CollectionPage"
+    breadcrumbs={[
+        { name: 'Strona główna', path: '/' },
+        { name: seo.title, path: '/oferta/' },
+    ]}
+>
+    <OfferPage client:load />
+</BaseLayout>

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from '../Link';
 import { getExternalLinkRel } from '../../utils/linkUtils';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 export enum ButtonType {
     BUTTON = 'button',
@@ -25,7 +25,6 @@ export function Button(props: ButtonProps): React.ReactElement {
         } else {
             if (props.externalLink) {
                 return (
-                    // eslint-disable-next-line react/jsx-no-target-blank
                     <a
                         id={props.id}
                         className={classes.Button}

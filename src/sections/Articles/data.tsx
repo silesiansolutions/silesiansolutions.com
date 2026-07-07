@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { content } from '../../data/content';
 
 interface MediumArticle {
     author: string;
@@ -57,19 +57,5 @@ function constructMediumFeedUrl(profileUrl: string): string {
 }
 
 export const useLocalDataSource = (): ArticlePreviewQueryResult => {
-    return useStaticQuery(graphql`
-        query ArticlePreviewQuery {
-            allArticle {
-                articles: nodes {
-                    categories
-                    date(formatString: "YYYY-MM-DD HH:mm:ss")
-                    slug
-                    title
-                    readingTime {
-                        text
-                    }
-                }
-            }
-        }
-    `);
+    return { allArticle: { articles: content.articlePreviews } } as ArticlePreviewQueryResult;
 };

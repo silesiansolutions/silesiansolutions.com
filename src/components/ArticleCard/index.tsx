@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import SkeletonLoader from 'tiny-skeleton-loader-react';
+import { ContentImage } from '../ContentImage';
+import { Link } from '../Link';
 import { ImageObject } from '../../types';
 import { Theme, useGlobalState } from '../../context';
 import { getExternalLinkRel } from '../../utils/linkUtils';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 export interface ArticleCard {
     image?: ImageObject;
@@ -36,7 +35,7 @@ export function ArticleCard(props: ArticleCardProps): React.ReactElement {
             {props.showBanner && (
                 <div className={classes.Banner}>
                     {props.data.image && props.data.image.src && (
-                        <GatsbyImage
+                        <ContentImage
                             className={classes.ImageWrapper}
                             imgClassName={classes.Image}
                             objectFit={props.data.image.objectFit || 'cover'}
@@ -60,7 +59,6 @@ export function ArticleCard(props: ArticleCardProps): React.ReactElement {
     );
 
     return absoluteUrl ? (
-        // eslint-disable-next-line react/jsx-no-target-blank
         <a href={props.data.link} target="_blank" rel={getExternalLinkRel(props.data.link)} title={props.data.title}>
             {articleCard}
         </a>
@@ -80,15 +78,15 @@ export function ArticleCardSkeleton(): React.ReactElement {
             style={darkModeEnabled ? { border: '0.125rem solid var(--primary-color)' } : undefined}
         >
             <div className={classes.DescriptionWrapper}>
-                <SkeletonLoader
+                <div
                     style={{
                         height: '1.5rem',
                         marginBottom: '.5rem',
                         background: 'var(--tertiary-color)',
                     }}
                 />
-                <SkeletonLoader style={{ height: '4rem', background: 'var(--tertiary-color)' }} />
-                <SkeletonLoader
+                <div style={{ height: '4rem', background: 'var(--tertiary-color)' }} />
+                <div
                     style={{
                         height: '.75rem',
                         width: '50%',

@@ -1,13 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { useGlobalState, ActionType, Theme } from '../../context';
 import { Logo } from '../Logo';
 import { Animation } from '../Animation';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 export function SplashScreen(): React.ReactElement {
     const [shouldUnmount, setShouldUnmount] = React.useState<boolean>(false);
     const { dispatch } = useGlobalState();
+
+    React.useEffect(() => {
+        document.body.classList.add('fixed');
+        return () => document.body.classList.remove('fixed');
+    }, []);
 
     return (
         <Animation
@@ -19,7 +23,6 @@ export function SplashScreen(): React.ReactElement {
                 if (shouldUnmount) dispatch({ type: ActionType.SetSplashScreenDone, value: true });
             }}
         >
-            <Helmet bodyAttributes={{ class: 'fixed' }} />
             <div className={classes.LogoWrapper}>
                 <Animation
                     className={classes.Backdrop}

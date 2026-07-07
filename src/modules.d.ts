@@ -1,2 +1,4 @@
-declare module 'gatsby-plugin-gdpr-cookies';
-declare module '*.module.css';
+declare module '*.module.css' {
+    const classes: Record<string, string>;
+    export default classes;
+}

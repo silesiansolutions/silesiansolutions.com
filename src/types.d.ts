@@ -1,5 +1,4 @@
-import { Reporter, Actions, Node } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { ContentImageData } from './components/ContentImage';
 
 interface AllSettingsQueryResult<T> {
     allSettingsJson: {
@@ -11,7 +10,7 @@ interface ImageObject {
     alt: string | null;
     src: {
         childImageSharp: {
-            gatsbyImageData: IGatsbyImageData;
+            gatsbyImageData: ContentImageData;
         };
     } | null;
     objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
@@ -22,14 +21,4 @@ interface PageSection {
     heading?: string;
     headingLevel?: 'h1' | 'h2' | 'h3';
     id?: string;
-}
-
-interface GatsbyNodeHelpers {
-    actions: Actions;
-    createContentDigest: (input: unknown) => string;
-    createNodeId: (input: string) => string;
-    createResolvers: (resolvers: unknown) => void;
-    getNode: (id: string) => Node;
-    node: Node;
-    reporter: Reporter;
 }

@@ -1,5 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import { AllSettingsQueryResult } from '../types';
+import { content } from '../data/content';
 
 export interface JsonLdOptions {
     contactPoint: {
@@ -38,54 +37,9 @@ export interface OrganizationData {
 }
 
 export function useOrganizationData(): OrganizationData {
-    const data: AllSettingsQueryResult<{ organizationData: OrganizationData }> = useStaticQuery(query);
-    return data.allSettingsJson.settings[0].organizationData;
+    return content.organizationData as OrganizationData;
 }
 
 export function useJsonLdOptions(): JsonLdOptions {
-    const data: AllSettingsQueryResult<{ jsonLdOptions: JsonLdOptions }> = useStaticQuery(query);
-    return data.allSettingsJson.settings[0].jsonLdOptions;
+    return content.jsonLdOptions as JsonLdOptions;
 }
-
-export const query = graphql`
-    query OrganizationData {
-        allSettingsJson: allContentJson {
-            settings: nodes {
-                organizationData {
-                    name
-                    legalName
-                    email
-                    description
-                    location {
-                        addressLocality
-                        addressRegion
-                        addressCountry
-                        postalCode
-                    }
-                    coordinates {
-                        latitude
-                        longitude
-                    }
-                    areaServed
-                    knowsAbout
-                    availableLanguage
-                    mainServices {
-                        name
-                        description
-                    }
-                }
-                jsonLdOptions {
-                    contactPoint {
-                        contactType
-                    }
-                    offerCatalog {
-                        name
-                    }
-                    breadcrumb {
-                        homePageName
-                    }
-                }
-            }
-        }
-    }
-`;

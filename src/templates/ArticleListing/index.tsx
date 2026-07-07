@@ -1,7 +1,7 @@
 import React from 'react';
-import { JsonLd } from 'react-schemaorg';
 import { Blog, WithContext } from 'schema-dts';
 
+import { JsonLd } from '../../components/JsonLd';
 import { Page } from '../../components/Page';
 import { Section } from '../../components/Section';
 import { Seo } from '../../components/Seo';
@@ -11,7 +11,7 @@ import { Button, ButtonType } from '../../components/Button';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { ArticleTemplateData } from '../Article/data';
 import { getPageSeoData } from '../../utils/seoHelpers';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 import { pluralize } from '../../utils/pluralize';
 
 interface ArticleListingTemplateProps {

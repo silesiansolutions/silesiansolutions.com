@@ -6,7 +6,7 @@ import { Button, ButtonType } from '../../components/Button';
 import { Project } from '../../components/Project';
 import { PageSection } from '../../types';
 import { useLocalDataSource } from './data';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 export function ProjectsSection(props: PageSection & { maxVisibleProjects: number }): React.ReactElement {
     const response = useLocalDataSource();

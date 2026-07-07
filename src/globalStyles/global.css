@@ -108,10 +108,10 @@ u:hover {
     box-shadow: inset 0 -1em 0 var(--secondary-color);
 }
 
-#___gatsby,
-#gatsby-focus-wrapper {
-    width: 100%;
-    height: 100%;
+.content-image-wrapper {
+    position: relative;
+    display: block;
+    overflow: hidden;
 }
 
 /* Disable smooth scrolling when users have prefers-reduced-motion enabled */

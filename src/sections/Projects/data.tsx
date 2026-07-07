@@ -1,5 +1,5 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import { Project } from '../../components/Project';
+import { content } from '../../data/content';
 
 interface ProjectsSectionQueryResult {
     allProjectsJson: {
@@ -15,39 +15,5 @@ interface ProjectsSectionQueryResult {
 }
 
 export const useLocalDataSource = (): ProjectsSectionQueryResult => {
-    return useStaticQuery(graphql`
-        query ProjectsSectionQuery {
-            allProjectsJson {
-                sections: nodes {
-                    button {
-                        label
-                        url
-                        visible
-                    }
-                    projects {
-                        slug
-                        category
-                        description
-                        image {
-                            alt
-                            linkTo
-                            src {
-                                childImageSharp {
-                                    gatsbyImageData(width: 400)
-                                }
-                            }
-                            objectFit
-                        }
-                        links {
-                            type
-                            url
-                        }
-                        tags
-                        title
-                        visible
-                    }
-                }
-            }
-        }
-    `);
+    return { allProjectsJson: { sections: [content.projectsListing] } } as ProjectsSectionQueryResult;
 };

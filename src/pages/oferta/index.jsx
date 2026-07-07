@@ -1,29 +1,14 @@
-import React from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
-import { JsonLd } from 'react-schemaorg';
+import { JsonLd } from '../../components/JsonLd';
+import { Link } from '../../components/Link';
+import { content } from '../../data/content';
 import { Page, Seo, ContactSection, Animation, Section, ProjectsSection } from '../../sections';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
 import { createOrganizationReference, createSimpleBreadcrumb, createAreaServed } from '../../utils/organizationHelpers';
 import { getPageSeoData, createSeoTitle } from '../../utils/seoHelpers';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
-const useLocalDataSource = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            allOfferJson {
-                nodes {
-                    slug
-                    heading
-                    content
-                    description
-                }
-            }
-        }
-    `);
-
-    return data;
-};
+const useLocalDataSource = () => ({ allOfferJson: { nodes: content.offers } });
 
 export default function OfferPage() {
     const { allOfferJson } = useLocalDataSource();

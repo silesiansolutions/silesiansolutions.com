@@ -1,5 +1,5 @@
 import React from 'react';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 interface SliderProps {
     additionalClasses?: string[];

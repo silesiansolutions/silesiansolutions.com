@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import OfferTemplate from '../../../src/templates/Offer/index';
+import { content } from '../../../src/data/content';
+
+export function getStaticPaths() {
+    return content.offers.map((offer) => ({ params: { slug: offer.slug }, props: { offer } }));
+}
+
+const { offer } = Astro.props;
+const title = offer.heading.split(' ').slice(1).join(' ');
+const image = offer.image?.src?.childImageSharp?.gatsbyImageData.images.fallback.src;
+---
+
+<BaseLayout
+    title={title}
+    description={offer.description}
+    image={image}
+    imageAlt={offer.image?.alt || title}
+    breadcrumbs={[
+        { name: 'Strona główna', path: '/' },
+        { name: 'Oferta', path: '/oferta/' },
+        { name: title, path: `/oferta/${offer.slug}/` },
+    ]}
+>
+    <OfferTemplate client:load pageContext={{ offer, listingPagePath: '/oferta' }} />
+</BaseLayout>

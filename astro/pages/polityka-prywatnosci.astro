@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PrivacyPage from '../../src/pages/polityka-prywatnosci.jsx';
+import { getPageSeoData } from '../../src/utils/seoHelpers';
+
+const seo = getPageSeoData('privacy');
+---
+
+<BaseLayout
+    title={seo.seoTitle}
+    description={seo.description}
+    noIndex
+    breadcrumbs={[
+        { name: 'Strona główna', path: '/' },
+        { name: seo.title, path: '/polityka-prywatnosci/' },
+    ]}
+>
+    <PrivacyPage client:load />
+</BaseLayout>

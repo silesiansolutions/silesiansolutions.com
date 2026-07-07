@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectTemplate from '../../../src/templates/Project/index';
+import { content } from '../../../src/data/content';
+
+export function getStaticPaths() {
+    return content.projects
+        .filter((project) => project.visible && project.slug)
+        .map((project) => ({ params: { slug: project.slug }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const image = project.image?.src?.childImageSharp?.gatsbyImageData.images.fallback.src;
+---
+
+<BaseLayout
+    title={project.title}
+    description={project.description}
+    image={image}
+    imageAlt={project.image?.alt || project.title}
+    breadcrumbs={[
+        { name: 'Strona główna', path: '/' },
+        { name: 'Realizacje', path: '/realizacje/' },
+        { name: project.title, path: `/realizacje/${project.slug}/` },
+    ]}
+>
+    <ProjectTemplate client:load pageContext={{ project, listingPagePath: '/realizacje' }} />
+</BaseLayout>

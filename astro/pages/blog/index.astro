@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleListingTemplate from '../../../src/templates/ArticleListing/index';
+import { content } from '../../../src/data/content';
+import { getPageSeoData } from '../../../src/utils/seoHelpers';
+
+const seo = getPageSeoData('blog');
+---
+
+<BaseLayout
+    title={seo.seoTitle}
+    description={seo.description}
+    pageType="CollectionPage"
+    breadcrumbs={[
+        { name: 'Strona główna', path: '/' },
+        { name: seo.title, path: '/blog/' },
+    ]}
+>
+    <ArticleListingTemplate client:load pageContext={{ articles: content.articles }} />
+</BaseLayout>

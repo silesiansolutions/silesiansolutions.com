@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { content } from '../../data/content';
 
 interface LegalSection {
     html: string;
@@ -14,18 +14,7 @@ export interface LegalSectionQueryResult {
 }
 
 export const useLocalDataSource = (): LegalSectionQueryResult => {
-    return useStaticQuery(graphql`
-        query LegalSectionQuery {
-            allLegalSection: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/sections/legal/" } }) {
-                sections: nodes {
-                    html
-                    frontmatter {
-                        sectionId
-                    }
-                }
-            }
-        }
-    `);
+    return { allLegalSection: { sections: content.legalDocuments } } as LegalSectionQueryResult;
 };
 
 export const getSectionBySectionId = (res: LegalSectionQueryResult, id: string): LegalSection => {

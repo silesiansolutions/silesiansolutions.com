@@ -1,27 +1,13 @@
-import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { JsonLd } from 'react-schemaorg';
+import { JsonLd } from '../../components/JsonLd';
+import { content } from '../../data/content';
 import { Page, Seo, ContactSection, InterestsSection, Animation, Section } from '../../sections';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
 import { createOrganizationReference, createSimpleBreadcrumb } from '../../utils/organizationHelpers';
 import { getPageSeoData, createSeoTitle } from '../../utils/seoHelpers';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
-const useLocalDataSource = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            allAboutUsJson {
-                nodes {
-                    heading
-                    content
-                }
-            }
-        }
-    `);
-
-    return data;
-};
+const useLocalDataSource = () => ({ allAboutUsJson: { nodes: content.aboutUs } });
 
 export default function AboutUsPage() {
     const { allAboutUsJson } = useLocalDataSource();

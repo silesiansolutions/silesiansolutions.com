@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { content } from '../../data/content';
 import { ImageObject } from '../../types';
 
 interface InterestsSectionQueryResult {
@@ -19,30 +19,5 @@ interface InterestsSectionQueryResult {
 }
 
 export const useLocalDataSource = (): InterestsSectionQueryResult => {
-    return useStaticQuery(graphql`
-        query InterestsSectionQuery {
-            allInterestsJson {
-                sections: nodes {
-                    button {
-                        initiallyShownInterests
-                        label
-                        visible
-                    }
-                    interests {
-                        image {
-                            alt
-                            src {
-                                childImageSharp {
-                                    gatsbyImageData(width: 20, height: 20)
-                                }
-                            }
-                            objectFit
-                        }
-                        label
-                        slug
-                    }
-                }
-            }
-        }
-    `);
+    return { allInterestsJson: { sections: [content.interests] } } as InterestsSectionQueryResult;
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { ContentImage } from '../../components/ContentImage';
 import { Animation } from '../../components/Animation';
 import { useCalendlyWidget } from '../../hooks/useCalendlyWidget';
 import { Section } from '../../components/Section';
@@ -7,7 +7,7 @@ import { SocialProfiles } from '../../components/SocialProfiles';
 import { Button, ButtonType } from '../../components/Button';
 import { useLocalDataSource } from './data';
 import { PageSection } from '../../types';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 export function HeroSection(props: PageSection): React.ReactElement {
     const response = useLocalDataSource();
@@ -21,7 +21,7 @@ export function HeroSection(props: PageSection): React.ReactElement {
             <Section anchor={props.sectionId} additionalClasses={[classes.HeroContainer]} id={props.id}>
                 {data.heroPhoto?.src && (
                     <div className={classes.heroImageCont}>
-                        <GatsbyImage
+                        <ContentImage
                             className={classes.heroImage}
                             image={data.heroPhoto.src.childImageSharp.gatsbyImageData}
                             alt={data.heroPhoto.alt || `Zdjęcie profilowe`}
@@ -34,7 +34,7 @@ export function HeroSection(props: PageSection): React.ReactElement {
                         {data.intro && <span className={classes.ImagePrefix}>{data.intro}</span>}
                         {data.image?.src && (
                             <Animation className={classes.Image} type="waving-hand" duration={2500} iterationCount={3}>
-                                <GatsbyImage
+                                <ContentImage
                                     image={data.image.src.childImageSharp.gatsbyImageData}
                                     alt={data.image.alt || `Zdjęcie wprowadzenia`}
                                     loading="eager"

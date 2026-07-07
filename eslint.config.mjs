@@ -1,51 +1,20 @@
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
+import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import astro from 'eslint-plugin-astro';
+import globals from 'globals';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
-
-export default [{
-    ignores: ["**/node_modules", "**/build", "**/coverage", "**/.cache", "**/public"],
-}, ...compat.extends(
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-), {
-    plugins: {
-        "@typescript-eslint": typescriptEslint,
+export default [
+    {
+        ignores: ['dist/**', '.astro/**', 'node_modules/**', 'content/**', 'public/**', '.cache/**', 'gatsby-*.js'],
     },
-
-    languageOptions: {
-        parser: tsParser,
-        ecmaVersion: 2018,
-        sourceType: "module",
-
-        parserOptions: {
-            ecmaFeatures: {
-                jsx: true,
-            },
+    js.configs.recommended,
+    ...tseslint.configs.recommended,
+    ...astro.configs.recommended,
+    {
+        languageOptions: { globals: { ...globals.browser, ...globals.node } },
+        rules: {
+            '@typescript-eslint/no-explicit-any': 'off',
+            '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
         },
     },
-
-    settings: {
-        react: {
-            pragma: "React",
-            version: "17.0.1",
-        },
-    },
-}, {
-    files: ["**/*.js"],
-
-    rules: {
-        "@typescript-eslint/no-var-requires": "off",
-    },
-}];
+];

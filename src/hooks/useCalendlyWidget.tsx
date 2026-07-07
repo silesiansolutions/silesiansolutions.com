@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { Script } from 'gatsby';
+import { useEffect } from 'react';
 
 declare global {
     const Calendly:
@@ -34,7 +33,7 @@ export const useCalendlyWidget = (options?: CalendlyWidgetProps) => {
     return useCalendlyIntegration ? (
         <>
             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-            <Script
+            <script
                 id="calendlyScript"
                 src="https://assets.calendly.com/assets/external/widget.js"
                 type="text/javascript"

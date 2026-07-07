@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AboutUsPage from '../../../src/pages/o-nas/index.jsx';
+import { getPageSeoData } from '../../../src/utils/seoHelpers';
+
+const seo = getPageSeoData('about');
+---
+
+<BaseLayout
+    title={seo.seoTitle}
+    description={seo.description}
+    pageType="AboutPage"
+    breadcrumbs={[
+        { name: 'Strona główna', path: '/' },
+        { name: seo.title, path: '/o-nas/' },
+    ]}
+>
+    <AboutUsPage client:load />
+</BaseLayout>

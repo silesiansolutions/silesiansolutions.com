@@ -1,9 +1,9 @@
 import React from 'react';
-import { JsonLd } from 'react-schemaorg';
 import { Article, BlogPosting, WithContext } from 'schema-dts';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
 
+import { ContentImage } from '../../components/ContentImage';
+import { JsonLd } from '../../components/JsonLd';
+import { Link } from '../../components/Link';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData } from '../../hooks/useOrganizationData';
 import { Page } from '../../components/Page';
@@ -13,7 +13,7 @@ import { ArticleTemplateData } from './data';
 import { pluralize } from '../../utils/pluralize';
 import { createOrganizationReference } from '../../utils/organizationHelpers';
 import { createSeoTitle } from '../../utils/seoHelpers';
-import * as classes from './style.module.css';
+import classes from './style.module.css';
 
 // Reference to the local prismjs theme (Modified)
 import '../../globalStyles/prism.css';
@@ -112,7 +112,7 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
                     </section>
                     {article.banner && article.banner.src && (
                         <section className={classes.Banner}>
-                            <GatsbyImage
+                            <ContentImage
                                 image={article.banner.src.childImageSharp.gatsbyImageData}
                                 alt={article.banner.alt || `Zdjęcie artykułu ${article.title}`}
                                 imgClassName={classes.BannerImage}

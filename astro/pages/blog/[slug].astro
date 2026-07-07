@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleTemplate from '../../../src/templates/Article/index';
+import { content } from '../../../src/data/content';
+
+export function getStaticPaths() {
+    return content.articles.map((article) => ({
+        params: { slug: article.slug.split('/').filter(Boolean).at(-1) },
+        props: { article },
+    }));
+}
+
+const { article } = Astro.props;
+const image = article.banner?.src?.childImageSharp?.gatsbyImageData.images.fallback.src;
+---
+
+<BaseLayout
+    title={article.title}
+    description={article.description || content.siteMetadata.description}
+    image={image}
+    imageAlt={article.banner?.alt || article.title}
+    article
+    publishedTime={article.publishedDate}
+    modifiedTime={article.publishedDate}
+    breadcrumbs={[
+        { name: 'Strona główna', path: '/' },
+        { name: 'Blog', path: '/blog/' },
+        { name: article.title, path: article.slug },
+    ]}
+>
+    <ArticleTemplate client:load pageContext={{ article, listingPagePath: '/blog' }} />
+</BaseLayout>
