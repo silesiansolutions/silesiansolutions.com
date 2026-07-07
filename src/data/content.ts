@@ -226,103 +226,53 @@ const legalDocuments = [
     };
 });
 
+const aboutSection = {
+    frontmatter: {
+        imageAlt: aboutDocument.attributes.imageAlt,
+        imageSrc: contentImage('/content/sections/about/about.md', { src: aboutDocument.attributes.imageSrc }, 400).src,
+    },
+    html: markdownToHtml(aboutDocument.body, '/content/sections/about/about.md'),
+};
+
+const projectsListing = {
+    ...projects,
+    projects: projects.projects.map((project) => ({
+        ...project,
+        image: project.image.src
+            ? {
+                  ...project.image,
+                  src: {
+                      childImageSharp: {
+                          gatsbyImageData: {
+                              ...project.image.src.childImageSharp.gatsbyImageData,
+                              width: 400,
+                          },
+                      },
+                  },
+              }
+            : project.image,
+    })),
+};
+
 export const content = {
     siteMetadata,
     siteConfiguration: settingsJson.siteConfiguration,
     organizationData: settingsJson.organizationData,
     jsonLdOptions: settingsJson.jsonLdOptions,
     articles,
+    articlePreviews: articles.map((article) => ({
+        ...article,
+        date: `${article.publishedDate} 00:00:00`,
+    })),
     offers,
     projects: projects.projects,
+    projectsListing,
     hours: hoursJson,
     faq: faqJson,
+    hero,
+    contact,
+    interests,
+    aboutSection,
+    legalDocuments,
+    aboutUs: aboutUsJson,
 };
-
-export function getStaticQueryResult(query: string): any {
-    if (query.includes('SiteMetadata')) {
-        return { allSettingsJson: { settings: [{ siteMetadata }] } };
-    }
-    if (query.includes('SiteConfiguration')) {
-        return { allSettingsJson: { settings: [{ siteConfiguration: settingsJson.siteConfiguration }] } };
-    }
-    if (query.includes('OrganizationData')) {
-        return {
-            allSettingsJson: {
-                settings: [
-                    {
-                        organizationData: settingsJson.organizationData,
-                        jsonLdOptions: settingsJson.jsonLdOptions,
-                    },
-                ],
-            },
-        };
-    }
-    if (query.includes('HeroSectionQuery')) return { allHeroJson: { sections: [hero] } };
-    if (query.includes('AboutSectionQuery')) {
-        return {
-            allAboutMarkdown: {
-                sections: [
-                    {
-                        frontmatter: {
-                            imageAlt: aboutDocument.attributes.imageAlt,
-                            imageSrc: contentImage(
-                                '/content/sections/about/about.md',
-                                {
-                                    src: aboutDocument.attributes.imageSrc,
-                                },
-                                400,
-                            ).src,
-                        },
-                        html: markdownToHtml(aboutDocument.body, '/content/sections/about/about.md'),
-                    },
-                ],
-            },
-        };
-    }
-    if (query.includes('InterestsSectionQuery')) return { allInterestsJson: { sections: [interests] } };
-    if (query.includes('ProjectsSectionQuery')) {
-        return {
-            allProjectsJson: {
-                sections: [
-                    {
-                        ...projects,
-                        projects: projects.projects.map((project) => ({
-                            ...project,
-                            image: project.image.src
-                                ? {
-                                      ...project.image,
-                                      src: {
-                                          childImageSharp: {
-                                              gatsbyImageData: {
-                                                  ...project.image.src.childImageSharp.gatsbyImageData,
-                                                  width: 400,
-                                              },
-                                          },
-                                      },
-                                  }
-                                : project.image,
-                        })),
-                    },
-                ],
-            },
-        };
-    }
-    if (query.includes('ArticlePreviewQuery')) {
-        return {
-            allArticle: {
-                articles: articles.map((article) => ({
-                    ...article,
-                    date: `${article.publishedDate} 00:00:00`,
-                })),
-            },
-        };
-    }
-    if (query.includes('ContactSectionQuery')) return { allContactJson: { sections: [contact] } };
-    if (query.includes('LegalSectionQuery')) return { allLegalSection: { sections: legalDocuments } };
-    if (query.includes('allAboutUsJson')) return { allAboutUsJson: { nodes: aboutUsJson } };
-    if (query.includes('allOfferJson')) return { allOfferJson: { nodes: offers } };
-    if (query.includes('allHoursJson') || query.includes('allFaqJson')) {
-        return { allHoursJson: { nodes: hoursJson }, allFaqJson: { nodes: faqJson } };
-    }
-    throw new Error(`Unsupported static query: ${query.slice(0, 120)}`);
-}

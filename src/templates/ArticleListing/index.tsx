@@ -1,7 +1,7 @@
 import React from 'react';
-import { JsonLd } from 'react-schemaorg';
 import { Blog, WithContext } from 'schema-dts';
 
+import { JsonLd } from '../../components/JsonLd';
 import { Page } from '../../components/Page';
 import { Section } from '../../components/Section';
 import { Seo } from '../../components/Seo';

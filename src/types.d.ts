@@ -1,4 +1,4 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { ContentImageData } from './components/ContentImage';
 
 interface AllSettingsQueryResult<T> {
     allSettingsJson: {
@@ -10,7 +10,7 @@ interface ImageObject {
     alt: string | null;
     src: {
         childImageSharp: {
-            gatsbyImageData: IGatsbyImageData;
+            gatsbyImageData: ContentImageData;
         };
     } | null;
     objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';

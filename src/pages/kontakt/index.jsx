@@ -1,6 +1,5 @@
-import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { JsonLd } from 'react-schemaorg';
+import { JsonLd } from '../../components/JsonLd';
+import { content } from '../../data/content';
 import { Page, Seo, ContactSection, Section, Animation } from '../../sections';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import { useOrganizationData, useJsonLdOptions } from '../../hooks/useOrganizationData';
@@ -14,27 +13,10 @@ import {
 import { getPageSeoData, createSeoTitle } from '../../utils/seoHelpers';
 import classes from './style.module.css';
 
-const useLocalDataSource = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            allHoursJson {
-                nodes {
-                    day
-                    hours
-                    isOpen
-                }
-            }
-            allFaqJson {
-                nodes {
-                    question
-                    answer
-                }
-            }
-        }
-    `);
-
-    return data;
-};
+const useLocalDataSource = () => ({
+    allHoursJson: { nodes: content.hours },
+    allFaqJson: { nodes: content.faq },
+});
 
 export default function ContactPage() {
     const { allHoursJson, allFaqJson } = useLocalDataSource();

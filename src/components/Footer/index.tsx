@@ -1,8 +1,8 @@
 import React from 'react';
-import { JsonLd } from 'react-schemaorg';
 import { SiteNavigationElement, WithContext } from 'schema-dts';
-import { GatsbyImage } from 'gatsby-plugin-image';
 
+import { ContentImage } from '../ContentImage';
+import { JsonLd } from '../JsonLd';
 import { Link } from '../Link';
 import { Icon } from '../Icon';
 import { Theme, useGlobalState } from '../../context';
@@ -88,7 +88,7 @@ export function Footer(): React.ReactElement {
                     <div className={classes.BrandRow}>
                         <Link to="/" aria-label="strona główna" className={classes.AvatarLink}>
                             {avatar?.childImageSharp?.gatsbyImageData && (
-                                <GatsbyImage
+                                <ContentImage
                                     className={classes.BrandAvatar}
                                     image={avatar.childImageSharp.gatsbyImageData}
                                     alt={`Logo ${author}`}

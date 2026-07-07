@@ -1,17 +1,17 @@
 import React from 'react';
-import type { ImageData } from '../data/content';
+import type { ImageData } from '../../data/content';
 
-export type IGatsbyImageData = ImageData;
+export type ContentImageData = ImageData;
 
-interface GatsbyImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src'> {
-    image: IGatsbyImageData;
+interface ContentImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src'> {
+    image: ContentImageData;
     alt: string;
     imgClassName?: string;
     objectFit?: React.CSSProperties['objectFit'];
     objectPosition?: React.CSSProperties['objectPosition'];
 }
 
-export function GatsbyImage({
+export function ContentImage({
     image,
     alt,
     className,
@@ -20,13 +20,14 @@ export function GatsbyImage({
     objectPosition,
     loading,
     style,
-}: GatsbyImageProps): React.ReactElement | null {
+}: ContentImageProps): React.ReactElement | null {
     const src = image?.images?.fallback?.src;
     if (!src) return null;
     const hasDimensions = image.width > 1 && image.height > 1;
+
     return (
         <div
-            className={['gatsby-image-wrapper', className].filter(Boolean).join(' ')}
+            className={['content-image-wrapper', className].filter(Boolean).join(' ')}
             style={{
                 maxWidth: !className && image.width > 1 ? `${image.width}px` : undefined,
                 aspectRatio: !className && hasDimensions ? `${image.width} / ${image.height}` : undefined,
@@ -48,8 +49,4 @@ export function GatsbyImage({
             />
         </div>
     );
-}
-
-export function getImage(image: IGatsbyImageData): IGatsbyImageData {
-    return image;
 }

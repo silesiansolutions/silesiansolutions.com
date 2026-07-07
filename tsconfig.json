@@ -7,13 +7,7 @@
         "allowSyntheticDefaultImports": true,
         "verbatimModuleSyntax": false,
         "jsx": "react-jsx",
-        "jsxImportSource": "react",
-        "baseUrl": ".",
-        "paths": {
-            "gatsby": ["src/compat/gatsby.tsx"],
-            "gatsby-plugin-image": ["src/compat/gatsby-plugin-image.tsx"],
-            "react-schemaorg": ["src/compat/react-schemaorg.tsx"]
-        }
+        "jsxImportSource": "react"
     },
     "include": [".astro/types.d.ts", "astro/**/*", "src/**/*"],
     "exclude": ["dist", "node_modules", "src/types.d.ts"]

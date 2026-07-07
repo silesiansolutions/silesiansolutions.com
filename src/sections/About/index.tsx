@@ -1,5 +1,5 @@
 import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { ContentImage } from '../../components/ContentImage';
 import { Animation } from '../../components/Animation';
 import { Section } from '../../components/Section';
 import { useLocalDataSource } from './data';
@@ -18,7 +18,7 @@ export function AboutSection(props: PageSection): React.ReactElement {
                     {data.frontmatter.imageSrc && (
                         <Animation type="fadeLeft" delay={1200}>
                             <div className={classes.ImageWrapper}>
-                                <GatsbyImage
+                                <ContentImage
                                     image={data.frontmatter.imageSrc.childImageSharp.gatsbyImageData}
                                     className={classes.Image}
                                     alt={data.frontmatter.imageAlt || `Zdjęcie sekcji o nas`}

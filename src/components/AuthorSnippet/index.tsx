@@ -1,5 +1,5 @@
 import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { ContentImage } from '../ContentImage';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import classes from './style.module.css';
 
@@ -8,7 +8,7 @@ export function AuthorSnippet(): React.ReactElement {
     return (
         <div className={classes.AuthorSnippet}>
             {avatar?.childImageSharp?.gatsbyImageData ? (
-                <GatsbyImage image={avatar.childImageSharp.gatsbyImageData} alt={author} className={classes.Avatar} />
+                <ContentImage image={avatar.childImageSharp.gatsbyImageData} alt={author} className={classes.Avatar} />
             ) : null}
             <div className={classes.Description}>
                 <span className={classes.WrittenBy}>

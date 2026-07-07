@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { ContentImage } from '../ContentImage';
+import { Link } from '../Link';
 import { ImageObject } from '../../types';
 import { Theme, useGlobalState } from '../../context';
 import { getExternalLinkRel } from '../../utils/linkUtils';
@@ -35,7 +35,7 @@ export function ArticleCard(props: ArticleCardProps): React.ReactElement {
             {props.showBanner && (
                 <div className={classes.Banner}>
                     {props.data.image && props.data.image.src && (
-                        <GatsbyImage
+                        <ContentImage
                             className={classes.ImageWrapper}
                             imgClassName={classes.Image}
                             objectFit={props.data.image.objectFit || 'cover'}

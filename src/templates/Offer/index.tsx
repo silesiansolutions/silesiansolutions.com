@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import { JsonLd } from 'react-schemaorg';
 import { Service, WebPage, WithContext } from 'schema-dts';
+import { ContentImage } from '../../components/ContentImage';
+import { JsonLd } from '../../components/JsonLd';
+import { Link } from '../../components/Link';
 import { Page } from '../../components/Page';
 import { Seo } from '../../components/Seo';
 import { pluralize } from '../../utils/pluralize';
@@ -94,7 +94,7 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
 
                     {offer.image?.src?.childImageSharp?.gatsbyImageData && (
                         <section className={classes.Banner}>
-                            <GatsbyImage
+                            <ContentImage
                                 image={offer.image.src.childImageSharp.gatsbyImageData}
                                 alt={offer.image.alt || title}
                                 imgClassName={classes.BannerImage}

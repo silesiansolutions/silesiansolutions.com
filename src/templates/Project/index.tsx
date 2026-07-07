@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import { JsonLd } from 'react-schemaorg';
 import { CreativeWork, WebPage, WithContext } from 'schema-dts';
+import { ContentImage } from '../../components/ContentImage';
+import { JsonLd } from '../../components/JsonLd';
+import { Link } from '../../components/Link';
 import { Page } from '../../components/Page';
 import { Seo } from '../../components/Seo';
 import { Icon } from '../../components/Icon';
@@ -92,7 +92,7 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
 
                     {project.image?.src && (
                         <section className={classes.Banner}>
-                            <GatsbyImage
+                            <ContentImage
                                 image={project.image.src.childImageSharp.gatsbyImageData}
                                 alt={project.image.alt || `Zdjęcie projektu ${project.title}`}
                                 imgClassName={classes.BannerImage}

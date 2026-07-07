@@ -1,7 +1,7 @@
 import React from 'react';
-import { JsonLd } from 'react-schemaorg';
 import { SiteNavigationElement, WithContext } from 'schema-dts';
 
+import { JsonLd } from '../JsonLd';
 import { Logo } from '../Logo';
 import { Link } from '../Link';
 import { Animation } from '../Animation';

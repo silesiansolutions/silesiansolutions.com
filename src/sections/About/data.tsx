@@ -1,5 +1,5 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import type { ContentImageData } from '../../components/ContentImage';
+import { content } from '../../data/content';
 
 interface AboutSectionQueryResult {
     allAboutMarkdown: {
@@ -8,7 +8,7 @@ interface AboutSectionQueryResult {
                 imageAlt?: string;
                 imageSrc?: {
                     childImageSharp: {
-                        gatsbyImageData: IGatsbyImageData;
+                        gatsbyImageData: ContentImageData;
                     };
                 };
             };
@@ -18,21 +18,5 @@ interface AboutSectionQueryResult {
 }
 
 export const useLocalDataSource = (): AboutSectionQueryResult => {
-    return useStaticQuery(graphql`
-        query AboutSectionQuery {
-            allAboutMarkdown: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/sections/about/" } }) {
-                sections: nodes {
-                    frontmatter {
-                        imageAlt
-                        imageSrc {
-                            childImageSharp {
-                                gatsbyImageData(width: 400)
-                            }
-                        }
-                    }
-                    html
-                }
-            }
-        }
-    `);
+    return { allAboutMarkdown: { sections: [content.aboutSection] } } as AboutSectionQueryResult;
 };

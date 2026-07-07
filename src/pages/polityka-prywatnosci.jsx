@@ -1,5 +1,4 @@
-import React from 'react';
-import { JsonLd } from 'react-schemaorg';
+import { JsonLd } from '../components/JsonLd';
 import { LegalSection, Page, Seo } from '../sections';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { useJsonLdOptions } from '../hooks/useOrganizationData';

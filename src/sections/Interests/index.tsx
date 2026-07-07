@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { ContentImage } from '../../components/ContentImage';
+import { Link } from '../../components/Link';
 import { Animation } from '../../components/Animation';
 import { Section } from '../../components/Section';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import { Button, ButtonType } from '../../components/Button';
 import { PageSection } from '../../types';
 import { useLocalDataSource } from './data';
@@ -29,7 +29,7 @@ export function InterestsSection(props: PageSection): React.ReactElement {
                         const interestContent = (
                             <>
                                 {interest.image.src && (
-                                    <GatsbyImage
+                                    <ContentImage
                                         image={interest.image.src.childImageSharp.gatsbyImageData}
                                         className={classes.Icon}
                                         alt={interest.image.alt || `Ikona usługi ${interest.label}`}

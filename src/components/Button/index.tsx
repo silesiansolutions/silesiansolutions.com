@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from '../Link';
 import { getExternalLinkRel } from '../../utils/linkUtils';
 import classes from './style.module.css';
 

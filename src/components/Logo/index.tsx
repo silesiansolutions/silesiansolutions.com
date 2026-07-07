@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { ContentImage } from '../ContentImage';
 import { Theme, useGlobalState } from '../../context';
 import { SiteConfiguration, useSiteConfiguration } from '../../hooks/useSiteConfiguration';
 import classes from './style.module.css';
@@ -44,7 +44,7 @@ const getLogoContent = (image: SiteConfiguration['logo']['image'], fallback: str
     }
 
     if (hasImage && !isSvg && image?.childImageSharp?.gatsbyImageData) {
-        return <GatsbyImage image={image?.childImageSharp?.gatsbyImageData} alt={fallback} objectFit="contain" />;
+        return <ContentImage image={image?.childImageSharp?.gatsbyImageData} alt={fallback} objectFit="contain" />;
     }
 
     return undefined;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { ContentImage } from '../ContentImage';
+import { Link } from '../Link';
 import { Animation } from '../Animation';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { Icon } from '../Icon';
@@ -87,7 +87,7 @@ export function Project(props: ProjectProps): React.ReactElement {
                     rel={getExternalLinkRel(props.data.image.linkTo)}
                     aria-label="Link zewnętrzny"
                 >
-                    <GatsbyImage
+                    <ContentImage
                         className={classes.ProjectImageWrapper}
                         imgClassName={classes.ProjectImage}
                         objectFit={props.data.image.objectFit}
@@ -97,7 +97,7 @@ export function Project(props: ProjectProps): React.ReactElement {
                 </a>
             )}
             {props.data.image.src && !props.data.image.linkTo && (
-                <GatsbyImage
+                <ContentImage
                     className={classes.ProjectImageWrapper}
                     imgClassName={classes.ProjectImage}
                     objectFit={props.data.image.objectFit}

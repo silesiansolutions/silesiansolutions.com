@@ -1,6 +1,5 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
-import { AllSettingsQueryResult } from '../types';
+import type { ContentImageData } from '../components/ContentImage';
+import { content } from '../data/content';
 
 export interface SiteConfiguration {
     featureToggles: {
@@ -14,13 +13,13 @@ export interface SiteConfiguration {
             extension?: string;
             publicURL?: string;
             svg?: { originalContent?: string };
-            childImageSharp?: { gatsbyImageData?: IGatsbyImageData };
+            childImageSharp?: { gatsbyImageData?: ContentImageData };
         };
         imageDark?: {
             extension?: string;
             publicURL?: string;
             svg?: { originalContent?: string };
-            childImageSharp?: { gatsbyImageData?: IGatsbyImageData };
+            childImageSharp?: { gatsbyImageData?: ContentImageData };
         };
     };
     navigation: {
@@ -41,60 +40,5 @@ export interface SiteConfiguration {
 }
 
 export function useSiteConfiguration(): SiteConfiguration {
-    const data: AllSettingsQueryResult<{ siteConfiguration: SiteConfiguration }> = useStaticQuery(query);
-    return data.allSettingsJson.settings[0].siteConfiguration;
+    return content.siteConfiguration as SiteConfiguration;
 }
-
-export const query = graphql`
-    query SiteConfiguration {
-        allSettingsJson: allContentJson {
-            settings: nodes {
-                siteConfiguration {
-                    featureToggles {
-                        useCookieBar
-                        useDarkModeAsDefault
-                        useDarkModeBasedOnUsersPreference
-                    }
-                    logo {
-                        text
-                        image {
-                            extension
-                            publicURL
-                            svg {
-                                originalContent
-                            }
-                            childImageSharp {
-                                gatsbyImageData(width: 320, placeholder: BLURRED)
-                            }
-                        }
-                        imageDark {
-                            extension
-                            publicURL
-                            svg {
-                                originalContent
-                            }
-                            childImageSharp {
-                                gatsbyImageData(width: 320, placeholder: BLURRED)
-                            }
-                        }
-                    }
-                    navigation {
-                        ctaButton {
-                            label
-                            openNewTab
-                            url
-                        }
-                        footer {
-                            label
-                            url
-                        }
-                        header {
-                            label
-                            url
-                        }
-                    }
-                }
-            }
-        }
-    }
-`;

@@ -1,4 +1,4 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import type { ContentImageData } from '../../components/ContentImage';
 
 export interface ArticleTemplateData {
     id: string;
@@ -10,7 +10,7 @@ export interface ArticleTemplateData {
         alt: string | null;
         src: {
             childImageSharp: {
-                gatsbyImageData: IGatsbyImageData;
+                gatsbyImageData: ContentImageData;
             };
         } | null;
         caption: string | null;

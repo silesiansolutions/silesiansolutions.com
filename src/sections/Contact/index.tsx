@@ -1,5 +1,5 @@
 import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { ContentImage } from '../../components/ContentImage';
 import { Animation } from '../../components/Animation';
 import { Section } from '../../components/Section';
 import { SocialProfiles } from '../../components/SocialProfiles';
@@ -28,7 +28,7 @@ export function ContactSection(props: ContactSectionProps): React.ReactElement {
                 <div className={classes.Description}>{finalDescription && <p>{finalDescription}</p>}</div>
                 <div className={classes.Profile}>
                     {data.image.src && (
-                        <GatsbyImage
+                        <ContentImage
                             className={classes.Avatar}
                             image={data.image.src.childImageSharp.gatsbyImageData}
                             alt={data.image.alt || `Zdjęcie profilowe ${data.name}`}

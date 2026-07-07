@@ -1,5 +1,5 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import { SocialProfile } from '../../components/SocialProfiles';
+import { content } from '../../data/content';
 import { ImageObject } from '../../types';
 
 interface HeroSectionQueryResult {
@@ -35,51 +35,5 @@ interface HeroSectionQueryResult {
 }
 
 export const useLocalDataSource = (): HeroSectionQueryResult => {
-    return useStaticQuery(graphql`
-        query HeroSectionQuery {
-            allHeroJson {
-                sections: nodes {
-                    description
-                    heroPhoto {
-                        src {
-                            childImageSharp {
-                                gatsbyImageData(aspectRatio: 1)
-                            }
-                        }
-                        alt
-                    }
-                    image {
-                        alt
-                        src {
-                            childImageSharp {
-                                gatsbyImageData(width: 48, aspectRatio: 1)
-                            }
-                        }
-                        objectFit
-                    }
-                    intro
-                    socialProfiles {
-                        from
-                        showIcons
-                    }
-                    calendly {
-                        label
-                        username
-                        colorText
-                        colorButton
-                    }
-                    cta {
-                        label
-                        url
-                    }
-                    subtitle {
-                        highlight
-                        prefix
-                        suffix
-                    }
-                    title
-                }
-            }
-        }
-    `);
+    return { allHeroJson: { sections: [content.hero] } } as unknown as HeroSectionQueryResult;
 };

@@ -108,13 +108,7 @@ u:hover {
     box-shadow: inset 0 -1em 0 var(--secondary-color);
 }
 
-#___gatsby,
-#gatsby-focus-wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-.gatsby-image-wrapper {
+.content-image-wrapper {
     position: relative;
     display: block;
     overflow: hidden;

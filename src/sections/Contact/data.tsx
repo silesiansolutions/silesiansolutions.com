@@ -1,5 +1,5 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import { SocialProfile } from '../../components/SocialProfiles';
+import { content } from '../../data/content';
 import { ImageObject } from '../../types';
 
 interface ContactSectionQueryResult {
@@ -18,28 +18,5 @@ interface ContactSectionQueryResult {
 }
 
 export const useLocalDataSource = (): ContactSectionQueryResult => {
-    return useStaticQuery(graphql`
-        query ContactSectionQuery {
-            allContactJson {
-                sections: nodes {
-                    description
-                    email
-                    image {
-                        alt
-                        src {
-                            childImageSharp {
-                                gatsbyImageData(width: 140)
-                            }
-                        }
-                        objectFit
-                    }
-                    name
-                    socialProfiles {
-                        from
-                        showIcons
-                    }
-                }
-            }
-        }
-    `);
+    return { allContactJson: { sections: [content.contact] } } as ContactSectionQueryResult;
 };
