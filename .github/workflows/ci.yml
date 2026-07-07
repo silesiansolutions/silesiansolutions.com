@@ -56,5 +56,7 @@ jobs:
               run: pnpm check:build
             - name: Validate structured-data graph
               run: pnpm check:structured-data
+            - name: Verify Google Search quality
+              run: pnpm check:search-quality
             - name: Check internal links
               run: pnpm dlx linkinator@6.1.2 dist --recurse --skip "^https?://(?!localhost)"

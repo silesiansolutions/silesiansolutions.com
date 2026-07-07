@@ -17,7 +17,7 @@ keywords:
     - 'Wydajność'
 ---
 
-Nvidia Corporation należy do grona największych, najbardziej i najlepiej rozpoznawalnych producentów układów scalonych i [procesorów graficznych](../procesory-intel/) na świecie. Jest chyba najlepiej znanym dostawcą dla producentów kart graficznych działających na rynku.
+Nvidia Corporation należy do grona największych, najbardziej i najlepiej rozpoznawalnych producentów układów scalonych i [procesorów graficznych](/blog/procesory-intel/) na świecie. Jest chyba najlepiej znanym dostawcą dla producentów kart graficznych działających na rynku.
 
 ## Trochę o firmie
 
