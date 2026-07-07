@@ -7,6 +7,7 @@ interface ContentImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElemen
     image: ContentImageData;
     alt: string;
     imgClassName?: string;
+    fullWidth?: boolean;
     objectFit?: React.CSSProperties['objectFit'];
     objectPosition?: React.CSSProperties['objectPosition'];
 }
@@ -16,6 +17,7 @@ export function ContentImage({
     alt,
     className,
     imgClassName,
+    fullWidth = false,
     objectFit,
     objectPosition,
     loading,
@@ -29,7 +31,8 @@ export function ContentImage({
         <div
             className={['content-image-wrapper', className].filter(Boolean).join(' ')}
             style={{
-                maxWidth: !className && image.width > 1 ? `${image.width}px` : undefined,
+                width: fullWidth ? '100%' : undefined,
+                maxWidth: !fullWidth && !className && image.width > 1 ? `${image.width}px` : undefined,
                 aspectRatio: !className && hasDimensions ? `${image.width} / ${image.height}` : undefined,
                 ...style,
             }}

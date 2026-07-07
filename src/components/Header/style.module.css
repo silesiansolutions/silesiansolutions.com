@@ -65,6 +65,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
     background: var(--background-color);
 }
 
@@ -92,13 +93,19 @@
     transition: 200ms ease-out;
 }
 
+.TopNavigationBar a.NavLink {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
 .TopNavigationBar a.NavLink:hover::before {
     width: 100%;
 }
 
 .TopNavigationBar a.CtaButton {
-    width: auto;
+    width: 10.5rem;
     height: auto;
+    flex-shrink: 0;
     border-radius: var(--border-radius);
     border: 0.125rem solid var(--primary-color);
     background: var(--background-color);
