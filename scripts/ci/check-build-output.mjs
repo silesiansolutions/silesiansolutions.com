@@ -6,6 +6,7 @@ import { expectedRoutes, routeToFile } from './routes.mjs';
 const root = path.resolve(import.meta.dirname, '../..');
 const dist = path.join(root, 'dist');
 const routes = expectedRoutes();
+const origin = 'https://silesiansolutions.com';
 
 for (const route of routes) {
     const file = routeToFile(route, dist);
@@ -22,6 +23,16 @@ for (const route of routes) {
     assert.match(html, /property="og:title"/, `${route}: missing Open Graph metadata`);
     assert.match(html, /name="twitter:card"/, `${route}: missing Twitter card metadata`);
     assert.match(html, /type="application\/ld\+json"/, `${route}: missing JSON-LD`);
+
+    for (const [, href] of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)) {
+        const url = new URL(href, origin);
+        if (url.origin === origin && url.pathname !== '/' && !url.pathname.split('/').at(-1)?.includes('.')) {
+            assert.ok(
+                url.pathname.endsWith('/'),
+                `${route}: internal link must use its canonical trailing slash: ${href}`,
+            );
+        }
+    }
 }
 
 const home = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');

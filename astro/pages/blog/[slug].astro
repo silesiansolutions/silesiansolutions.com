@@ -28,5 +28,5 @@ const image = article.banner?.src?.childImageSharp?.gatsbyImageData.images.fallb
         { name: article.title, path: article.slug },
     ]}
 >
-    <ArticleTemplate client:load pageContext={{ article, listingPagePath: '/blog' }} />
+    <ArticleTemplate client:load pageContext={{ article, listingPagePath: '/blog/' }} />
 </BaseLayout>

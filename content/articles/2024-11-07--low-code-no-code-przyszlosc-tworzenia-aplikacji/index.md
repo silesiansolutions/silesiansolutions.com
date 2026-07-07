@@ -88,4 +88,4 @@ Decyzja o wyborze platformy low-code lub no-code powinna zależeć od charakteru
 
 Low-code i no-code to przyszłość w tworzeniu aplikacji. Dzięki tym technologiom firmy mogą elastycznie dostosowywać się do potrzeb rynku, obniżać koszty, skracać czas wdrożenia i wprowadzać innowacyjne rozwiązania bez potrzeby dużego zespołu programistycznego. Chociaż te platformy mają swoje ograniczenia, ich zalety sprawiają, że są one idealnym rozwiązaniem dla firm, które chcą szybko wdrożyć nowe aplikacje, bez dużych inwestycji w IT.
 
-Chcesz dowiedzieć się więcej, jakie rozwiązania IT mogą wesprzeć rozwój Twojej firmy? Sprawdź nasze [Realizacje](/realizacje) lub [skontaktuj się z nami](/kontakt), aby omówić swoje potrzeby i zobaczyć, jak low-code/no-code mogą pomóc w Twoim biznesie.
+Chcesz dowiedzieć się więcej, jakie rozwiązania IT mogą wesprzeć rozwój Twojej firmy? Sprawdź nasze [Realizacje](/realizacje/) lub [skontaktuj się z nami](/kontakt/), aby omówić swoje potrzeby i zobaczyć, jak low-code/no-code mogą pomóc w Twoim biznesie.

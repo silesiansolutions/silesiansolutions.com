@@ -123,4 +123,4 @@ Sztuczna inteligencja zmienia krajobraz współczesnych przedsiębiorstw, oferuj
 
 Chcesz dowiedzieć się, jak sztuczna inteligencja może wspierać rozwój Twojej firmy? Skontaktuj się z nami i razem znajdziemy rozwiązania dopasowane do Twoich potrzeb!
 
-➡️ [silesiansolutions.com/kontakt](https://silesiansolutions.com/kontakt)
+➡️ [silesiansolutions.com/kontakt](https://silesiansolutions.com/kontakt/)

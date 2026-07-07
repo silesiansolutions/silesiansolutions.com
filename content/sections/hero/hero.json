@@ -13,7 +13,7 @@
     "description": "Pomagamy firmom projektować, budować i rozwijać oprogramowanie, automatyzacje oraz rozwiązania AI. Łączymy frontend architecture, DevOps i podejście security-first z technicznym doradztwem B2B - od rozpoznania problemu po utrzymanie produkcji.",
     "cta": {
         "label": "Porozmawiajmy o projekcie",
-        "url": "/kontakt"
+        "url": "/kontakt/"
     },
     "socialProfiles": {
         "from": ["LinkedIn", "Twitter", "Github"],

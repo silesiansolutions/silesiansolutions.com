@@ -15,34 +15,34 @@ export function Footer(): React.ReactElement {
     const { siteUrl, social, bio, author, avatar } = useSiteMetadata();
 
     const offerLinks = [
-        { label: 'Sztuczna Inteligencja (AI)', url: '/oferta/sztuczna-inteligencja-ai' },
-        { label: 'Strony Internetowe', url: '/oferta/strony-internetowe' },
-        { label: 'Aplikacje Mobilne', url: '/oferta/aplikacje-mobilne' },
-        { label: 'Sklepy Internetowe', url: '/oferta/sklepy-internetowe' },
-        { label: 'Systemy Dedykowane', url: '/oferta/systemy-dedykowane' },
-        { label: 'Integracje Systemów', url: '/oferta/integracje-systemow' },
-        { label: 'Rozwiązania Chmurowe', url: '/oferta/rozwiazania-chmurowe' },
-        { label: 'Cyberbezpieczeństwo', url: '/oferta/cyberbezpieczenstwo' },
-        { label: 'Analiza Danych', url: '/oferta/analiza-danych' },
-        { label: 'Doradztwo IT', url: '/oferta/doradztwo-it' },
-        { label: 'Compliance i Audyty IT', url: '/oferta/compliance-i-audyty-it' },
-        { label: 'Automatyzacja Procesów', url: '/oferta/automatyzacja-procesow' },
-        { label: 'DevOps & CI/CD', url: '/oferta/devops-ci-cd' },
-        { label: 'Low-Code & No-Code', url: '/oferta/low-code-no-code' },
-        { label: 'Internet of Things (IoT)', url: '/oferta/internet-of-things-iot' },
+        { label: 'Sztuczna Inteligencja (AI)', url: '/oferta/sztuczna-inteligencja-ai/' },
+        { label: 'Strony Internetowe', url: '/oferta/strony-internetowe/' },
+        { label: 'Aplikacje Mobilne', url: '/oferta/aplikacje-mobilne/' },
+        { label: 'Sklepy Internetowe', url: '/oferta/sklepy-internetowe/' },
+        { label: 'Systemy Dedykowane', url: '/oferta/systemy-dedykowane/' },
+        { label: 'Integracje Systemów', url: '/oferta/integracje-systemow/' },
+        { label: 'Rozwiązania Chmurowe', url: '/oferta/rozwiazania-chmurowe/' },
+        { label: 'Cyberbezpieczeństwo', url: '/oferta/cyberbezpieczenstwo/' },
+        { label: 'Analiza Danych', url: '/oferta/analiza-danych/' },
+        { label: 'Doradztwo IT', url: '/oferta/doradztwo-it/' },
+        { label: 'Compliance i Audyty IT', url: '/oferta/compliance-i-audyty-it/' },
+        { label: 'Automatyzacja Procesów', url: '/oferta/automatyzacja-procesow/' },
+        { label: 'DevOps & CI/CD', url: '/oferta/devops-ci-cd/' },
+        { label: 'Low-Code & No-Code', url: '/oferta/low-code-no-code/' },
+        { label: 'Internet of Things (IoT)', url: '/oferta/internet-of-things-iot/' },
     ];
 
     const companyLinks = [
         { label: 'Strona główna', url: '/' },
-        { label: 'O nas', url: '/o-nas' },
-        { label: 'Realizacje', url: '/realizacje' },
-        { label: 'Blog', url: '/blog' },
-        { label: 'Kontakt', url: '/kontakt' },
+        { label: 'O nas', url: '/o-nas/' },
+        { label: 'Realizacje', url: '/realizacje/' },
+        { label: 'Blog', url: '/blog/' },
+        { label: 'Kontakt', url: '/kontakt/' },
     ];
 
     const legalLinks = [
-        { label: 'Polityka prywatności', url: '/polityka-prywatnosci' },
-        { label: 'Klauzula informacyjna', url: '/klauzula-informacyjna' },
+        { label: 'Polityka prywatności', url: '/polityka-prywatnosci/' },
+        { label: 'Klauzula informacyjna', url: '/klauzula-informacyjna/' },
     ];
 
     const socialLinks = [
@@ -168,7 +168,7 @@ export function Footer(): React.ReactElement {
                     <h3 className={classes.ServicesTitle}>Nasze Usługi</h3>
                     <div className={classes.ServicesList}>
                         <Link
-                            to="/oferta"
+                            to="/oferta/"
                             className={classes.ServicesLink}
                             style={{
                                 color: darkModeEnabled ? 'var(--primary-color)' : 'var(--background-color)',

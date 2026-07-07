@@ -21,12 +21,12 @@ export default function AboutUsPage() {
         '@type': 'AboutPage',
         name: createSeoTitle(seoData.seoTitle, titleTemplate),
         description: seoData.description,
-        url: `${siteUrl}/o-nas`,
+        url: `${siteUrl}/o-nas/`,
         mainContentOfPage: {
             '@id': '#about-us-content',
         },
         mainEntity: createOrganizationReference(siteUrl, organizationData),
-        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/o-nas`, jsonLdOptions),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/o-nas/`, jsonLdOptions),
     };
 
     return (

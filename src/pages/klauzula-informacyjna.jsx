@@ -15,11 +15,11 @@ export default function InformationClausePage() {
         '@type': 'WebPage',
         name: createSeoTitle(seoData.seoTitle, titleTemplate),
         description: seoData.description,
-        url: `${siteUrl}/klauzula-informacyjna`,
+        url: `${siteUrl}/klauzula-informacyjna/`,
         mainContentOfPage: {
             '@id': '#information-clause-content',
         },
-        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/klauzula-informacyjna`, jsonLdOptions),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/klauzula-informacyjna/`, jsonLdOptions),
     };
 
     return (

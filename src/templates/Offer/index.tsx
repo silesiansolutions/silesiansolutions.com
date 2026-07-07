@@ -38,7 +38,7 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
     const { siteUrl, titleTemplate } = useSiteMetadata();
     const organizationData = useOrganizationData();
     const title = offer.heading.split(' ').slice(1).join(' ');
-    const serviceUrl = new URL(`${props.pageContext.listingPagePath}/${offer.slug}/`, `${siteUrl}/`).href;
+    const serviceUrl = new URL(`${props.pageContext.listingPagePath}${offer.slug}/`, `${siteUrl}/`).href;
 
     const serviceSchema: WithContext<Service> = {
         '@context': 'https://schema.org',
@@ -61,14 +61,14 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
         '@type': 'WebPage',
         name: createSeoTitle(title, titleTemplate),
         description: offer.description,
-        url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}`,
+        url: serviceUrl,
         mainContentOfPage: {
             '@id': '#offer-content',
         },
         breadcrumb: createBreadcrumb([
             { name: 'Strona główna', url: siteUrl },
-            { name: 'Oferta', url: `${siteUrl}/oferta` },
-            { name: title, url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}` },
+            { name: 'Oferta', url: `${siteUrl}/oferta/` },
+            { name: title, url: serviceUrl },
         ]),
     };
 

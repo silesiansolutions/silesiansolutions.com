@@ -122,4 +122,4 @@ Warto pamiętać, że sam model to dopiero początek - kluczowe znaczenie ma int
 ---
 
 **Masz pytania lub chcesz wdrożyć rozwiązanie oparte na transformerach?**  
-[Skontaktuj się z nami](https://silesiansolutions.com/kontakt) - chętnie pomożemy Ci zbudować nowoczesne narzędzia AI, które usprawnią Twoje procesy i pozwolą Ci wyprzedzić konkurencję.
+[Skontaktuj się z nami](https://silesiansolutions.com/kontakt/) - chętnie pomożemy Ci zbudować nowoczesne narzędzia AI, które usprawnią Twoje procesy i pozwolą Ci wyprzedzić konkurencję.

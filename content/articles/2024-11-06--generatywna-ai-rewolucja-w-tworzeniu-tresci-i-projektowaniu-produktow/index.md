@@ -76,4 +76,4 @@ Generatywna AI ma przed sobą obiecującą przyszłość, a jej znaczenie w bizn
 
 Generatywna sztuczna inteligencja to potężne narzędzie, które może przynieść firmom znaczące korzyści - od automatyzacji tworzenia treści po innowacyjne projektowanie produktów. Jednak aby w pełni wykorzystać jej potencjał, niezbędna jest przemyślana strategia wdrożeniowa, uwzględniająca zarówno korzyści, jak i wyzwania związane z jakością treści, etyką i integracją z istniejącymi systemami.
 
-Chcesz dowiedzieć się, jak generatywna AI może wspierać rozwój Twojej firmy? [Skontaktuj się z nami](/kontakt) i zobacz, jak nasza wiedza oraz nowoczesne technologie mogą pomóc w rozwoju Twojego biznesu!
+Chcesz dowiedzieć się, jak generatywna AI może wspierać rozwój Twojej firmy? [Skontaktuj się z nami](/kontakt/) i zobacz, jak nasza wiedza oraz nowoczesne technologie mogą pomóc w rozwoju Twojego biznesu!

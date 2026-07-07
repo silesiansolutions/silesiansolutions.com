@@ -15,11 +15,11 @@ export default function ProjectsPage() {
         '@type': 'CollectionPage',
         name: createSeoTitle(seoData.seoTitle, titleTemplate),
         description: seoData.description,
-        url: `${siteUrl}/realizacje`,
+        url: `${siteUrl}/realizacje/`,
         mainContentOfPage: {
             '@id': '#projects-content',
         },
-        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/realizacje`, jsonLdOptions),
+        breadcrumb: createSimpleBreadcrumb(siteUrl, seoData.title, `${siteUrl}/realizacje/`, jsonLdOptions),
     };
 
     return (
