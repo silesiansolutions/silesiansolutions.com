@@ -13,7 +13,8 @@
         "format": "prettier --write \"**/*.{astro,js,jsx,json,yml,yaml,css,ts,tsx,md,mdx,mjs}\"",
         "format:check": "prettier --check \"**/*.{astro,js,jsx,json,yml,yaml,css,ts,tsx,md,mdx,mjs}\"",
         "type-check": "astro check",
-        "check:build": "node scripts/ci/check-build-output.mjs"
+        "check:build": "node scripts/ci/check-build-output.mjs",
+        "check:structured-data": "node scripts/ci/check-structured-data.mjs"
     },
     "dependencies": {
         "@fontsource/roboto": "^5.2.10",

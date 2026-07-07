@@ -34,10 +34,10 @@ export default function OfferPage() {
                 position: index + 1,
                 item: {
                     '@type': 'Service',
-                    '@id': `#offer-item-${index}`,
+                    '@id': offer.slug ? `${siteUrl}/oferta/${offer.slug}/#service` : undefined,
                     name: offer.heading,
                     description: offer.content,
-                    url: offer.slug ? `${siteUrl}/oferta/${offer.slug}` : undefined,
+                    url: offer.slug ? `${siteUrl}/oferta/${offer.slug}/` : undefined,
                     provider: createOrganizationReference(siteUrl, organizationData),
                 },
             })),
@@ -47,10 +47,10 @@ export default function OfferPage() {
     const professionalServicesSchema = allOfferJson.nodes.map((offer, index) => ({
         '@context': 'https://schema.org',
         '@type': 'Service',
-        '@id': `#offer-item-${index}`,
+        '@id': offer.slug ? `${siteUrl}/oferta/${offer.slug}/#service` : `${siteUrl}/oferta/#service-${index}`,
         name: offer.heading,
         description: offer.content,
-        url: offer.slug ? `${siteUrl}/oferta/${offer.slug}` : `${siteUrl}/oferta`,
+        url: offer.slug ? `${siteUrl}/oferta/${offer.slug}/` : `${siteUrl}/oferta/`,
         provider: createOrganizationReference(siteUrl, organizationData),
         areaServed: createAreaServed(organizationData),
     }));

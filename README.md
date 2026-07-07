@@ -25,3 +25,5 @@ pnpm check:build
 ```
 
 The build contract verifies the 44 routes inherited from the Gatsby site together with canonical URLs, social metadata, JSON-LD, sitemap, robots and the web manifest.
+
+`pnpm check:structured-data` validates every generated JSON-LD block and the relationships between the canonical `ProfessionalService`, `WebSite`, page, breadcrumb, `BlogPosting` and `Service` nodes. CI and CD both run this gate against the final `dist/` output. Google discovers updates through the sitemap declared in `robots.txt`; the Indexing API is intentionally not used because these pages are neither job postings nor livestream events.

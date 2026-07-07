@@ -54,10 +54,16 @@ const dayNames: Record<string, string> = {
 
 const graph = [
     {
-        '@type': ['Organization', 'ProfessionalService'],
+        '@type': 'ProfessionalService',
         '@id': organizationId,
         name: organizationData.name,
         legalName: organizationData.legalName,
+        founder: {
+            '@type': 'Person',
+            name: 'Dawid Ryłko',
+            url: 'https://dawidrylko.com/',
+            sameAs: ['https://github.com/dawidrylko', 'https://www.linkedin.com/in/dawidrylko'],
+        },
         url: `${siteUrl}/`,
         logo: { '@type': 'ImageObject', url: new URL(fallbackImage, `${siteUrl}/`).href },
         image: new URL(fallbackImage, `${siteUrl}/`).href,
@@ -79,6 +85,7 @@ const graph = [
             '@type': 'ContactPoint',
             contactType: jsonLdOptions.contactPoint.contactType,
             email: organizationData.email,
+            url: jsonLdOptions.contactPoint.url,
             availableLanguage: organizationData.availableLanguage,
         },
         openingHoursSpecification: hours
@@ -110,14 +117,15 @@ const graph = [
         about: { '@id': organizationId },
         primaryImageOfPage: { '@type': 'ImageObject', url: imageUrl },
         breadcrumb:
-            breadcrumbs.length > 0
+            breadcrumbs.length > 1
                 ? {
                       '@type': 'BreadcrumbList',
+                      '@id': `${canonicalUrl}#breadcrumb`,
                       itemListElement: breadcrumbs.map((item, index) => ({
                           '@type': 'ListItem',
                           position: index + 1,
                           name: item.name,
-                          item: new URL(item.path, `${siteUrl}/`).href,
+                          item: index === breadcrumbs.length - 1 ? undefined : new URL(item.path, `${siteUrl}/`).href,
                       })),
                   }
                 : undefined,

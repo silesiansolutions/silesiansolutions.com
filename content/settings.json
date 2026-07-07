@@ -56,10 +56,11 @@
     },
     "organizationData": {
         "name": "Silesian Solutions",
-        "legalName": "Silesian Solutions",
+        "legalName": "Dawid Ryłko",
         "email": "biuro@silesiansolutions.com",
         "description": "Silesian Solutions wspiera firmy B2B w projektowaniu i rozwijaniu oprogramowania, rozwiązań AI, automatyzacji procesów oraz bezpiecznej architektury technicznej.",
         "location": {
+            "streetAddress": "ul. Zwierzyniecka 19a/1",
             "addressLocality": "Bielsko-Biała",
             "addressRegion": "Śląskie",
             "addressCountry": "PL",
