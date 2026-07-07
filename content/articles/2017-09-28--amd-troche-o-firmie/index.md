@@ -17,13 +17,13 @@ keywords:
     - 'Wydajność procesorów'
 ---
 
-Firma AMD jest jednym z czołowych światowych producentów układów scalonych i mikroprocesorów przeznaczonych do urządzeń elektronicznych dla różnorakich firm technologicznych oraz użytkowników domowych. Główne produkty tej firmy to mikroprocesory, chipsety do płyt głównych, systemy wbudowane, a także [procesory graficzne](../karty-graficzne-nvidia/).
+Firma AMD jest jednym z czołowych światowych producentów układów scalonych i mikroprocesorów przeznaczonych do urządzeń elektronicznych dla różnorakich firm technologicznych oraz użytkowników domowych. Główne produkty tej firmy to mikroprocesory, chipsety do płyt głównych, systemy wbudowane, a także [procesory graficzne](/blog/karty-graficzne-nvidia/).
 
 > ​​​​​​​​​​​​​​We design and integrate technology that powers millions of intelligent devices, including personal computers, game consoles and cloud servers that define the new era of surround computing.
 
 ## AMD na globalnym rynku
 
-Advanced Micro Devices, Inc. to drugi na świecie po [Intelu](../procesory-intel/) producent procesorów x86 oraz procesorów graficznych. Od lat procesory firmy znajdują szerokie zastosowanie w komputerach osobistych, stacjonarnych i przenośnych, laptopach, tabletach.
+Advanced Micro Devices, Inc. to drugi na świecie po [Intelu](/blog/procesory-intel/) producent procesorów x86 oraz procesorów graficznych. Od lat procesory firmy znajdują szerokie zastosowanie w komputerach osobistych, stacjonarnych i przenośnych, laptopach, tabletach.
 
 > Our history is marked by a commitment to innovation that’s truly useful to our customers - putting the real needs of people ahead of technical one-upmanship.
 
