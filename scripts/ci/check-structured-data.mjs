@@ -74,8 +74,11 @@ for (const file of htmlFiles(dist)) {
     assert.ok(nodes.length > 0, `${page}: missing JSON-LD`);
 
     for (const node of nodes) {
-        if (typeof node?.['@id'] === 'string' && node['@id'].startsWith(ORIGIN)) {
-            assert.ok(!new URL(node['@id']).pathname.includes('//'), `${page}: malformed @id ${node['@id']}`);
+        if (typeof node?.['@id'] === 'string' && URL.canParse(node['@id'])) {
+            const idUrl = new URL(node['@id']);
+            if (idUrl.origin === ORIGIN) {
+                assert.ok(!idUrl.pathname.includes('//'), `${page}: malformed @id ${node['@id']}`);
+            }
         }
     }
 
@@ -129,7 +132,7 @@ for (const file of htmlFiles(dist)) {
             assert.equal(service.offers.seller?.['@id'], ORGANIZATION_ID, `${page}: Offer seller is inconsistent`);
         }
     }
-    if (canonical.startsWith(`${ORIGIN}/oferta/`) && canonical !== `${ORIGIN}/oferta/`) {
+    if (new URL(canonical).pathname.startsWith('/oferta/') && canonical !== `${ORIGIN}/oferta/`) {
         assert.ok(
             services.some((service) => service.url === canonical),
             `${page}: detail page is missing its canonical Service`,
