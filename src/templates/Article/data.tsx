@@ -6,6 +6,7 @@ export interface ArticleTemplateData {
     title: string;
     description: string | null;
     date: string;
+    publishedDate: string;
     banner: {
         alt: string | null;
         src: {

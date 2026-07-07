@@ -3,6 +3,7 @@ import { content } from '../data/content';
 export interface JsonLdOptions {
     contactPoint: {
         contactType: string;
+        url: string;
     };
     offerCatalog: {
         name: string;
@@ -18,6 +19,7 @@ export interface OrganizationData {
     email: string;
     description: string;
     location: {
+        streetAddress: string;
         addressLocality: string;
         addressRegion: string;
         addressCountry: string;

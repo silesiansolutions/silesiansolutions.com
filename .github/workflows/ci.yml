@@ -54,5 +54,7 @@ jobs:
             - run: pnpm build
             - name: Verify routes, metadata and structured data
               run: pnpm check:build
+            - name: Validate structured-data graph
+              run: pnpm check:structured-data
             - name: Check internal links
               run: pnpm dlx linkinator@6.1.2 dist --recurse --skip "^https?://(?!localhost)"

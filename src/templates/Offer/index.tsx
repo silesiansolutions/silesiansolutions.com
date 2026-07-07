@@ -38,13 +38,15 @@ export default function OfferTemplate(props: OfferTemplateProps): React.ReactEle
     const { siteUrl, titleTemplate } = useSiteMetadata();
     const organizationData = useOrganizationData();
     const title = offer.heading.split(' ').slice(1).join(' ');
+    const serviceUrl = new URL(`${props.pageContext.listingPagePath}/${offer.slug}/`, `${siteUrl}/`).href;
 
     const serviceSchema: WithContext<Service> = {
         '@context': 'https://schema.org',
         '@type': 'Service',
+        '@id': `${serviceUrl}#service`,
         name: title,
         description: offer.description,
-        url: `${siteUrl}${props.pageContext.listingPagePath}/${offer.slug}`,
+        url: serviceUrl,
         provider: createOrganizationReference(siteUrl, organizationData),
         areaServed: organizationData.areaServed,
         offers: {

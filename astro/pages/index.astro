@@ -6,6 +6,6 @@ import { getPageSeoData } from '../../src/utils/seoHelpers';
 const seo = getPageSeoData('home');
 ---
 
-<BaseLayout title={seo.seoTitle} description={seo.description} breadcrumbs={[{ name: seo.title, path: '/' }]}>
+<BaseLayout title={seo.seoTitle} description={seo.description}>
     <HomePage client:load />
 </BaseLayout>

@@ -27,13 +27,15 @@ export default function ProjectTemplate(props: ProjectTemplateProps): React.Reac
     const project = props.pageContext.project;
     const { siteUrl, titleTemplate } = useSiteMetadata();
     const organizationData = useOrganizationData();
+    const projectUrl = new URL(`${props.pageContext.listingPagePath}/${project.slug}/`, `${siteUrl}/`).href;
 
     const creativeWorkSchema: WithContext<CreativeWork> = {
         '@context': 'https://schema.org',
         '@type': 'CreativeWork',
+        '@id': `${projectUrl}#project`,
         name: project.title,
         description: project.description,
-        url: `${siteUrl}${props.pageContext.listingPagePath}/${project.slug}`,
+        url: projectUrl,
         creator: createOrganizationReference(siteUrl, organizationData),
         publisher: createOrganizationReference(siteUrl, organizationData),
         image: project.image?.src

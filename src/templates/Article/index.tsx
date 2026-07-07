@@ -1,5 +1,5 @@
 import React from 'react';
-import { Article, BlogPosting, WithContext } from 'schema-dts';
+import { BlogPosting, WithContext } from 'schema-dts';
 
 import { ContentImage } from '../../components/ContentImage';
 import { JsonLd } from '../../components/JsonLd';
@@ -12,7 +12,6 @@ import { AuthorSnippet } from '../../components/AuthorSnippet';
 import { ArticleTemplateData } from './data';
 import { pluralize } from '../../utils/pluralize';
 import { createOrganizationReference } from '../../utils/organizationHelpers';
-import { createSeoTitle } from '../../utils/seoHelpers';
 import classes from './style.module.css';
 
 // Reference to the local prismjs theme (Modified)
@@ -28,52 +27,24 @@ interface ArticleTemplateProps {
 
 export default function ArticleTemplate(props: ArticleTemplateProps): React.ReactElement {
     const article = props.pageContext.article;
-    const { siteUrl, author, titleTemplate } = useSiteMetadata();
+    const { siteUrl } = useSiteMetadata();
     const organizationData = useOrganizationData();
-
-    const schemaTitle = createSeoTitle(article.title, titleTemplate);
-
-    const articleSchema: WithContext<Article> = {
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: schemaTitle,
-        description: article.description || undefined,
-        author: {
-            '@type': 'Person',
-            name: author,
-        },
-        datePublished: article.date,
-        dateModified: article.date,
-        publisher: createOrganizationReference(siteUrl, organizationData),
-        mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': `${siteUrl}${props.pageContext.listingPagePath}/${article.slug}#article-content`,
-        },
-        image: article.banner?.src?.childImageSharp?.gatsbyImageData
-            ? {
-                  '@type': 'ImageObject',
-                  url: `${siteUrl}${article.banner.src.childImageSharp.gatsbyImageData.images.fallback?.src}`,
-              }
-            : undefined,
-        keywords: article.keywords?.join(', '),
-        articleSection: article.categories.join(', '),
-    };
+    const articleUrl = `${siteUrl}${article.slug}`;
+    const readingTimeMinutes = Number.parseInt(article.readingTime?.text ?? '', 10);
 
     const blogPostingSchema: WithContext<BlogPosting> = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
-        headline: schemaTitle,
+        '@id': `${articleUrl}#article`,
+        url: articleUrl,
+        headline: article.title,
         description: article.description || undefined,
-        author: {
-            '@type': 'Person',
-            name: author,
-        },
-        datePublished: article.date,
-        dateModified: article.date,
+        author: createOrganizationReference(siteUrl, organizationData),
+        datePublished: article.publishedDate,
         publisher: createOrganizationReference(siteUrl, organizationData),
         mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `${siteUrl}${props.pageContext.listingPagePath}/${article.slug}#article-content`,
+            '@id': `${articleUrl}#webpage`,
         },
         image: article.banner?.src?.childImageSharp?.gatsbyImageData
             ? {
@@ -83,13 +54,13 @@ export default function ArticleTemplate(props: ArticleTemplateProps): React.Reac
             : undefined,
         keywords: article.keywords?.join(', '),
         articleSection: article.categories.join(', '),
-        timeRequired: article.readingTime?.text,
+        isPartOf: { '@type': 'Blog', '@id': `${siteUrl}/blog/#blog`, name: 'Blog Silesian Solutions' },
+        timeRequired: Number.isFinite(readingTimeMinutes) ? `PT${readingTimeMinutes}M` : undefined,
     };
 
     return (
         <>
             <Seo title={article.title} description={article.description || undefined} useTitleTemplate={true} />
-            <JsonLd<Article> item={articleSchema} />
             <JsonLd<BlogPosting> item={blogPostingSchema} />
             <Page>
                 <article className={classes.Article} id="article-content">

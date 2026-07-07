@@ -1,14 +1,15 @@
 import { OrganizationData, JsonLdOptions } from '../hooks/useOrganizationData';
 
 export const createOrganizationReference = (siteUrl: string, organizationData: OrganizationData) => ({
-    '@type': 'Organization' as const,
-    '@id': `${siteUrl}#organization`,
+    '@type': 'ProfessionalService' as const,
+    '@id': `${siteUrl.replace(/\/$/, '')}/#organization`,
     name: organizationData.name,
-    url: siteUrl,
+    url: `${siteUrl.replace(/\/$/, '')}/`,
 });
 
 export const createPostalAddress = (organizationData: OrganizationData) => ({
     '@type': 'PostalAddress' as const,
+    streetAddress: organizationData.location.streetAddress,
     addressLocality: organizationData.location.addressLocality,
     addressRegion: organizationData.location.addressRegion,
     addressCountry: organizationData.location.addressCountry,
@@ -25,6 +26,7 @@ export const createContactPoint = (organizationData: OrganizationData, options: 
     '@type': 'ContactPoint' as const,
     contactType: options.contactPoint.contactType,
     email: organizationData.email,
+    url: options.contactPoint.url,
     availableLanguage: organizationData.availableLanguage,
 });
 

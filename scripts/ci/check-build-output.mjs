@@ -31,7 +31,7 @@ const jsonLdBlocks = [...home.matchAll(/<script type="application\/ld\+json">([\
 const graph = jsonLdBlocks.find((block) => Array.isArray(block['@graph']))?.['@graph'];
 assert.ok(graph, 'Homepage: missing central JSON-LD graph');
 const flattenedTypes = graph.flatMap((item) => (Array.isArray(item['@type']) ? item['@type'] : [item['@type']]));
-for (const type of ['Organization', 'ProfessionalService', 'WebSite', 'WebPage']) {
+for (const type of ['ProfessionalService', 'WebSite', 'WebPage']) {
     assert.ok(flattenedTypes.includes(type), `Homepage: missing ${type} structured data`);
 }
 
