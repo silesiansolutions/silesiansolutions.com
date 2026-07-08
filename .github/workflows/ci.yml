@@ -57,6 +57,12 @@ jobs:
             - name: Validate structured-data graph
               run: pnpm check:structured-data
             - name: Verify Google Search quality
-              run: pnpm check:search-quality
+              uses: SilesianSolutions/search-quality-kit/action@v0
+              with:
+                  node-version: '24.11.0'
+                  package-manager: pnpm
+                  config: search-quality.config.ts
+                  summary: 'true'
+                  upload-artifact: 'true'
             - name: Check internal links
               run: pnpm dlx linkinator@6.1.2 dist --recurse --skip "^https?://(?!localhost)"
