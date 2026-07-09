@@ -59,6 +59,9 @@ jobs:
             - name: Validate structured-data graph
               run: pnpm check:structured-data
 
+            - name: Diagnose search quality setup
+              run: pnpm doctor:search-quality
+
             - name: Verify Google Search quality
               uses: SilesianSolutions/search-quality-kit/action@v0
               with:

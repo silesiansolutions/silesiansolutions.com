@@ -15,16 +15,17 @@
         "type-check": "astro check",
         "check:build": "node scripts/ci/check-build-output.mjs",
         "check:structured-data": "node scripts/ci/check-structured-data.mjs",
+        "doctor:search-quality": "search-quality-kit doctor --config search-quality.config.ts",
         "check:search-quality": "search-quality-kit verify"
     },
     "dependencies": {
-        "@fontsource/roboto": "^5.2.10",
         "@astrojs/react": "^5.0.7",
         "@astrojs/sitemap": "^3.7.3",
+        "@fontsource/roboto": "^5.2.10",
         "js-cookie": "^3.0.7",
+        "marked": "^16.4.1",
         "mini-svg-data-uri": "^1.4.4",
         "normalize.css": "^8.0.1",
-        "marked": "^16.4.1",
         "prismjs": "^1.30.0",
         "schema-dts": "^2.0.0",
         "yaml": "^2.8.2"
@@ -32,7 +33,7 @@
     "devDependencies": {
         "@astrojs/check": "^0.9.9",
         "@eslint/js": "^10.0.1",
-        "@silesiansolutions/search-quality-kit": "0.6.1",
+        "@silesiansolutions/search-quality-kit": "0.8.0",
         "@types/js-cookie": "^3.0.6",
         "@types/node": "^25.5.0",
         "@types/react": "^19.2.0",
