@@ -1,4 +1,4 @@
-import { defineConfig, presets, profiles } from '@silesiansolutions/search-quality-kit';
+import { defineConfig, policyPacks, presets, profiles } from '@silesiansolutions/search-quality-kit';
 
 const preset = presets.astro();
 
@@ -14,6 +14,14 @@ export default defineConfig({
         maxPages: 100,
         exclude: [...(preset.crawl?.exclude ?? []), '/klauzula-informacyjna', '/polityka-prywatnosci'],
     },
+    profiles: {
+        default: 'company',
+        routes: [
+            { pattern: '/oferta/**', profile: 'servicePage' },
+            { pattern: '/blog/**', profile: 'blogPost' },
+        ],
+    },
+    plugins: [policyPacks.companySite(), policyPacks.aiVisibilitySafe()],
     ci: {
         failOn: ['error'],
     },
