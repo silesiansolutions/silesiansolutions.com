@@ -23,7 +23,7 @@
         "@astrojs/sitemap": "^3.7.3",
         "@fontsource/roboto": "^5.2.10",
         "js-cookie": "^3.0.7",
-        "marked": "^16.4.1",
+        "marked": "^18.0.6",
         "mini-svg-data-uri": "^1.4.4",
         "normalize.css": "^8.0.1",
         "prismjs": "^1.30.0",
