@@ -10,11 +10,19 @@ updates:
       schedule:
           interval: 'weekly'
           time: '03:00'
+      cooldown:
+          default-days: 7
       open-pull-requests-limit: 10
       assignees:
           - 'dawidrylko'
       reviewers:
           - 'dawidrylko'
-      ignore:
-          - dependency-name: 'react-cookie-consent'
-            update-types: ['version-update:semver-major', 'version-update:semver-minor']
+      groups:
+          npm-dependencies:
+              applies-to: version-updates
+              patterns:
+                  - '*'
+          npm-security:
+              applies-to: security-updates
+              patterns:
+                  - '*'
