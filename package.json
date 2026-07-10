@@ -28,7 +28,7 @@
         "normalize.css": "^8.0.1",
         "prismjs": "^1.30.0",
         "schema-dts": "^2.0.0",
-        "yaml": "^2.8.2"
+        "yaml": "^2.9.0"
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.9",
