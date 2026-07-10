@@ -22,7 +22,7 @@
         "@astrojs/react": "^5.0.7",
         "@astrojs/sitemap": "^3.7.3",
         "@fontsource/roboto": "^5.2.10",
-        "js-cookie": "^3.0.7",
+        "js-cookie": "^3.0.8",
         "marked": "^16.4.1",
         "mini-svg-data-uri": "^1.4.4",
         "normalize.css": "^8.0.1",
