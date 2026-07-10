@@ -1,5 +1,7 @@
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/700.css';
+import '@fontsource/roboto/latin-400.css';
+import '@fontsource/roboto/latin-ext-400.css';
+import '@fontsource/roboto/latin-700.css';
+import '@fontsource/roboto/latin-ext-700.css';
 import '../../globalStyles/global.css';
 import '../../globalStyles/theme.css';
 import React, { useEffect, useState } from 'react';
