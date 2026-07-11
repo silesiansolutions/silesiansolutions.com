@@ -1,6 +1,8 @@
 import { marked } from 'marked';
 import { parse as parseYaml } from 'yaml';
 
+import thumbnailOriginal from '../../content/images/silesiansolutions.jpg?url';
+
 import settingsJson from '../../content/settings.json';
 import offerJson from '../../content/offer.json';
 import hoursJson from '../../content/hours.json';
@@ -17,11 +19,19 @@ const markdownFiles = import.meta.glob('/content/**/*.md', {
     import: 'default',
 }) as Record<string, string>;
 
-const imageAssets = import.meta.glob('/content/**/*.{avif,gif,jpeg,jpg,png,svg,webp}', {
+const optimizedImageAssets = import.meta.glob('/content/**/*.{jpeg,jpg,png,webp}', {
+    eager: true,
+    query: '?w=1600&format=webp&url',
+    import: 'default',
+}) as Record<string, string>;
+
+const passthroughImageAssets = import.meta.glob('/content/**/*.{avif,gif,svg}', {
     eager: true,
     query: '?url',
     import: 'default',
 }) as Record<string, string>;
+
+const imageAssets = { ...optimizedImageAssets, ...passthroughImageAssets };
 
 interface FrontmatterDocument<T> {
     attributes: T;
@@ -164,7 +174,7 @@ const siteMetadata = {
     thumbnail: {
         childImageSharp: {
             original: {
-                src: assetUrl('/content/settings.json', settingsJson.siteMetadata.thumbnail) ?? '',
+                src: thumbnailOriginal,
             },
         },
     },
