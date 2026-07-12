@@ -12,7 +12,6 @@ export default defineConfig({
         ...preset.crawl,
         entrypoints: ['/'],
         maxPages: 100,
-        exclude: [...(preset.crawl?.exclude ?? []), '/klauzula-informacyjna', '/polityka-prywatnosci'],
     },
     profiles: {
         default: 'company',
@@ -21,7 +20,29 @@ export default defineConfig({
             { pattern: '/blog/**', profile: 'blogPost' },
         ],
     },
-    plugins: [policyPacks.companySite(), policyPacks.aiVisibilitySafe()],
+    plugins: [
+        policyPacks.companySite({
+            contactLinkText: ['Kontakt', 'Skontaktuj się', 'Porozmawiajmy', 'Napisz do nas'],
+            contactHrefPatterns: ['/kontakt', 'mailto:'],
+        }),
+        policyPacks.aiVisibilitySafe({
+            allowNoindexOn: ['/klauzula-informacyjna/**', '/polityka-prywatnosci/**'],
+        }),
+    ],
+    suppressions: [
+        {
+            code: 'indexability.noindex',
+            urlPattern: '/klauzula-informacyjna/**',
+            reason: 'Legal information clause is intentionally noindexed; it stays reachable for users but is not a search landing page.',
+            owner: 'dawidrylko',
+        },
+        {
+            code: 'indexability.noindex',
+            urlPattern: '/polityka-prywatnosci/**',
+            reason: 'Privacy policy is intentionally noindexed; it stays reachable for users but is not a search landing page.',
+            owner: 'dawidrylko',
+        },
+    ],
     ci: {
         failOn: ['error'],
     },
