@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { expectedRoutes, routeToFile } from './routes.mjs';
+import { findOversizedFiles } from './size-budget.mjs';
 
 const root = path.resolve(import.meta.dirname, '../..');
 const dist = path.join(root, 'dist');
@@ -67,4 +68,13 @@ for (const route of routes.filter(
 const robots = fs.readFileSync(path.join(dist, 'robots.txt'), 'utf8');
 assert.match(robots, /Sitemap: https:\/\/silesiansolutions\.com\/sitemap-index\.xml/);
 
+const sizeViolations = findOversizedFiles(dist);
+assert.equal(
+    sizeViolations.length,
+    0,
+    `Size budget exceeded:\n${sizeViolations.map((v) => `${v.file} (${v.size} B > ${v.limit} B)`).join('\n')}`,
+);
+const scannedFiles = fs.readdirSync(dist, { recursive: true, withFileTypes: true }).filter((entry) => entry.isFile());
+
 console.log(`Build contract passed for ${routes.length} routes.`);
+console.log(`Size budget passed (${scannedFiles.length} files scanned).`);
