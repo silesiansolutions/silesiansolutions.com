@@ -6,6 +6,12 @@ node_modules
 # testing
 /coverage
 
+# search quality output
+search-quality-report.json
+search-quality-report.md
+search-quality-contract.json
+search-quality-handoff.md
+
 # production
 dist
 .astro
