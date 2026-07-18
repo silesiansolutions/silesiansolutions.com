@@ -35,7 +35,7 @@
     "devDependencies": {
         "@astrojs/check": "^0.9.9",
         "@eslint/js": "^10.0.1",
-        "@silesiansolutions/search-quality-kit": "0.9.0",
+        "@silesiansolutions/search-quality-kit": "0.10.0",
         "@types/js-cookie": "^3.0.6",
         "@types/node": "^26.1.1",
         "@types/react": "^19.2.17",
